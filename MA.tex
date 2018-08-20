@@ -39,14 +39,18 @@
 
 \begin{document}
   %% title pages similar to providet template instead of maketitle
-  \include{titlepages-ger} % select either german
   \include{titlepages-eng} % or english title page
   \include{abstracts}
 
   \tableofcontents
   %% Put your contents here
-
-  \part{Appendix}
+	\include{introduction}
+	\include{theory}
+	\include{experimental_setup}
+	\include{the_algorithm}
+	\include{discussion}
+	
+  \chapter*{Appendix}
   \begin{appendix}
     \chapter{Lists}
     \listoffigures
