@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.4.18)  24 AUG 2018 16:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.4.18)  24 AUG 2018 18:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -729,18 +729,25 @@ Chapter 1.
 
  (./theory.tex
 Chapter 2.
-[6
+<images/coord_sys.png, id=160, 332.24126pt x 266.9975pt>
+File: images/coord_sys.png Graphic file (type png)
+
+<use images/coord_sys.png>
+Package pdftex.def Info: images/coord_sys.png used on input line 11.
+(pdftex.def)             Requested size: 132.89413pt x 106.79709pt.
+ [6
 
 
 
-] [7] <graphs/gauss_sigma_2.png, id=195, 433.62pt x 289.08pt>
+ <./images/coord_sys.png>] [7]
+<graphs/gauss_sigma_2.png, id=196, 433.62pt x 289.08pt>
 File: graphs/gauss_sigma_2.png Graphic file (type png)
 
 <use graphs/gauss_sigma_2.png>
-Package pdftex.def Info: graphs/gauss_sigma_2.png used on input line 82.
+Package pdftex.def Info: graphs/gauss_sigma_2.png used on input line 90.
 (pdftex.def)             Requested size: 128.03871pt x 85.35725pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--83
+Underfull \hbox (badness 10000) in paragraph at lines 91--91
 [][][]|\T1/cmr/m/n/10.95 1D Gaus-sian sig-nal
  []
 
@@ -748,10 +755,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--83
 File: images/gauss_sigma_2.png Graphic file (type png)
 
 <use images/gauss_sigma_2.png>
-Package pdftex.def Info: images/gauss_sigma_2.png used on input line 87.
+Package pdftex.def Info: images/gauss_sigma_2.png used on input line 95.
 (pdftex.def)             Requested size: 128.03871pt x 85.35725pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 88--88
+Underfull \hbox (badness 10000) in paragraph at lines 96--96
 [][][]|\T1/cmr/m/n/10.95 2D Gaus-sian sig-nal
  []
 
@@ -759,29 +766,59 @@ Underfull \hbox (badness 10000) in paragraph at lines 88--88
 File: images/lena_orig.png Graphic file (type png)
 
 <use images/lena_orig.png>
-Package pdftex.def Info: images/lena_orig.png used on input line 92.
+Package pdftex.def Info: images/lena_orig.png used on input line 100.
 (pdftex.def)             Requested size: 128.03871pt x 124.92606pt.
 
 <images/lena_smooth.png, id=199, 289.08pt x 282.05376pt>
 File: images/lena_smooth.png Graphic file (type png)
 
 <use images/lena_smooth.png>
-Package pdftex.def Info: images/lena_smooth.png used on input line 98.
+Package pdftex.def Info: images/lena_smooth.png used on input line 106.
 (pdftex.def)             Requested size: 128.03871pt x 124.92606pt.
 
 <graphs/edges_intro.png, id=200, 428.60126pt x 355.3275pt>
 File: graphs/edges_intro.png Graphic file (type png)
 
 <use graphs/edges_intro.png>
-Package pdftex.def Info: graphs/edges_intro.png used on input line 114.
+Package pdftex.def Info: graphs/edges_intro.png used on input line 122.
 (pdftex.def)             Requested size: 342.88147pt x 284.26237pt.
- [8 <./graphs/gauss_sigma_2.png> <./images/gauss_sigma_2.png> <./images/lena_or
-ig.png> <./images/lena_smooth.png>]) [9 <./graphs/edges_intro.png>]
+
+
+Package caption Warning: \label without proper \caption on input line 120.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:edges_intro' on page 8 undefined on input line 12
+5.
+
+[8] [9 <./graphs/gauss_sigma_2.png> <./images/gauss_sigma_2.png> <./images/lena
+_orig.png> <./images/lena_smooth.png>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 155.
+
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 155.
+ [10 <./graphs/edges_intro.png>]
+
+LaTeX Warning: Reference `fig:sobel_demo' on page 11 undefined on input line 19
+6.
+
+<images/lena_orig_sobel.png, id=233, 452.69125pt x 231.86626pt>
+File: images/lena_orig_sobel.png Graphic file (type png)
+
+<use images/lena_orig_sobel.png>
+Package pdftex.def Info: images/lena_orig_sobel.png used on input line 200.
+(pdftex.def)             Requested size: 226.34506pt x 115.93283pt.
+) [11 <./images/lena_orig_sobel.png>]
 \openout2 = `related_work.aux'.
 
- (./related_work.tex
+
+(./related_work.tex
 Chapter 3.
-) [10
+) [12
 
 
 
@@ -790,7 +827,7 @@ Chapter 3.
 
  (./experimental_setup.tex
 Chapter 4.
-) [11
+) [13
 
 
 
@@ -799,7 +836,7 @@ Chapter 4.
 
  (./the_algorithm.tex
 Chapter 5.
-) [12
+) [14
 
 
 
@@ -808,7 +845,7 @@ Chapter 5.
 
 
 No file discussion.tex.
-[13
+[15
 
 
 
@@ -825,12 +862,12 @@ Appendix A.
 
 
 No file MA.bbl.
-[14
+[16
 
 ]
 \openout2 = `deposition.aux'.
 
- (./deposition.tex) [15
+ (./deposition.tex) [17
 
 ]
 
@@ -847,47 +884,52 @@ Package rerunfilecheck Info: File `MA.out' has not changed.
 (rerunfilecheck)             Checksum: 34F03C63D4752F5101154B1D7E3A16FB;1436.
 
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 66.
  ) 
 Here is how much of TeX's memory you used:
- 9710 strings out of 493117
- 147713 string characters out of 6135433
- 288692 words of memory out of 5000000
- 12881 multiletter control sequences out of 15000+600000
- 24658 words of font info for 63 fonts, out of 8000000 for 9000
+ 9760 strings out of 493117
+ 148563 string characters out of 6135433
+ 291811 words of memory out of 5000000
+ 12911 multiletter control sequences out of 15000+600000
+ 25434 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,9n,71p,715b,548s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,10n,71p,715b,549s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
-/usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
-usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
-sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></us
-r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
-local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
-cal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loca
-l/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/t
-exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
-xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texl
-ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texliv
-e/2014/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2014/t
-exmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb></usr/local/texlive/2014/tex
-mf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2014/texmf
--dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2014/texmf-d
-ist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2014/texmf-dis
-t/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2014/texmf-dist/
-fonts/type1/public/cm-super/sfss1440.pfb></usr/local/texlive/2014/texmf-dist/fo
-nts/type1/public/cm-super/sfss1728.pfb></usr/local/texlive/2014/texmf-dist/font
-s/type1/public/cm-super/sfsx1200.pfb></usr/local/texlive/2014/texmf-dist/fonts/
-type1/public/cm-super/sfsx1440.pfb></usr/local/texlive/2014/texmf-dist/fonts/ty
-pe1/public/cm-super/sfsx1728.pfb></usr/local/texlive/2014/texmf-dist/fonts/type
-1/public/cm-super/sfsx2074.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/
-public/cm-super/sfti1200.pfb>
-Output written on MA.pdf (15 pages, 503168 bytes).
+/usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></u
+sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
+r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr
+/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/
+local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/lo
+cal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
+l/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/
+texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/tex
+live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
+ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texliv
+e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/
+2014/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2014/tex
+mf-dist/fonts/type1/public/cm-super/sfbi1200.pfb></usr/local/texlive/2014/texmf
+-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2014/texmf-d
+ist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2014/texmf-dis
+t/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2014/texmf-dist/
+fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2014/texmf-dist/fo
+nts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2014/texmf-dist/font
+s/type1/public/cm-super/sfss1440.pfb></usr/local/texlive/2014/texmf-dist/fonts/
+type1/public/cm-super/sfss1728.pfb></usr/local/texlive/2014/texmf-dist/fonts/ty
+pe1/public/cm-super/sfsx1200.pfb></usr/local/texlive/2014/texmf-dist/fonts/type
+1/public/cm-super/sfsx1440.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/
+public/cm-super/sfsx1728.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/pu
+blic/cm-super/sfsx2074.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/publ
+ic/cm-super/sfti1200.pfb>
+Output written on MA.pdf (17 pages, 628380 bytes).
 PDF statistics:
- 337 PDF objects out of 1000 (max. 8388607)
- 285 compressed objects within 3 object streams
- 56 named destinations out of 1000 (max. 500000)
- 218 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 378 PDF objects out of 1000 (max. 8388607)
+ 316 compressed objects within 4 object streams
+ 70 named destinations out of 1000 (max. 500000)
+ 228 words of extra memory for PDF output out of 10000 (max. 10000000)
 

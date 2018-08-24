@@ -4,7 +4,15 @@ In this chapter we explain the theoretical concepts relevant to this thesis. We 
 	\section{Bubble physics} \label{bubble_physics}
 	
 	\section{Image processing}	\label{image_processing}
-	In the following we represent an image as a two dimensional signal written as a matrix \textit{\textbf{g}}. Therefore, $g_{m,n}$ denotes the pixel (i.e. picture element) at the \textit{m}-th row corresponding to the \textit{n}-th column. 
+	In the following we represent an image as a two dimensional signal written as a matrix \textit{\textbf{g}}. Therefore, $g_{m,n}$ denotes the pixel (i.e. picture element) at the \textit{m}-th row corresponding to the \textit{n}-th column. The chosen coordinate system is described in figure \ref{fig:coord_sys}. 
+	
+		\begin{figure}
+		    \centering
+		    \includegraphics[scale=0.4]{images/coord_sys.png}
+		    \caption{Notation and coordinate system}
+		    \label{fig:coord_sys}
+		\end{figure}
+	
 		\subsection{Fourier theory}
 		The Fourier transform is an important image processing tool which is used to decompose an image into its since and cosine components. The output of the transformation represents the image in the Fourier or frequency domain, while the input image is the spacial domain. In the Fourier domain image, each point represents a particular frequency contained in the spatial domain image.
 		The \textit{continuous} two-dimensional Fourier transform is defined as
@@ -114,11 +122,89 @@ In this chapter we explain the theoretical concepts relevant to this thesis. We 
 			\includegraphics[scale=0.8]{graphs/edges_intro.png}
 			\caption{Original 1D signal. First derivative. Second derivative}
 		\end{figure}
-		An edge can be defined as a set of continuous pixel positions where an abrupt change of intensity (i.e. gray value) occurs. 
+		An edge can be defined as a set of continuous pixel positions where an abrupt change of intensity (i.e. gray value) occurs. Therefore, edge detection is based on differentiation, where in discrete images differentiation is replaced by discrete differences that are mere approximation to differentiation. There is also the need to not only know where edges are, but also how strong they are. Figure \ref{fig:edges_intro} shows that in the one dimensional case, edges can be detected by applying first and second derivatives to the signal. 
 		
+		In continuous space, a partial derivative operation is defined as
+		\begin{equation}
+		 	\mathbf{\nabla} = \left[ \dfrac{\partial}{\partial x}, \dfrac{\partial}{\partial y} \right]
+		\end{equation}
+		and its corresponding Fourier transform is
+		\begin{equation}
+			\mathscr{F}\{\mathbf{\nabla}\} = 2 \pi \text{i} \mathbf{k}
+		\end{equation}
+		
+		For the second derivative we need to consider all possible combinations of second order partial differential operators of a two dimensional signal. The resulting $2 \times 2$ matrix is called the Hessian matrix
+		\begin{equation}
+			\mathbf{H} = 
+				\begin{bmatrix}
+   \dfrac{\partial^2}{\partial x^2}       & \dfrac{\partial^2}{\partial x \partial y}\\
+   \dfrac{\partial^2}{\partial y \partial x}       & \dfrac{\partial^2}{\partial y^2}\\
+				\end{bmatrix}
+		\end{equation}
+		and its Fourier transform is
+		
+		\begin{equation}
+			\mathscr{F}\{\mathbf{H}\} = -4 \pi^2 \mathbf{k}\mathbf{k}^T
+		\end{equation}
+		
+		
+		Edge detectors can be implemented as filters $h$ that operate on a two dimensional grid. From the above equations we can derive the general properties for these filters:
+		\begin{enumerate}
+			\item Zero-shift: 
+				\begin{itemize}
+					\item $90^\circ$ phase shift for first order derivative, implying $ \Im\{ \hat{h} \} \neq 0$ and an antisymmetric filter mask, i.e $h_{-n} = -h_{n}$
+					\item a second order derivative operator must be symmetric in order to satisfy the zero shift property, i.e. $h_{-n} = h_{n}$
+				\end{itemize} 
+				
+			\item Suppression of mean value: $\hat{h}(k_i =0) \Leftrightarrow \sum_{\mathbf{n}}h_{\mathbf{n}} = 0$
+			
+			\item isotropy: For good edge detection, the edge detector's response must not depend on the direction of the edge. 
+				\begin{itemize}
+					\item first order derivative $\hat{h}(\mathbf{k}) = 
+											\pi \text{i} k_i \hat{b} (|\mathbf{k}|)$
+					\item second order derivative $\hat{h}(\mathbf{k}) = 
+											\pi^2 k_i^2 \hat{b} (|\mathbf{k}|)$
+				\end{itemize}
+				where $k_i$ denotes the wave number in the $i$-th direction and $b$ is an isotropic smoothing filter that fulfills the conditions
+				\begin{equation}
+					\hat{b}(\mathbf{0}) = 1, \hspace{1cm} \mathbf{\nabla}_k \hat{b}(|\mathbf{k}|) = \mathbf{0}
+				\end{equation}
+		\end{enumerate}
+			
+		In this work we will be using the Sobel filter masks as defined in equation (\ref{eq:sobel}) in order to compute derivatives in $x$ and $y$ directions. 
+		\begin{equation}
+			S_x =
+			 \begin{bmatrix}
+     				1	& 2 & 1 \\
+    					0	 & 0 & 0 \\
+    					-1	 & -2 & -1 \\
+				\end{bmatrix},
+			\hspace{2cm}
+			S_y = 
+				\begin{bmatrix}
+     				1	& 0 & -1 \\
+    					2	 & 0 & 2 \\
+    					1	 & 0 & -1 \\
+				\end{bmatrix}
+			\label{eq:sobel}
+			\end{equation}
+		At each point in the image, the resulting gradient approximations can be combined to give the gradient magnitude image $S$, using:
+		\begin{equation}
+			S = \sqrt{(S_x \star G )^2 + (S_y \star G)^2}
+			\label{eq:grad_sobel}
+		\end{equation}
+		where G is the input image. Figure \ref{fig:sobel_demo} shows the result of applying the derivation operator on an image. Note how edges have different magnitude depending on their strength. 
+
+		\begin{figure}
+			\centering
+			\includegraphics[scale=0.5]{images/lena_orig_sobel.png}
+			\caption{Left: original image. Right: gradient image}
+			\label{fig:sobel_demo}
+		\end{figure}
 		
 		
 		\subsection{Orientation and Structure Tensor}
+		
 		
 	
 	\section{Machine Learning}
