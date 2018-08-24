@@ -75,7 +75,7 @@ In this chapter we explain the theoretical concepts relevant to this thesis. We 
 		\end{equation}
 		Where $\mu$ is the mean, i.e. Gaussian peak's position and $\sigma$ is the standard deviation, i.e. peak's width.
 		
-		Figure \ref{fig:gauss_intro} show a Gaussian curve in one and two dimensions as well as the result of convolving an image with a Gaussian filter mask. 
+		Figure \ref{fig:gauss_intro} show a Gaussian curve in one and two dimensions as well as the result of convolving an image with a Gaussian filter mask. Note how the image becomes blurry, i.e. large wave numbers have been suppressed.
 		\begin{figure}
 		    \centering
 		    \begin{subfigure}[b]{0.3\textwidth}
@@ -106,7 +106,18 @@ In this chapter we explain the theoretical concepts relevant to this thesis. We 
 		\end{figure}
 
 
-		\subsection{Derivation}
+
+
+		\subsection{Edges and Derivation}
+		\begin{figure}\label{fig:edges_intro}
+			\centering
+			\includegraphics[scale=0.8]{graphs/edges_intro.png}
+			\caption{Original 1D signal. First derivative. Second derivative}
+		\end{figure}
+		An edge can be defined as a set of continuous pixel positions where an abrupt change of intensity (i.e. gray value) occurs. 
+		
+		
+		
 		\subsection{Orientation and Structure Tensor}
 		
 	

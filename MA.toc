@@ -6,7 +6,7 @@
 \contentsline {subsection}{\numberline {2.2.1}Fourier theory}{6}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Convolution}{7}{subsection.2.2.2}
 \contentsline {subsection}{\numberline {2.2.3}Smoothing}{7}{subsection.2.2.3}
-\contentsline {subsection}{\numberline {2.2.4}Derivation}{9}{subsection.2.2.4}
+\contentsline {subsection}{\numberline {2.2.4}Edges and Derivation}{9}{subsection.2.2.4}
 \contentsline {subsection}{\numberline {2.2.5}Orientation and Structure Tensor}{9}{subsection.2.2.5}
 \contentsline {section}{\numberline {2.3}Machine Learning}{9}{section.2.3}
 \contentsline {section}{\numberline {2.4}The object detection problem}{9}{section.2.4}
