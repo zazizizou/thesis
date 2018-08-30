@@ -65,7 +65,7 @@ In this chapter we explain the theoretical concepts relevant to this thesis. We 
 		
 		At the edge of the image, we typically extend the image with zero values (i.e. zero padding). This introduces an error when applying filters at the image border and we will mostly exclude the border when using filters (see chapter \ref{the_algorithm} for more details).
 		
-		\subsection{Smoothing}
+		\subsection{Smoothing}\label{sect:smoothing}
 		Smoothing an image means convolving an image with a smoothing filter. A smoothing or averaging filters must ideally fulfill following conditions
 		\begin{enumerate}
 			\item Zero-shift: $\Im (\hat{h}(\mathbf{k})) = 0$
@@ -188,11 +188,17 @@ In this chapter we explain the theoretical concepts relevant to this thesis. We 
 				\end{bmatrix}
 			\label{eq:sobel}
 			\end{equation}
-		At each point in the image, the resulting gradient approximations can be combined to give the gradient magnitude image $S$, using:
+		At each point in the image, the resulting gradient approximations can be combined to give the gradient magnitude image $S$ using:
 		\begin{equation}
 			S = \sqrt{(S_x \star G )^2 + (S_y \star G)^2}
 			\label{eq:grad_sobel}
 		\end{equation}
+
+%		as well as the orientation $\theta$
+%		\begin{equation}
+%			\theta = \arctan \left(\dfrac{S_y \star G}{S_x \star G}\right)
+%		\end{equation}
+
 		where G is the input image. Figure \ref{fig:sobel_demo} shows the result of applying the derivation operator on an image. Note how edges have different magnitude depending on their strength. 
 
 		\begin{figure}
@@ -204,8 +210,116 @@ In this chapter we explain the theoretical concepts relevant to this thesis. We 
 		
 		
 		\subsection{Orientation and Structure Tensor}
+		\begin{figure} %fig:struct_tensor_intro
+			\centering
+			\includegraphics[scale=1]{images/structure_tensor_intro.png}
+			\caption{Ideal local neighborhood described by a unit vector $\tilde{\mathbf{n}}$}
+			\label{fig:struct_tensor_intro}
+		\end{figure}
+		Although derivation is useful to determine the gradient magnitude and its direction in an image, it doesn't tell us much about gradient directions in a specific neighborhood of a point. Figure \ref{fig:struct_tensor_intro} shows that in a neighborhood with ideal orientation gray values change in one direction only. Generally, the direction of local orientation can be denoted with a unit vector $\tilde{\mathbf{n}}$. If we orient the coordinate system along the principal directions, the gray values become a one dimensional function and a simple neighbourhood can be represented by
+		\begin{equation}
+			g(\mathbf{x}) = g(\mathbf{x}^T \tilde{\mathbf{n}})
+		\end{equation}
+
+		The drawback of this representation however, is that it cannot distinguish between neighborhoods with constant values and isotropic orientation distribution. So if we define the optimum orientation as the orientation that shows the least deviations from the directions of the gradient, we can expressed it using the unit vector $\tilde{\mathbf{n}}$ as
+		\begin{equation}
+			\mathbf{\nabla}g^T \tilde{\mathbf{n}} = \cos[\angle(\mathbf{\nabla}g, \tilde{\mathbf{n}})]\\
+			\Leftrightarrow \\
+			\left( \mathbf{\nabla}g^T \tilde{\mathbf{n}} \right)^2 = 
+						 |\mathbf{\nabla}g|^2 \cos^2[\angle(\mathbf{\nabla}g, \tilde{\mathbf{n}})]
+		\end{equation}
+		We can see that this quantity is maximized when the orientation is along the unit vector $\tilde{\mathbf{n}}$, i.e. when $\mathbf{\nabla}g$ and $\tilde{\mathbf{n}}$ are either parallel or antiparallel. Therefore, the following integral is maximized in a local neighborhood:
+		\begin{equation}
+			\int w(\mathbf{x} - \mathbf{x'}) 
+								\left( 
+									 \mathbf{\nabla}g(\mathbf{x'})^T \tilde{\mathbf{n}}
+								\right)^2
+								\text{d}\mathbf{x'}
+			\label{eq:max_integral}
+		\end{equation}
+		where the window function $w$ determines the size and shape of neighborhood around a point $\mathbf{x}$ in which the orientation is averaged. 		
+		The maximization problem must be solved for each point $\mathbf{x}$, so we can write the maximization problem as follows:
+		\begin{equation}
+			\tilde{\mathbf{n}}^T \mathbf{J} \tilde{\mathbf{n}} \rightarrow \text{max}
+			\label{eq:max_prob}
+		\end{equation}
 		
+		From equation \ref{eq:max_integral} and \ref{eq:max_prob} we can define \textbf{the structure tensor} as 
+		\begin{equation} 
+			\mathbf{J} = \int w(\mathbf{x} - \mathbf{x'}) 
+								\left( 
+									\mathbf{\nabla}g(\mathbf{x'}) \mathbf{\nabla}g(\mathbf{x'})^T
+								\right)
+								\text{d}\mathbf{x'}
+		\end{equation}
 		
+		The $pq$-th component of this tensor is therefore given by
+		\begin{equation}
+			J_{pq} = \int_{-\infty}^{\infty} w(\mathbf{x} - \mathbf{x'}) 
+							\left(
+								\dfrac{\partial g(\mathbf{x'})}{\partial x'_p} \dfrac{\partial g(\mathbf{x'})}{\partial x'_q}
+							\right)
+							\text{d} \mathbf{x'}
+			\label{eq:struct_tensor_pq}
+		\end{equation}
+		Rotating equation \ref{eq:max_prob} into principle coordinate system yields:
+		\begin{equation}
+				\begin{bmatrix}
+    					 n_1' & n_2' \\
+				\end{bmatrix}
+				\begin{bmatrix}
+    					 J_{11}' & 0 \\
+    				  0 & J_{22} \\
+				\end{bmatrix}
+				\begin{bmatrix}
+    					 n_1' \\
+    				   n_2' \\
+				\end{bmatrix}
+				=
+				J' = J_{11}'n_1' + J_{22}'n_2' \rightarrow \text{max}
+		\end{equation}					
+		We can see that $J'$ is maximized for $\tilde{\mathbf{n}} = [1 \hspace{0.3cm} 0]^T$ (assuming $J_{11}' > J_{22}'$), where the maximum value is $J_{11}$, so solving this problem is equivalent to solving the eigenvalue problem for $\mathbf{J}$. We can then extract the orientation $\theta$ as follows:
+		\begin{equation}
+			\begin{bmatrix}
+    					 \lambda_1 & 0 \\
+    					 0		& \lambda_2
+				\end{bmatrix}
+				=
+				\begin{bmatrix}
+    					 \cos(\theta) & \sin(\theta) \\
+    				  	-\sin(\theta) & \cos(\theta) \\
+				\end{bmatrix}
+				\begin{bmatrix}
+    					 J_{11} & J{12} \\
+    				  J_{21} & J_{22} \\
+				\end{bmatrix}
+				\begin{bmatrix}
+    					 \cos(\theta) & -\sin(\theta) \\
+    				  	\sin(\theta) & \cos(\theta) \\
+				\end{bmatrix}
+		\end{equation}
+		Using trigonometric identities, this yields 
+		\begin{equation}
+			\tan(2\theta) = \dfrac{2 J_{12}}{J_{11} - J_{22}}
+		\end{equation}
+		
+		For discrete images, we use Sobel filters as defined in equation \ref{eq:sobel} for derivation and a Gaussian smoothing mask introduced in section \ref{sect:smoothing}. Computing the elements of a structure tensor for an image $G$ therefore requires following steps:
+		\begin{enumerate}
+			\item $G_x = S_x \star G$ \\
+						$G_y = S_y \star G$
+			\item $J_{11} = M \star (G_x \times G_x)$ \\
+						 $J_{12} = J_{21} = M \star (G_x \times G_y)$ \\
+						 $J_{22} = M \star (G_y \times G_y)$
+		\end{enumerate}
+		Where $M$ is a smoothing mask and $S_x$ and $S_y$ are derivation masks in $x$ and $y$ directions respectively.
+
+		Figure \ref{fig:struct_tensor_demo} shows an extracted orientation from a bubble image using the structure tensor.
+		\begin{figure}
+			\centering
+			\includegraphics[scale=0.4]{images/structure_tensor_demo.png}
+			\caption{Orientation angle using sobel filters for derivation and a Gaussian mask with $\sigma =1$ for smoothing.}
+			\label{fig:struct_tensor_demo}
+		\end{figure}
 		
 	
 	\section{Machine Learning}

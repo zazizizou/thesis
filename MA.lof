@@ -5,6 +5,8 @@
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Gaussian smoothing filter\relax }}{9}{figure.caption.3}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Original 1D signal. First derivative. Second derivative\relax }}{10}{figure.caption.4}
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Left: original image. Right: gradient image\relax }}{11}{figure.caption.5}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Ideal local neighborhood described by a unit vector $\mathaccentV {tilde}07E{\mathbf {n}}$\relax }}{12}{figure.caption.6}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Orientation angle using sobel filters for derivation and a Gaussian mask with $\sigma =1$ for smoothing\relax }}{13}{figure.caption.7}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
