@@ -322,9 +322,80 @@ In this chapter we explain the theoretical concepts relevant to this thesis. We 
 		\end{figure}
 		
 	
-	\section{Machine Learning}
-	\label{machine_learning}
+	\section{The object detection problem}\label{the_object_detection_problem}
 	
-	\section{The object detection problem}
-	\label{the_object_detection_problem}
+	Our proposed algorithm recognizes bubbles (classification) in an image and estimates their respective centers and radii (localization). This problem of classification and localization is known as the object detection problem. Figure \ref{fig:obj_detec_intro} shows a typical output of an object detection algorithm. 
+	
+	\begin{figure}
+		\centering
+		\includegraphics[scale=1]{images/object_detection_intro.png}
+		\caption{Left: Input image. Left: Output of an object detection algorithm dawn as bounding boxes around bubbles}
+		\label{fig:obj_detec_intro}
+	\end{figure}
+	
+	There has been a lot of progress in this field thanks to deep learning algorithms (see next section) that rely on training a relatively complex model a large amount of annotated data. The sate of the art algorithms include region based methods such as Faster R-CNN (cite \cite{faster_rcnn}), where many candidate regions are first extracted and then classified and single evaluation methods such as YOLO (cite \cite{YOLO}) where bounding boxes and class probabilities are estimated with one single neural network in a single evaluation. Although these algorithms perform very well on typical photographs and support between 1000 and 9000 different classes, applying them to our problem yields very bad results (see chapter \ref{the_algorithm}). We still however opt for a machine learning based approach for the classification part, and then perform localization with more straightforward methods.
+		
+		\subsection{Classification and Machine Learning}\label{machine_learning}
+		In our work, we use machine learning techniques mainly for signal classification purposes. For instance, both of the proposed algorithms rely on binary classification using logistic regression and convolutional neural network. In this section, we explain the principle behind machine learning and the main idea behind the chosen model. A more thorough argumentation about the chosen architecture and model-specific parameters can be found in chapter \ref{the_algorithm}.
+
+		Machine learning is commonly defined as the practice of using algorithms to parse data, learn from it, and the make a determination or prediction about something. In our case, this means training our model with a large number of bubble and background instances, in order to predict whether a given signal corresponds to a bubble or not. Figure \ref{fig:machine_learning_intro} summarizes the principle behind machine learning. 
+		
+		\begin{figure}
+			\centering
+			\begin{subfigure}[b]{0.55\textwidth}
+				\includegraphics[scale=1]{images/training_intro.png}
+				\caption{Training}
+			\end{subfigure}
+			\begin{subfigure}[b]{0.55\textwidth}
+				\includegraphics[scale=1]{images/testing_intro.png}
+				\caption{Testing}
+			\end{subfigure}
+			\caption{Training and testing in machine learning}
+			\label{fig:machine_learning_intro}
+		\end{figure}				
+		
+		
+		\subsubsection{Nomenclature}
+			\begin{itemize} 
+				\item Training
+				\item Testing
+				\item Validation
+			\end{itemize}				
+		
 		\subsection{Evaluation Criteria}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
