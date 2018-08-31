@@ -355,15 +355,16 @@ In this chapter we explain the theoretical concepts relevant to this thesis. We 
 		\end{figure}				
 		
 		
-		\subsubsection{Nomenclature}
+		\subsubsection{Terminology}
 			\begin{itemize} 
-				\item Training
-				\item Testing
-				\item Validation
+				\item \textbf{Training} is changing the model's parameters based on the model's output. Training is also referred to as optimization. When training data is annotated, we speak of supervised training. 
+				\item \textbf{Testing} is assigning a score to a trained model based on annotated testing data. The score is typically by an evaluation criteria and is independent of the model itself. 
+				\item \textbf{Validation} is a form of testing, so it assigns a score to a trained model. Validation is needed when we want to choose the best model among some trained candidate models based on their testing performance. Since changing a parameter of the algorithm (in this case the whole model) based on the output is equivalent to training by definition, we need an independent data set to compute the final score of the algorithm, i.e. validation data. 
 			\end{itemize}				
 		
-		\subsection{Evaluation Criteria}
-
+		\subsubsection{Evaluation Criteria: IoU@p-mAP}
+		  The chosen criteria is called Intersection over Union at $p$ mean Average Precision. It makes the assumption that the object detection algorithm outputs a bounding box 
+			This is not necessarily the best criteria to evaluate the newly developed method to estimate bubble spectra in water.  
 
 
 

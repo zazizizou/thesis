@@ -9,12 +9,12 @@
 \BOOKMARK [2][-]{subsection.2.2.5}{Orientation and Structure Tensor}{section.2.2}% 9
 \BOOKMARK [1][-]{section.2.3}{The object detection problem}{chapter.2}% 10
 \BOOKMARK [2][-]{subsection.2.3.1}{Classification and Machine Learning}{section.2.3}% 11
-\BOOKMARK [2][-]{subsection.2.3.2}{Evaluation Criteria}{section.2.3}% 12
-\BOOKMARK [0][-]{chapter.3}{Related Work}{}% 13
-\BOOKMARK [0][-]{chapter.4}{Experimental Setup}{}% 14
-\BOOKMARK [1][-]{section.4.1}{Requirements}{chapter.4}% 15
-\BOOKMARK [1][-]{section.4.2}{Aquarium}{chapter.4}% 16
-\BOOKMARK [1][-]{section.4.3}{Aeolotron}{chapter.4}% 17
+\BOOKMARK [0][-]{chapter.3}{Related Work}{}% 12
+\BOOKMARK [0][-]{chapter.4}{Experimental Setup}{}% 13
+\BOOKMARK [1][-]{section.4.1}{Requirements}{chapter.4}% 14
+\BOOKMARK [1][-]{section.4.2}{Aquarium}{chapter.4}% 15
+\BOOKMARK [1][-]{section.4.3}{Aeolotron}{chapter.4}% 16
+\BOOKMARK [1][-]{section.4.4}{Calibration}{chapter.4}% 17
 \BOOKMARK [0][-]{chapter.5}{The Algorithm}{}% 18
 \BOOKMARK [1][-]{section.5.1}{BubbleNet}{chapter.5}% 19
 \BOOKMARK [1][-]{section.5.2}{Curvature based}{chapter.5}% 20

@@ -10,13 +10,14 @@
 \contentsline {subsection}{\numberline {2.2.5}Orientation and Structure Tensor}{11}{subsection.2.2.5}
 \contentsline {section}{\numberline {2.3}The object detection problem}{13}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Classification and Machine Learning}{14}{subsection.2.3.1}
-\contentsline {subsubsection}{\nonumberline Nomenclature}{16}{section*.10}
-\contentsline {subsection}{\numberline {2.3.2}Evaluation Criteria}{16}{subsection.2.3.2}
+\contentsline {subsubsection}{\nonumberline Terminology}{16}{section*.10}
+\contentsline {subsubsection}{\nonumberline Evaluation Criteria: IoU@p-mAP}{16}{section*.11}
 \contentsline {chapter}{\numberline {3}Related Work}{17}{chapter.3}
 \contentsline {chapter}{\numberline {4}Experimental Setup}{18}{chapter.4}
 \contentsline {section}{\numberline {4.1}Requirements}{18}{section.4.1}
 \contentsline {section}{\numberline {4.2}Aquarium}{18}{section.4.2}
 \contentsline {section}{\numberline {4.3}Aeolotron}{18}{section.4.3}
+\contentsline {section}{\numberline {4.4}Calibration}{18}{section.4.4}
 \contentsline {chapter}{\numberline {5}The Algorithm}{19}{chapter.5}
 \contentsline {section}{\numberline {5.1}BubbleNet}{19}{section.5.1}
 \contentsline {section}{\numberline {5.2}Curvature based}{19}{section.5.2}

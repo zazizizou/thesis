@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.5.24)  30 AUG 2018 19:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.5.24)  31 AUG 2018 17:14
 entering extended mode
 **./MA.tex
 (MA.tex
@@ -1026,7 +1026,7 @@ Class scrreprt Warning: You are using `\begin{appendix}...\end{appendix}'.
 (scrreprt)              inconsistent.
 (scrreprt)              Because of this, you should remove `\end{appendix}'
 (scrreprt)              and replace `\begin{appendix}' by command
-(scrreprt)              `\appendix' on input line 58.
+(scrreprt)              `\appendix' on input line 59.
 
 [20
 
@@ -1058,24 +1058,24 @@ No file MA.bbl.
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 67.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 67.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 68.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 68.
 (MA.aux (titlepages-eng.aux) (abstracts.aux) (introduction.aux) (theory.aux)
 (related_work.aux) (experimental_setup.aux) (the_algorithm.aux) (discussion.aux
 ) (references.bib.aux) (deposition.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 67.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 67.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 68.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 68.
 Package rerunfilecheck Info: File `MA.out' has not changed.
-(rerunfilecheck)             Checksum: 46D6543A9BADB9B737FBF5E1728A46E8;1486.
+(rerunfilecheck)             Checksum: FDC1724E3AAB55E1F044C1E49ADE2BE8;1471.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 67.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 68.
  ) 
 Here is how much of TeX's memory you used:
- 10665 strings out of 493328
- 168174 string characters out of 3139121
+ 10666 strings out of 493328
+ 168175 string characters out of 3139121
  362685 words of memory out of 3000000
  13853 multiletter control sequences out of 15000+200000
  25434 words of font info for 64 fonts, out of 3000000 for 9000
@@ -1109,9 +1109,9 @@ KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
 e1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
 public/rsfs/rsfs10.pfb>
-Output written on MA.pdf (22 pages, 950315 bytes).
+Output written on MA.pdf (22 pages, 955620 bytes).
 PDF statistics:
- 819 PDF objects out of 1000 (max. 8388607)
- 91 named destinations out of 1000 (max. 500000)
+ 833 PDF objects out of 1000 (max. 8388607)
+ 92 named destinations out of 1000 (max. 500000)
  253 words of extra memory for PDF output out of 10000 (max. 10000000)
 
