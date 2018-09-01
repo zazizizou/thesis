@@ -9,7 +9,10 @@
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Orientation angle using sobel filters for derivation and a Gaussian mask with $\sigma =1$ for smoothing.\relax }}{13}{figure.caption.7}
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Left: Input image. Left: Output of an object detection algorithm dawn as bounding boxes around bubbles\relax }}{14}{figure.caption.8}
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Training and testing in machine learning\relax }}{15}{figure.caption.9}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Definition of intersection over union. Green represents predicted bounding box and red is the ground truth. Areas are drawn in blue\relax }}{16}{figure.caption.12}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Bright field method\relax }}{19}{figure.caption.13}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Bubble detection with the bubble optical imaging instrument\relax }}{20}{figure.caption.14}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

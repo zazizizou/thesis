@@ -363,8 +363,30 @@ In this chapter we explain the theoretical concepts relevant to this thesis. We 
 			\end{itemize}				
 		
 		\subsubsection{Evaluation Criteria: IoU@p-mAP}
-		  The chosen criteria is called Intersection over Union at $p$ mean Average Precision. It makes the assumption that the object detection algorithm outputs a bounding box 
-			This is not necessarily the best criteria to evaluate the newly developed method to estimate bubble spectra in water.  
+		  We evaluate our object detection algorithm using the \textit{intersection over union at $p$ mean average precision} criteria as shown in figure \ref{fig:iou_def}. As the  name suggests, we compute the area of intersection between the predicted and the ground truth bounding box and then divide it by union area of the two boxes. This means that IoU = 1 corresponds to a perfect prediction and IoU = 0 is a complete miss (assuming original images were annotated perfectly). So we choose a threshold $p$, so that IoU $>= p$ or simply IoU@p corresponds to a correct prediction or \textit{true positive}. 		  
+
+		\begin{figure}
+			\centering
+			\includegraphics[scale=.5]{images/iou_def.png}
+			\caption{Definition of intersection over union. Green represents predicted bounding box and red is the ground truth. Areas are drawn in blue}
+			\label{fig:iou_def}
+		\end{figure}				  
+		  
+		  \textit{Mean average precision} is the average of the maximum precision at different recall values, where \textbf{precision} and recall are defined as
+		  \begin{equation}
+		  	precision = \dfrac{True \hspace{.1cm} Positive}{True \hspace{.1cm}  Positive + False \hspace{.1cm}  Positive}
+		  \end{equation}
+		  \begin{equation}
+		  	recall = \dfrac{True \hspace{.1cm}  Positive}{True \hspace{.1cm}  Positive + False \hspace{.1cm}  Negative}
+		  \end{equation}
+
+		From the above definition it becomes clear that precision measures how accurate the predictions are and recall measures how well all the positives can be found.
+		
+		Since our algorithm performs binary classification, \textit{mean average precision} is equivalent to \textit{average precision} in our case. 
+		
+		\textbf{Note:} This criteria only shows how well the algorithms is at detecting bubbles from an image, and does not necessarily make a strong statement on how well the measurement technique as a whole performs at estimating bubble size distributions in a water. 
+		
+		 
 
 
 
