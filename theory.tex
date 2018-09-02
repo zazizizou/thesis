@@ -1,10 +1,76 @@
 \chapter{Theory}
-In this chapter we explain the theoretical concepts relevant to this thesis. We start with explaining the physics behind our method in section \ref{bubble_physics}, in particular how bubbles interact with light. Next, we discuss the mathematical basics necessary for image processing such as Fourier theory and convolution in section \ref{image_processing}. Section \ref{machine_learning} explains the principle behind machine learning that our method relies on for classification. Finally, section \ref{the_object_detection_problem} formally introduces the object detection problem and our chosen criteria for evaluation. 
+In this chapter we explain the theoretical concepts relevant to this thesis. We start with explaining the physics behind our method in section \ref{bubble_physics}, in particular how bubbles interact with light. Next, we discuss the mathematical basics necessary for image processing such as Fourier theory and edge detection in section \ref{image_processing}. Section \ref{machine_learning} explains the principle behind machine learning that our method relies on for classification. Finally, section \ref{the_object_detection_problem} formally introduces the object detection problem and our chosen criteria for evaluation. 
 
 	\section{Bubble physics} \label{bubble_physics}
+		In this section we briefly discuss the physical laws relevant to light-bubble interaction. 
+
+		\subsection{Reflection and Refraction}
+			\textbf{Reflection} is the abrupt change in the direction of propagation of a light beam that strikes the boundary between two different media. Assuming the incoming light ray makes an angle $\theta_1$ with the normal of a plane tangent to the boundary, then the reflected ray makes an angle $\theta_1'$ with this normal and lies in the same plane as the incident ray and the normal. The reflection law is shown in figure \ref{fig:reflection_def} and is described as
+			\begin{equation}
+				\theta = \theta'
+			\end{equation}
+			
+			\begin{figure}
+		    \centering
+		    \begin{subfigure}{0.3\textwidth}
+		        \includegraphics[width=\textwidth]{images/reflection.png}
+		        \caption{Reflection: incident light beam gets reflected with the same angle relative to surface normal.}
+		        \label{fig:reflection_def}
+		    \end{subfigure}
+		    
+		    \begin{subfigure}{0.3\textwidth}
+		        \includegraphics[width=\textwidth]{images/refraction.png}
+		        \caption{Refraction: refracted light beam gets refracted according to Snell's law}	
+		        \label{fig:refracted_def}
+		    \end{subfigure}
+		    
+		    \begin{subfigure}{0.3\textwidth}
+		        \includegraphics[width=\textwidth]{images/total_reflection.png}
+		        \caption{Critical angle is reached when refracted angle is $90^\circ$}	
+		        \label{fig:total_reflected_def}
+		    \end{subfigure}
+	 		\end{figure}	
+			
+			\textbf{Refraction} is the change in direction of propagation of a wave when the wave passes from one medium into another with a different index of refraction. The angle of the reflected beam is shown in figure \ref{fig:refracted_def} is given by Snell's law:
+			\begin{equation}
+				n_1 \sin(\theta_1) = n_2 \sin(\theta_2)
+			\end{equation}
+				Where $n_1$ and $n_2$ are the indices of refraction of the media.
+				
+				\textbf{Total reflection} occurs when angle of the incident beam is larger than the critical angle:
+				\begin{equation}
+					\theta_c = \arcsin\left(\dfrac{n2}{n1}\right)
+				\end{equation}
+			
+		\subsection{Bubble-light interaction}
+			Since the smallest bubble radius is much larger than the wavelength of our light source, diffraction within the air bubble can be neglected and therefore only refraction laws will be considered. Our light source is also much larger than the largest considered bubble radius (see section \ref{experimental_setup}).
+			
+			\begin{figure}
+		    \centering
+		    \begin{subfigure}{0.3\textwidth}
+		    		\centering
+		        \includegraphics[width=\textwidth]{images/bubble_refraction.png}
+		        \caption{Light beams inside a bubble. Light paths are described with refraction and total reflection laws.}
+		        \label{subfig:bubble_refraction}
+		    \end{subfigure}
+		    
+		    \begin{subfigure}{0.3\textwidth}
+		    		\centering
+		        \includegraphics[width=1\textwidth]{images/bubble_simulation.png}
+		        \caption{Simulated bubbles with ray tracing with two different lighting conditions. Left: no ambient light. Right: with ambient light}	
+		        \label{subfig:bubble_simulation}
+		    \end{subfigure}
+		    
+		    \caption{Interaction of a light bubble with light rays}
+		    \label{fig:bubble_physics}
+	 		\end{figure}	
+			
+			Figure \ref{subfig:bubble_refraction} shows refracted rays inside an air bubble. Since the outside medium (water) is more dense, total refraction occurs at the lower bubble boundary. Simulation in figure \ref{subfig:bubble_simulation} also shows that when a bubble is lit from bellow, two peaks can be observed. The lower peak is strong because it arises from total reflection on the lower bubble boundary, whereas the upper peak is much weaker because it is caused by refracted beams only. Peaks' characteristics will be exploited by our proposed algorithm in order to compute depth and radius.
+			
+			
 	
 	\section{Image processing}	\label{image_processing}
-	In the following we represent an image as a two dimensional signal written as a matrix \textit{\textbf{g}}. Therefore, $g_{m,n}$ denotes the pixel (i.e. picture element) at the \textit{m}-th row corresponding to the \textit{n}-th column. The chosen coordinate system is described in figure \ref{fig:coord_sys}. 
+	In the following we represent an image as a two dimensional signal written as a matrix \textit{\textbf{g}}. $g_{m,n}$ denotes the pixel (i.e. picture element) at the \textit{m}-th row corresponding to the \textit{n}-th column. The chosen coordinate system is described in figure \ref{fig:coord_sys}. 
 	
 		\begin{figure}
 		    \centering

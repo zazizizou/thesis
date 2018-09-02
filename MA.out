@@ -1,26 +1,28 @@
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
 \BOOKMARK [0][-]{chapter.2}{Theory}{}% 2
 \BOOKMARK [1][-]{section.2.1}{Bubble physics}{chapter.2}% 3
-\BOOKMARK [1][-]{section.2.2}{Image processing}{chapter.2}% 4
-\BOOKMARK [2][-]{subsection.2.2.1}{Fourier theory}{section.2.2}% 5
-\BOOKMARK [2][-]{subsection.2.2.2}{Convolution}{section.2.2}% 6
-\BOOKMARK [2][-]{subsection.2.2.3}{Smoothing}{section.2.2}% 7
-\BOOKMARK [2][-]{subsection.2.2.4}{Edges and Derivation}{section.2.2}% 8
-\BOOKMARK [2][-]{subsection.2.2.5}{Orientation and Structure Tensor}{section.2.2}% 9
-\BOOKMARK [1][-]{section.2.3}{The object detection problem}{chapter.2}% 10
-\BOOKMARK [2][-]{subsection.2.3.1}{Classification and Machine Learning}{section.2.3}% 11
-\BOOKMARK [0][-]{chapter.3}{Related Work}{}% 12
-\BOOKMARK [1][-]{section.3.1}{Bright field method}{chapter.3}% 13
-\BOOKMARK [1][-]{section.3.2}{Bubble optical imaging instrument}{chapter.3}% 14
-\BOOKMARK [0][-]{chapter.4}{Experimental Setup}{}% 15
-\BOOKMARK [1][-]{section.4.1}{Requirements}{chapter.4}% 16
-\BOOKMARK [1][-]{section.4.2}{Aquarium}{chapter.4}% 17
-\BOOKMARK [1][-]{section.4.3}{Aeolotron}{chapter.4}% 18
-\BOOKMARK [1][-]{section.4.4}{Calibration}{chapter.4}% 19
-\BOOKMARK [0][-]{chapter.5}{The Algorithm}{}% 20
-\BOOKMARK [1][-]{section.5.1}{BubbleNet}{chapter.5}% 21
-\BOOKMARK [1][-]{section.5.2}{Curvature based}{chapter.5}% 22
-\BOOKMARK [1][-]{section.5.3}{Calibration}{chapter.5}% 23
-\BOOKMARK [0][-]{appendix.A}{Lists}{}% 24
-\BOOKMARK [1][-]{section.A.1}{List of Figures}{appendix.A}% 25
-\BOOKMARK [1][-]{section.A.2}{List of Tables}{appendix.A}% 26
+\BOOKMARK [2][-]{subsection.2.1.1}{Reflection and Refraction}{section.2.1}% 4
+\BOOKMARK [2][-]{subsection.2.1.2}{Bubble-light interaction}{section.2.1}% 5
+\BOOKMARK [1][-]{section.2.2}{Image processing}{chapter.2}% 6
+\BOOKMARK [2][-]{subsection.2.2.1}{Fourier theory}{section.2.2}% 7
+\BOOKMARK [2][-]{subsection.2.2.2}{Convolution}{section.2.2}% 8
+\BOOKMARK [2][-]{subsection.2.2.3}{Smoothing}{section.2.2}% 9
+\BOOKMARK [2][-]{subsection.2.2.4}{Edges and Derivation}{section.2.2}% 10
+\BOOKMARK [2][-]{subsection.2.2.5}{Orientation and Structure Tensor}{section.2.2}% 11
+\BOOKMARK [1][-]{section.2.3}{The object detection problem}{chapter.2}% 12
+\BOOKMARK [2][-]{subsection.2.3.1}{Classification and Machine Learning}{section.2.3}% 13
+\BOOKMARK [0][-]{chapter.3}{Related Work}{}% 14
+\BOOKMARK [1][-]{section.3.1}{Bright field method}{chapter.3}% 15
+\BOOKMARK [1][-]{section.3.2}{Bubble optical imaging instrument}{chapter.3}% 16
+\BOOKMARK [0][-]{chapter.4}{Experimental Setup}{}% 17
+\BOOKMARK [1][-]{section.4.1}{Requirements}{chapter.4}% 18
+\BOOKMARK [1][-]{section.4.2}{Aquarium}{chapter.4}% 19
+\BOOKMARK [1][-]{section.4.3}{Aeolotron}{chapter.4}% 20
+\BOOKMARK [1][-]{section.4.4}{Calibration}{chapter.4}% 21
+\BOOKMARK [0][-]{chapter.5}{The Algorithm}{}% 22
+\BOOKMARK [1][-]{section.5.1}{BubbleNet}{chapter.5}% 23
+\BOOKMARK [1][-]{section.5.2}{Curvature based}{chapter.5}% 24
+\BOOKMARK [1][-]{section.5.3}{Calibration}{chapter.5}% 25
+\BOOKMARK [0][-]{appendix.A}{Lists}{}% 26
+\BOOKMARK [1][-]{section.A.1}{List of Figures}{appendix.A}% 27
+\BOOKMARK [1][-]{section.A.2}{List of Tables}{appendix.A}% 28
