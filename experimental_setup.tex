@@ -1,12 +1,64 @@
 \chapter{Experimental Setup}\label{experimental_setup}
-	\section{Requirements}
-		In an attempt to improve on previous works (cite Leonie, section \ref{related_work}), our method must fulfill following criteria:
+	\section{Requirements}\label{requirements}
+		In order to improve on previous works (cite Leonie, section \ref{related_work}), we require that our method fulfills following criteria:
 	\begin{itemize}
-		\item \textbf{Minimal distance to water surface}: This requirement defined our method
-		\item \textbf{Consistent image results}. 
-	\end{itemize}			
-		
+		\item \textbf{R1: Minimal distance to water surface}: This requirement defined our experimental setup. As shown in figures \ref{fig:aquarium_setup} and \ref{fig:aelotron_setup}, lighting bubbles from below gives more freedom for the camera to be closer to the water surface. This is more apparent when the camera faces the surface with a certain angle. 
+		\item \textbf{R2: Consistent image results}: Bubbles can look very different under different lighting conditions. For instance, bubbles might appear as dark disks or bright rings (chapter \ref{related_work}) depending how they are lit. We therefore require that the angle between camera and light source is always constant. This requirement guarantees a consistent pattern for bubbles across different water tanks.
+		\item \textbf{R3: Images must contain all possibly retrievable information}. From our simulation (figure \ref{subfig:bubble_simulation}) we know that bubbles are characterized by two peaks. Both of these – especially the upper, dimmer one – are required to be visible. This requires the camera to have a high signal-to-noise ratio and/or the light source to be very bright. 
+	\end{itemize}	
 		
 	\section{Aquarium}
+		\begin{figure}
+			\centering
+			\includegraphics[scale=.4]{images/aquarium_setup}
+			\caption{Experimental setup illustrating the $90^\circ$ angle between the light source (LED array) and the camera. Note how LEDs are also oriented towards the camera's field of view to maximize the amount of light reaching the camera and therefore reduce noise.}
+			\label{fig:aquarium_setup}
+		\end{figure}			
+		
+		The goal of this setup is to capture bubble images that we can use to prototype our algorithm, so we built the experiment in a transparent $1m \times 1m \times 1m$ water tank as shown in figure \ref{fig:aquarium_setup} where we could change most of the parameters such as lighting angle, camera and bubble concentration independently from each other. 
+		
+		In order to satisfy requirements in section \ref{requirements}, we opted for the following parameters (also summarized in table \ref{tab:aquarium_param})
+		
+		\begin{itemize}
+		\item \textbf{Camera} We chose the Basler A1920 mainly because of its high signal-to-noise ratio, and therefore fulfilling requirement R3 given enough light. Its main drawback is its relatively low frame rate at the highest possible resolution, which making bubble tracking more difficult, which in turn makes radius calibration more difficult (see section \ref{calibration_setup}. Compared to an available high-speed camera with comparable maximum resolution, (PCO Dimax, 1,2kHz at 2000x2000 resolution) our chosen camera also has a smaller sensor. This means that the magnification factor is higher and therefore smaller bubbles can be better detected as well. 
+		
+		\item \textbf{Lens}
+		\item \textbf{Exposure time}
+		\item \textbf{F-number}
+		
+		\end{itemize}
+		
+		\begin{table}
+			\centering
+		
+			\begin{tabular}{|c|c|}
+			\hline 
+			Camera & Basler A1920-155um \\ 
+			\hline 
+			Focal length & 100 mm \\ 
+			\hline 
+			F-number & 5,6 \\ 
+			\hline 
+			Exposure time & 100 us \\ 
+			\hline 
+			Resolution [px] &1920 x 1200 \\
+			\hline 
+			Sensor size & 11.3 mm x 7.1 mm \\
+			hline
+			Air flow & 1,8 LPM \\ 
+			\hline 
+			Magnification & 1 px = 30 um \\ 
+			\hline 
+			Framerate & 100 Hz \\ 
+			\hline 
+			\end{tabular} 
+			
+			\caption{Parameters for aquarium setup}
+			\label{tab:aquarium_param}
+
+		\end{table}
+		
 	\section{Aeolotron}
-	\section{Calibration}
+	
+	
+	\section{Calibration}\label{calibration_setup}
