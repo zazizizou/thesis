@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.5.24)  3 SEP 2018 14:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.5.24)  5 SEP 2018 15:14
 entering extended mode
 **./MA.tex
 (MA.tex
@@ -832,6 +832,12 @@ Package natbib Warning: Citation `loremIpsum' on page 3 undefined on input line
 
  (introduction.tex
 chapter 1.
+
+LaTeX Warning: Reference `theory' on page 5 undefined on input line 8.
+
+
+LaTeX Warning: Reference `relevant_work' on page 5 undefined on input line 8.
+
 ) [5
 
 
@@ -840,7 +846,7 @@ chapter 1.
 
  (theory.tex
 chapter 2.
-<images/reflection.png, id=179, 134.00063pt x 80.80188pt>
+<images/reflection.png, id=182, 134.00063pt x 80.80188pt>
 File: images/reflection.png Graphic file (type png)
 
 <use images/reflection.png>
@@ -856,7 +862,7 @@ Underfull \hbox (badness 5667) in paragraph at lines 17--17
 \T1/cmr/m/n/10.95 light beam gets re-
  []
 
-<images/refraction.png, id=181, 139.01938pt x 120.45pt>
+<images/refraction.png, id=184, 139.01938pt x 120.45pt>
 File: images/refraction.png Graphic file (type png)
 
 <use images/refraction.png>
@@ -877,7 +883,7 @@ Underfull \hbox (badness 6526) in paragraph at lines 23--23
 \T1/cmr/m/n/10.95 fracted ac-cord-ing to
  []
 
-<images/total_reflection.png, id=182, 139.01938pt x 120.45pt>
+<images/total_reflection.png, id=185, 139.01938pt x 120.45pt>
 File: images/total_reflection.png Graphic file (type png)
 
 <use images/total_reflection.png>
@@ -889,14 +895,14 @@ Package pdftex.def Info: images/total_reflection.png used on input line 28.
 
 ] [7 <./images/reflection.png> <./images/refraction.png> <./images/total_reflec
 tion.png>]
-<images/bubble_refraction.png, id=209, 134.00063pt x 80.80188pt>
+<images/bubble_refraction.png, id=211, 134.00063pt x 80.80188pt>
 File: images/bubble_refraction.png Graphic file (type png)
 
 <use images/bubble_refraction.png>
 Package pdftex.def Info: images/bubble_refraction.png used on input line 52.
 (pdftex.def)             Requested size: 128.03871pt x 77.20642pt.
 
-<images/bubble_simulation.png, id=210, 499.8675pt x 253.94875pt>
+<images/bubble_simulation.png, id=212, 499.8675pt x 253.94875pt>
 File: images/bubble_simulation.png Graphic file (type png)
 
 <use images/bubble_simulation.png>
@@ -907,7 +913,7 @@ Underfull \hbox (badness 1210) in paragraph at lines 60--60
 \T1/cmr/m/n/10.95 ray trac-ing with two
  []
 
-<images/coord_sys.png, id=214, 332.24126pt x 266.9975pt>
+<images/coord_sys.png, id=216, 332.24126pt x 266.9975pt>
 File: images/coord_sys.png Graphic file (type png)
 
 <use images/coord_sys.png>
@@ -915,7 +921,7 @@ Package pdftex.def Info: images/coord_sys.png used on input line 77.
 (pdftex.def)             Requested size: 132.89413pt x 106.79709pt.
  [8 <./images/bubble_refraction.png> <./images/bubble_simulation.png>] [9 <./im
 ages/coord_sys.png>]
-<graphs/gauss_sigma_2.png, id=238, 433.62pt x 289.08pt>
+<graphs/gauss_sigma_2.png, id=240, 433.62pt x 289.08pt>
 File: graphs/gauss_sigma_2.png Graphic file (type png)
 
 <use graphs/gauss_sigma_2.png>
@@ -926,7 +932,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 157--157
 [][][]|\T1/cmr/m/n/10.95 1D Gaus-sian sig-nal
  []
 
-<images/gauss_sigma_2.png, id=239, 433.62pt x 289.08pt>
+<images/gauss_sigma_2.png, id=241, 433.62pt x 289.08pt>
 File: images/gauss_sigma_2.png Graphic file (type png)
 
 <use images/gauss_sigma_2.png>
@@ -937,21 +943,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 162--162
 [][][]|\T1/cmr/m/n/10.95 2D Gaus-sian sig-nal
  []
 
-<images/lena_orig.png, id=240, 289.08pt x 282.05376pt>
+<images/lena_orig.png, id=242, 289.08pt x 282.05376pt>
 File: images/lena_orig.png Graphic file (type png)
 
 <use images/lena_orig.png>
 Package pdftex.def Info: images/lena_orig.png used on input line 166.
 (pdftex.def)             Requested size: 128.03871pt x 124.92606pt.
 
-<images/lena_smooth.png, id=241, 289.08pt x 282.05376pt>
+<images/lena_smooth.png, id=243, 289.08pt x 282.05376pt>
 File: images/lena_smooth.png Graphic file (type png)
 
 <use images/lena_smooth.png>
 Package pdftex.def Info: images/lena_smooth.png used on input line 172.
 (pdftex.def)             Requested size: 128.03871pt x 124.92606pt.
 
-<graphs/edges_intro.png, id=242, 428.60126pt x 355.3275pt>
+<graphs/edges_intro.png, id=244, 428.60126pt x 355.3275pt>
 File: graphs/edges_intro.png Graphic file (type png)
 
 <use graphs/edges_intro.png>
@@ -977,14 +983,14 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 221.
 
-<images/lena_orig_sobel.png, id=274, 452.69125pt x 231.86626pt>
+<images/lena_orig_sobel.png, id=276, 452.69125pt x 231.86626pt>
 File: images/lena_orig_sobel.png Graphic file (type png)
 
 <use images/lena_orig_sobel.png>
 Package pdftex.def Info: images/lena_orig_sobel.png used on input line 272.
 (pdftex.def)             Requested size: 226.34506pt x 115.93283pt.
 
-<images/structure_tensor_intro.png, id=275, 120.45pt x 75.28125pt>
+<images/structure_tensor_intro.png, id=277, 120.45pt x 75.28125pt>
 File: images/structure_tensor_intro.png Graphic file (type png)
 
 <use images/structure_tensor_intro.png>
@@ -993,7 +999,7 @@ Package pdftex.def Info: images/structure_tensor_intro.png used on input line 2
 (pdftex.def)             Requested size: 120.44969pt x 75.28105pt.
  [13] [14 <./images/lena_orig_sobel.png> <./images/structure_tensor_intro.png>]
 
-<images/structure_tensor_demo.png, id=308, 436.63126pt x 414.54875pt>
+<images/structure_tensor_demo.png, id=310, 436.63126pt x 414.54875pt>
 File: images/structure_tensor_demo.png Graphic file (type png)
 
 <use images/structure_tensor_demo.png>
@@ -1001,7 +1007,7 @@ Package pdftex.def Info: images/structure_tensor_demo.png used on input line 38
 5.
 (pdftex.def)             Requested size: 174.6494pt x 165.81656pt.
 
-<images/object_detection_intro.png, id=310, 403.00563pt x 139.52126pt>
+<images/object_detection_intro.png, id=312, 403.00563pt x 139.52126pt>
 File: images/object_detection_intro.png Graphic file (type png)
 
 <use images/object_detection_intro.png>
@@ -1018,7 +1024,7 @@ Package natbib Warning: Citation `YOLO' on page 15 undefined on input line 402.
 
 
 [15] [16 <./images/structure_tensor_demo.png> <./images/object_detection_intro.
-png>] <images/training_intro.png, id=332, 392.46625pt x 175.65625pt>
+png>] <images/training_intro.png, id=334, 392.46625pt x 175.65625pt>
 File: images/training_intro.png Graphic file (type png)
 
 <use images/training_intro.png>
@@ -1029,7 +1035,7 @@ Overfull \hbox (157.72871pt too wide) in paragraph at lines 412--413
 [][] 
  []
 
-<images/testing_intro.png, id=333, 365.365pt x 132.495pt>
+<images/testing_intro.png, id=335, 365.365pt x 132.495pt>
 File: images/testing_intro.png Graphic file (type png)
 
 <use images/testing_intro.png>
@@ -1041,7 +1047,7 @@ Overfull \hbox (130.62755pt too wide) in paragraph at lines 416--417
  []
 
 [17] [18 <./images/training_intro.png> <./images/testing_intro.png>]
-<images/iou_def.png, id=345, 534.99875pt x 257.96375pt>
+<images/iou_def.png, id=347, 534.99875pt x 257.96375pt>
 File: images/iou_def.png Graphic file (type png)
 
 <use images/iou_def.png>
@@ -1060,7 +1066,7 @@ See the caption package documentation for explanation.
 LaTeX Warning: Reference `fig:bright_field' on page 20 undefined on input line 
 7.
 
-<images/bright_field_method.png, id=358, 899.36pt x 349.305pt>
+<images/bright_field_method.png, id=360, 899.36pt x 349.305pt>
 File: images/bright_field_method.png Graphic file (type png)
 
 <use images/bright_field_method.png>
@@ -1071,14 +1077,14 @@ Overfull \hbox (125.00107pt too wide) in paragraph at lines 12--13
 [][] 
  []
 
-<images/bright_field_result.png, id=359, 233.87375pt x 143.53625pt>
+<images/bright_field_result.png, id=361, 233.87375pt x 143.53625pt>
 File: images/bright_field_result.png Graphic file (type png)
 
 <use images/bright_field_result.png>
 Package pdftex.def Info: images/bright_field_result.png used on input line 17.
 (pdftex.def)             Requested size: 233.87315pt x 143.53589pt.
 
-<images/bright_field_calibration_target.png, id=360, 642.4pt x 481.8pt>
+<images/bright_field_calibration_target.png, id=362, 642.4pt x 481.8pt>
 File: images/bright_field_calibration_target.png Graphic file (type png)
 
 <use images/bright_field_calibration_target.png>
@@ -1091,7 +1097,7 @@ ut line 22.
 
 ] [21 <./images/bright_field_method.png> <./images/bright_field_result.png> <./
 images/bright_field_calibration_target.png>]
-<images/bubble_optical_imaging_instrument.png, id=376, 309.155pt x 363.3575pt>
+<images/bubble_optical_imaging_instrument.png, id=378, 309.155pt x 363.3575pt>
 File: images/bubble_optical_imaging_instrument.png Graphic file (type png)
 
 <use images/bubble_optical_imaging_instrument.png>
@@ -1099,7 +1105,7 @@ Package pdftex.def Info: images/bubble_optical_imaging_instrument.png used on i
 nput line 44.
 (pdftex.def)             Requested size: 123.6598pt x 145.34041pt.
 
-<images/sample_result_optical_imaging_instrument.png, id=377, 359.3425pt x 216.
+<images/sample_result_optical_imaging_instrument.png, id=379, 359.3425pt x 216.
 81pt>
 File: images/sample_result_optical_imaging_instrument.png Graphic file (type pn
 g)
@@ -1199,18 +1205,18 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 68.
  ) 
 Here is how much of TeX's memory you used:
- 10765 strings out of 493328
- 170826 string characters out of 3139121
+ 10767 strings out of 493328
+ 170849 string characters out of 3139121
  364911 words of memory out of 3000000
- 13922 multiletter control sequences out of 15000+200000
+ 13924 multiletter control sequences out of 15000+200000
  25434 words of font info for 64 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  49i,10n,80p,8815b,544s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\windis\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
 \ecti1200.pk> <C:\Users\windis\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
 n\ec\dpi600\ecbi1200.pk> <C:\Users\windis\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
-our\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\windis\AppData\Local\MiKTeX\2.9\f
-onts\pk\ljfour\jknappen\ec\dpi600\ecsx1440.pk> <C:\Users\windis\AppData\Local\M
+our\jknappen\ec\dpi600\ecsx1440.pk> <C:\Users\windis\AppData\Local\MiKTeX\2.9\f
+onts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\windis\AppData\Local\M
 iKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\windis\AppD
 ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1200.pk> <C:\Users\
 windis\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx2074.pk>
@@ -1234,9 +1240,9 @@ KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
 e1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
 public/rsfs/rsfs10.pfb>
-Output written on MA.pdf (27 pages, 1243452 bytes).
+Output written on MA.pdf (27 pages, 1245255 bytes).
 PDF statistics:
- 948 PDF objects out of 1000 (max. 8388607)
+ 950 PDF objects out of 1000 (max. 8388607)
  111 named destinations out of 1000 (max. 500000)
  340 words of extra memory for PDF output out of 10000 (max. 10000000)
 
