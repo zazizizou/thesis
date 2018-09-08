@@ -20,7 +20,7 @@
 \contentsline {chapter}{\numberline {4}Experimental Setup}{23}{chapter.4}
 \contentsline {section}{\numberline {4.1}Requirements}{23}{section.4.1}
 \contentsline {section}{\numberline {4.2}Aquarium Setup}{23}{section.4.2}
-\contentsline {section}{\numberline {4.3}Aeolotron Setup}{24}{section.4.3}
+\contentsline {section}{\numberline {4.3}Aeolotron Setup}{25}{section.4.3}
 \contentsline {section}{\numberline {4.4}Measurement result}{25}{section.4.4}
 \contentsline {section}{\numberline {4.5}Calibration}{25}{section.4.5}
 \contentsline {chapter}{\numberline {5}The Algorithm}{27}{chapter.5}
