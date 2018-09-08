@@ -7,25 +7,25 @@
 		\item \textbf{R3: Images must contain all possibly retrievable information}. From our simulation (figure \ref{subfig:bubble_simulation}) we know that bubbles are characterized by two peaks. Both of these – especially the upper, dimmer one – are required to be visible. This requires the camera to have a high signal-to-noise ratio and/or the light source to be very bright. 
 	\end{itemize}	
 		
-	\section{Aquarium}
+	\section{Aquarium Setup}
 		\begin{figure}
 			\centering
-			\includegraphics[scale=.4]{images/aquarium_setup}
+			\includegraphics[scale=1]{images/aquarium_setup}
 			\caption{Experimental setup illustrating the $90^\circ$ angle between the light source (LED array) and the camera. Note how LEDs are also oriented towards the camera's field of view to maximize the amount of light reaching the camera and therefore reduce noise.}
 			\label{fig:aquarium_setup}
 		\end{figure}			
 		
-		The goal of this setup is to capture bubble images that we can use to prototype our algorithm, so we built the experiment in a transparent $1m \times 1m \times 1m$ water tank as shown in figure \ref{fig:aquarium_setup} where we could change most of the parameters such as lighting angle, camera and bubble concentration independently from each other. 
+		The goal of this setup is to capture bubble images that can be used to prototype our algorithm, so we built the experiment in a transparent $1m \times 1m \times 1m$ water tank as shown in figure \ref{fig:aquarium_setup} where we could change most of the parameters such as lighting angle, camera and bubble concentration independently from each other. Measurement results are discussed in next chapter and image analysis is discussed in chapter \ref{the_algorithm}.
 		
 		In order to satisfy requirements in section \ref{requirements}, we opted for the following parameters (also summarized in table \ref{tab:aquarium_param})
 		
 		\begin{itemize}
-		\item \textbf{Camera} We chose the Basler A1920 mainly because of its high signal-to-noise ratio, and therefore fulfilling requirement R3 given enough light. Its main drawback is its relatively low frame rate at the highest possible resolution, which making bubble tracking more difficult, which in turn makes radius calibration more difficult (see section \ref{calibration_setup}. Compared to an available high-speed camera with comparable maximum resolution, (PCO Dimax, 1,2kHz at 2000x2000 resolution) our chosen camera also has a smaller sensor. This means that the magnification factor is higher and therefore smaller bubbles can be better detected as well. 
+		\item \textbf{Camera} We chose the Basler A1920 mainly because of its high signal-to-noise ratio, and therefore fulfilling requirement R3 given enough light. Its main drawback is its relatively low frame rate at the highest possible resolution, which making bubble tracking more difficult, which in turn makes radius calibration more difficult (see section \ref{calibration_setup}. Compared to an available high-speed camera with comparable maximum resolution, (PCO Dimax, 1,2kHz at $2000 \times 2000$ resolution) our chosen camera also has a smaller sensor. This means that the magnification factor is higher and therefore smaller bubbles can be better detected as well. 
 		
-		\item \textbf{Lens}
-		\item \textbf{Exposure time}
-		\item \textbf{F-number}
-		
+		\item \textbf{Lens} A 100 mm macro lens was used in this setup. The large focal length yields a large magnification, which is desired.
+		\item \textbf{Exposure time} This value depends on the maximum speed of bubbles. In this setup, no waves are present, so a bubble's speed is proportional to its radius. 
+		\item \textbf{F-number} This value has been chosen such that the depth of field is a few centimeters large (see also section \ref{calibration_setup})		
+		\item \textbf{Air flow} Bubbles were produced by an bubble generator. Bubble radii therefore depend on the amount of air flowing through the bubble generator (measured in liter per minute or LPM).
 		\end{itemize}
 		
 		\begin{table}
@@ -44,13 +44,15 @@
 			Resolution [px] &1920 x 1200 \\
 			\hline 
 			Sensor size & 11.3 mm x 7.1 mm \\
-			hline
+			\hline
 			Air flow & 1,8 LPM \\ 
 			\hline 
-			Magnification & 1 px = 30 um \\ 
+			Magnification factor & 30 um/px \\ 
 			\hline 
 			Framerate & 100 Hz \\ 
 			\hline 
+			Resulting field of view & 5,7cm x 3,6 cm \\
+			\hline
 			\end{tabular} 
 			
 			\caption{Parameters for aquarium setup}
@@ -58,7 +60,66 @@
 
 		\end{table}
 		
-	\section{Aeolotron}
+	\section{Aeolotron Setup}
+		The Aeolotron is an experimental annular wind-wave facility with a diameter of about 10m and a width of about 60cm. Typical water height is 1m. Four wind engines generate reference wind speeds of up to 14m/s, enough to generate breaking waves that in turn produce air bubbles. Figure \ref{fig:aeolotron_setup} shows a schematic view of the wind facility as well as the experimental setup.
+		
+		The goal of this setup is to apply the knowledge gained from the previous setup on bubble measurements emerging from breaking waves, so we reproduced the setup from the aquarium at the Aeolotron, while keeping as many unchanged parameters as possible (e.g. same camera, same light source same lens etc...). 
+		
+	We also used a bubble generator first, to verify that the algorithm developed for the previous setup still works with measurements from the Aeolotron setup. Some parameters such as focus distance and angle between the light source and bubbles were inevitably changed, which means we needed to calibrate the depth of field again. 
+		
+		\begin{figure}
+			\centering
+			\begin{subfigure}[b]{.55\textwidth}
+				\centering
+				\includegraphics[scale=0.1]{images/aeolotron-gesamt.jpg}
+				\caption{Aeolotron wind wave facility}
+			\end{subfigure}
+
+			\begin{subfigure}[b]{.55\textwidth}		
+				\centering
+				\includegraphics[scale=.8]{images/aeolotron_setup.png}
+				\caption{Experimental setup}
+			\end{subfigure}
+			
+			\caption{Aeolotron facility and experimental setup}
+			\label{fig:aeolotron_setup}
+		\end{figure}
 	
-	
+		
+		
+	\section{Measurement result}\label{measurement_result}
 	\section{Calibration}\label{calibration_setup}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
