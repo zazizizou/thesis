@@ -17,5 +17,8 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Experimental setup illustrating the $90^\circ $ angle between the light source (LED array) and the camera. Note how LEDs are also oriented towards the camera's field of view to maximize the amount of light reaching the camera and therefore reduce noise.\relax }}{24}{figure.caption.17}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Aeolotron facility and experimental setup\relax }}{26}{figure.caption.19}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Sample image captured with aquarium setup for a low bubble concentration. Note how bubbles are characterized by one bright peak at the bottom and one dimmer upper peak, as expected from simulation.\relax }}{27}{figure.caption.20}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Sample image captured with aquarium setup for a high bubble concentration. The upper peak is not visible anymore. However, bubble curvatures are more recognizable, even for smaller bubbles\relax }}{28}{figure.caption.21}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Image captured with Aeolotron setup. Bubbles were created by a bubble generator. Exposure time = , Gamma = \relax }}{29}{figure.caption.22}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

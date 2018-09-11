@@ -8,6 +8,7 @@
 	\end{itemize}	
 		
 	\section{Aquarium Setup}
+	%TODO 2 more columns for different setups
 		\begin{figure}
 			\centering
 			\includegraphics[scale=1]{images/aquarium_setup}
@@ -20,7 +21,7 @@
 		In order to satisfy requirements in section \ref{requirements}, we opted for the following parameters (also summarized in table \ref{tab:aquarium_param})
 		
 		\begin{itemize}
-		\item \textbf{Camera} We chose the Basler A1920 mainly because of its high signal-to-noise ratio, and therefore fulfilling requirement R3 given enough light. Its main drawback is its relatively low frame rate at the highest possible resolution, which making bubble tracking more difficult, which in turn makes radius calibration more difficult (see section \ref{calibration_setup}. Compared to an available high-speed camera with comparable maximum resolution, (PCO Dimax, 1,2kHz at $2000 \times 2000$ resolution) our chosen camera also has a smaller sensor. This means that the magnification factor is higher and therefore smaller bubbles can be better detected as well. 
+		\item \textbf{Camera} We chose the Basler A1920 mainly because of its high signal-to-noise ratio, and therefore fulfilling requirement R3 given enough light. Its main drawback is its relatively low frame rate at the highest possible resolution, which makes bubble tracking more difficult, which in turn makes radius calibration more difficult (see section \ref{calibration_setup}. Compared to an available high-speed camera with comparable maximum resolution, (PCO Dimax, 1,2kHz at $2000 \times 2000$ resolution) our chosen camera also has a smaller sensor. This means that the magnification factor is higher and therefore smaller bubbles can be better detected.
 		
 		\item \textbf{Lens} A 100 mm macro lens was used in this setup. The large focal length yields a large magnification, which is desired.
 		\item \textbf{Exposure time} This value depends on the maximum speed of bubbles. In this setup, no waves are present, so a bubble's speed is proportional to its radius. 
@@ -64,6 +65,7 @@
 		\end{table}
 		
 	\section{Aeolotron Setup}
+		%TODO Table as 4.1
 		The Aeolotron is an experimental annular wind-wave facility with a diameter of about 10m and a width of about 60cm. Typical water height is 1m. Four wind engines generate reference wind speeds of up to 14m/s, enough to generate breaking waves that in turn produce air bubbles. Figure \ref{fig:aeolotron_setup} shows a schematic view of the wind facility as well as the experimental setup.
 		
 		The goal of this setup is to apply the knowledge gained from the previous setup on bubble measurements emerging from breaking waves, so we reproduced the setup from the aquarium at the Aeolotron, while keeping as many unchanged parameters as possible (e.g. same camera, same light source same lens etc...). 
@@ -91,6 +93,53 @@
 		
 		
 	\section{Measurement result}\label{measurement_result}
+		\begin{figure}			
+			\begin{subfigure}[b]{.55\textwidth}
+				\centering
+				\includegraphics[scale=0.8]{images/aquarium_result_sat.png}
+				\caption{Exposure time = 100us, Gamma = 0,6. Both peaks are dimmer than in figure \ref{subfig:aquarium_result_sat}}
+			\end{subfigure}
+			
+			\begin{subfigure}[b]{.55\textwidth}
+				\centering
+				\includegraphics[scale=0.3]{images/aquarium_result_surf.png}
+				\caption{Exposure time = $200 \mu s$, Gamma = 1. Lower peak is saturated but upper peak can be clearly seen}
+				\label{subfig:aquarium_result_sat}
+			\end{subfigure}
+			\caption{Sample image captured with aquarium setup for a low bubble concentration. Note how bubbles are characterized by one bright peak at the bottom and one dimmer upper peak, as expected from simulation.}			
+			\label{fig:aqauarium_result}
+		\end{figure}
+					
+					
+		\begin{figure}
+			\includegraphics[scale=0.3]{images/aquarium_result_high_conc.jpg}
+			\caption{Sample image captured with aquarium setup for a high bubble concentration. The upper peak is not visible anymore. However, bubble curvatures are more recognizable, even for smaller bubbles}
+			\label{fig:aquarium_result_high_conc}
+		\end{figure}							
+					
+			\begin{figure}
+				\centering
+				\includegraphics[scale=0.3]{images/aeolotron_result.png}
+				\caption{Image captured with Aeolotron setup. Bubbles were created by a bubble generator.  Exposure time = , Gamma = }
+								
+				\label{fig:aeolotron_result}
+			\end{figure}
+
+			Figures \ref{fig:aqauarium_result}, \ref{fig:aquarium_result_high_conc} and \ref{fig:aeolotron_result} show different images captured using a bubble generator in two different water tanks. For low bubble concentrations, images look very similar across the two different setups. 
+			
+			However,  
+			
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	\section{Calibration}\label{calibration_setup}
 
