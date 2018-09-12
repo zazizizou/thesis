@@ -20,10 +20,13 @@
 \BOOKMARK [1][-]{section.4.3}{Aeolotron Setup}{chapter.4}% 20
 \BOOKMARK [1][-]{section.4.4}{Measurement result}{chapter.4}% 21
 \BOOKMARK [1][-]{section.4.5}{Calibration}{chapter.4}% 22
-\BOOKMARK [0][-]{chapter.5}{The Algorithm}{}% 23
-\BOOKMARK [1][-]{section.5.1}{BubbleNet}{chapter.5}% 24
-\BOOKMARK [1][-]{section.5.2}{Curvature based}{chapter.5}% 25
-\BOOKMARK [1][-]{section.5.3}{Calibration}{chapter.5}% 26
-\BOOKMARK [0][-]{appendix.A}{Lists}{}% 27
-\BOOKMARK [1][-]{section.A.1}{List of Figures}{appendix.A}% 28
-\BOOKMARK [1][-]{section.A.2}{List of Tables}{appendix.A}% 29
+\BOOKMARK [2][-]{subsection.4.5.1}{Depth of Field}{section.4.5}% 23
+\BOOKMARK [2][-]{subsection.4.5.2}{Radius}{section.4.5}% 24
+\BOOKMARK [0][-]{chapter.5}{The Algorithm}{}% 25
+\BOOKMARK [1][-]{section.5.1}{Motivation}{chapter.5}% 26
+\BOOKMARK [1][-]{section.5.2}{BubbleNet}{chapter.5}% 27
+\BOOKMARK [1][-]{section.5.3}{BubbleCurves}{chapter.5}% 28
+\BOOKMARK [1][-]{section.5.4}{Calibration}{chapter.5}% 29
+\BOOKMARK [0][-]{appendix.A}{Lists}{}% 30
+\BOOKMARK [1][-]{section.A.1}{List of Figures}{appendix.A}% 31
+\BOOKMARK [1][-]{section.A.2}{List of Tables}{appendix.A}% 32

@@ -1,4 +1,16 @@
 \chapter{The Algorithm} \label{the_algorithm}
-	\section{BubbleNet}
-	\section{Curvature based}
-	\section{Calibration}
+	In this chapter we discuss two important object detection algorithms that can classify bubbles in an image and estimate its radius. The first algorithm, which we refer to as \textit{BubbleNet} is meant to work for small bubble concentration (e.g. figure \ref{fig:aqauarium_result}) whereas the second algorithm, referred to as \textit{BubbleCurves} is better suited for bubble images with very high concentrations (figure \ref{fig:aquarium_result_high_conc}).
+		
+	\section{Motivation}
+		We mentioned in section \ref{the_object_detection_problem} that the state of the art object detection algorithms are based on deep learning algorithms such as Faster R-CNN (cite frcnn Leute) and YOLO (Cite yolo Leute). Training these algorithms with our data (simulated and real) did not yield good results. Training a pre-trained R-CNN algorithm (i.e. transfer learning) is not meaningful because most pre-trained models have large anchors (or rank regions boxes) and are fine tuned to work for real world photographs that contain typical objects such as humans, cars and pets. 
+		
+		This led us to the conclusion that such algorithms are not well suited for detecting small and dense objects (images with a low bubble concentration are also considered to have dense objects, since they contain several hundred bubble instances per image that are very close to each other). This suspicion was confirmed by (cite Zhenhua Chen et Al.) who also added that these algorithms not only rely on a large amount of training data, but also require the data to be rich in features, which does not apply to our data. 
+		
+	Interestingly though, scaling down anchors and training a Faster R-CNN algorithm (cite Projektpraktikum?)  from scratch did perform better, with an IoU@0.5mAP of 68\%. This is however far from ideal, so a developing a different approach was necessary to achieve better results. 
+		
+		
+		
+		
+	\section{BubbleNet}\label{BubbleNet}
+	\section{BubbleCurves}
+	\section{Calibration}\label{calibration_algorithm}

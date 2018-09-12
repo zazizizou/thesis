@@ -21,6 +21,7 @@
 		In order to satisfy requirements in section \ref{requirements}, we opted for the following parameters (also summarized in table \ref{tab:aquarium_param})
 		
 		\begin{itemize}
+		%TODO convert list to text. 
 		\item \textbf{Camera} We chose the Basler A1920 mainly because of its high signal-to-noise ratio, and therefore fulfilling requirement R3 given enough light. Its main drawback is its relatively low frame rate at the highest possible resolution, which makes bubble tracking more difficult, which in turn makes radius calibration more difficult (see section \ref{calibration_setup}. Compared to an available high-speed camera with comparable maximum resolution, (PCO Dimax, 1,2kHz at $2000 \times 2000$ resolution) our chosen camera also has a smaller sensor. This means that the magnification factor is higher and therefore smaller bubbles can be better detected.
 		
 		\item \textbf{Lens} A 100 mm macro lens was used in this setup. The large focal length yields a large magnification, which is desired.
@@ -125,24 +126,72 @@
 				\label{fig:aeolotron_result}
 			\end{figure}
 
-			Figures \ref{fig:aqauarium_result}, \ref{fig:aquarium_result_high_conc} and \ref{fig:aeolotron_result} show different images captured using a bubble generator in two different water tanks. For low bubble concentrations, images look very similar across the two different setups. 
-			
-			However,  
-			
-		
-	
-	
-	
-	
-	
-	
-	
-	
-	
+			Figures \ref{fig:aqauarium_result}, \ref{fig:aquarium_result_high_conc} and \ref{fig:aeolotron_result} show different images captured using a bubble generator in two different water tanks. For low bubble concentrations, images look very similar across the two different setups. However, when the concentration is very high (figure \ref{fig:aquarium_result_high_conc}) bubbles change dramatically. The curvature can be easily distinguished and scattered light from other bubbles gives bubbles a more circular shape. Also, the background is much brighter for a high bubble concentration. The exact bubble shape will be discussed further in chapter \ref{the_algorithm}.	
 	
 	
 	\section{Calibration}\label{calibration_setup}
-
+		\subsection{Depth of Field}\label{sub:depth_of_field_setup}
+			Since we want to determine the measurement volume, we need to not only detect bubbles in an image, but also determine their depth, i.e. distance to the focal plane. With the experimental setup shown in figure \ref{fig:depth_of_field_setup}, we can capture bubbles and move them along the depth axis. Figure \ref{fig:depth_of_field_setup_result} shows images captured with this setup. Note how blurriness varies among images depending on the distance to focal point. In section \ref{calibration_algorithm} we discuss how to extract depth form these images.
+			
+			\begin{figure}
+				\centering
+				\includegraphics[scale=.2]{images/depth_of_field_setup.png}
+				\caption{Setup for depth of field calibration. A high friction stick attached to a micrometer screw captures bubbles. }
+			\end{figure}
+			
+			\begin{figure}
+				\begin{subfigure}[b]{.55\textwidth}
+					\centering
+					\includegraphics[scale=.5]{images/dof_calib_1.png}
+					\caption{}
+				\end{subfigure}
+				
+				\begin{subfigure}[b]{.55\textwidth}
+					\centering
+					\includegraphics[scale=.5]{images/dof_calib_2.png}
+					\caption{}
+				\end{subfigure}
+				
+				\caption{Two images from depth of field calibration setup at different distances from focal plane.}								
+				\label{fig:depth_of_field_setup_result}
+			\end{figure}
+			
+			
+		\subsection{Radius}\label{sub:radius_setup}
+			Although simulation shows that the distance between the two dominant peaks in a bubble is proportional to the bubble radius, we cannot determine the real radius from measurement results alone (figure \ref{fig:aqauarium_result} and \ref{fig:aeolotron_result}). So we need to change the lighting in such a way that real radius, i.e. the whole bubble becomes visible. In a similar way to the light field method (cite Mischler), we used an additional light source and a mirror in order to light up the bubbles from behind (figure \ref{fig:radius_calibration_setup}). Then, we acquired images at a frame rate of 200 FPS and lit the additional light source every second frame. Results are shown in figure \ref{fig:radius_calibration_setup_result}. In section \ref{calibration_algorithm} we identify bubbles lit from bellow with those lit from behind in order to estimate the proportionality factor between the real radius and the radius computed by our algorithm. 
+			
+			\begin{figure}
+				\includegraphics[scale=0.2]{images/radius_setup.png}
+				\caption{Setup for radius calibration at Aeolotron. }
+				\label{fig:radius_calibration_setup}
+			\end{figure}
+			
+			\begin{figure}
+			%TODO get images from upper left corner instead.
+				\begin{subfigure}[b]{.55\textwidth}
+					\centering
+					\includegraphics[scale=1]{images/rad_calib_1.png}
+					\caption{}
+				\end{subfigure}
+				\begin{subfigure}[b]{.55\textwidth}
+					\centering
+					\includegraphics[scale=1]{images/rad_calib_2.png}
+					\caption{}
+				\end{subfigure}
+				\begin{subfigure}[b]{.55\textwidth}
+					\centering
+					\includegraphics[scale=1]{images/rad_calib_3.png}
+					\caption{}
+				\end{subfigure}
+				\begin{subfigure}[b]{.55\textwidth}
+					\centering
+					\includegraphics[scale=1]{images/rad_calib_4.png}
+					\caption{}
+				\end{subfigure}
+				
+				\caption{Radius calibration images}
+				\label{fig:radius_calibration_setup_result}
+			\end{figure}
 
 
 

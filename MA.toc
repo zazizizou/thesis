@@ -22,11 +22,14 @@
 \contentsline {section}{\numberline {4.2}Aquarium Setup}{23}{section.4.2}
 \contentsline {section}{\numberline {4.3}Aeolotron Setup}{25}{section.4.3}
 \contentsline {section}{\numberline {4.4}Measurement result}{25}{section.4.4}
-\contentsline {section}{\numberline {4.5}Calibration}{25}{section.4.5}
-\contentsline {chapter}{\numberline {5}The Algorithm}{30}{chapter.5}
-\contentsline {section}{\numberline {5.1}BubbleNet}{30}{section.5.1}
-\contentsline {section}{\numberline {5.2}Curvature based}{30}{section.5.2}
-\contentsline {section}{\numberline {5.3}Calibration}{30}{section.5.3}
-\contentsline {chapter}{\numberline {A}Lists}{32}{appendix.A}
-\contentsline {section}{\numberline {A.1}List of Figures}{32}{section.A.1}
-\contentsline {section}{\numberline {A.2}List of Tables}{32}{section.A.2}
+\contentsline {section}{\numberline {4.5}Calibration}{30}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Depth of Field}{30}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Radius}{30}{subsection.4.5.2}
+\contentsline {chapter}{\numberline {5}The Algorithm}{33}{chapter.5}
+\contentsline {section}{\numberline {5.1}Motivation}{33}{section.5.1}
+\contentsline {section}{\numberline {5.2}BubbleNet}{33}{section.5.2}
+\contentsline {section}{\numberline {5.3}BubbleCurves}{33}{section.5.3}
+\contentsline {section}{\numberline {5.4}Calibration}{33}{section.5.4}
+\contentsline {chapter}{\numberline {A}Lists}{35}{appendix.A}
+\contentsline {section}{\numberline {A.1}List of Figures}{35}{section.A.1}
+\contentsline {section}{\numberline {A.2}List of Tables}{36}{section.A.2}
