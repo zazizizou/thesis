@@ -1,28 +1,31 @@
 \select@language {english}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Interaction of a light bubble with light rays\relax }}{8}{figure.caption.3}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Notation and coordinate system\relax }}{9}{figure.caption.4}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Gaussian smoothing filter\relax }}{11}{figure.caption.5}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Original 1D signal. First derivative. Second derivative\relax }}{12}{figure.caption.6}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Left: original image. Right: gradient image\relax }}{14}{figure.caption.7}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Ideal local neighborhood described by a unit vector $\mathaccentV {tilde}07E{\mathbf {n}}$\relax }}{14}{figure.caption.8}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Orientation angle using sobel filters for derivation and a Gaussian mask with $\sigma =1$ for smoothing.\relax }}{16}{figure.caption.9}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Left: Input image. Left: Output of an object detection algorithm dawn as bounding boxes around bubbles\relax }}{16}{figure.caption.10}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Training and testing in machine learning\relax }}{18}{figure.caption.11}
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Definition of intersection over union. Green represents predicted bounding box and red is the ground truth. Areas are drawn in blue\relax }}{19}{figure.caption.14}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Interaction of a light bubble with light rays\relax }}{9}{figure.caption.3}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Notation and coordinate system\relax }}{10}{figure.caption.4}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Gaussian smoothing filter\relax }}{12}{figure.caption.5}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Original 1D signal. First derivative. Second derivative\relax }}{13}{figure.caption.6}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Left: original image. Right: gradient image\relax }}{15}{figure.caption.7}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Ideal local neighborhood described by a unit vector $\mathaccentV {tilde}07E{\mathbf {n}}$\relax }}{15}{figure.caption.8}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Orientation angle using sobel filters for derivation and a Gaussian mask with $\sigma =1$ for smoothing.\relax }}{17}{figure.caption.9}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Left: Input image. Left: Output of an object detection algorithm dawn as bounding boxes around bubbles\relax }}{17}{figure.caption.10}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Training and testing in machine learning\relax }}{19}{figure.caption.11}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Definition of intersection over union. Green represents predicted bounding box and red is the ground truth. Areas are drawn in blue\relax }}{20}{figure.caption.14}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Bright field method\relax }}{21}{figure.caption.15}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Bubble detection with the bubble optical imaging instrument\relax }}{22}{figure.caption.16}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Bright field method\relax }}{22}{figure.caption.15}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Bubble detection with the bubble optical imaging instrument\relax }}{23}{figure.caption.16}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Experimental setup illustrating the $90^\circ $ angle between the light source (LED array) and the camera. Note how LEDs are also oriented towards the camera's field of view to maximize the amount of light reaching the camera and therefore reduce noise.\relax }}{24}{figure.caption.17}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Aeolotron facility and experimental setup\relax }}{26}{figure.caption.19}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Sample image captured with aquarium setup for a low bubble concentration. Note how bubbles are characterized by one bright peak at the bottom and one dimmer upper peak, as expected from simulation.\relax }}{27}{figure.caption.20}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Sample image captured with aquarium setup for a high bubble concentration. The upper peak is not visible anymore. However, bubble curvatures are more recognizable, even for smaller bubbles\relax }}{28}{figure.caption.21}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Image captured with Aeolotron setup. Bubbles were created by a bubble generator. Exposure time = , Gamma = \relax }}{29}{figure.caption.22}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Setup for depth of field calibration. A high friction stick attached to a micrometer screw captures bubbles. \relax }}{30}{figure.caption.23}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Two images from depth of field calibration setup at different distances from focal plane.\relax }}{31}{figure.caption.24}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Setup for radius calibration at Aeolotron. \relax }}{31}{figure.caption.25}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Radius calibration images\relax }}{32}{figure.caption.26}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Experimental setup illustrating the $90^\circ $ angle between the light source (LED array) and the camera. Note how LEDs are also oriented towards the camera's field of view to maximize the amount of light reaching the camera and therefore reduce noise.\relax }}{25}{figure.caption.17}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Aeolotron facility and experimental setup\relax }}{27}{figure.caption.19}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Sample image captured with aquarium setup for a low bubble concentration. Note how bubbles are characterized by one bright peak at the bottom and one dimmer upper peak, as expected from simulation.\relax }}{28}{figure.caption.20}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Sample image captured with aquarium setup for a high bubble concentration. The upper peak is not visible anymore. However, bubble curvatures are more recognizable, even for smaller bubbles\relax }}{29}{figure.caption.21}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Image captured with Aeolotron setup. Bubbles were created by a bubble generator. Exposure time = , Gamma = \relax }}{30}{figure.caption.22}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Setup for depth of field calibration. A high friction stick attached to a micrometer screw captures bubbles. \relax }}{31}{figure.caption.23}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Two images from depth of field calibration setup at different distances from focal plane.\relax }}{32}{figure.caption.24}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Setup for radius calibration at Aeolotron. \relax }}{32}{figure.caption.25}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Radius calibration images\relax }}{33}{figure.caption.26}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces A small air bubble from an image with low bubble concentration. \relax }}{36}{figure.caption.27}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Simulated distance between two peaks as a function of bubble radius.\relax }}{37}{figure.caption.28}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Architecture of BubbleNet. Numbers in parentheses refer to the kernel size. The rest refers to the layer size. \relax }}{38}{figure.caption.30}
 \addvspace {10\p@ }
