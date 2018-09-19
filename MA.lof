@@ -25,7 +25,9 @@
 \contentsline {figure}{\numberline {4.8}{\ignorespaces Setup for radius calibration at Aeolotron. \relax }}{32}{figure.caption.25}
 \contentsline {figure}{\numberline {4.9}{\ignorespaces Radius calibration images\relax }}{33}{figure.caption.26}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces A small air bubble from an image with low bubble concentration. \relax }}{36}{figure.caption.27}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Simulated distance between two peaks as a function of bubble radius.\relax }}{37}{figure.caption.28}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces A small air bubble from an image with low bubble concentration. \relax }}{37}{figure.caption.27}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Simulated distance between two peaks as a function of bubble radius.\relax }}{38}{figure.caption.28}
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Architecture of BubbleNet. Numbers in parentheses refer to the kernel size. The rest refers to the layer size. \relax }}{38}{figure.caption.30}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Structure tensor eigenvalues and orientation on a single bubble from a high bubble concentration image.\relax }}{42}{figure.caption.34}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Applying the structure tensor on a slightly smaller and differently lit bubble. Orientation from the upper part is not meaningful. \relax }}{43}{figure.caption.35}
 \addvspace {10\p@ }

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.4.18)  17 SEP 2018 14:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.4.18)  18 SEP 2018 19:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -791,7 +791,7 @@ Class scrreprt Warning: \float@addtolists detected!
 
  (./theory.tex
 Chapter 2.
-<images/reflection.png, id=234, 134.00063pt x 80.80188pt>
+<images/reflection.png, id=244, 134.00063pt x 80.80188pt>
 File: images/reflection.png Graphic file (type png)
 
 <use images/reflection.png>
@@ -807,7 +807,7 @@ Underfull \hbox (badness 5667) in paragraph at lines 17--17
 \T1/cmr/m/n/10.95 light beam gets re-
  []
 
-<images/refraction.png, id=236, 139.01938pt x 120.45pt>
+<images/refraction.png, id=246, 139.01938pt x 120.45pt>
 File: images/refraction.png Graphic file (type png)
 
 <use images/refraction.png>
@@ -828,7 +828,7 @@ Underfull \hbox (badness 6526) in paragraph at lines 23--23
 \T1/cmr/m/n/10.95 fracted ac-cord-ing to
  []
 
-<images/total_reflection.png, id=237, 139.01938pt x 120.45pt>
+<images/total_reflection.png, id=247, 139.01938pt x 120.45pt>
 File: images/total_reflection.png Graphic file (type png)
 
 <use images/total_reflection.png>
@@ -840,14 +840,14 @@ Package pdftex.def Info: images/total_reflection.png used on input line 28.
 
 ] [8 <./images/reflection.png> <./images/refraction.png> <./images/total_reflec
 tion.png>]
-<images/bubble_refraction.png, id=264, 134.00063pt x 80.80188pt>
+<images/bubble_refraction.png, id=274, 134.00063pt x 80.80188pt>
 File: images/bubble_refraction.png Graphic file (type png)
 
 <use images/bubble_refraction.png>
 Package pdftex.def Info: images/bubble_refraction.png used on input line 52.
 (pdftex.def)             Requested size: 128.03871pt x 77.20642pt.
 
-<images/bubble_simulation.png, id=265, 499.8675pt x 253.94875pt>
+<images/bubble_simulation.png, id=275, 499.8675pt x 253.94875pt>
 File: images/bubble_simulation.png Graphic file (type png)
 
 <use images/bubble_simulation.png>
@@ -858,7 +858,7 @@ Underfull \hbox (badness 1210) in paragraph at lines 60--60
 \T1/cmr/m/n/10.95 ray trac-ing with two
  []
 
-<images/coord_sys.png, id=269, 332.24126pt x 266.9975pt>
+<images/coord_sys.png, id=279, 332.24126pt x 266.9975pt>
 File: images/coord_sys.png Graphic file (type png)
 
 <use images/coord_sys.png>
@@ -866,7 +866,7 @@ Package pdftex.def Info: images/coord_sys.png used on input line 77.
 (pdftex.def)             Requested size: 132.89413pt x 106.79709pt.
  [9 <./images/bubble_refraction.png> <./images/bubble_simulation.png>] [10 <./i
 mages/coord_sys.png>]
-<graphs/gauss_sigma_2.png, id=293, 433.62pt x 289.08pt>
+<graphs/gauss_sigma_2.png, id=303, 433.62pt x 289.08pt>
 File: graphs/gauss_sigma_2.png Graphic file (type png)
 
 <use graphs/gauss_sigma_2.png>
@@ -877,7 +877,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 157--157
 [][][]|\T1/cmr/m/n/10.95 1D Gaus-sian sig-nal
  []
 
-<images/gauss_sigma_2.png, id=294, 433.62pt x 289.08pt>
+<images/gauss_sigma_2.png, id=304, 433.62pt x 289.08pt>
 File: images/gauss_sigma_2.png Graphic file (type png)
 
 <use images/gauss_sigma_2.png>
@@ -888,21 +888,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 162--162
 [][][]|\T1/cmr/m/n/10.95 2D Gaus-sian sig-nal
  []
 
-<images/lena_orig.png, id=295, 289.08pt x 282.05376pt>
+<images/lena_orig.png, id=305, 289.08pt x 282.05376pt>
 File: images/lena_orig.png Graphic file (type png)
 
 <use images/lena_orig.png>
 Package pdftex.def Info: images/lena_orig.png used on input line 166.
 (pdftex.def)             Requested size: 128.03871pt x 124.92606pt.
 
-<images/lena_smooth.png, id=296, 289.08pt x 282.05376pt>
+<images/lena_smooth.png, id=306, 289.08pt x 282.05376pt>
 File: images/lena_smooth.png Graphic file (type png)
 
 <use images/lena_smooth.png>
 Package pdftex.def Info: images/lena_smooth.png used on input line 172.
 (pdftex.def)             Requested size: 128.03871pt x 124.92606pt.
 
-<graphs/edges_intro.png, id=297, 428.60126pt x 355.3275pt>
+<graphs/edges_intro.png, id=307, 428.60126pt x 355.3275pt>
 File: graphs/edges_intro.png Graphic file (type png)
 
 <use graphs/edges_intro.png>
@@ -919,84 +919,84 @@ LaTeX Warning: Reference `fig:edges_intro' on page 11 undefined on input line 1
 
 [11] [12 <./graphs/gauss_sigma_2.png> <./images/gauss_sigma_2.png> <./images/le
 na_orig.png> <./images/lena_smooth.png>] [13 <./graphs/edges_intro.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 221.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 222.
 
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 221.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 222.
 
-<images/lena_orig_sobel.png, id=331, 452.69125pt x 231.86626pt>
+<images/lena_orig_sobel.png, id=341, 452.69125pt x 231.86626pt>
 File: images/lena_orig_sobel.png Graphic file (type png)
 
 <use images/lena_orig_sobel.png>
-Package pdftex.def Info: images/lena_orig_sobel.png used on input line 272.
+Package pdftex.def Info: images/lena_orig_sobel.png used on input line 273.
 (pdftex.def)             Requested size: 226.34506pt x 115.93283pt.
 
-<images/structure_tensor_intro.png, id=332, 120.45pt x 75.28125pt>
+<images/structure_tensor_intro.png, id=342, 120.45pt x 75.28125pt>
 File: images/structure_tensor_intro.png Graphic file (type png)
 
 <use images/structure_tensor_intro.png>
 Package pdftex.def Info: images/structure_tensor_intro.png used on input line 2
-81.
+82.
 (pdftex.def)             Requested size: 120.44969pt x 75.28105pt.
  [14] [15 <./images/lena_orig_sobel.png> <./images/structure_tensor_intro.png>]
 
-<images/structure_tensor_demo.png, id=364, 436.63126pt x 414.54875pt>
+<images/structure_tensor_demo.png, id=374, 436.63126pt x 414.54875pt>
 File: images/structure_tensor_demo.png Graphic file (type png)
 
 <use images/structure_tensor_demo.png>
 Package pdftex.def Info: images/structure_tensor_demo.png used on input line 38
-5.
+6.
 (pdftex.def)             Requested size: 174.6494pt x 165.81656pt.
 
-<images/object_detection_intro.png, id=366, 403.00563pt x 139.52126pt>
+<images/object_detection_intro.png, id=376, 403.00563pt x 139.52126pt>
 File: images/object_detection_intro.png Graphic file (type png)
 
 <use images/object_detection_intro.png>
 Package pdftex.def Info: images/object_detection_intro.png used on input line 3
-97.
+98.
 (pdftex.def)             Requested size: 403.00464pt x 139.5209pt.
 
 
 Package natbib Warning: Citation `faster_rcnn' on page 16 undefined on input li
-ne 402.
+ne 403.
 
 
-Package natbib Warning: Citation `YOLO' on page 16 undefined on input line 402.
+Package natbib Warning: Citation `YOLO' on page 16 undefined on input line 403.
 
 
 [16] [17 <./images/structure_tensor_demo.png> <./images/object_detection_intro.
-png>] <images/training_intro.png, id=388, 392.46625pt x 175.65625pt>
+png>] <images/training_intro.png, id=398, 392.46625pt x 175.65625pt>
 File: images/training_intro.png Graphic file (type png)
 
 <use images/training_intro.png>
-Package pdftex.def Info: images/training_intro.png used on input line 412.
+Package pdftex.def Info: images/training_intro.png used on input line 413.
 (pdftex.def)             Requested size: 392.46527pt x 175.6558pt.
 
-Overfull \hbox (157.72871pt too wide) in paragraph at lines 412--413
+Overfull \hbox (157.72871pt too wide) in paragraph at lines 413--414
 [][] 
  []
 
-<images/testing_intro.png, id=389, 365.365pt x 132.495pt>
+<images/testing_intro.png, id=399, 365.365pt x 132.495pt>
 File: images/testing_intro.png Graphic file (type png)
 
 <use images/testing_intro.png>
-Package pdftex.def Info: images/testing_intro.png used on input line 416.
+Package pdftex.def Info: images/testing_intro.png used on input line 417.
 (pdftex.def)             Requested size: 365.3641pt x 132.49466pt.
 
-Overfull \hbox (130.62755pt too wide) in paragraph at lines 416--417
+Overfull \hbox (130.62755pt too wide) in paragraph at lines 417--418
 [][] 
  []
 
 [18] [19 <./images/training_intro.png> <./images/testing_intro.png>]
-<images/iou_def.png, id=402, 534.99875pt x 257.96375pt>
+<images/iou_def.png, id=412, 534.99875pt x 257.96375pt>
 File: images/iou_def.png Graphic file (type png)
 
 <use images/iou_def.png>
-Package pdftex.def Info: images/iou_def.png used on input line 436.
+Package pdftex.def Info: images/iou_def.png used on input line 437.
 (pdftex.def)             Requested size: 267.49872pt x 128.98155pt.
 ) [20 <./images/iou_def.png>]
 \openout2 = `related_work.aux'.
@@ -1011,7 +1011,7 @@ See the caption package documentation for explanation.
 LaTeX Warning: Reference `fig:bright_field' on page 21 undefined on input line 
 7.
 
-<images/bright_field_method.png, id=414, 899.36pt x 349.305pt>
+<images/bright_field_method.png, id=424, 899.36pt x 349.305pt>
 File: images/bright_field_method.png Graphic file (type png)
 
 <use images/bright_field_method.png>
@@ -1022,14 +1022,14 @@ Overfull \hbox (125.00107pt too wide) in paragraph at lines 12--13
 [][] 
  []
 
-<images/bright_field_result.png, id=415, 233.87375pt x 143.53625pt>
+<images/bright_field_result.png, id=425, 233.87375pt x 143.53625pt>
 File: images/bright_field_result.png Graphic file (type png)
 
 <use images/bright_field_result.png>
 Package pdftex.def Info: images/bright_field_result.png used on input line 17.
 (pdftex.def)             Requested size: 233.87315pt x 143.53589pt.
 
-<images/bright_field_calibration_target.png, id=416, 642.4pt x 481.8pt>
+<images/bright_field_calibration_target.png, id=426, 642.4pt x 481.8pt>
 File: images/bright_field_calibration_target.png Graphic file (type png)
 
 <use images/bright_field_calibration_target.png>
@@ -1042,7 +1042,7 @@ ut line 22.
 
 ] [22 <./images/bright_field_method.png> <./images/bright_field_result.png> <./
 images/bright_field_calibration_target.png>]
-<images/bubble_optical_imaging_instrument.png, id=432, 309.155pt x 363.3575pt>
+<images/bubble_optical_imaging_instrument.png, id=442, 309.155pt x 363.3575pt>
 File: images/bubble_optical_imaging_instrument.png Graphic file (type png)
 
 <use images/bubble_optical_imaging_instrument.png>
@@ -1050,7 +1050,7 @@ Package pdftex.def Info: images/bubble_optical_imaging_instrument.png used on i
 nput line 44.
 (pdftex.def)             Requested size: 123.6598pt x 145.34041pt.
 
-<images/sample_result_optical_imaging_instrument.png, id=433, 359.3425pt x 216.
+<images/sample_result_optical_imaging_instrument.png, id=443, 359.3425pt x 216.
 81pt>
 File: images/sample_result_optical_imaging_instrument.png Graphic file (type pn
 g)
@@ -1073,7 +1073,7 @@ Chapter 4.
 LaTeX Warning: Reference `fig:aelotron_setup' on page 24 undefined on input lin
 e 5.
 
-<images/aquarium_setup.png, id=444, 280.54813pt x 197.23688pt>
+<images/aquarium_setup.png, id=454, 280.54813pt x 197.23688pt>
 File: images/aquarium_setup.png Graphic file (type png)
 
 <use images/aquarium_setup.png>
@@ -1084,21 +1084,21 @@ Package pdftex.def Info: images/aquarium_setup.png used on input line 14.
 
 
 ] [25 <./images/aquarium_setup.png>]
-<images/aeolotron-gesamt.jpg, id=465, 1445.4pt x 1284.8pt>
+<images/aeolotron-gesamt.jpg, id=475, 1445.4pt x 1284.8pt>
 File: images/aeolotron-gesamt.jpg Graphic file (type jpg)
 
 <use images/aeolotron-gesamt.jpg>
 Package pdftex.def Info: images/aeolotron-gesamt.jpg used on input line 80.
 (pdftex.def)             Requested size: 144.54846pt x 128.48752pt.
 
-<images/aeolotron_setup.png, id=466, 291.58937pt x 185.69376pt>
+<images/aeolotron_setup.png, id=476, 291.58937pt x 185.69376pt>
 File: images/aeolotron_setup.png Graphic file (type png)
 
 <use images/aeolotron_setup.png>
 Package pdftex.def Info: images/aeolotron_setup.png used on input line 86.
 (pdftex.def)             Requested size: 233.2718pt x 148.55519pt.
 
-<images/aquarium_result_sat.png, id=467, 507.8975pt x 429.605pt>
+<images/aquarium_result_sat.png, id=477, 507.8975pt x 429.605pt>
 File: images/aquarium_result_sat.png Graphic file (type png)
 
 <use images/aquarium_result_sat.png>
@@ -1110,7 +1110,7 @@ Overfull \hbox (171.582pt too wide) in paragraph at lines 100--101
  [][] 
  []
 
-<images/aquarium_result_surf.png, id=470, 1092.08pt x 979.66pt>
+<images/aquarium_result_surf.png, id=480, 1092.08pt x 979.66pt>
 File: images/aquarium_result_surf.png Graphic file (type png)
 
 <use images/aquarium_result_surf.png>
@@ -1125,7 +1125,7 @@ Overfull \hbox (92.88997pt too wide) in paragraph at lines 106--107
 
 LaTeX Warning: Float too large for page by 136.58472pt on input line 112.
 
-<images/aquarium_result_high_conc.jpg, id=471, 903.375pt x 1445.4pt>
+<images/aquarium_result_high_conc.jpg, id=481, 903.375pt x 1445.4pt>
 File: images/aquarium_result_high_conc.jpg Graphic file (type jpg)
 
 <use images/aquarium_result_high_conc.jpg>
@@ -1133,7 +1133,7 @@ Package pdftex.def Info: images/aquarium_result_high_conc.jpg used on input lin
 e 116.
 (pdftex.def)             Requested size: 271.01459pt x 433.62335pt.
 
-<images/aeolotron_result.png, id=472, 1486.05188pt x 1467.98438pt>
+<images/aeolotron_result.png, id=482, 1486.05188pt x 1467.98438pt>
 File: images/aeolotron_result.png Graphic file (type png)
 
 <use images/aeolotron_result.png>
@@ -1155,7 +1155,7 @@ Underfull \vbox (badness 3396) has occurred while \output is active []
 [27 <./images/aeolotron-gesamt.jpg> <./images/aeolotron_setup.png>] [28 <./imag
 es/aquarium_result_sat.png> <./images/aquarium_result_surf.png>] [29 <./images/
 aquarium_result_high_conc.jpg>] [30 <./images/aeolotron_result.png>]
-<images/depth_of_field_setup.png, id=507, 1003.75pt x 1003.75pt>
+<images/depth_of_field_setup.png, id=517, 1003.75pt x 1003.75pt>
 File: images/depth_of_field_setup.png Graphic file (type png)
 
 <use images/depth_of_field_setup.png>
@@ -1163,49 +1163,49 @@ Package pdftex.def Info: images/depth_of_field_setup.png used on input line 138
 .
 (pdftex.def)             Requested size: 200.74644pt x 200.74644pt.
 
-<images/dof_calib_1.png, id=508, 260.975pt x 210.7875pt>
+<images/dof_calib_1.png, id=518, 260.975pt x 210.7875pt>
 File: images/dof_calib_1.png Graphic file (type png)
 
 <use images/dof_calib_1.png>
 Package pdftex.def Info: images/dof_calib_1.png used on input line 145.
 (pdftex.def)             Requested size: 130.48718pt x 105.3935pt.
 
-<images/dof_calib_2.png, id=509, 260.975pt x 210.7875pt>
+<images/dof_calib_2.png, id=519, 260.975pt x 210.7875pt>
 File: images/dof_calib_2.png Graphic file (type png)
 
 <use images/dof_calib_2.png>
 Package pdftex.def Info: images/dof_calib_2.png used on input line 151.
 (pdftex.def)             Requested size: 130.48718pt x 105.3935pt.
 
-<images/radius_setup.png, id=515, 1003.75pt x 1003.75pt>
+<images/radius_setup.png, id=525, 1003.75pt x 1003.75pt>
 File: images/radius_setup.png Graphic file (type png)
 
 <use images/radius_setup.png>
 Package pdftex.def Info: images/radius_setup.png used on input line 164.
 (pdftex.def)             Requested size: 200.74644pt x 200.74644pt.
 
-<images/rad_calib_1.png, id=516, 200.75pt x 200.75pt>
+<images/rad_calib_1.png, id=526, 200.75pt x 200.75pt>
 File: images/rad_calib_1.png Graphic file (type png)
 
 <use images/rad_calib_1.png>
 Package pdftex.def Info: images/rad_calib_1.png used on input line 173.
 (pdftex.def)             Requested size: 200.7495pt x 200.7495pt.
 
-<images/rad_calib_2.png, id=517, 200.75pt x 200.75pt>
+<images/rad_calib_2.png, id=527, 200.75pt x 200.75pt>
 File: images/rad_calib_2.png Graphic file (type png)
 
 <use images/rad_calib_2.png>
 Package pdftex.def Info: images/rad_calib_2.png used on input line 178.
 (pdftex.def)             Requested size: 200.7495pt x 200.7495pt.
 
-<images/rad_calib_3.png, id=518, 200.75pt x 200.75pt>
+<images/rad_calib_3.png, id=528, 200.75pt x 200.75pt>
 File: images/rad_calib_3.png Graphic file (type png)
 
 <use images/rad_calib_3.png>
 Package pdftex.def Info: images/rad_calib_3.png used on input line 183.
 (pdftex.def)             Requested size: 200.7495pt x 200.7495pt.
 
-<images/rad_calib_4.png, id=519, 200.75pt x 200.75pt>
+<images/rad_calib_4.png, id=529, 200.75pt x 200.75pt>
 File: images/rad_calib_4.png Graphic file (type png)
 
 <use images/rad_calib_4.png>
@@ -1230,56 +1230,106 @@ png>]
  (./the_algorithm.tex
 Chapter 5.
 
-LaTeX Warning: Reference `eq:dof' on page 34 undefined on input line 27.
+LaTeX Warning: Reference `eq:radius_calib' on page 34 undefined on input line 2
+7.
+
+
+LaTeX Warning: Reference `eq:dof' on page 34 undefined on input line 28.
 
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 34.
-
-Underfull \vbox (badness 1371) has occurred while \output is active []
-
- [34
+put line 35.
+[34
 
 
 
-]
-<images/one_peaks.png, id=561, 21.07875pt x 23.08624pt>
+] [35] <images/one_peaks.png, id=581, 21.07875pt x 23.08624pt>
 File: images/one_peaks.png Graphic file (type png)
 
 <use images/one_peaks.png>
-Package pdftex.def Info: images/one_peaks.png used on input line 54.
+Package pdftex.def Info: images/one_peaks.png used on input line 60.
 (pdftex.def)             Requested size: 189.70807pt x 207.7755pt.
 
-Overfull \hbox (18.99413pt too wide) in paragraph at lines 54--55
+Overfull \hbox (18.99413pt too wide) in paragraph at lines 60--61
 [][] 
  []
 
-<graphs/one_peaks_profile.png, id=562, 598.235pt x 350.30875pt>
+<graphs/one_peaks_profile.png, id=582, 598.235pt x 350.30875pt>
 File: graphs/one_peaks_profile.png Graphic file (type png)
 
 <use graphs/one_peaks_profile.png>
-Package pdftex.def Info: graphs/one_peaks_profile.png used on input line 59.
+Package pdftex.def Info: graphs/one_peaks_profile.png used on input line 65.
 (pdftex.def)             Requested size: 299.11676pt x 175.15395pt.
 
-Overfull \hbox (85.72107pt too wide) in paragraph at lines 59--60
+Overfull \hbox (85.72107pt too wide) in paragraph at lines 65--66
 [][] 
  []
 
-<graphs/peak_distance_radius_fit.png, id=563, 398.48875pt x 263.98625pt>
+<graphs/peak_distance_radius_fit.png, id=583, 398.48875pt x 263.98625pt>
 File: graphs/peak_distance_radius_fit.png Graphic file (type png)
 
 <use graphs/peak_distance_radius_fit.png>
 Package pdftex.def Info: graphs/peak_distance_radius_fit.png used on input line
- 68.
+ 74.
 (pdftex.def)             Requested size: 278.94022pt x 184.78911pt.
- [35] [36 <./images/one_peaks.png> <./graphs/one_peaks_profile.png>]
-<images/cnn_architecture.png, id=580, 590.205pt x 316.18124pt>
+
+<images/cnn_architecture.png, id=586, 590.205pt x 316.18124pt>
 File: images/cnn_architecture.png Graphic file (type png)
 
 <use images/cnn_architecture.png>
-Package pdftex.def Info: images/cnn_architecture.png used on input line 89.
+Package pdftex.def Info: images/cnn_architecture.png used on input line 95.
 (pdftex.def)             Requested size: 295.10178pt x 158.09023pt.
- [37 <./graphs/peak_distance_radius_fit.png>]
-[38 <./images/cnn_architecture.png>]) [39]
+ [36] [37 <./images/one_peaks.png> <./graphs/one_peaks_profile.png>] [38 <./gra
+phs/peak_distance_radius_fit.png> <./images/cnn_architecture.png>] [39]
+
+LaTeX Warning: Reference `algo:getCurve' on page 40 undefined on input line 199
+.
+
+
+LaTeX Warning: Reference `eq:dof' on page 40 undefined on input line 202.
+
+
+LaTeX Warning: Reference `rand_forest_class' on page 40 undefined on input line
+ 223.
+
+[40] <images/larger_ev.png, id=631, 359.3425pt x 327.2225pt>
+File: images/larger_ev.png Graphic file (type png)
+
+<use images/larger_ev.png>
+Package pdftex.def Info: images/larger_ev.png used on input line 238.
+(pdftex.def)             Requested size: 179.6708pt x 163.61084pt.
+
+<images/smaller_ev.png, id=632, 355.3275pt x 327.2225pt>
+File: images/smaller_ev.png Graphic file (type png)
+
+<use images/smaller_ev.png>
+Package pdftex.def Info: images/smaller_ev.png used on input line 243.
+(pdftex.def)             Requested size: 177.6633pt x 163.61084pt.
+
+Overfull \hbox (45.2922pt too wide) in paragraph at lines 237--247
+[][] [] 
+ []
+
+<images/struct_tensor_orientation.png, id=633, 550.055pt x 518.93875pt>
+File: images/struct_tensor_orientation.png Graphic file (type png)
+
+<use images/struct_tensor_orientation.png>
+Package pdftex.def Info: images/struct_tensor_orientation.png used on input lin
+e 249.
+(pdftex.def)             Requested size: 275.02682pt x 259.46873pt.
+
+Overfull \hbox (40.29027pt too wide) in paragraph at lines 249--250
+[][] 
+ []
+
+<images/struct_tensor_result_2.png, id=634, 559.08875pt x 509.905pt>
+File: images/struct_tensor_result_2.png Graphic file (type png)
+
+<use images/struct_tensor_result_2.png>
+Package pdftex.def Info: images/struct_tensor_result_2.png used on input line 2
+59.
+(pdftex.def)             Requested size: 279.54369pt x 254.95187pt.
+) [41] [42 <./images/larger_ev.png> <./images/smaller_ev.png> <./images/struct_
+tensor_orientation.png>] [43 <./images/struct_tensor_result_2.png>]
 \openout2 = `discussion.aux'.
 
 
@@ -1287,7 +1337,7 @@ No file discussion.tex.
 \openout2 = `references.bib.aux'.
 
 No file references.bib.tex.
-[40
+[44
 
 
 
@@ -1296,7 +1346,7 @@ No file references.bib.tex.
 
 ]
 Appendix A.
-(./MA.lof [41
+(./MA.lof [45
 
 ])
 \tf@lof=\write5
@@ -1308,10 +1358,10 @@ Appendix A.
 
 
 No file MA.bbl.
-[42]
+[46]
 \openout2 = `deposition.aux'.
 
- (./deposition.tex) [43
+ (./deposition.tex) [47
 
 ]
 
@@ -1326,55 +1376,61 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 73.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 73.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 73.
 Package rerunfilecheck Info: File `MA.out' has not changed.
-(rerunfilecheck)             Checksum: 7D033722BBF8151ADD9528E822E5CE0C;2355.
+(rerunfilecheck)             Checksum: 0DA7E7F0BFCBC90E581B69344789E002;2507.
 
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 73.
  ) 
 Here is how much of TeX's memory you used:
- 11035 strings out of 493117
- 171016 string characters out of 6135433
- 316517 words of memory out of 5000000
- 14032 multiletter control sequences out of 15000+600000
+ 11085 strings out of 493117
+ 172103 string characters out of 6135433
+ 317324 words of memory out of 5000000
+ 14064 multiletter control sequences out of 15000+600000
  26197 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,10n,71p,1088b,591s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
-</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
-/usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></u
-sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
-r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr
-/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/
-local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/lo
-cal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
-l/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/
-texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/tex
-live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
-ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texliv
-e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/
-2014/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texl
-ive/2014/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2014
-/texmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb></usr/local/texlive/2014/t
-exmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2014/tex
-mf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2014/texmf
--dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2014/texmf-d
-ist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2014/texmf-dis
-t/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2014/texmf-dist/
-fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2014/texmf-dist/fo
-nts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2014/texmf-dist/font
-s/type1/public/cm-super/sfss1440.pfb></usr/local/texlive/2014/texmf-dist/fonts/
-type1/public/cm-super/sfss1728.pfb></usr/local/texlive/2014/texmf-dist/fonts/ty
-pe1/public/cm-super/sfsx1200.pfb></usr/local/texlive/2014/texmf-dist/fonts/type
-1/public/cm-super/sfsx1440.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/
-public/cm-super/sfsx1728.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/pu
-blic/cm-super/sfsx2074.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/publ
-ic/cm-super/sfti1200.pfb>
-Output written on MA.pdf (43 pages, 6462609 bytes).
+ 48i,10n,71p,1205b,591s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{figure.caption.33} has been referenced but does n
+ot exist, replaced by a fixed one
+
+{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</
+usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></u
+sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr
+/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/
+local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/l
+ocal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/lo
+cal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/loca
+l/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/
+texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/te
+xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texli
+ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
+e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/
+2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/20
+14/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texliv
+e/2014/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2014/t
+exmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb></usr/local/texlive/2014/tex
+mf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2014/texmf
+-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2014/texmf-d
+ist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2014/texmf-dis
+t/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2014/texmf-dist/
+fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2014/texmf-dist/fo
+nts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2014/texmf-dist/font
+s/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2014/texmf-dist/fonts/
+type1/public/cm-super/sfss1440.pfb></usr/local/texlive/2014/texmf-dist/fonts/ty
+pe1/public/cm-super/sfss1728.pfb></usr/local/texlive/2014/texmf-dist/fonts/type
+1/public/cm-super/sfsx1200.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/
+public/cm-super/sfsx1440.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/pu
+blic/cm-super/sfsx1728.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/publ
+ic/cm-super/sfsx2074.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public
+/cm-super/sfti1200.pfb>
+Output written on MA.pdf (47 pages, 6647008 bytes).
 PDF statistics:
- 794 PDF objects out of 1000 (max. 8388607)
- 642 compressed objects within 7 object streams
- 160 named destinations out of 1000 (max. 500000)
- 507 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 852 PDF objects out of 1000 (max. 8388607)
+ 688 compressed objects within 7 object streams
+ 174 named destinations out of 1000 (max. 500000)
+ 543 words of extra memory for PDF output out of 10000 (max. 10000000)
 
