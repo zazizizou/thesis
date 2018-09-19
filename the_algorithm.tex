@@ -321,6 +321,7 @@
 					\centering
 					\includegraphics[scale=1]{images/bubbleCurve_final_result.png}
 					\caption{Final result of algorithm \ref{algo:bubbleCurves} applied to a single bubble}
+					\label{fig:final_result}
 				\end{figure}
 				
 				The final result is shown in figure \ref{fig:final_result}. Although the circle matches the bubble's shape well, it is clear that the radius has been underestimated. Similarly to algorithm \ref{algo:bubbleNet}, radius calibration is addressed in section \ref{sub:radius_algorithm}
@@ -334,29 +335,35 @@
 	
 	\section{Calibration}\label{calibration_algorithm}
 		\subsection{Depth of Field}
-			Determining the distance between a bubble and the focal plane can be deduced from bubble blurriness. If we consider a vertical profile of the bright lower peak (for both low and high bubble concentration images), we note that the peak's width increases with increasing distance from focal plane. We therefore describe blurriness with the peak's width, given by the sigma parameter of a Gaussian fit around the peak. Theoretically, we would expect a linear dependency between blurriness and distance to focal plane. However, our light source has certain size that also has to be accounted for, which gives bubble peaks a certain minimum width at focus. 
+			Determining the distance between a bubble and the focal plane can be deduced from bubble blurriness. If we consider a vertical profile of the bright lower peak (for both low and high bubble concentration images), we note that the peak's width increases with increasing distance from focal plane (figure \ref{subfig:peak_profile}). We therefore describe blurriness with the peak's width, given by the sigma parameter of a Gaussian fit around the peak. Theoretically, we would expect a linear dependency between blurriness and distance to focal plane. However, our light source has a certain size that has to be accounted for, which gives bubble peaks a certain minimum width at focus. 	
 			
-			Blurriness also depends on bubble radius. For instance, 
+			Furthermore, blurriness depends on the radius. For instance, larger bubbles tend to be visible for a larger distances from focal plane (up to 10 centimeters), whereas small bubbles are only visible for no more than 2 centimeters. Figure \ref{subfig:depth_calib_meas} shows measured blurriness (in terms of $\sigma$) as a function of radius and distance from focal plane. 
+			
 			
 			\begin{figure}
 				\begin{subfigure}[t]{.50\textwidth}
 						\centering
 						\includegraphics[scale=.4]{graphs/peak_profile_fit.png}
 						\caption{Vertical peak profile and Gaussian fit with $\sigma = 4.04$}
+						\label{subfig:peak_profile}
 					\end{subfigure}				
 				
 				\begin{subfigure}[t]{.50\textwidth}
 						\centering
 						\includegraphics[scale=.4]{images/dof_calibration_measurement.png}
 						\caption{ }
+						\label{subfig:dof_calib_meas}
 					\end{subfigure}				
 					
 				\begin{subfigure}[t]{.50\textwidth}
 						\centering
 						\includegraphics[scale=.4]{images/dof_calibration_fit.png}
 						\caption{Sampling result. }
+						\label{subfig:depth_calib_meas}
 					\end{subfigure}								
 				
+				\caption{Depth calibration}
+				\label{fig:depth_calib}
 			\end{figure}
 			
 		\subsection{Radius}\label{sub:radius_algorithm}
