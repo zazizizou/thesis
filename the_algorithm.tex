@@ -192,12 +192,12 @@
 			\begin{algorithmic}[1]
 				\State \textbf{Input} Image with a high bubble concentration $G$. 
 				\State \textbf{Output} List of rectangles $Rec$, List of depths $Dep$
-				\State Obtain local maxima $loc_max$ in $G$
-				\For{Each $lm$ in $loc_max$}
-					\State Extract image window $W$ with size $10 \times 10$.
+				\State Obtain local maxima $loc\_max$ in $G$
+				\For{Each $lm$ in $loc\_max$}
+					\State Extract image window $W$ around $lm$ with size $10 \times 10$.
 					\If {RFC($W$)}
-						\State get bubble curvature $c$ using algorithm \ref{algo:getCurve}
-						\State Compute radius $r$ and center $c$ from $c$ using a circle fit.
+						\State get bubble curvature $cur$ using algorithm \ref{algo:getCurve}
+						\State Compute radius $r$ and center $c$ from $cur$ using a circle fit.
 						\State Compute real radius $r'$ using equation \ref{eq:get_radius}
 						\State Compute depth $d$ using equation \ref{eq:dof}
 						\State append($Rec$, toBoundingBox($r'$, $c$))
@@ -239,6 +239,7 @@
 				\caption{Larger eigenvalues of the structure tensor}		
 				\label{subfig:larger_ev}
 			\end{subfigure}
+			
 			\begin{subfigure}[t]{.55\textwidth}
 				\includegraphics[scale=0.5]{images/smaller_ev.png}
 				\caption{Smaller eigenvalues of the structure tensor }
@@ -268,15 +269,127 @@
 	
 	
 			\subsubsection{Curve from Orientation}
-				Assuming that our starting point is part of the bubble's lower edge, we first get the orientation at the current pixel and then draw a line along this orientation. The sampling method is taken from (cite max bopp) and it 
+				Assuming that our starting point is part of the bubble's lower edge, we first get the orientation at the current pixel and then draw a line along this orientation. The sampling method is taken from (cite max bopp). A square is drawn around each point on the sampling line, and then we perform a weighted average of the gray values within the rectangle, where weights are intersection areas between neighboring pixels and the drawn rectangle. This sampling step is illustrated in figure \ref{fig:subpixel_sampling}
 				 After sampling, we perform a Gaussian fit, where we initialize the mean with the current position. Next, we add the fit result to our curve and move one step to the right. Figure \ref{fig:curve_from_orientation} summarizes how a bubble curve is extracted using orientation. 
+				 
+				 \begin{figure}
+				 	\centering
+				 	\includegraphics[scale=1]{images/curve_from_orientation.png}
+				 	\caption{Extracting curve from bubble using orientation and neighborhood sampling.}
+				 	\label{fig:curve_from_orientation}
+				 \end{figure}
+				 
+				 \begin{figure}
+				 	\centering
+				 	\includegraphics[scale=1]{images/subpixel_sampling.png}
+				 	\caption{Gray value sampling along sampling line}
+				 	\label{fig:subpixel_sampling}
+				 \end{figure}
+				 
 				
+				Finally, we use a least squares fit to find the center $c = (a,b)^T$ and the radius $r$ from the circle equation
+				\begin{equation}
+					\sqrt{ \left( (x-a)^2 + (y-b)^2 \right)} = r^2
+				\end{equation}
+				The fit and sampling results are shown in figure \ref{fig:fit_circle_fit_result}
 				
-			\subsubsection{Radius from Curve}
+				\begin{figure}
+				
+					\begin{subfigure}[t]{.50\textwidth}
+						\centering
+						\includegraphics[scale=.8]{images/sampling_result.png}
+						\caption{Sampling result. }
+					\end{subfigure}					
+
+
+					\begin{subfigure}[t]{.55\textwidth}
+						\centering
+						\includegraphics[scale=.7]{graphs/circle_fit.png}
+						\caption{Circle fit result.}
+					\end{subfigure}
+					
+					
+					\caption{Sampling and fit Note that the circle works well, even though only half a circle is extracted from the bubble at most. }
+					\label{fig:fit_circle_fit_result}
+				\end{figure}
+
+
+
+			\subsubsection{Results}
+
+				\begin{figure}
+					\centering
+					\includegraphics[scale=1]{images/bubbleCurve_final_result.png}
+					\caption{Final result of algorithm \ref{algo:bubbleCurves} applied to a single bubble}
+				\end{figure}
+				
+				The final result is shown in figure \ref{fig:final_result}. Although the circle matches the bubble's shape well, it is clear that the radius has been underestimated. Similarly to algorithm \ref{algo:bubbleNet}, radius calibration is addressed in section \ref{sub:radius_algorithm}
+				
+				Using a validation set of 30 small images, each containing 30 to 40 bubbles, this algorithm achieved IoU@0.5mAP = 89.3\%, which is slightly worse than algorithm \ref{algo:bubbleNet}. This is in part due to the overlap between bubbles, making curvature extraction less precise. Overlap between bubbles also reduces the performance of our classifier. Nevertheless, the algorithm is reliable enough to be usable alongside algorithm \ref{algo:bubbleNet}.
+				
+
 	
 	
 	
 	
 	\section{Calibration}\label{calibration_algorithm}
 		\subsection{Depth of Field}
+			Determining the distance between a bubble and the focal plane can be deduced from bubble blurriness. If we consider a vertical profile of the bright lower peak (for both low and high bubble concentration images), we note that the peak's width increases with increasing distance from focal plane. We therefore describe blurriness with the peak's width, given by the sigma parameter of a Gaussian fit around the peak. Theoretically, we would expect a linear dependency between blurriness and distance to focal plane. However, our light source has certain size that also has to be accounted for, which gives bubble peaks a certain minimum width at focus. 
+			
+			Blurriness also depends on bubble radius. For instance, 
+			
+			\begin{figure}
+				\begin{subfigure}[t]{.50\textwidth}
+						\centering
+						\includegraphics[scale=.4]{graphs/peak_profile_fit.png}
+						\caption{Vertical peak profile and Gaussian fit with $\sigma = 4.04$}
+					\end{subfigure}				
+				
+				\begin{subfigure}[t]{.50\textwidth}
+						\centering
+						\includegraphics[scale=.4]{images/dof_calibration_measurement.png}
+						\caption{ }
+					\end{subfigure}				
+					
+				\begin{subfigure}[t]{.50\textwidth}
+						\centering
+						\includegraphics[scale=.4]{images/dof_calibration_fit.png}
+						\caption{Sampling result. }
+					\end{subfigure}								
+				
+			\end{figure}
+			
 		\subsection{Radius}\label{sub:radius_algorithm}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

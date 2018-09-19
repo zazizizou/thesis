@@ -131,12 +131,15 @@
 	
 	\section{Calibration}\label{calibration_setup}
 		\subsection{Depth of Field}\label{sub:depth_of_field_setup}
-			Since we want to determine the measurement volume, we need to not only detect bubbles in an image, but also determine their depth, i.e. distance to the focal plane. With the experimental setup shown in figure \ref{fig:depth_of_field_setup}, we can capture bubbles and move them along the depth axis. Figure \ref{fig:depth_of_field_setup_result} shows images captured with this setup. Note how blurriness varies among images depending on the distance to focal point. In section \ref{calibration_algorithm} we discuss how to extract depth form these images.
+			Since we want to determine the measurement volume, we need to not only detect bubbles in an image, but also determine their depth, i.e. distance to the focal plane. With the experimental setup shown in figure \ref{fig:depth_of_field_setup}, we can capture bubbles and move them along the depth axis. 
+			Figure \ref{fig:depth_of_field_setup_result} shows images captured with this setup. Note how blurriness varies among images depending on the distance to focal point. In section \ref{calibration_algorithm} we discuss how to extract depth form these images. The setup is not perfectly stable, so images not perfectly aligned. As a workaround, we took additional images with a different light source at each position to make other objects visible, e.g. armature of calibration device that can later on be used for tracking and stabilization. 
+			
 			
 			\begin{figure}
 				\centering
 				\includegraphics[scale=.2]{images/depth_of_field_setup.png}
 				\caption{Setup for depth of field calibration. A high friction stick attached to a micrometer screw captures bubbles. }
+				\label{fig:depth_of_field_setup}
 			\end{figure}
 			
 			\begin{figure}
