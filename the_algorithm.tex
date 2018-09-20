@@ -177,8 +177,15 @@
 			
 			We first shuffled our data and split it into training (80\%) and testing (20\%). After training for 14 epochs, the testing accuracy converged against 96.8\%, which is a very good result for a binary classifier. 
 			
-			For validation we used 20 more manually annotated small images, each containing from 10 to 20 bubbles. The CNN achieved IoU@0.5mAP = 91.5\% and IoU@0.3mAP = 93\%. Note that this is slightly worse than the classification accuracy result. This is due to the occasionally unprecise radius computation, which gets penalized by the IoU@p-mAP criteria. 
+			For validation we used 20 more manually annotated small images, each containing from 10 to 20 bubbles. Figure \ref{fig:bubbleNet_result} illustrates the performance of algorithm \ref{algo:bubbleNet}.  
+			The CNN achieved IoU@0.5mAP = 91.5\% and IoU@0.3mAP = 93\%. Note that this is slightly worse than the classification accuracy result. This is due to the occasionally unprecise radius computation, which gets penalized by the IoU@p-mAP criteria. 
 	
+			\begin{figure}
+				\centering
+				\includegraphics[scale=0.4]{images/bubbleNet_validation_result.png}
+				\caption{Testing of algorithm \ref{algo:bubbleNet}. Red: ground truth, green: predicted. Note how in this image, ground truth annotation was not done perfectly, so IoU results were likely slightly underestimated.}
+				\label{fig:bubbleNet_result}
+			\end{figure}
 	
 	
 	
@@ -335,9 +342,20 @@
 	
 	\section{Calibration}\label{calibration_algorithm}
 		\subsection{Depth of Field}
-			Determining the distance between a bubble and the focal plane can be deduced from bubble blurriness. If we consider a vertical profile of the bright lower peak (for both low and high bubble concentration images), we note that the peak's width increases with increasing distance from focal plane (figure \ref{subfig:peak_profile}). We therefore describe blurriness with the peak's width, given by the sigma parameter of a Gaussian fit around the peak. Theoretically, we would expect a linear dependency between blurriness and distance to focal plane. However, our light source has a certain size that has to be accounted for, which gives bubble peaks a certain minimum width at focus. 	
+			Determining the distance between a bubble and the focal plane can be deduced from bubble blurriness. If we consider a vertical profile of the bright lower peak (for both low and high bubble concentration images), we note that the peak's width increases with increasing distance from focal plane (figure \ref{subfig:peak_profile}). We therefore describe blurriness with the peak's width, given by the sigma parameter of a Gaussian fit around the peak. Theoretically, we would expect a linear dependency between blurriness and distance to focal plane. However, our light source has a certain size that has to be accounted for, which gives bubble peaks a certain minimum width at focus. 
 			
-			Furthermore, blurriness depends on the radius. For instance, larger bubbles tend to be visible for a larger distances from focal plane (up to 10 centimeters), whereas small bubbles are only visible for no more than 2 centimeters. Figure \ref{subfig:depth_calib_meas} shows measured blurriness (in terms of $\sigma$) as a function of radius and distance from focal plane. 
+			Furthermore, blurriness depends on the radius. For instance, larger bubbles tend to be visible for a larger distances from focal plane (up to 10 centimeters), whereas small bubbles are only visible for no more than 2 centimeters. Figure \ref{subfig:dof_calib_meas} shows measured blurriness (in terms of $\sigma$) as a function of radius and distance from focal plane. 
+			
+			Therefore, we choose a fourth degree polynomial to describe the blurriness-depth dependency and a linear function to describe the radius dependency. The resulting calibration equation is 
+			\begin{equation}
+				f(r, d) = b \cdot r + a_1 \cdot d + a_2 \cdot d^2 + c
+				\label{eq:dof_calib}				
+			\end{equation}
+			Where $a_1 =, a_2=, b=, c= $ were used for Aeolotron setup. Figure \ref{subfig:depth_calib_fit_result} shows the two dimensional calibration function alongside the measurements. 
+			
+			Note that only measurement results up to a certain threshold $\sigma_th$ were kept and used for the fit function \ref{eq:dof_calib}. 
+			
+			
 			
 			
 			\begin{figure}
@@ -359,15 +377,66 @@
 						\centering
 						\includegraphics[scale=.4]{images/dof_calibration_fit.png}
 						\caption{Sampling result. }
-						\label{subfig:depth_calib_meas}
+						\label{subfig:depth_calib_fit_result}
 					\end{subfigure}								
 				
 				\caption{Depth calibration}
 				\label{fig:depth_calib}
 			\end{figure}
 			
+			
+			
+			
+			
 		\subsection{Radius}\label{sub:radius_algorithm}
+			The measurement technique developed in this work uses a light source to light up bubbles from below and captures images with a camera placed at $90^\circ$ to the light source. The resulting images are characterized by a lower peak (or bright lower curvature for high concentration bubbles) as discussed in section \ref{measurement_result}. From these images alone, it is not clear whether the observed edge corresponds to the real bubble edge or not. Also, algorithm \ref{algo:bubbleCurves} clearly underestimates the observed radius (figure \ref{fig:final_result}). 
+			
+			In order to correct for this effect, we performed calibration measurements as described in section \ref{sub:radius_setup}.
+			
+			We first need to identify back lit bubbles with those lit from below. So we take images with back lit bubbles only, and track a few bubbles of different sizes and depths and compute their radii. From the tracked back lit bubbles, we can roughly estimate the position of the same bubble lit from below. Figure \ref{fig:radius_calib_demo} illustrates the principle behind identifying bubbles from different images. 
+			
+			\begin{figure}	
+				\centering
+				\begin{subfigure}[t]{.55\textwidth}
+					\centering
+					\includegraphics[scale=0.5]{images/tracking_green.png}
+					\caption{}
+					\label{subfig:green_1}
+				\end{subfigure}
+				
+				\begin{subfigure}[t]{.55\textwidth}
+					\centering
+					\includegraphics[scale=0.5]{images/tracking_green_2.png}
+					\caption{}
+					\label{subfig:green_2}
+				\end{subfigure}
 
+				\begin{subfigure}[t]{.55\textwidth}
+					\centering
+					\includegraphics[scale=0.5]{images/tracking_red.png}
+					\caption{}
+					\label{subfig:red}
+				\end{subfigure}
+								
+					\caption{Identifying a bubble from images with different lighting. Images were acquired at 200 FPS. Image \ref{subfig:red} was taken after \ref{subfig:green_1} and before \ref{subfig:green_2}. Matching bubble in \ref{subfig:red} is marked in red }
+					\label{fig:radius_calib_demo}
+			\end{figure}
+			
+			
+			Determining the radius of bubbles lit from below is done using algorithm \ref{algo:bubbleNet}. As for the corresponding back lit bubbles, the radius is determined as follows:
+			First, we compute the derivative image and then estimate the position of the bubble center using the characteristic bright peak around the bubble center. We then extract several horizontal profiles that go through or are very close to the bubble center. Next, we compute the local maxima from the extracted profiles and apply a Gaussian fit around them in order to determine the local maximum with a subpixel accuracy. The bubble diameter is then given by the distance between the two local maxima that are farthest apart from each other. Figure \ref{fig:green_radius} illustrates the described steps above. 
+			
+			\begin{figure}
+				\centering
+				
+				\caption{Determining the radius of a back lit bubble}
+				\label{fig:green_radius}
+			\end{figure}
+			
+			
+			
+			
+			
 
 
 
