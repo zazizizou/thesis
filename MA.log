@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.4.18)  20 SEP 2018 15:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.4.18)  21 SEP 2018 15:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1380,22 +1380,14 @@ ensor_orientation.png>] [45 <./images/struct_tensor_result_2.png> <./images/cur
 ve_from_orientation.png> <./images/subpixel_sampling.png>] [46 <./images/sampli
 ng_result.png> <./graphs/circle_fit.png> <./images/bubbleCurve_final_result.png
 >]
-
-LaTeX Warning: Reference `subfig:depth_calib_fit_result' on page 47 undefined o
-n input line 354.
-
-
-LaTeX Warning: Reference `eq:dof_calib' on page 47 undefined on input line 356.
-
-
-<graphs/peak_profile_fit.png, id=700, 433.62pt x 289.08pt>
+<graphs/peak_profile_fit.png, id=702, 433.62pt x 289.08pt>
 File: graphs/peak_profile_fit.png Graphic file (type png)
 
 <use graphs/peak_profile_fit.png>
 Package pdftex.def Info: graphs/peak_profile_fit.png used on input line 364.
 (pdftex.def)             Requested size: 173.44492pt x 115.62994pt.
 
-<images/dof_calibration_measurement.png, id=701, 461.725pt x 425.59pt>
+<images/dof_calibration_measurement.png, id=703, 461.725pt x 425.59pt>
 File: images/dof_calibration_measurement.png Graphic file (type png)
 
 <use images/dof_calibration_measurement.png>
@@ -1403,7 +1395,7 @@ Package pdftex.def Info: images/dof_calibration_measurement.png used on input l
 ine 371.
 (pdftex.def)             Requested size: 184.68672pt x 170.23297pt.
 
-<images/dof_calibration_fit.png, id=702, 529.98pt x 517.935pt>
+<images/dof_calibration_fit.png, id=704, 529.98pt x 517.935pt>
 File: images/dof_calibration_fit.png Graphic file (type png)
 
 <use images/dof_calibration_fit.png>
@@ -1411,21 +1403,21 @@ Package pdftex.def Info: images/dof_calibration_fit.png used on input line 378.
 
 (pdftex.def)             Requested size: 211.98824pt x 207.17032pt.
 
-<images/tracking_green.png, id=708, 397.485pt x 400.49625pt>
+<images/tracking_green.png, id=710, 397.485pt x 400.49625pt>
 File: images/tracking_green.png Graphic file (type png)
 
 <use images/tracking_green.png>
 Package pdftex.def Info: images/tracking_green.png used on input line 402.
 (pdftex.def)             Requested size: 198.742pt x 200.24763pt.
 
-<images/tracking_green_2.png, id=709, 395.22656pt x 398.23781pt>
+<images/tracking_green_2.png, id=711, 395.22656pt x 398.23781pt>
 File: images/tracking_green_2.png Graphic file (type png)
 
 <use images/tracking_green_2.png>
 Package pdftex.def Info: images/tracking_green_2.png used on input line 409.
 (pdftex.def)             Requested size: 197.6128pt x 199.11841pt.
 
-<images/tracking_red.png, id=710, 400.49625pt x 414.04688pt>
+<images/tracking_red.png, id=712, 400.49625pt x 414.04688pt>
 File: images/tracking_red.png Graphic file (type png)
 
 <use images/tracking_red.png>
@@ -1435,9 +1427,36 @@ Package pdftex.def Info: images/tracking_red.png used on input line 416.
 
 LaTeX Warning: Float too large for page by 85.18892pt on input line 423.
 
-) [47] [48 <./graphs/peak_profile_fit.png> <./images/dof_calibration_measuremen
-t.png> <./images/dof_calibration_fit.png>] [49 <./images/tracking_green.png> <.
-/images/tracking_green_2.png> <./images/tracking_red.png>]
+[47] [48 <./graphs/peak_profile_fit.png> <./images/dof_calibration_measurement.
+png> <./images/dof_calibration_fit.png>] [49 <./images/tracking_green.png> <./i
+mages/tracking_green_2.png> <./images/tracking_red.png>]
+<images/green_edges.png, id=744, 403.5075pt x 378.41376pt>
+File: images/green_edges.png Graphic file (type png)
+
+<use images/green_edges.png>
+Package pdftex.def Info: images/green_edges.png used on input line 434.
+(pdftex.def)             Requested size: 121.05318pt x 113.525pt.
+
+<graphs/green_radius_demo.png, id=745, 433.62pt x 289.08pt>
+File: graphs/green_radius_demo.png Graphic file (type png)
+
+<use graphs/green_radius_demo.png>
+Package pdftex.def Info: graphs/green_radius_demo.png used on input line 440.
+(pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
+
+Overfull \hbox (3.41377pt too wide) in paragraph at lines 440--441
+ [][] 
+ []
+
+<graphs/radius_calibration_result.png, id=748, 433.62pt x 289.08pt>
+File: graphs/radius_calibration_result.png Graphic file (type png)
+
+<use graphs/radius_calibration_result.png>
+Package pdftex.def Info: graphs/radius_calibration_result.png used on input lin
+e 452.
+(pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
+) [50 <./images/green_edges.png> <./graphs/green_radius_demo.png>] [51 <./graph
+s/radius_calibration_result.png>]
 \openout2 = `discussion.aux'.
 
 
@@ -1445,7 +1464,7 @@ No file discussion.tex.
 \openout2 = `references.bib.aux'.
 
 No file references.bib.tex.
-[50
+[52
 
 
 
@@ -1454,7 +1473,7 @@ No file references.bib.tex.
 
 ]
 Appendix A.
-(./MA.lof [51
+(./MA.lof [53
 
 ])
 \tf@lof=\write5
@@ -1466,10 +1485,10 @@ Appendix A.
 
 
 No file MA.bbl.
-[52]
+[54]
 \openout2 = `deposition.aux'.
 
- (./deposition.tex) [53
+ (./deposition.tex) [55
 
 ]
 
@@ -1489,16 +1508,13 @@ Package rerunfilecheck Info: File `MA.out' has not changed.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 73.
  ) 
 Here is how much of TeX's memory you used:
- 11181 strings out of 493117
- 174662 string characters out of 6135433
- 319078 words of memory out of 5000000
- 14134 multiletter control sequences out of 15000+600000
+ 11200 strings out of 493117
+ 175165 string characters out of 6135433
+ 319283 words of memory out of 5000000
+ 14146 multiletter control sequences out of 15000+600000
  26197 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  48i,10n,71p,1170b,591s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1532,10 +1548,10 @@ pe1/public/cm-super/sfsx1200.pfb></usr/local/texlive/2014/texmf-dist/fonts/type
 public/cm-super/sfsx1728.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/pu
 blic/cm-super/sfsx2074.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/publ
 ic/cm-super/sfti1200.pfb>
-Output written on MA.pdf (53 pages, 7977664 bytes).
+Output written on MA.pdf (55 pages, 8016894 bytes).
 PDF statistics:
- 955 PDF objects out of 1000 (max. 8388607)
- 760 compressed objects within 8 object streams
- 188 named destinations out of 1000 (max. 500000)
- 603 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 980 PDF objects out of 1000 (max. 8388607)
+ 777 compressed objects within 8 object streams
+ 192 named destinations out of 1000 (max. 500000)
+ 618 words of extra memory for PDF output out of 10000 (max. 10000000)
 

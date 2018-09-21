@@ -37,4 +37,6 @@
 \contentsline {figure}{\numberline {5.10}{\ignorespaces Final result of algorithm \ref {algo:bubbleCurves} applied to a single bubble\relax }}{46}{figure.caption.42}
 \contentsline {figure}{\numberline {5.11}{\ignorespaces Depth calibration\relax }}{48}{figure.caption.43}
 \contentsline {figure}{\numberline {5.12}{\ignorespaces Identifying a bubble from images with different lighting. Images were acquired at 200 FPS. Image \ref {subfig:red} was taken after \ref {subfig:green_1} and before \ref {subfig:green_2}. Matching bubble in \ref {subfig:red} is marked in red \relax }}{49}{figure.caption.44}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Determining the radius of a back lit bubble\relax }}{50}{figure.caption.45}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Measured radius as a function of real radius.\relax }}{51}{figure.caption.46}
 \addvspace {10\p@ }

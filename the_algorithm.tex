@@ -428,9 +428,30 @@
 			
 			\begin{figure}
 				\centering
+
+				\begin{subfigure}[t]{.5\textwidth}
+					\centering
+					\includegraphics[scale=0.3]{images/green_edges.png}
+					\caption{From derivative image we extract horizontal profiles}
+				\end{subfigure}
+								
+				\begin{subfigure}[t]{.5\textwidth}
+				\centering
+					\includegraphics[scale=0.5]{graphs/green_radius_demo.png}
+					\caption{The distance between the farthest local maxima gives the diameter}
+				\end{subfigure}
 				
-				\caption{Determining the radius of a back lit bubble}
+				\caption{Determining the radius of a back lit bubble}								
 				\label{fig:green_radius}
+			\end{figure}
+			
+			Figure \ref{fig:radius_calib_result} shows the radius determined by algorithm \ref{algo:bubbleNet} of bubbles lit from below as a function of the radius of back lit bubbles. The error bars are standard deviations, i.e. statistical errors arising from multiple radius computations of the same bubble at different depths and different locations. 
+			
+			\begin{figure}
+				\centering
+				\includegraphics[scale=0.5]{graphs/radius_calibration_result.png}
+				\caption{Measured radius as a function of real radius.}
+				\label{fig:radius_calib_result}
 			\end{figure}
 			
 			
