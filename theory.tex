@@ -41,9 +41,10 @@ In this chapter we explain the theoretical concepts relevant to this thesis. We 
 				\begin{equation}
 					\theta_c = \arcsin\left(\dfrac{n2}{n1}\right)
 				\end{equation}
-			
+				
+				
 		\subsection{Bubble-light interaction}
-			Since the smallest bubble radius is much larger than the wavelength of our light source, diffraction within the air bubble can be neglected and therefore only refraction laws will be considered. Our light source is also much larger than the largest considered bubble radius (see section \ref{experimental_setup}).
+			Since the smallest bubble radius (around 50-100 $\mu m$) is much larger than the wavelength of our light source (around 600 nm), diffraction within the air bubble can be neglected. Mie scattering effects are also only relevant for radii within the same order of magnitude as the wavelength (Demtroeder 2) so it can be neglected as well. Therefore, only refraction and reflection laws will be considered. 
 			
 			\begin{figure}
 		    \centering
@@ -65,7 +66,8 @@ In this chapter we explain the theoretical concepts relevant to this thesis. We 
 		    \label{fig:bubble_physics}
 	 		\end{figure}	
 			
-			Figure \ref{subfig:bubble_refraction} shows refracted rays inside an air bubble. Since the outside medium (water) is more dense, total refraction occurs at the lower bubble boundary. Simulation in figure \ref{subfig:bubble_simulation} also shows that when a bubble is lit from bellow, two peaks can be observed. The lower peak is strong because it arises from total reflection on the lower bubble boundary, whereas the upper peak is much weaker because it is caused by refracted beams only. Peaks' characteristics will be exploited by our proposed algorithm in order to compute depth and radius.
+			Figure \ref{subfig:bubble_refraction} shows refracted rays inside an air bubble. Since the outside medium (water) is more dense, total refraction occurs at the lower bubble boundary. Simulation in figure \ref{subfig:bubble_simulation} also shows that when a bubble is lit from bellow, two peaks can be observed. The lower peak is strong because it arises from total reflection on the lower bubble boundary, whereas the upper peak is much weaker. The second peak arises from internal (partial) reflections within the bubble and can be best explained by the Fresnel equations (Demtroeder 2). 
+			The different peaks characteristics will be exploited by our proposed algorithm in order to compute the bubble's depth and radius.
 			
 			
 	
@@ -137,7 +139,7 @@ In this chapter we explain the theoretical concepts relevant to this thesis. We 
 			\item Zero-shift: $\Im (\hat{h}(\mathbf{k})) = 0$
 			\item Preservation of mean value: $\hat{h}(0) = 1 $
 			\item Monotonous decrease: $ \hat{h}(k_1) \leq \hat{h}(k_2) $ for $ k_2 > k_2 $
-			\item Isotropy: $\hat{h}(\mathbf{k}) = \hat{h}(| \mathbf{k} |)$ \textcolor{red}{stimmt das ??}
+			\item Isotropy: $\hat{h}(\mathbf{k}) = \hat{h}(| \mathbf{k} |)$
 		\end{enumerate}
 		
 		In this work, we will be using Gaussian filters for one and two dimensional smoothing. Although Gaussian filters are not ideal, e.g. isotropy is violated for small standard deviations, it is still a good approximation for an ideal low pass filter. Computing the Fourier transform (for convolution) is also faster for a Gaussian filter. The $m$-th component of a one dimensional Gaussian filter mask can be obtained from the Gaussian function

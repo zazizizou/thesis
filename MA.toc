@@ -4,9 +4,9 @@
 \contentsline {section}{\numberline {2.1}Bubble physics}{7}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Reflection and Refraction}{7}{subsection.2.1.1}
 \contentsline {subsection}{\numberline {2.1.2}Bubble-light interaction}{9}{subsection.2.1.2}
-\contentsline {section}{\numberline {2.2}Image processing}{9}{section.2.2}
+\contentsline {section}{\numberline {2.2}Image processing}{10}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Fourier theory}{10}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Convolution}{10}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.2}Convolution}{11}{subsection.2.2.2}
 \contentsline {subsection}{\numberline {2.2.3}Smoothing}{11}{subsection.2.2.3}
 \contentsline {subsection}{\numberline {2.2.4}Edges and Derivation}{13}{subsection.2.2.4}
 \contentsline {subsection}{\numberline {2.2.5}Orientation and Structure Tensor}{15}{subsection.2.2.5}
@@ -20,7 +20,7 @@
 \contentsline {chapter}{\numberline {4}Experimental Setup}{24}{chapter.4}
 \contentsline {section}{\numberline {4.1}Requirements}{24}{section.4.1}
 \contentsline {section}{\numberline {4.2}Aquarium Setup}{24}{section.4.2}
-\contentsline {section}{\numberline {4.3}Aeolotron Setup}{26}{section.4.3}
+\contentsline {section}{\numberline {4.3}Aeolotron Setup}{25}{section.4.3}
 \contentsline {section}{\numberline {4.4}Measurement result}{26}{section.4.4}
 \contentsline {section}{\numberline {4.5}Calibration}{31}{section.4.5}
 \contentsline {subsection}{\numberline {4.5.1}Depth of Field}{31}{subsection.4.5.1}
@@ -31,18 +31,19 @@
 \contentsline {subsection}{\numberline {5.2.1}Radius from Bubble}{36}{subsection.5.2.1}
 \contentsline {subsection}{\numberline {5.2.2}Signal extraction}{37}{subsection.5.2.2}
 \contentsline {subsection}{\numberline {5.2.3}Signal classification}{37}{subsection.5.2.3}
-\contentsline {subsubsection}{\nonumberline BubbleNet architecture}{37}{section*.29}
-\contentsline {subsubsection}{\nonumberline Training Data}{40}{section*.31}
-\contentsline {subsubsection}{\nonumberline Results}{40}{section*.32}
-\contentsline {section}{\numberline {5.3}BubbleCurves}{41}{section.5.3}
+\contentsline {subsubsection}{\nonumberline BubbleNet architecture}{37}{section*.30}
+\contentsline {subsubsection}{\nonumberline Training Data}{40}{section*.32}
+\contentsline {subsubsection}{\nonumberline Results}{41}{section*.33}
+\contentsline {section}{\numberline {5.3}BubbleCurves}{42}{section.5.3}
 \contentsline {subsection}{\numberline {5.3.1}Bubble Classification}{42}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Radius from Orientation}{42}{subsection.5.3.2}
-\contentsline {subsubsection}{\nonumberline Orientation}{43}{section*.34}
-\contentsline {subsubsection}{\nonumberline Curve from Orientation}{43}{section*.37}
-\contentsline {subsubsection}{\nonumberline Results}{43}{section*.41}
+\contentsline {subsection}{\numberline {5.3.2}Radius from Orientation}{43}{subsection.5.3.2}
+\contentsline {subsubsection}{\nonumberline Orientation}{43}{section*.35}
+\contentsline {subsubsection}{\nonumberline Curve from Orientation}{43}{section*.38}
+\contentsline {subsubsection}{\nonumberline Results}{43}{section*.42}
 \contentsline {section}{\numberline {5.4}Calibration}{47}{section.5.4}
 \contentsline {subsection}{\numberline {5.4.1}Depth of Field}{47}{subsection.5.4.1}
 \contentsline {subsection}{\numberline {5.4.2}Radius}{47}{subsection.5.4.2}
-\contentsline {chapter}{\numberline {A}Lists}{53}{appendix.A}
-\contentsline {section}{\numberline {A.1}List of Figures}{53}{section.A.1}
-\contentsline {section}{\numberline {A.2}List of Tables}{54}{section.A.2}
+\contentsline {chapter}{\numberline {6}Summary and Discussion}{52}{chapter.6}
+\contentsline {chapter}{\numberline {A}Lists}{54}{appendix.A}
+\contentsline {section}{\numberline {A.1}List of Figures}{54}{section.A.1}
+\contentsline {section}{\numberline {A.2}List of Tables}{55}{section.A.2}
