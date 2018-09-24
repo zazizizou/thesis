@@ -404,8 +404,8 @@ In this chapter we explain the theoretical concepts relevant to this thesis. We 
 	
 	There has been a lot of progress in this field thanks to deep learning algorithms (see next section) that rely on training a relatively complex model a large amount of annotated data. The sate of the art algorithms include region based methods such as Faster R-CNN (cite \cite{faster_rcnn}), where many candidate regions are first extracted and then classified and single evaluation methods such as YOLO (cite \cite{YOLO}) where bounding boxes and class probabilities are estimated with one single neural network in a single evaluation. Although these algorithms perform very well on typical photographs and support between 1000 and 9000 different classes, applying them to our problem yields very bad results (see chapter \ref{the_algorithm}). We still however opt for a machine learning based approach for the classification part, and then perform localization with more straightforward methods.
 		
-		\subsection{Classification and Machine Learning}\label{machine_learning}
-		In our work, we use machine learning techniques mainly for signal classification purposes. For instance, both of the proposed algorithms rely on binary classification using logistic regression and convolutional neural network. In this section, we explain the principle behind machine learning and the main idea behind the chosen model. A more thorough argumentation about the chosen architecture and model-specific parameters can be found in chapter \ref{the_algorithm}.
+		\subsection{Classification}\label{machine_learning}
+		In our work, we use machine learning techniques mainly for signal classification purposes. For instance, both of the proposed algorithms rely on binary classification using a random forest classifier and a convolutional neural network. In this section, we explain the principle behind machine learning and the main idea behind the chosen model. A more thorough argumentation about the chosen architecture and model-specific parameters is discussed in chapter \ref{the_algorithm}.
 
 		Machine learning is commonly defined as the practice of using algorithms to parse data, learn from it, and the make a determination or prediction about something. In our case, this means training our model with a large number of bubble and background instances, in order to predict whether a given signal corresponds to a bubble or not. Figure \ref{fig:machine_learning_intro} summarizes the principle behind machine learning. 
 		
@@ -430,8 +430,25 @@ In this chapter we explain the theoretical concepts relevant to this thesis. We 
 				\item \textbf{Testing} is assigning a score to a trained model based on annotated testing data. The score is typically by an evaluation criteria and is independent of the model itself. 
 				\item \textbf{Validation} is a form of testing, so it assigns a score to a trained model. Validation is needed when we want to choose the best model among some trained candidate models based on their testing performance. Since changing a parameter of the algorithm (in this case the whole model) based on the output is equivalent to training by definition, we need an independent data set to compute the final score of the algorithm, i.e. validation data. 
 			\end{itemize}				
+			
+		\subsubsection{Logistic Regression Classifier}
+			Logistic regression is despite its name a linear model for classification, where the probabilities describing the possible outcome of a single trial are modeled using a logistic function (sigmoid curve):
+			\begin{equation}
+				lr(x) = \dfrac{A}{1 + e^{-k (x-x_0)}}
+			\end{equation}
+		where $x_0$ is the x-value of the sigmoid's midpoint, $A$ is the curve's maximum value and k is the steepness of the curve. This model is very simple and can be trained with relatively few data points. Its main drawback is its inability to generalize to complex data with high number of features. We make use of this classifier as a preprocessing step to generate training data for the more demanding convolutional neural network. 
 		
-		\subsubsection{Evaluation Criteria: IoU@p-mAP}
+		\subsubsection{Random Forest Classifier}\label{rand_forest_class}
+			Random forest classifiers operate by constructing a multitude of decision trees at training time and outputting the class that is the mode of the classes (cite Ho, Tin Kam 1995). So random forest is an ensemble method in which a classifier is constructed by combining several different independent base classifiers. Their main advantage over a simple decision tree is the ability to describe the data well without overfitting. 			
+			This method is well suited for small sized and balanced data set, given the chosen features describe the data well. It also allows an estimation of feature importance in the classification, something that neural networks are known to be lacking. Its main drawback is its tendency to generate deep trees during training, which makes evaluation computationally expensive. See (cite Pattern Recognition buch 2016) for a more in depth description of random forests. 
+			
+		\subsubsection{Convolutional Neural Network}
+			First introduced by (cite AlexNet), a convolutional neural networks, or CNN is a class of deep, feed-forward artificial neural networks. Convolutional networks were inspired by biological processes[4] in that the connectivity pattern between neurons resembles the organization of the animal visual cortex. Individual neurons activate only when stimulated in a restricted region of the visual field known as the receptive field. The receptive fields of different neurons partially overlap such that they cover the entire visual field. CNNs are known for their ability to generalize well to large, mutlidimensional data. CNNs also require very little preprocessing compared to other classical machine learning classification algorithms, such as random forests. For instance, neural networks learn the filters needed to extract features using a back propagation optimization method called stochastic gradient descent. 
+			
+			The drawback of using a CNN is the need of a large amount of data and computational power for proper training. It is also not possible to extract feature importance from a trained CNN, which makes CNNs resemble black boxes that are hard to interpret.  
+			 (cite Neural Network Methods for Natural Language Processing) explain CNNs in more details.
+		
+		\subsection{Evaluation Criteria: IoU@p-mAP}
 		  We evaluate our object detection algorithm using the \textit{intersection over union at $p$ mean average precision} criteria as shown in figure \ref{fig:iou_def}. As the  name suggests, we compute the area of intersection between the predicted and the ground truth bounding box and then divide it by union area of the two boxes. This means that IoU = 1 corresponds to a perfect prediction and IoU = 0 is a complete miss (assuming original images were annotated perfectly). So we choose a threshold $p$, so that IoU $>= p$ or simply IoU@p corresponds to a correct prediction or \textit{true positive}. 		  
 
 		\begin{figure}

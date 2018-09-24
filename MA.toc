@@ -11,39 +11,42 @@
 \contentsline {subsection}{\numberline {2.2.4}Edges and Derivation}{13}{subsection.2.2.4}
 \contentsline {subsection}{\numberline {2.2.5}Orientation and Structure Tensor}{15}{subsection.2.2.5}
 \contentsline {section}{\numberline {2.3}The object detection problem}{18}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Classification and Machine Learning}{18}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.1}Classification}{18}{subsection.2.3.1}
 \contentsline {subsubsection}{\nonumberline Terminology}{18}{section*.12}
-\contentsline {subsubsection}{\nonumberline Evaluation Criteria: IoU@p-mAP}{20}{section*.13}
-\contentsline {chapter}{\numberline {3}Related Work}{21}{chapter.3}
-\contentsline {section}{\numberline {3.1}Bright field method}{21}{section.3.1}
-\contentsline {section}{\numberline {3.2}Bubble optical imaging instrument}{21}{section.3.2}
-\contentsline {chapter}{\numberline {4}Experimental Setup}{24}{chapter.4}
-\contentsline {section}{\numberline {4.1}Requirements}{24}{section.4.1}
-\contentsline {section}{\numberline {4.2}Aquarium Setup}{24}{section.4.2}
-\contentsline {section}{\numberline {4.3}Aeolotron Setup}{25}{section.4.3}
-\contentsline {section}{\numberline {4.4}Measurement result}{26}{section.4.4}
-\contentsline {section}{\numberline {4.5}Calibration}{31}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}Depth of Field}{31}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}Radius}{31}{subsection.4.5.2}
-\contentsline {chapter}{\numberline {5}The Algorithm}{35}{chapter.5}
-\contentsline {section}{\numberline {5.1}Motivation}{35}{section.5.1}
-\contentsline {section}{\numberline {5.2}BubbleNet}{35}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Radius from Bubble}{36}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Signal extraction}{37}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Signal classification}{37}{subsection.5.2.3}
-\contentsline {subsubsection}{\nonumberline BubbleNet architecture}{37}{section*.30}
-\contentsline {subsubsection}{\nonumberline Training Data}{40}{section*.32}
-\contentsline {subsubsection}{\nonumberline Results}{41}{section*.33}
-\contentsline {section}{\numberline {5.3}BubbleCurves}{42}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Bubble Classification}{42}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Radius from Orientation}{43}{subsection.5.3.2}
-\contentsline {subsubsection}{\nonumberline Orientation}{43}{section*.35}
-\contentsline {subsubsection}{\nonumberline Curve from Orientation}{43}{section*.38}
-\contentsline {subsubsection}{\nonumberline Results}{43}{section*.42}
-\contentsline {section}{\numberline {5.4}Calibration}{47}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Depth of Field}{47}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Radius}{47}{subsection.5.4.2}
-\contentsline {chapter}{\numberline {6}Summary and Discussion}{52}{chapter.6}
-\contentsline {chapter}{\numberline {A}Lists}{54}{appendix.A}
-\contentsline {section}{\numberline {A.1}List of Figures}{54}{section.A.1}
-\contentsline {section}{\numberline {A.2}List of Tables}{55}{section.A.2}
+\contentsline {subsubsection}{\nonumberline Logistic Regression Classifier}{20}{section*.13}
+\contentsline {subsubsection}{\nonumberline Random Forest Classifier}{20}{section*.14}
+\contentsline {subsubsection}{\nonumberline Convolutional Neural Network}{20}{section*.15}
+\contentsline {subsection}{\numberline {2.3.2}Evaluation Criteria: IoU@p-mAP}{21}{subsection.2.3.2}
+\contentsline {chapter}{\numberline {3}Related Work}{23}{chapter.3}
+\contentsline {section}{\numberline {3.1}Bright field method}{23}{section.3.1}
+\contentsline {section}{\numberline {3.2}Bubble optical imaging instrument}{23}{section.3.2}
+\contentsline {chapter}{\numberline {4}Experimental Setup}{26}{chapter.4}
+\contentsline {section}{\numberline {4.1}Requirements}{26}{section.4.1}
+\contentsline {section}{\numberline {4.2}Aquarium Setup}{26}{section.4.2}
+\contentsline {section}{\numberline {4.3}Aeolotron Setup}{27}{section.4.3}
+\contentsline {section}{\numberline {4.4}Measurement result}{28}{section.4.4}
+\contentsline {section}{\numberline {4.5}Calibration}{33}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Depth of Field}{33}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Radius}{33}{subsection.4.5.2}
+\contentsline {chapter}{\numberline {5}The Algorithm}{37}{chapter.5}
+\contentsline {section}{\numberline {5.1}Motivation}{37}{section.5.1}
+\contentsline {section}{\numberline {5.2}BubbleNet}{37}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Radius from Bubble}{38}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Signal extraction}{39}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Signal classification}{39}{subsection.5.2.3}
+\contentsline {subsubsection}{\nonumberline BubbleNet architecture}{39}{section*.32}
+\contentsline {subsubsection}{\nonumberline Training Data}{42}{section*.34}
+\contentsline {subsubsection}{\nonumberline Results}{43}{section*.35}
+\contentsline {section}{\numberline {5.3}BubbleCurves}{44}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Bubble Classification}{44}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Radius from Orientation}{45}{subsection.5.3.2}
+\contentsline {subsubsection}{\nonumberline Orientation}{45}{section*.37}
+\contentsline {subsubsection}{\nonumberline Curve from Orientation}{45}{section*.40}
+\contentsline {subsubsection}{\nonumberline Results}{45}{section*.44}
+\contentsline {section}{\numberline {5.4}Calibration}{49}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Depth of Field}{49}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Radius}{49}{subsection.5.4.2}
+\contentsline {chapter}{\numberline {6}Summary and Discussion}{54}{chapter.6}
+\contentsline {chapter}{\numberline {A}Lists}{56}{appendix.A}
+\contentsline {section}{\numberline {A.1}List of Figures}{56}{section.A.1}
+\contentsline {section}{\numberline {A.2}List of Tables}{57}{section.A.2}
