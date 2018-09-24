@@ -8,6 +8,7 @@
 \@writefile{toc}{\contentsline {section}{\numberline {2.1}Bubble physics}{7}{section.2.1}}
 \newlabel{bubble_physics}{{2.1}{7}{Bubble physics}{section.2.1}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1.1}Reflection and Refraction}{7}{subsection.2.1.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.2}Bubble-light interaction}{7}{subsection.2.1.2}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:reflection_def}{{2.1a}{8}{Reflection: incident light beam gets reflected with the same angle relative to surface normal.\relax }{figure.caption.2}{}}
 \newlabel{sub@fig:reflection_def}{{a}{8}{Reflection: incident light beam gets reflected with the same angle relative to surface normal.\relax }{figure.caption.2}{}}
@@ -21,7 +22,6 @@
 \newlabel{sub@subfig:bubble_simulation}{{b}{9}{Simulated bubbles with ray tracing with two different lighting conditions. Left: no ambient light. Right: with ambient light\relax }{figure.caption.3}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces Interaction of a light bubble with light rays\relax }}{9}{figure.caption.3}}
 \newlabel{fig:bubble_physics}{{2.2}{9}{Interaction of a light bubble with light rays\relax }{figure.caption.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.2}Bubble-light interaction}{9}{subsection.2.1.2}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Notation and coordinate system\relax }}{10}{figure.caption.4}}
 \newlabel{fig:coord_sys}{{2.3}{10}{Notation and coordinate system\relax }{figure.caption.4}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.2}Image processing}{10}{section.2.2}}
@@ -30,45 +30,45 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}Convolution}{11}{subsection.2.2.2}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.3}Smoothing}{11}{subsection.2.2.3}}
 \newlabel{sect:smoothing}{{2.2.3}{11}{Smoothing}{subsection.2.2.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces Gaussian smoothing filter\relax }}{12}{figure.caption.5}}
-\newlabel{fig:gauss_intro}{{2.4}{12}{Gaussian smoothing filter\relax }{figure.caption.5}{}}
-\newlabel{fig:edges_intro}{{\caption@xref {fig:edges_intro}{ on input line 188}}{13}{Edges and Derivation}{figure.caption.6}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces Original 1D signal. First derivative. Second derivative\relax }}{13}{figure.caption.6}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.4}Edges and Derivation}{13}{subsection.2.2.4}}
-\newlabel{eq:hessian_def}{{2.14}{14}{Edges and Derivation}{equation.2.2.14}{}}
-\newlabel{eq:sobel}{{2.17}{14}{Edges and Derivation}{equation.2.2.17}{}}
-\newlabel{eq:grad_sobel}{{2.18}{14}{Edges and Derivation}{equation.2.2.18}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.4}Edges and Derivation}{12}{subsection.2.2.4}}
+\newlabel{eq:hessian_def}{{2.14}{12}{Edges and Derivation}{equation.2.2.14}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces Gaussian smoothing filter\relax }}{13}{figure.caption.5}}
+\newlabel{fig:gauss_intro}{{2.4}{13}{Gaussian smoothing filter\relax }{figure.caption.5}{}}
+\newlabel{fig:edges_intro}{{\caption@xref {fig:edges_intro}{ on input line 187}}{14}{Edges and Derivation}{figure.caption.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces Original 1D signal. First derivative. Second derivative\relax }}{14}{figure.caption.6}}
+\newlabel{eq:sobel}{{2.16}{14}{Edges and Derivation}{equation.2.2.16}{}}
+\newlabel{eq:grad_sobel}{{2.17}{14}{Edges and Derivation}{equation.2.2.17}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces Left: original image. Right: gradient image\relax }}{15}{figure.caption.7}}
 \newlabel{fig:sobel_demo}{{2.6}{15}{Left: original image. Right: gradient image\relax }{figure.caption.7}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces Ideal local neighborhood described by a unit vector $\mathaccentV {tilde}07E{\mathbf  {n}}$\relax }}{15}{figure.caption.8}}
 \newlabel{fig:struct_tensor_intro}{{2.7}{15}{Ideal local neighborhood described by a unit vector $\tilde {\mathbf {n}}$\relax }{figure.caption.8}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.5}Orientation and Structure Tensor}{15}{subsection.2.2.5}}
-\newlabel{eq:max_integral}{{2.21}{15}{Orientation and Structure Tensor}{equation.2.2.21}{}}
+\newlabel{eq:struct_tensor_pq}{{2.20}{15}{Orientation and Structure Tensor}{equation.2.2.20}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2.1}{\ignorespaces Interpretation of the eigenvalues of a structure tensor\relax }}{16}{table.caption.9}}
+\newlabel{tab:struc_tensor_interp}{{2.1}{16}{Interpretation of the eigenvalues of a structure tensor\relax }{table.caption.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces Orientation angle using sobel filters for derivation and a Gaussian mask with $\sigma =1$ for smoothing.\relax }}{16}{figure.caption.10}}
+\newlabel{fig:struct_tensor_demo}{{2.8}{16}{Orientation angle using sobel filters for derivation and a Gaussian mask with $\sigma =1$ for smoothing.\relax }{figure.caption.10}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}The object detection problem}{16}{section.2.3}}
+\newlabel{the_object_detection_problem}{{2.3}{16}{The object detection problem}{section.2.3}{}}
 \citation{faster_rcnn}
 \citation{YOLO}
-\newlabel{eq:max_prob}{{2.22}{16}{Orientation and Structure Tensor}{equation.2.2.22}{}}
-\newlabel{eq:struct_tensor_pq}{{2.24}{16}{Orientation and Structure Tensor}{equation.2.2.24}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces Orientation angle using sobel filters for derivation and a Gaussian mask with $\sigma =1$ for smoothing.\relax }}{17}{figure.caption.9}}
-\newlabel{fig:struct_tensor_demo}{{2.8}{17}{Orientation angle using sobel filters for derivation and a Gaussian mask with $\sigma =1$ for smoothing.\relax }{figure.caption.9}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.9}{\ignorespaces Left: Input image. Left: Output of an object detection algorithm dawn as bounding boxes around bubbles\relax }}{17}{figure.caption.10}}
-\newlabel{fig:obj_detec_intro}{{2.9}{17}{Left: Input image. Left: Output of an object detection algorithm dawn as bounding boxes around bubbles\relax }{figure.caption.10}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.3}The object detection problem}{18}{section.2.3}}
-\newlabel{the_object_detection_problem}{{2.3}{18}{The object detection problem}{section.2.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}Classification}{18}{subsection.2.3.1}}
-\newlabel{machine_learning}{{2.3.1}{18}{Classification}{subsection.2.3.1}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Terminology}{18}{section*.12}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.10}{\ignorespaces Training and testing in machine learning\relax }}{19}{figure.caption.11}}
-\newlabel{fig:machine_learning_intro}{{2.10}{19}{Training and testing in machine learning\relax }{figure.caption.11}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Logistic Regression Classifier}{20}{section*.13}}
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Random Forest Classifier}{20}{section*.14}}
-\newlabel{rand_forest_class}{{2.3.1}{20}{Random Forest Classifier}{section*.14}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Convolutional Neural Network}{20}{section*.15}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.11}{\ignorespaces Definition of intersection over union. Green represents predicted bounding box and red is the ground truth. Areas are drawn in blue\relax }}{21}{figure.caption.16}}
-\newlabel{fig:iou_def}{{2.11}{21}{Definition of intersection over union. Green represents predicted bounding box and red is the ground truth. Areas are drawn in blue\relax }{figure.caption.16}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Evaluation Criteria: IoU@p-mAP}{21}{subsection.2.3.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.9}{\ignorespaces Left: Input image. Left: Output of an object detection algorithm dawn as bounding boxes around bubbles\relax }}{17}{figure.caption.11}}
+\newlabel{fig:obj_detec_intro}{{2.9}{17}{Left: Input image. Left: Output of an object detection algorithm dawn as bounding boxes around bubbles\relax }{figure.caption.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}Classification}{17}{subsection.2.3.1}}
+\newlabel{machine_learning}{{2.3.1}{17}{Classification}{subsection.2.3.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.10}{\ignorespaces Training and testing in machine learning\relax }}{18}{figure.caption.12}}
+\newlabel{fig:machine_learning_intro}{{2.10}{18}{Training and testing in machine learning\relax }{figure.caption.12}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Terminology}{19}{section*.13}}
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Logistic Regression Classifier}{19}{section*.14}}
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Random Forest Classifier}{19}{section*.15}}
+\newlabel{rand_forest_class}{{2.3.1}{19}{Random Forest Classifier}{section*.15}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.11}{\ignorespaces Definition of intersection over union. Green represents predicted bounding box and red is the ground truth. Areas are drawn in blue\relax }}{20}{figure.caption.17}}
+\newlabel{fig:iou_def}{{2.11}{20}{Definition of intersection over union. Green represents predicted bounding box and red is the ground truth. Areas are drawn in blue\relax }{figure.caption.17}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Convolutional Neural Network}{20}{section*.16}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Evaluation Criteria: IoU@p-mAP}{20}{subsection.2.3.2}}
 \@setckpt{theory}{
-\setcounter{page}{23}
-\setcounter{equation}{30}
+\setcounter{page}{22}
+\setcounter{equation}{24}
 \setcounter{enumi}{2}
 \setcounter{enumii}{0}
 \setcounter{enumiii}{0}
@@ -83,10 +83,10 @@
 \setcounter{paragraph}{0}
 \setcounter{subparagraph}{0}
 \setcounter{figure}{11}
-\setcounter{table}{0}
+\setcounter{table}{1}
 \setcounter{parentequation}{0}
 \setcounter{NAT@ctr}{0}
-\setcounter{Item}{9}
+\setcounter{Item}{6}
 \setcounter{Hfootnote}{0}
 \setcounter{bookmark@seq@number}{14}
 \setcounter{ContinuedFloat}{0}

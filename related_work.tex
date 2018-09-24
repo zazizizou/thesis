@@ -1,10 +1,10 @@
 \chapter{Related Work} \label{related_work}
  
 
-In this chapter we briefly discuss two similar bubble measurement techniques that aim to estimate bubble concentrations in water. The first is a master's thesis by (cite Leonie), where bubbles, where a bright field method was used in lab, so that bubbles appeared as dark circles on camera, and the second is a field measurement technique (cite R. Al-Lashi, S. Gunn), where bubbles were artificially lit from below, yielding similar images to our own. 
+In this chapter we briefly discuss two similar bubble measurement techniques that aim to estimate bubble concentrations in water. The first is a master's thesis by (cite Leonie), where a bright field method was used in a wind wave facility, so that bubbles appeared as dark circles on camera, and the second is a field measurement technique (cite R. Al-Lashi, S. Gunn), where bubbles were artificially lit from below, yielding similar images to our own. 
 
 \section{Bright field method}
-	As an improved method from (cite Michler), this technique uses a bright field method as shown in figure \ref{fig:bright_field}. Bubbles is this experimental setup are backlit, so that they appear completely dark except for one spot in the center (see section  \ref{bubble_physics}). Note the need to use a lens shift adapter because the incoming rays are not parallel. 
+	As an improved method from (cite Michler), this technique uses a bright field method as shown in figure \ref{fig:bright_field}. Bubbles in this experimental setup are backlit, so that they appear completely dark except for one spot in the center (see section  \ref{bubble_physics}). Note the need to use a lens shift adapter because the incoming rays are not parallel. 
 	
 		\begin{figure}
 			\centering
@@ -23,16 +23,16 @@ In this chapter we briefly discuss two similar bubble measurement techniques tha
 				\caption{calibration target}
 				\label{subfig:calib_target}
 			\end{subfigure}
-			\label{fig:bright_field}
 			
 			\caption{Bright field method}
+			\label{fig:bright_field}
 		\end{figure}		
 	
 	Depth of field calibration was based on the edges between bubbles and background. The higher the edge's magnitude, the closer the bubble is to the focus plane. A calibration target made of hollow circles was used to calibrate the depth of field (figure \ref{subfig:calib_target}). 
 	
 	The images obtained by this method are arguably the most important advantage of this technique, since it reduces bubbles to simple circles, making them relatively easy to detect, whereas our algorithms need to recognize significantly more complex patterns than mere circles.
 	 In contrast to our method however, the bright field technique constrains how close the camera can get to the water surface. Also, (cite Leonie) does not define a criteria that measures how well the circle detection algorithm performs, so the assumption is that precision is close to perfect, which introduces an error to bubble concentration measurement that was essentially neglected. 
-	 Nevertheless, this work was very important for newly developed method because it offered an estimation of the boundary conditions, such as the largest possible bubble radius and the largest possible bubble concentration, that were important to determine the different hyperparameters of our algorithm and therefore contributing to the accuracy of our algorithms. 
+	 Nevertheless, this work was very important for our newly developed method because it offered an estimation of boundary conditions, such as the largest possible bubble radius and the largest possible bubble concentration, that were important to determine the different hyperparameters of our algorithm and therefore contributing to the accuracy of our algorithms. 
 	
 	
 \section{Bubble optical imaging instrument}
