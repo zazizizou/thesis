@@ -11,21 +11,21 @@ In this chapter we explain the theoretical concepts relevant to this thesis. We 
 			
 			\begin{figure}
 		    \centering
-		    \begin{subfigure}{0.3\textwidth}
+		    \begin{subfigure}[t]{0.3\textwidth}
 		        \includegraphics[width=\textwidth]{images/reflection.png}
 		        \caption{Reflection: incident light beam gets reflected with the same angle relative to surface normal.}
 		        \label{fig:reflection_def}
 		    \end{subfigure}
 		    
-		    \begin{subfigure}{0.3\textwidth}
+		    \begin{subfigure}[t]{0.3\textwidth}
 		        \includegraphics[width=\textwidth]{images/refraction.png}
-		        \caption{Refraction: refracted light beam gets refracted according to Snell's law}	
+		        \caption{Refraction: refracted light beam gets refracted according to Snell's law.}	
 		        \label{fig:refracted_def}
 		    \end{subfigure}
 		    
-		    \begin{subfigure}{0.3\textwidth}
+		    \begin{subfigure}[t]{0.3\textwidth}
 		        \includegraphics[width=\textwidth]{images/total_reflection.png}
-		        \caption{Critical angle is reached when refracted angle is $90^\circ$}	
+		        \caption{Critical angle is reached when refracted angle is $90^\circ$.}
 		        \label{fig:total_reflected_def}
 		    \end{subfigure}
 	 		\end{figure}	
@@ -38,7 +38,7 @@ In this chapter we explain the theoretical concepts relevant to this thesis. We 
 				
 				\textbf{Total reflection} occurs when angle of the incident beam is larger than the critical angle:
 				\begin{equation}
-					\theta_c = \arcsin\left(\dfrac{n2}{n1}\right)
+					\theta_c = \arcsin\left(\dfrac{n_2}{n_1}\right)
 				\end{equation}
 				
 				
@@ -47,17 +47,17 @@ In this chapter we explain the theoretical concepts relevant to this thesis. We 
 			
 			\begin{figure}
 		    \centering
-		    \begin{subfigure}{0.3\textwidth}
+		    \begin{subfigure}[b]{0.5\textwidth}
 		    		\centering
-		        \includegraphics[width=\textwidth]{images/bubble_refraction.png}
-		        \caption{Light beams inside a bubble. Light paths are described with refraction and total reflection laws.}
+		        \includegraphics[scale=.5]{images/bubble_refraction.png}
+		        \caption{Light beams inside a bubble. Reflected beams' intensities inside the bubble are described by Fresnel's law.}
 		        \label{subfig:bubble_refraction}
 		    \end{subfigure}
 		    
-		    \begin{subfigure}{0.3\textwidth}
+		    \begin{subfigure}[b]{0.5\textwidth}
 		    		\centering
-		        \includegraphics[width=1\textwidth]{images/bubble_simulation.png}
-		        \caption{Simulated bubbles with ray tracing with two different lighting conditions. Left: no ambient light. Right: with ambient light}	
+		        \includegraphics[scale=0.6]{images/bubble_simulation.png}
+		        \caption{Simulated bubbles with ray tracing.}	
 		        \label{subfig:bubble_simulation}
 		    \end{subfigure}
 		    

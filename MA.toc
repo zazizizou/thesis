@@ -9,13 +9,13 @@
 \contentsline {subsection}{\numberline {2.2.2}Convolution}{11}{subsection.2.2.2}
 \contentsline {subsection}{\numberline {2.2.3}Smoothing}{11}{subsection.2.2.3}
 \contentsline {subsection}{\numberline {2.2.4}Edges and Derivation}{12}{subsection.2.2.4}
-\contentsline {subsection}{\numberline {2.2.5}Orientation and Structure Tensor}{15}{subsection.2.2.5}
+\contentsline {subsection}{\numberline {2.2.5}Orientation and Structure Tensor}{14}{subsection.2.2.5}
 \contentsline {section}{\numberline {2.3}The object detection problem}{16}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Classification}{17}{subsection.2.3.1}
-\contentsline {subsubsection}{\nonumberline Terminology}{19}{section*.13}
+\contentsline {subsubsection}{\nonumberline Terminology}{17}{section*.13}
 \contentsline {subsubsection}{\nonumberline Logistic Regression Classifier}{19}{section*.14}
 \contentsline {subsubsection}{\nonumberline Random Forest Classifier}{19}{section*.15}
-\contentsline {subsubsection}{\nonumberline Convolutional Neural Network}{20}{section*.16}
+\contentsline {subsubsection}{\nonumberline Convolutional Neural Network}{19}{section*.16}
 \contentsline {subsection}{\numberline {2.3.2}Evaluation Criteria: IoU@p-mAP}{20}{subsection.2.3.2}
 \contentsline {chapter}{\numberline {3}Related Work}{22}{chapter.3}
 \contentsline {section}{\numberline {3.1}Bright field method}{22}{section.3.1}
