@@ -11,23 +11,23 @@ In this chapter we explain the theoretical concepts relevant to this thesis. We 
 			
 			\begin{figure}
 		    \centering
-		    \begin{subfigure}[t]{0.3\textwidth}
+		    \begin{subfigure}[t]{0.4\textwidth}
 		        \includegraphics[width=\textwidth]{images/reflection.png}
 		        \caption{Reflection: incident light beam gets reflected with the same angle relative to surface normal.}
 		        \label{fig:reflection_def}
-		    \end{subfigure}
-		    
-		    \begin{subfigure}[t]{0.3\textwidth}
+		    \end{subfigure}\hfill
+		    \begin{subfigure}[t]{0.4\textwidth}
 		        \includegraphics[width=\textwidth]{images/refraction.png}
 		        \caption{Refraction: refracted light beam gets refracted according to Snell's law.}	
 		        \label{fig:refracted_def}
-		    \end{subfigure}
+		    \end{subfigure}%
 		    
-		    \begin{subfigure}[t]{0.3\textwidth}
+		    \begin{subfigure}[t]{0.5\textwidth}
 		        \includegraphics[width=\textwidth]{images/total_reflection.png}
 		        \caption{Critical angle is reached when refracted angle is $90^\circ$.}
 		        \label{fig:total_reflected_def}
 		    \end{subfigure}
+		    \caption{Reflection and refraction.}
 	 		\end{figure}	
 			
 			\textbf{Refraction} is the change in direction of propagation of a wave when the wave passes from one medium into another with a different index of refraction. The angle of the reflected beam is shown in figure \ref{fig:refracted_def} is given by Snell's law:
@@ -47,14 +47,13 @@ In this chapter we explain the theoretical concepts relevant to this thesis. We 
 			
 			\begin{figure}
 		    \centering
-		    \begin{subfigure}[b]{0.5\textwidth}
+		    \begin{subfigure}[t]{0.5\textwidth}
 		    		\centering
 		        \includegraphics[scale=.5]{images/bubble_refraction.png}
 		        \caption{Light beams inside a bubble. Reflected beams' intensities inside the bubble are described by Fresnel's law.}
 		        \label{subfig:bubble_refraction}
-		    \end{subfigure}
-		    
-		    \begin{subfigure}[b]{0.5\textwidth}
+		    \end{subfigure}%
+		    \begin{subfigure}[t]{0.5\textwidth}
 		    		\centering
 		        \includegraphics[scale=0.6]{images/bubble_simulation.png}
 		        \caption{Simulated bubbles with ray tracing.}	
@@ -156,13 +155,11 @@ In this chapter we explain the theoretical concepts relevant to this thesis. We 
 		    \begin{subfigure}[t]{0.3\textwidth}
 		        \includegraphics[width=\textwidth]{graphs/gauss_sigma_4.png}
 		        \caption{1D Gaussian signal with $\mu=15$ and $\sigma=2$}
-		    \end{subfigure}
-		    
+		    \end{subfigure}%
 		    \begin{subfigure}[t]{0.3\textwidth}
 		        \includegraphics[width=\textwidth]{images/gauss_sigma_2.png}
 		        \caption{2D Gaussian signal with $\mu_x = \mu_y = 15$ and $\sigma_x = \sigma_y = 4$}
-		    \end{subfigure}
-		    
+		    \end{subfigure}%
 		    \begin{subfigure}[t]{0.3\textwidth}
 		        \includegraphics[width=\textwidth]{images/green_one.png}
 		        \caption{Original image}
@@ -187,8 +184,7 @@ In this chapter we explain the theoretical concepts relevant to this thesis. We 
 			\begin{subfigure}[t]{.4\linewidth}
 				\includegraphics[scale=0.5]{images/green_one.png}
 				\caption{Original bubble image}
-			\end{subfigure}
-			
+			\end{subfigure}\hfill
 			\begin{subfigure}[t]{.4\linewidth}
 				\includegraphics[scale=0.5]{images/green_one_sobel.png}
 				\caption{Sobel filter filter applied.}
@@ -413,12 +409,14 @@ In this chapter we explain the theoretical concepts relevant to this thesis. We 
 		Where $M$ is a smoothing mask and $S_x$ and $S_y$ are derivation masks in $x$ and $y$ directions respectively.
 
 		Figure \ref{fig:struct_tensor_demo} shows an extracted orientation from a bubble image using the structure tensor.
-		\begin{figure}
+		
+		\sidecaptionvpos{figure}{t}
+		\begin{SCfigure}
 			\centering
+			\caption{Orientation angle using sobel filters for derivation and a Gaussian mask with $\sigma =1$ for smoothing.}		
 			\includegraphics[scale=0.4]{images/structure_tensor_demo.png}
-			\caption{Orientation angle using sobel filters for derivation and a Gaussian mask with $\sigma =1$ for smoothing.}
 			\label{fig:struct_tensor_demo}
-		\end{figure}
+		\end{SCfigure}
 		
 	
 	\section{The object detection problem}\label{the_object_detection_problem}
@@ -428,11 +426,12 @@ In this chapter we explain the theoretical concepts relevant to this thesis. We 
 		\begin{figure}
 			\centering
 			\begin{subfigure}[t]{0.4\linewidth}
+				\centering
 				\includegraphics[scale=.4]{images/object_detection_intro_1.png}
 				\caption{Input image.}
 			\end{subfigure}
-			
 			\begin{subfigure}[t]{0.4\linewidth}
+				\centering
 				\includegraphics[scale=.4]{images/object_detection_intro_2.png}
 				\caption{Output format.}
 			\end{subfigure}
@@ -450,11 +449,11 @@ In this chapter we explain the theoretical concepts relevant to this thesis. We 
 		\begin{figure}
 			\centering
 			\begin{subfigure}[b]{0.55\textwidth}
-				\includegraphics[scale=1]{images/training_intro.png}
+				\includegraphics[scale=.5]{images/training_intro.png}
 				\caption{Training}
 			\end{subfigure}
 			\begin{subfigure}[b]{0.55\textwidth}
-				\includegraphics[scale=1]{images/testing_intro.png}
+				\includegraphics[scale=.5]{images/testing_intro.png}
 				\caption{Testing}
 			\end{subfigure}
 			\caption{Training and testing in machine learning}

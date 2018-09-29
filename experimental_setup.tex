@@ -103,13 +103,12 @@
 		
 		\begin{figure}
 			\centering
-			\begin{subfigure}[b]{.55\textwidth}
+			\begin{subfigure}[t]{.4\linewidth}
 				\centering
-				\includegraphics[scale=0.1]{images/aeolotron-gesamt.jpg}
+				\includegraphics[scale=0.1]{images/aeolotron-gesamt.png}
 				\caption{Aeolotron wind wave facility}
 			\end{subfigure}
-
-			\begin{subfigure}[b]{.55\textwidth}		
+			\begin{subfigure}[t]{.4\linewidth}		
 				\centering
 				\includegraphics[scale=.8]{images/aeolotron_setup.png}
 				\caption{Experimental setup}
@@ -166,20 +165,19 @@
 			This calibration technique is practical, because we do not need to determine the absolute distance to the camera. So only relative distances to focal plane are needed for a depth calibration. This is important because the goal of calibration is to determine the measurement volume only and not necessarily the absolute position of the measurement volume to the camera. 
 			
 			
-			\begin{figure}
+			\begin{SCfigure}
 				\centering
 				\includegraphics[scale=.2]{images/depth_of_field_setup.png}
 				\caption{Setup for depth of field calibration. A high friction stick attached to a micrometer screw captures bubbles. }
 				\label{fig:depth_of_field_setup}
-			\end{figure}
+			\end{SCfigure}
 			
 			\begin{figure}
 				\begin{subfigure}[b]{.55\textwidth}
 					\centering
 					\includegraphics[scale=.5]{images/dof_calib_1.png}
 					\caption{}
-				\end{subfigure}
-				
+				\end{subfigure}%
 				\begin{subfigure}[b]{.55\textwidth}
 					\centering
 					\includegraphics[scale=.5]{images/dof_calib_2.png}
@@ -194,11 +192,12 @@
 		\subsection{Radius}\label{sub:radius_setup}
 			Although simulation shows that the distance between the two dominant peaks in a bubble is proportional to the bubble radius, we cannot determine the real radius from measurement results alone (figure \ref{fig:aqauarium_result} and \ref{fig:aeolotron_result}). So we need to change the lighting in such a way that the real radius becomes measurable, i.e. the whole bubble becomes visible. In a similar way to the light field method (cite Mischler), we used an additional light source and a mirror in order to light up the bubbles from behind (figure \ref{fig:radius_calibration_setup}). Then, we acquired images at a frame rate of 200 FPS and lit the additional light source every second frame. Results are shown in figure \ref{fig:radius_calibration_setup_result}. In section \ref{calibration_algorithm} we identify bubbles lit from below with those lit from behind in order to estimate the proportionality factor between the real radius and the radius computed by our algorithm. 
 			
-			\begin{figure}
-				\includegraphics[scale=0.2]{images/radius_setup.png}
-				\caption{Setup for radius calibration at Aeolotron. }
+
+			\begin{SCfigure}
+				\includegraphics[scale=.5]{images/radius_setup_fancy.png}
+				\caption{A view from inside the Aeolotron wind wave facility for radius calibration. The additional light source (green) is synchronized with the main light source (red).}
 				\label{fig:radius_calibration_setup}
-			\end{figure}
+			\end{SCfigure}
 			
 			\begin{figure}
 			%TODO get images from upper left corner instead.
