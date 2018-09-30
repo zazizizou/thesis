@@ -25,19 +25,20 @@
 \contentsline {figure}{\numberline {4.8}{\ignorespaces A view from inside the Aeolotron wind wave facility for radius calibration. The additional light source (green) is synchronized with the main light source (red).\relax }}{31}{figure.caption.28}
 \contentsline {figure}{\numberline {4.9}{\ignorespaces Radius calibration images\relax }}{32}{figure.caption.29}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces A small air bubble from an image with low bubble concentration.\relax }}{36}{figure.caption.30}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Simulated distance between two peaks as a function of bubble radius.\relax }}{37}{figure.caption.31}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces A small air bubble from an image with low bubble concentration.\relax }}{35}{figure.caption.30}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Simulated distance between two peaks as a function of bubble radius.\relax }}{36}{figure.caption.31}
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Architecture of BubbleNet. Numbers in parentheses refer to the kernel size. The rest refers to the layer size. \relax }}{37}{figure.caption.33}
 \contentsline {figure}{\numberline {5.4}{\ignorespaces Testing of algorithm \ref {algo:bubbleNet}. Red: ground truth, green: predicted. Note how in this image, ground truth annotation was not done perfectly, so IoU results were likely slightly underestimated.\relax }}{39}{figure.caption.36}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Structure tensor eigenvalues and orientation on a single bubble from a high bubble concentration image.\relax }}{42}{figure.caption.38}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Applying the structure tensor on a slightly smaller and differently lit bubble. Orientation from the upper part is not meaningful. \relax }}{43}{figure.caption.39}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Extracting curve from bubble using orientation and neighborhood sampling.\relax }}{43}{figure.caption.41}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Gray value sampling along sampling line\relax }}{43}{figure.caption.42}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Sampling and fit Note that the circle works well, even though only half a circle is extracted from the bubble at most. \relax }}{44}{figure.caption.43}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Final result of algorithm \ref {algo:bubbleCurves} applied to a single bubble\relax }}{44}{figure.caption.45}
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Depth calibration\relax }}{46}{figure.caption.46}
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Identifying a bubble from images with different lighting. Images were acquired at 200 FPS. Image \ref {subfig:red} was taken after \ref {subfig:green_1} and before \ref {subfig:green_2}. Matching bubble in \ref {subfig:red} is marked in red \relax }}{48}{figure.caption.47}
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Determining the radius of a back lit bubble\relax }}{49}{figure.caption.48}
-\contentsline {figure}{\numberline {5.14}{\ignorespaces Measured radius as a function of real radius.\relax }}{50}{figure.caption.49}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Structure tensor eigenvalues and orientation on a single bubble from a high bubble concentration image.\relax }}{41}{figure.caption.38}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Applying the structure tensor on a slightly smaller and differently lit bubble. Significance of orientation is represented by the arrows' length. Orientation from the left side and the upper part is not meaningful and can't be used.\relax }}{41}{figure.caption.39}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Extracting curve from bubble using orientation and neighborhood sampling.\relax }}{42}{figure.caption.41}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Gray value sampling along sampling line\relax }}{42}{figure.caption.42}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Sampling and fit Note that the circle works well, even though only half a circle is extracted from the bubble at most. \relax }}{43}{figure.caption.43}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Final result of algorithm \ref {algo:bubbleCurves} applied to a single bubble\relax }}{43}{figure.caption.45}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Depth calibration\relax }}{45}{figure.caption.46}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Identifying a bubble from images with different lighting. Images were acquired at 200 FPS. Image \ref {subfig:red} was taken after \ref {subfig:green_1} and before \ref {subfig:green_2}. Matching bubble in \ref {subfig:red} is marked in red \relax }}{47}{figure.caption.47}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Determining the radius of a back lit bubble\relax }}{48}{figure.caption.48}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Measured radius as a function of real radius.\relax }}{48}{figure.caption.49}
+\addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

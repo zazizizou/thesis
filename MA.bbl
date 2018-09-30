@@ -1,0 +1,21 @@
+\begin{thebibliography}{2}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[gei(1995)]{geissler_1995}
+\emph{{Measurements of bubble size distributions with an optical technique
+  based on depth from focus}}, December 1995. Zenodo.
+\newblock \doi{10.5281/zenodo.10400}.
+\newblock URL \url{https://doi.org/10.5281/zenodo.10400}.
+
+\bibitem[Terray et~al.(1996)Terray, A.~Donelan, Agrawal, Drennan, Kahma,
+  Williams, Hwang, and A.~Kitaigorodskii]{Terry}
+Eugene Terray, M~A.~Donelan, Y.C. Agrawal, William Drennan, Kimmo Kahma, Albert
+  Williams, Paul Hwang, and S~A.~Kitaigorodskii.
+\newblock Estimates of kinetic energy dissipation under breaking waves.
+\newblock 26:\penalty0 792--807, May 1996.
+
+\end{thebibliography}

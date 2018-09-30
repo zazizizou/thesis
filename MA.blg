@@ -1,0 +1,59 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: MA.aux
+A level-1 auxiliary file: titlepages-eng.aux
+A level-1 auxiliary file: abstracts.aux
+A level-1 auxiliary file: introduction.aux
+A level-1 auxiliary file: theory.aux
+A level-1 auxiliary file: related_work.aux
+A level-1 auxiliary file: experimental_setup.aux
+A level-1 auxiliary file: the_algorithm.aux
+A level-1 auxiliary file: discussion.aux
+The style file: plainnat.bst
+A level-1 auxiliary file: deposition.aux
+Database file #1: biblio.bib
+Warning--I didn't find a database entry for "loremIpsum"
+Warning--to sort, need editor, organization, or key in geissler_1995
+Warning--empty journal in Terry
+You've used 2 entries,
+            2773 wiz_defined-function locations,
+            618 strings with 5430 characters,
+and the built_in function-call counts, 1061 in all, are:
+= -- 90
+> -- 75
+< -- 0
++ -- 26
+- -- 24
+* -- 102
+:= -- 159
+add.period$ -- 7
+call.type$ -- 2
+change.case$ -- 13
+chr.to.int$ -- 2
+cite$ -- 7
+duplicate$ -- 43
+empty$ -- 78
+format.name$ -- 25
+if$ -- 215
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 1
+newline$ -- 18
+num.names$ -- 4
+pop$ -- 33
+preamble$ -- 1
+purify$ -- 12
+quote$ -- 0
+skip$ -- 30
+stack$ -- 0
+substring$ -- 30
+swap$ -- 3
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 20
+warning$ -- 2
+while$ -- 5
+width$ -- 0
+write$ -- 32
+(There were 3 warnings)
