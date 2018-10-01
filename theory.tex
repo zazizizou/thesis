@@ -43,7 +43,7 @@ In this chapter we explain the theoretical concepts relevant to this thesis. We 
 				
 				
 		\subsection{Bubble-light interaction}
-			Since the smallest bubble radius (around 50-100 $\mu m$) is much larger than the wavelength of our light source (around 600 nm), diffraction within the air bubble can be neglected. Mie scattering effects are also only relevant for radii within the same order of magnitude as the wavelength (Demtroeder 2) so it can be neglected as well. Therefore, only refraction and reflection laws will be considered. 
+			Since the smallest bubble radius (around 50-100 $\mu m$) is much larger than the wavelength of our light source (around 600 nm), diffraction within the air bubble can be neglected. Mie scattering effects are also only relevant for radii within the same order of magnitude as the wavelength \citep{Demtroeder2} so it can be neglected as well. Therefore, only refraction and reflection laws will be considered. 
 			
 			\begin{figure}
 		    \centering
@@ -64,7 +64,7 @@ In this chapter we explain the theoretical concepts relevant to this thesis. We 
 		    \label{fig:bubble_physics}
 	 		\end{figure}	
 			
-			Figure \ref{subfig:bubble_refraction} shows refracted rays inside an air bubble. Since the outside medium (water) is more dense, total refraction occurs at the lower bubble boundary. Simulation in figure \ref{subfig:bubble_simulation} also shows that when a bubble is lit from bellow, two peaks can be observed. The lower peak is strong because it arises from total reflection on the lower bubble boundary, whereas the upper peak is much weaker. The second peak arises from internal (partial) reflections within the bubble and can be best explained by the Fresnel equations (Demtroeder 2). 
+			Figure \ref{subfig:bubble_refraction} shows refracted rays inside an air bubble. Since the outside medium (water) is more dense, total refraction occurs at the lower bubble boundary. Simulation in figure \ref{subfig:bubble_simulation} also shows that when a bubble is lit from bellow, two peaks can be observed. The lower peak is strong because it arises from total reflection on the lower bubble boundary, whereas the upper peak is much weaker. The second peak arises from internal (partial) reflections within the bubble and can be best explained by the Fresnel equations \citep{Demtroeder2}. 
 			The different peaks characteristics will be exploited by our proposed algorithm in order to compute the bubble's depth and radius.
 			
 			
@@ -222,29 +222,7 @@ In this chapter we explain the theoretical concepts relevant to this thesis. We 
 		
 		
 		Edge detectors can be implemented as filters $h$ that operate on a two dimensional grid. 
-%		
-%		From the above equations we can derive the general properties for these filters:
-%		\begin{enumerate}
-%			\item Zero-shift: 
-%				\begin{itemize}
-%					\item $90^\circ$ phase shift for first order derivative, implying $ \Im\{ \hat{h} \} \neq 0$ and an antisymmetric filter mask, i.e $h_{-n} = -h_{n}$
-%					\item a second order derivative operator must be symmetric in order to satisfy the zero shift property, i.e. $h_{-n} = h_{n}$
-%				\end{itemize} 
-%				
-%			\item Suppression of mean value: $\hat{h}(k_i =0) \Leftrightarrow \sum_{\mathbf{n}}h_{\mathbf{n}} = 0$
-%			
-%			\item isotropy: For good edge detection, the edge detector's response must not depend on the direction of the edge. 
-%				\begin{itemize}
-%					\item first order derivative $\hat{h}(\mathbf{k}) = 
-%											\pi \text{i} k_i \hat{b} (|\mathbf{k}|)$
-%					\item second order derivative $\hat{h}(\mathbf{k}) = 
-%											\pi^2 k_i^2 \hat{b} (|\mathbf{k}|)$
-%				\end{itemize}
-%				where $k_i$ denotes the wave number in the $i$-th direction and $b$ is an isotropic smoothing filter that fulfills the conditions
-%				\begin{equation}
-%					\hat{b}(\mathbf{0}) = 1, \hspace{1cm} \mathbf{\nabla}_k \hat{b}(|\mathbf{k}|) = \mathbf{0}
-%				\end{equation}
-%		\end{enumerate}
+
 			
 		In this work we will be using the Sobel filter masks as defined in equation (\ref{eq:sobel}) in order to compute derivatives in $x$ and $y$ directions. 
 		\begin{equation}
@@ -269,11 +247,6 @@ In this chapter we explain the theoretical concepts relevant to this thesis. We 
 			\label{eq:grad_sobel}
 		\end{equation}
 
-%		as well as the orientation $\theta$
-%		\begin{equation}
-%			\theta = \arctan \left(\dfrac{S_y \star G}{S_x \star G}\right)
-%		\end{equation}
-
 		where G is the input image. Figure \ref{fig:sobel_demo} shows the result of applying the derivation operator on an image. Note how edges have different magnitude depending on their strength. 
 		
 		
@@ -289,33 +262,7 @@ In this chapter we explain the theoretical concepts relevant to this thesis. We 
 			g(\mathbf{x}) = g(\mathbf{x}^T \tilde{\mathbf{n}})
 		\end{equation}
 
-
-%		The drawback of this representation however, is that it cannot distinguish between neighborhoods with constant values and isotropic orientation distribution. So if we define the optimum orientation as the orientation that shows the least deviations from the directions of the gradient, we can expressed it using the unit vector $\tilde{\mathbf{n}}$ as
-%		\begin{equation}
-%			\mathbf{\nabla}g^T \tilde{\mathbf{n}} = \cos[\angle(\mathbf{\nabla}g, \tilde{\mathbf{n}})]\\
-%			\Leftrightarrow \\
-%			\left( \mathbf{\nabla}g^T \tilde{\mathbf{n}} \right)^2 = 
-%						 |\mathbf{\nabla}g|^2 \cos^2[\angle(\mathbf{\nabla}g, \tilde{\mathbf{n}})]
-%		\end{equation}
-%		We can see that this quantity is maximized when the orientation is along the unit vector $\tilde{\mathbf{n}}$, i.e. when $\mathbf{\nabla}g$ and $\tilde{\mathbf{n}}$ are either parallel or antiparallel. Therefore, the following integral is maximized in a local neighborhood:
-%		\begin{equation}
-%			\int w(\mathbf{x} - \mathbf{x'}) 
-%								\left( 
-%									 \mathbf{\nabla}g(\mathbf{x'})^T \tilde{\mathbf{n}}
-%								\right)^2
-%								\text{d}\mathbf{x'}
-%			\label{eq:max_integral}
-%		\end{equation}
-%		where the window function $w$ determines the size and shape of neighborhood around a point $\mathbf{x}$ in which the orientation is averaged. 		
-%		The maximization problem must be solved for each point $\mathbf{x}$, so we can write the maximization problem as follows:
-%		\begin{equation}
-%			\tilde{\mathbf{n}}^T \mathbf{J} \tilde{\mathbf{n}} \rightarrow \text{max}
-%			\label{eq:max_prob}
-%		\end{equation}
-		
-%		From equation \ref{eq:max_integral} and \ref{eq:max_prob} we can define \textbf{the structure tensor} as 
-
-		From this principle we can derive the structure tensor (cite Jähne )
+		From this principle we can derive the structure tensor \citep{JaehneBook}
 		\begin{equation} 
 			\mathbf{J} = \int w(\mathbf{x} - \mathbf{x'}) 
 								\left( 
@@ -334,43 +281,6 @@ In this chapter we explain the theoretical concepts relevant to this thesis. We 
 			\label{eq:struct_tensor_pq}
 		\end{equation}
 		
-%		Rotating equation \ref{eq:max_prob} into principle coordinate system yields:
-%		\begin{equation}
-%				\begin{bmatrix}
-%    					 n_1' & n_2' \\
-%				\end{bmatrix}
-%				\begin{bmatrix}
-%    					 J_{11}' & 0 \\
-%    				  0 & J_{22} \\
-%				\end{bmatrix}
-%				\begin{bmatrix}
-%    					 n_1' \\
-%    				   n_2' \\
-%				\end{bmatrix}
-%				=
-%				J' = J_{11}'n_1' + J_{22}'n_2' \rightarrow \text{max}
-%		\end{equation}					
-%		We can see that $J'$ is maximized for $\tilde{\mathbf{n}} = [1 \hspace{0.3cm} 0]^T$ (assuming $J_{11}' > J_{22}'$), where the maximum value is $J_{11}$, so solving this problem is equivalent to solving the eigenvalue problem for $\mathbf{J}$. We can then extract the orientation $\theta$ as follows:
-%		\begin{equation}
-%			\begin{bmatrix}
-%    					 \lambda_1 & 0 \\
-%    					 0		& \lambda_2
-%				\end{bmatrix}
-%				=
-%				\begin{bmatrix}
-%    					 \cos(\theta) & \sin(\theta) \\
-%    				  	-\sin(\theta) & \cos(\theta) \\
-%				\end{bmatrix}
-%				\begin{bmatrix}
-%    					 J_{11} & J{12} \\
-%    				  J_{21} & J_{22} \\
-%				\end{bmatrix}
-%				\begin{bmatrix}
-%    					 \cos(\theta) & -\sin(\theta) \\
-%    				  	\sin(\theta) & \cos(\theta) \\
-%				\end{bmatrix}
-%		\end{equation}
-% Using trigonometric identities, this yields 
 	
 		Orientation can be obtained from	
 		\begin{equation}
@@ -440,7 +350,7 @@ In this chapter we explain the theoretical concepts relevant to this thesis. We 
 			\label{fig:obj_detec_intro}
 		\end{figure}
 	
-	There has been a lot of progress in this field thanks to deep learning algorithms (see next section) that rely on training a relatively complex model a large amount of annotated data. The sate of the art algorithms include region based methods such as Faster R-CNN (cite fasterRcnn), where many candidate regions are first extracted and then classified and single evaluation methods such as YOLO (cite YOLO) where bounding boxes and class probabilities are estimated with one single neural network in a single evaluation. Although these algorithms perform very well on typical photographs and support between 1000 and 9000 different classes, applying them to our problem yields very bad results (see chapter \ref{the_algorithm}). We still however opt for a machine learning based approach for the classification part, and then perform localization with more straightforward methods.
+	There has been a lot of progress in this field thanks to deep learning algorithms (see next section) that rely on training a relatively complex model a large amount of annotated data. The sate of the art algorithms include region based methods such as Faster R-CNN \citep{FasterRCNN}, where many candidate regions are first extracted and then classified and single evaluation methods such as YOLO \citep{YOLO}, where bounding boxes and class probabilities are estimated with one single neural network in a single evaluation. Although these algorithms perform very well on typical photographs and support between 1000 and 9000 different classes, applying them to our problem yields very bad results (see chapter \ref{the_algorithm}). We still however opt for a machine learning based approach for the classification part, and then perform localization with more straightforward methods.
 		
 		\subsection{Classification}\label{machine_learning}
 		In our work, we use machine learning techniques mainly for signal classification purposes. For instance, both of the proposed algorithms rely on binary classification using a random forest classifier and a convolutional neural network. In this section, we explain the principle behind machine learning and the main idea behind the chosen model. A more thorough argumentation about the chosen architecture and model-specific parameters is discussed in chapter \ref{the_algorithm}.
@@ -477,14 +387,14 @@ In this chapter we explain the theoretical concepts relevant to this thesis. We 
 		where $x_0$ is the x-value of the sigmoid's midpoint, $A$ is the curve's maximum value and k is the steepness of the curve. This model is very simple and can be trained with relatively few data points. Its main drawback is its inability to generalize to complex data with high number of features. We make use of this classifier as a preprocessing step to generate training data for the more demanding convolutional neural network. 
 		
 		\subsubsection{Random Forest Classifier}\label{rand_forest_class}
-			Random forest classifiers operate by constructing a multitude of decision trees at training time and outputting the class that is the mode of the classes (cite Ho, Tin Kam 1995). So random forest is an ensemble method in which a classifier is constructed by combining several different independent base classifiers. Their main advantage over a simple decision tree is the ability to describe the data well without overfitting. 			
-			This method is well suited for small sized and balanced data set, given the chosen features describe the data well. It also allows an estimation of feature importance in the classification, something that neural networks are known to be lacking. Its main drawback is its tendency to generate deep trees during training, which makes evaluation computationally expensive. See (cite Pattern Recognition buch 2016) for a more in depth description of random forests. 
+			Random forest classifiers operate by constructing a multitude of decision trees at training time and outputting the class that is the mode of the classes \citep{Ho1995}. So random forest is an ensemble method in which a classifier is constructed by combining several different independent base classifiers. Their main advantage over a simple decision tree is the ability to describe the data well without overfitting. 			
+			This method is well suited for small sized and balanced data set, given the chosen features describe the data well. It also allows an estimation of feature importance in the classification, something that neural networks are known to be lacking. Its main drawback is its tendency to generate deep trees during training, which makes evaluation computationally expensive. See (cite Pattern Recognition buch 2016) for a more in depth description of random forests. %TODO cite more on random forests
 			
 		\subsubsection{Convolutional Neural Network}
-			First introduced by (cite AlexNet), a convolutional neural networks, or CNN is a class of deep, feed-forward artificial neural networks. Convolutional networks were inspired by biological processes in that the connectivity pattern between neurons resembles the organization of the animal visual cortex. Individual neurons activate only when stimulated in a restricted region of the visual field known as the receptive field. The receptive fields of different neurons partially overlap such that they cover the entire visual field. CNNs are known for their ability to generalize well to large, mutlidimensional data. They also require very little preprocessing. For instance, neural networks learn the filters needed to extract features using back propagation (i.e. stochastic gradient descent) to optimize convolutional and dense layers within the neural network. This eliminates the need to first compute features and then pass them to the classifier as is done by classical machine learning algorithms such as random forests.
+			First introduced by \citep{AlexNet}, a convolutional neural networks, or CNN is a class of deep, feed-forward artificial neural networks. Convolutional networks were inspired by biological processes in that the connectivity pattern between neurons resembles the organization of the animal visual cortex. Individual neurons activate only when stimulated in a restricted region of the visual field known as the receptive field. The receptive fields of different neurons partially overlap such that they cover the entire visual field. CNNs are known for their ability to generalize well to large, mutlidimensional data. They also require very little preprocessing. For instance, neural networks learn the filters needed to extract features using back propagation (i.e. stochastic gradient descent) to optimize convolutional and dense layers within the neural network. This eliminates the need to first compute features and then pass them to the classifier as is done by classical machine learning algorithms such as random forests.
 			
 			The drawback of using a CNN is the need of a large amount of data and computational power for proper training. It is also not possible to extract feature importance from a trained CNN, which makes CNNs resemble black boxes that are hard to interpret.  
-			 (cite Neural Network Methods for Natural Language Processing) explain CNNs in more details.
+			 \citet{NNMethods} explain CNNs in more details.
 		
 		\subsection{Evaluation Criteria: IoU@p-mAP}
 		  We evaluate our object detection algorithm using the \textit{intersection over union at $p$ mean average precision} criteria as explained in figure \ref{fig:iou_def}. As the  name suggests, we compute the area of intersection between the predicted and the ground truth bounding boxes and then divide it by union area of the two boxes. This means that IoU = 1 corresponds to a perfect prediction and IoU = 0 is a complete miss (assuming original images were annotated perfectly). So we choose a threshold $p$, so that IoU $>= p$ or simply IoU@p corresponds to a correct prediction or \textit{true positive}. 		  

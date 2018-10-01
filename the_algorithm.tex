@@ -4,7 +4,7 @@
 	\section{Motivation}
 		We mentioned in section \ref{the_object_detection_problem} that the state of the art object detection algorithms are based on deep learning algorithms such as Faster R-CNN (cite frcnn Leute) and YOLO (Cite yolo Leute). Training these algorithms with our data (simulated and real) did not yield good results. Training a pre-trained R-CNN algorithm (i.e. transfer learning) is not meaningful either because most pre-trained models have large anchors (or rank regions boxes) and are fine tuned to work for real world photographs that contain typical objects such as humans, cars and pets. 
 		
-		This led us to the conclusion that such algorithms are not well suited for detecting small and dense objects (images with a low bubble concentration are also considered to have dense objects, since they contain several hundred bubble instances per image that are very close to each other). This suspicion was confirmed by (cite Zhenhua Chen et Al.) who also added that these algorithms not only rely on a large amount of training data, but also require the data to be rich in features, which does not apply to our data. 
+		This led us to the conclusion that such algorithms are not well suited for detecting small and dense objects (images with a low bubble concentration are also considered to have dense objects, since they contain several hundred bubble instances per image that are very close to each other). This suspicion was confirmed by \cite{Zhenhua2018} who also added that these algorithms not only rely on a large amount of training data, but also require the data to be rich in features, which does not apply to our data. 
 		
 	Interestingly though, scaling down anchors and training an R-CNN algorithm (cite rcnn, Projektpraktikum?) from scratch did perform slightly better, with an IoU@0.5mAP of 68\%. This however, is far from ideal, so developing a different approach was necessary to achieve better results. 
 		
@@ -75,7 +75,7 @@
 		
 		\begin{figure}
 			\centering
-			\includegraphics[scale=.7]{graphs/peak_distance_radius_fit.png}
+			\includegraphics[scale=.6]{graphs/peak_distance_radius_fit.png}
 			\caption{Simulated distance between two peaks as a function of bubble radius.}
 			\label{fig:peaks_radius_fit}
 		\end{figure}
@@ -85,14 +85,14 @@
 	\subsection{Signal extraction}
 		So far, we discussed how we can determine the radius from a given vertical cross section of a bubble. However, the question remains, how do we know the signal corresponds to a bubble in the first place? This is by far more challenging than determining the bubble radius and will be discussed thoroughly in the following sections. 
 		
-		As we can see from measurement results (section \ref{measurement_result}), extracting local maxima from an image gives good starting points for vertical profile extraction. Starting from a local maximum, we need to go a few pixels downwards $l_{d}$ to cover the whole peak and a certain distance upwards $l_u$ until the second peak is reached. $l_d$ and $l_u$ are hyperparameters that add up to the total signal length $L$. The choice $l_u$ depends on the largest bubble radius that we want to detect. From (cite bubble instrument system) we know that bubbles large enough to loose their spherical shape are very rare and their contribution to gas transfer can be neglected. Also, (cite Leonie) showed that the maximum bubble diameter observed at the Aeolotron facility lies at around 500 $\mu m$ (i.e. 50 pixels). As for $l_d$, a constant value of 4 pixels is good enough to cover the large peak, because the value returned by the fit usually lies within 1 to 2 pixels away from the local maximum. 	
+		As we can see from measurement results (section \ref{measurement_results}), extracting local maxima from an image gives good starting points for vertical profile extraction. Starting from a local maximum, we need to go a few pixels downwards $l_{d}$ to cover the whole peak and a certain distance upwards $l_u$ until the second peak is reached. $l_d$ and $l_u$ are hyperparameters that add up to the total signal length $L$. The choice $l_u$ depends on the largest bubble radius that we want to detect. From \citet{Al-Lashi2016} we know that bubbles large enough to loose their spherical shape are very rare and their contribution to gas transfer can be neglected. Also, \citet{Leonie} showed that the maximum bubble diameter observed at the Aeolotron facility lies at around 500 $\mu m$ (i.e. 50 pixels). As for $l_d$, a constant value of 4 pixels is good enough to cover the large peak, because the value returned by the fit usually lies within 1 to 2 pixels away from the local maximum. 	
 	
 		
 		\subsection{Signal classification}
 		After having extracted a one dimensional signal from a potential bubble, we classify it using a convolutional neural network that we call \textit{BubbleNet}. 
 
 		\subsubsection{BubbleNet architecture}		
-		The architecture of our BubbleNet is inspired from (cite Dan Li et al.), where the authors used a 1D convolutional neural network to classify electrocardiogram signals (ECG). The architecture of our CNN is shown in figure \ref{fig:cnn_arch}. We used two convolutional layers with MaxPool layers in between and two dense layers, where the last dense layer is also the output. 
+		The architecture of our BubbleNet is inspired from \citet{Li}, where the authors used a 1D convolutional neural network to classify electrocardiogram signals (ECG). The architecture of our CNN is shown in figure \ref{fig:cnn_arch}. We used two convolutional layers with MaxPool layers in between and two dense layers, where the last dense layer is also the output. 
 		
 		\begin{figure}
 			\centering
@@ -184,12 +184,12 @@
 			For validation we used 20 more manually annotated small images, each containing from 10 to 20 bubbles. Figure \ref{fig:bubbleNet_result} illustrates the performance of algorithm \ref{algo:bubbleNet}.  
 			The algorithm achieved IoU@0.5mAP = 91.5\% and IoU@0.3mAP = 93\%. Note that this is slightly worse than the classification accuracy result. This is due to the occasionally unprecise radius computation, which gets penalized by the IoU@p-mAP criteria. 
 	
-			\begin{figure}
+			\begin{SCfigure}
 				\centering
 				\includegraphics[scale=0.4]{images/bubbleNet_validation_result.png}
 				\caption{Testing of algorithm \ref{algo:bubbleNet}. Red: ground truth, green: predicted. Note how in this image, ground truth annotation was not done perfectly, so IoU results were likely slightly underestimated.}
 				\label{fig:bubbleNet_result}
-			\end{figure}
+			\end{SCfigure}
 	
 	
 	
@@ -282,7 +282,7 @@
 	
 	
 			\subsubsection{Curve from Orientation}
-				Assuming that our starting point is part of the bubble's lower edge, we first get the orientation at the current pixel and then sample points on a line segment along this orientation. The sampling method is taken from (cite max bopp): A square is drawn around each point on the sampling line, and then a weighted average of the gray values within the rectangle is performed, where weights are intersection areas between neighboring pixels and the drawn rectangle. This sampling step is illustrated in figure \ref{fig:subpixel_sampling}
+				Assuming that our starting point is part of the bubble's lower edge, we first get the orientation at the current pixel and then sample points on a line segment along this orientation. The sampling method is taken from \citet{Bopp2018}: A square is drawn around each point on the sampling line, and then a weighted average of the gray values within the rectangle is performed, where weights are intersection areas between neighboring pixels and the drawn rectangle. This sampling step is illustrated in figure \ref{fig:subpixel_sampling}
 				 After sampling, we perform a Gaussian fit along the fit line, where we initialize the mean with the current position. Next, we add the fit result to our curve and move one step to the right. Figure \ref{fig:curve_from_orientation} summarizes how a bubble curve is extracted using orientation. 
 				 
 				 \begin{figure}

@@ -1,4 +1,4 @@
-\begin{thebibliography}{2}
+\begin{thebibliography}{17}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -10,6 +10,126 @@
   based on depth from focus}}, December 1995. Zenodo.
 \newblock \doi{10.5281/zenodo.10400}.
 \newblock URL \url{https://doi.org/10.5281/zenodo.10400}.
+
+\bibitem[Zhe(2018)]{Zhenhua2018}
+Detecting small, densely distributed objects with filter-amplifier networks and
+  loss boosting.
+\newblock \emph{CoRR}, abs/1802.07845, 2018.
+\newblock URL \url{http://arxiv.org/abs/1802.07845}.
+\newblock Withdrawn.
+
+\bibitem[Al-Lashi et~al.(2016{\natexlab{a}})Al-Lashi, Gunn, and
+  Czerski]{Al-Lashi2016}
+Raied~S. Al-Lashi, Steve~R. Gunn, and Helen Czerski.
+\newblock Automated processing of oceanic bubble images for measuring bubble
+  size distributions underneath breaking waves.
+\newblock \emph{Journal of Atmospheric and Oceanic Technology}, 33\penalty0
+  (8):\penalty0 1701--1714, 2016{\natexlab{a}}.
+\newblock \doi{10.1175/JTECH-D-15-0222.1}.
+\newblock URL \url{https://doi.org/10.1175/JTECH-D-15-0222.1}.
+
+\bibitem[Al-Lashi et~al.(2016{\natexlab{b}})Al-Lashi, Gunn, and
+  Czerski]{Zhong2016}
+Raied~S. Al-Lashi, Steve~R. Gunn, and Helen Czerski.
+\newblock Automated processing of oceanic bubble images for measuring bubble
+  size distributions underneath breaking waves.
+\newblock \emph{Journal of Atmospheric and Oceanic Technology}, 33\penalty0
+  (8):\penalty0 1701--1714, 2016{\natexlab{b}}.
+\newblock \doi{10.1175/JTECH-D-15-0222.1}.
+\newblock URL \url{https://doi.org/10.1175/JTECH-D-15-0222.1}.
+
+\bibitem[Bopp(2018)]{Bopp2018}
+Maximilian Bopp.
+\newblock \emph{Air-flow and stress partitioning over wind waves in a linear
+  wind-wave facility}.
+\newblock PhD thesis, Institue of Environmental Physics, Heidelberg University,
+  2018.
+
+\bibitem[Demtr{\"o}der(2013)]{Demtroeder2}
+W.~Demtr{\"o}der.
+\newblock \emph{Experimentalphysik 2: Elektrizit{\"a}t und Optik}.
+\newblock Springer-Lehrbuch. Springer Berlin Heidelberg, 2013.
+\newblock ISBN 9783642299438.
+\newblock URL \url{https://books.google.de/books?id=lIYBlwEACAAJ}.
+
+\bibitem[Duda and Hart(1972)]{Hough1972}
+Richard~O. Duda and Peter~E. Hart.
+\newblock Use of the hough transformation to detect lines and curves in
+  pictures.
+\newblock \emph{Commun. ACM}, 15\penalty0 (1):\penalty0 11--15, January 1972.
+\newblock ISSN 0001-0782.
+\newblock \doi{10.1145/361237.361242}.
+\newblock URL \url{http://doi.acm.org/10.1145/361237.361242}.
+
+\bibitem[Flotow(2017)]{Leonie}
+Leonie Flotow.
+\newblock Bubble characteristics from breaking waves in fresh water and
+  simulated seawater.
+\newblock Master's thesis, Institue of Environmental Physics, Heidelberg
+  University, 2017.
+
+\bibitem[Goldberg and Hirst(2017)]{NNMethods}
+Yoav Goldberg and Graeme Hirst.
+\newblock \emph{Neural Network Methods in Natural Language Processing}.
+\newblock Morgan \& Claypool Publishers, 2017.
+\newblock ISBN 1627052984, 9781627052986.
+
+\bibitem[Ho(1995)]{Ho1995}
+Tin~Kam Ho.
+\newblock Random decision forests.
+\newblock In \emph{Proceedings of the Third International Conference on
+  Document Analysis and Recognition (Volume 1) - Volume 1}, ICDAR '95, pages
+  278--, Washington, DC, USA, 1995. IEEE Computer Society.
+\newblock ISBN 0-8186-7128-9.
+\newblock URL \url{http://dl.acm.org/citation.cfm?id=844379.844681}.
+
+\bibitem[J{\"a}hne et~al.(1984)J{\"a}hne, Wais, and Barabas]{jaehne1984}
+Bernd J{\"a}hne, Thomas Wais, and Michael Barabas.
+\newblock A new optical bubble measuring device; a simple model for bubble
+  contribution to gas exchange.
+\newblock In W.~Brutsaert and G.~H. Jirka, editors, \emph{Gas transfer at water
+  surfaces}, pages 237--246. Reidel, Reidel, 1984.
+\newblock \doi{10.1007/978-94-017-1660-4_22}.
+
+\bibitem[Krizhevsky et~al.(2017)Krizhevsky, Sutskever, and Hinton]{AlexNet}
+Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E. Hinton.
+\newblock Imagenet classification with deep convolutional neural networks.
+\newblock \emph{Commun. ACM}, 60\penalty0 (6):\penalty0 84--90, May 2017.
+\newblock ISSN 0001-0782.
+\newblock \doi{10.1145/3065386}.
+\newblock URL \url{http://doi.acm.org/10.1145/3065386}.
+
+\bibitem[Leifer et~al.(2003)Leifer, de~Leeuw, and Cohen]{Leifer2003}
+Ira Leifer, Gerrit de~Leeuw, and Leo~H. Cohen.
+\newblock Optical measurement of bubbles: System design and application.
+\newblock \emph{Journal of Atmospheric and Oceanic Technology}, 20\penalty0
+  (9):\penalty0 1317--1332, 2003.
+\newblock \doi{10.1175/1520-0426(2003)020<1317:OMOBSD>2.0.CO;2}.
+\newblock URL
+  \url{https://doi.org/10.1175/1520-0426(2003)020<1317:OMOBSD>2.0.CO;2}.
+
+\bibitem[Mischler(2014)]{MischlerDiss}
+Wolfgang Mischler.
+\newblock \emph{Systematic Measurements of Bubble Induced Gas Exchange for
+  Trace Gases with Low Solubilities}.
+\newblock PhD thesis, Heidelberg University, 2014.
+
+\bibitem[Redmon et~al.(2016)Redmon, Divvala, Girshick, and Farhadi]{YOLO}
+J.~Redmon, S.~Divvala, R.~Girshick, and A.~Farhadi.
+\newblock You only look once: Unified, real-time object detection.
+\newblock In \emph{2016 IEEE Conference on Computer Vision and Pattern
+  Recognition (CVPR)}, pages 779--788, June 2016.
+\newblock \doi{10.1109/CVPR.2016.91}.
+
+\bibitem[Ren et~al.(2015)Ren, He, Girshick, and Sun]{FasterRCNN}
+Shaoqing Ren, Kaiming He, Ross Girshick, and Jian Sun.
+\newblock Faster r-cnn: Towards real-time object detection with region proposal
+  networks.
+\newblock In C.~Cortes, N.~D. Lawrence, D.~D. Lee, M.~Sugiyama, and R.~Garnett,
+  editors, \emph{Advances in Neural Information Processing Systems 28}, pages
+  91--99. Curran Associates, Inc., 2015.
+\newblock URL
+  \url{http://papers.nips.cc/paper/5638-faster-r-cnn-towards-real-time-object-detection-with-region-proposal-networks.pdf}.
 
 \bibitem[Terray et~al.(1996)Terray, A.~Donelan, Agrawal, Drennan, Kahma,
   Williams, Hwang, and A.~Kitaigorodskii]{Terry}

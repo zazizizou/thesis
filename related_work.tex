@@ -1,10 +1,10 @@
 \chapter{Related Work} \label{related_work}
  
 
-In this chapter we briefly discuss two similar bubble measurement techniques that aim to estimate bubble concentrations in water. The first is a master's thesis by (cite Leonie), where a bright field method was used in a wind wave facility, so that bubbles appeared as dark circles on camera, and the second is a field measurement technique (cite R. Al-Lashi, S. Gunn), where bubbles were artificially lit from below, yielding similar images to our own. 
+In this chapter we briefly discuss two similar bubble measurement techniques that aim to estimate bubble concentrations in water. The first is a master's thesis by \citep{Leonie}, where a bright field method was used in a wind wave facility, so that bubbles appeared as dark circles on camera, and the second is a field measurement technique \citep{Al-Lashi2016}, where bubbles were artificially lit from below, yielding similar images to our own. 
 
 \section{Bright field method}
-	As an improved method from (cite Michler), this technique uses a bright field method as shown in figure \ref{fig:bright_field}. Bubbles in this experimental setup are backlit, so that they appear completely dark except for one spot in the center (see section  \ref{bubble_physics}). Note the need to use a lens shift adapter because the incoming rays are not parallel. 
+	As an improved method from \citet{MischlerDiss}, this technique uses a bright field method as shown in figure \ref{fig:bright_field}. Bubbles in this experimental setup are backlit, so that they appear completely dark except for one spot in the center (see section  \ref{bubble_physics}). Note the need to use a lens shift adapter because the incoming rays are not parallel. 
 	
 		\begin{figure}
 			\centering
@@ -31,12 +31,12 @@ In this chapter we briefly discuss two similar bubble measurement techniques tha
 	Depth of field calibration was based on the edges between bubbles and background. The higher the edge's magnitude, the closer the bubble is to the focus plane. A calibration target made of hollow circles was used to calibrate the depth of field (figure \ref{subfig:calib_target}). 
 	
 	The images obtained by this method are arguably the most important advantage of this technique, since it reduces bubbles to simple circles, making them relatively easy to detect, whereas our algorithms need to recognize significantly more complex patterns than mere circles.
-	 In contrast to our method however, the bright field technique constrains how close the camera can get to the water surface. Also, (cite Leonie) does not define a criteria that measures how well the circle detection algorithm performs, so the assumption is that precision is close to perfect, which introduces an error to bubble concentration measurement that was essentially neglected. 
+	 In contrast to our method however, the bright field technique constrains how close the camera can get to the water surface. Also, \citet{Leonie} does not define a criteria that measures how well the circle detection algorithm performs, so the assumption is that precision is close to perfect, which introduces an error to bubble concentration measurement that was essentially neglected. 
 	 Nevertheless, this work was very important for our newly developed method because it offered an estimation of boundary conditions, such as the largest possible bubble radius and the largest possible bubble concentration, that were important to determine the different hyperparameters of our algorithm and therefore contributing to the accuracy of our algorithms. 
 	
 	
 \section{Bubble optical imaging instrument}
-	This technique submerges an optical imaging instrument (figure \ref{subfig:optical_imaging}) underwater and illuminates a thin slice	of water of volume 4cm $\times$ 4cm $\times$ 5mm. We found this method  particularly interesting because it produces images similar to our own. However, applying the algorithm from this paper did not yield good results. This is most likely due to the fact that our method does not illuminate the bubbles from above, making the bubble's circular shape not easily detectable with a Hough transform (cite Hough transform, Al-Lashi)
+	This technique submerges an optical imaging instrument (figure \ref{subfig:optical_imaging}) underwater and illuminates a thin slice	of water of volume 4cm $\times$ 4cm $\times$ 5mm. We found this method  particularly interesting because it produces images similar to our own. However, applying the algorithm from this paper did not yield good results. This is most likely due to the fact that our method does not illuminate the bubbles from above, making the bubble's circular shape not easily detectable with a Hough transform \citep{Hough1972} \citep{Al-Lashi2016}.
 	
 		\begin{figure}
 			\centering

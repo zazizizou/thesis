@@ -1,6 +1,6 @@
 \chapter{Experimental Setup}\label{experimental_setup}
 	\section{Requirements}\label{requirements}
-		In order to improve on previous works (cite Leonie, section \ref{related_work}), we require that our method fulfills following criteria:
+		In order to improve on previous works \citet{Leonie}, section \ref{related_work}), we require that our method fulfills following criteria:
 	\begin{itemize}
 		\item \textbf{R1: Minimal distance to water surface}: This requirement defined our experimental setup. As shown in figures \ref{fig:aquarium_setup} and \ref{fig:aeolotron_setup}, lighting bubbles from below gives more freedom for the camera to be closer to the water surface. This is more apparent when the camera faces the surface with a certain angle. 
 		\item \textbf{R2: Consistent image results}: Bubbles can look very different under different lighting conditions. For instance, bubbles might appear as dark disks or bright rings (chapter \ref{related_work}) depending how they are lit. We therefore require that the angle between camera and light source is always constant. This requirement guarantees a consistent pattern for bubbles across different water tanks.
@@ -190,7 +190,7 @@
 			
 			
 		\subsection{Radius}\label{sub:radius_setup}
-			Although simulation shows that the distance between the two dominant peaks in a bubble is proportional to the bubble radius, we cannot determine the real radius from measurement results alone (figure \ref{fig:aqauarium_result} and \ref{fig:aeolotron_result}). So we need to change the lighting in such a way that the real radius becomes measurable, i.e. the whole bubble becomes visible. In a similar way to the light field method (cite Mischler), we used an additional light source and a mirror in order to light up the bubbles from behind (figure \ref{fig:radius_calibration_setup}). Then, we acquired images at a frame rate of 200 FPS and lit the additional light source every second frame. Results are shown in figure \ref{fig:radius_calibration_setup_result}. In section \ref{calibration_algorithm} we identify bubbles lit from below with those lit from behind in order to estimate the proportionality factor between the real radius and the radius computed by our algorithm. 
+			Although simulation shows that the distance between the two dominant peaks in a bubble is proportional to the bubble radius, we cannot determine the real radius from measurement results alone (figure \ref{fig:aqauarium_result} and \ref{fig:aeolotron_result}). So we need to change the lighting in such a way that the real radius becomes measurable, i.e. the whole bubble becomes visible. In a similar way to the light field method \cite{MischlerDiss}, we used an additional light source and a mirror in order to light up the bubbles from behind (figure \ref{fig:radius_calibration_setup}). Then, we acquired images at a frame rate of 200 FPS and lit the additional light source every second frame. Results are shown in figure \ref{fig:radius_calibration_setup_result}. In section \ref{calibration_algorithm} we identify bubbles lit from below with those lit from behind in order to estimate the proportionality factor between the real radius and the radius computed by our algorithm. 
 			
 
 			\begin{SCfigure}
