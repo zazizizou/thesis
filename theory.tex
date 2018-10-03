@@ -396,6 +396,7 @@ In this chapter we explain the theoretical concepts relevant to this thesis. We 
 			The drawback of using a CNN is the need of a large amount of data and computational power for proper training. It is also not possible to extract feature importance from a trained CNN, which makes CNNs resemble black boxes that are hard to interpret.  
 			 \citet{NNMethods} explain CNNs in more details.
 		
+		%TODO chnage IoU@p-mAP with mAP@p-IoU
 		\subsection{Evaluation Criteria: IoU@p-mAP}
 		  We evaluate our object detection algorithm using the \textit{intersection over union at $p$ mean average precision} criteria as explained in figure \ref{fig:iou_def}. As the  name suggests, we compute the area of intersection between the predicted and the ground truth bounding boxes and then divide it by union area of the two boxes. This means that IoU = 1 corresponds to a perfect prediction and IoU = 0 is a complete miss (assuming original images were annotated perfectly). So we choose a threshold $p$, so that IoU $>= p$ or simply IoU@p corresponds to a correct prediction or \textit{true positive}. 		  
 

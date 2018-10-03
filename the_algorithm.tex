@@ -179,17 +179,17 @@
 			
 		\subsubsection{Results}
 			
-			We first shuffled our data and split it into training (80\%) and testing (20\%). After training for 14 epochs, the testing accuracy converged against 96.8\%, which is a very good result for a binary classifier. 
+			We first shuffled our data and split it into training (80\%) and testing (20\%). After training for 14 epochs, the testing accuracy converged to 96.8\%, which is a very good result for a binary classifier. 
 			
 			For validation we used 20 more manually annotated small images, each containing from 10 to 20 bubbles. Figure \ref{fig:bubbleNet_result} illustrates the performance of algorithm \ref{algo:bubbleNet}.  
 			The algorithm achieved IoU@0.5mAP = 91.5\% and IoU@0.3mAP = 93\%. Note that this is slightly worse than the classification accuracy result. This is due to the occasionally unprecise radius computation, which gets penalized by the IoU@p-mAP criteria. 
 	
-			\begin{SCfigure}
+			\begin{figure}
 				\centering
 				\includegraphics[scale=0.4]{images/bubbleNet_validation_result.png}
 				\caption{Testing of algorithm \ref{algo:bubbleNet}. Red: ground truth, green: predicted. Note how in this image, ground truth annotation was not done perfectly, so IoU results were likely slightly underestimated.}
 				\label{fig:bubbleNet_result}
-			\end{SCfigure}
+			\end{figure}
 	
 	
 	
@@ -287,14 +287,14 @@
 				 
 				 \begin{figure}
 				 	\centering
-				 	\includegraphics[scale=1]{images/curve_from_orientation.png}
+				 	\includegraphics[scale=.5]{images/curve_from_orientation.png}
 				 	\caption{Extracting curve from bubble using orientation and neighborhood sampling.}
 				 	\label{fig:curve_from_orientation}
 				 \end{figure}
 				 
 				 \begin{figure}
 				 	\centering
-				 	\includegraphics[scale=1]{images/subpixel_sampling.png}
+				 	\includegraphics[scale=.5]{images/subpixel_sampling.png}
 				 	\caption{Gray value sampling along sampling line}
 				 	\label{fig:subpixel_sampling}
 				 \end{figure}
@@ -361,7 +361,7 @@
 			
 			
 			
-			
+			%TODO fix scale, font, etc..
 			\begin{figure}
 				\begin{subfigure}[t]{.50\textwidth}
 						\centering
