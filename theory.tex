@@ -1,5 +1,5 @@
 \chapter{Theory}\label{theory}
-In this chapter we explain the theoretical concepts relevant to this thesis. We start with explaining the physics behind our method in section \ref{bubble_physics}, in particular how bubbles interact with light. Next, we discuss the mathematical basics necessary for image processing such as Fourier theory and edge detection in section \ref{image_processing}. Section \ref{machine_learning} explains the principle behind machine learning that our method relies on for classification. Finally, section \ref{the_object_detection_problem} formally introduces the object detection problem and our chosen criteria for evaluation. 
+This chapter explains the theoretical concepts relevant to this thesis. First, the physics behind our method is explained in section \ref{bubble_physics}, in particular how bubbles interact with light. Next, the mathematical basics necessary for image processing such as Fourier theory and edge detection are discussed in section \ref{image_processing}. Section \ref{machine_learning} explains the principle behind machine learning that the method developed in this work relies on for classification. Finally, section \ref{the_object_detection_problem} formally introduces the object detection problem and our chosen criteria for evaluation. 
 
 	\section{Bubble physics} \label{bubble_physics}
 
@@ -70,7 +70,7 @@ In this chapter we explain the theoretical concepts relevant to this thesis. We 
 			
 	
 	\section{Image processing}	\label{image_processing}
-	In the following we represent an image as a two dimensional signal written as a matrix \textit{\textbf{g}}. $g_{m,n}$ denotes the pixel (i.e. picture element) at the \textit{m}-th row corresponding to the \textit{n}-th column. The chosen coordinate system is described in figure \ref{fig:coord_sys}. 
+	In the following an image is represented as a two dimensional signal written as a matrix \textit{\textbf{g}}. $g_{m,n}$ denotes the pixel (i.e. picture element) at the \textit{m}-th row corresponding to the \textit{n}-th column. The chosen coordinate system is described in figure \ref{fig:coord_sys}. 
 	
 		\begin{figure}
 		    \centering
@@ -94,7 +94,7 @@ In this chapter we explain the theoretical concepts relevant to this thesis. We 
 		\end{equation}
 		Where $\mathbf{x}$ and $\mathbf{k}$  are the two dimensional space and frequency vectors respectively. 
 		
-		Images however are discrete two dimensional signals, we therefore need to apply the \textit{Discrete} Fourier transform or DFT, defined as
+		Images however are discrete two dimensional signals, therefore the \textit{Discrete} Fourier transform or DFT is needed, which is defined as
 		\begin{equation}
 			\text{DFT}\{ g_{m,n} \} = \hat{g}_{u,v} = \dfrac{1}{MN} \sum_{m=0}^{M-1} \sum_{n=0}^{N-1}
 			g_{m,n} \text{ exp} \left(  - \dfrac{2 \pi \text{i} m u}{M}  \right)
@@ -111,7 +111,7 @@ In this chapter we explain the theoretical concepts relevant to this thesis. We 
 		
 		
 		\subsection{Convolution}
-		Convolution is one of the most important operations in signal processing. Convolving two signals $g$ and $h$ produces a third signal that expresses how the shape of one is modified by the other. Formally, we define the continuous convolution as follows
+		Convolution is one of the most important operations in signal processing. Convolving two signals $g$ and $h$ produces a third signal that expresses how the shape of one is modified by the other. Formally, the continuous convolution is defined as follows
 		\begin{equation}
 			(g \star h)(\mathbf{x}) = \int_{-\infty}^{\infty} 
 			h(\mathbf{x}') g(\mathbf{x} - \mathbf{x}')
@@ -123,13 +123,13 @@ In this chapter we explain the theoretical concepts relevant to this thesis. We 
 			h_{m',n'} g_{m-m', n-n'}
 		\end{equation}
 		
-		One important property of convolution is that we can express it as a multiplication in the Fourier domain. 
+		One important property of convolution is that it can be expressed as a multiplication in the Fourier domain. 
 		\begin{equation}
 		\mathscr{F}\{g \star h\} = N M \hat{h} \hat{g}
 		\end{equation}
 		This property, together with the fast Fourier implementation of the Fourier transform allows a fast computation of convolutions. 
 		
-		At the edge of the image, we typically extend the image with zero values (i.e. zero padding). This introduces an error when applying filters at the image border and we will mostly exclude the border when using filters (see chapter \ref{the_algorithm} for more details).
+		Edges of images are typically extended with zero values (i.e. zero padding). This introduces an error when applying filters at the image border so borders will mostly be excluded when using filters (see chapter \ref{the_algorithm} for more details).
 		
 		\subsection{Smoothing}\label{sect:smoothing}
 		Smoothing an image means convolving an image with a smoothing filter. A smoothing or averaging filters must ideally fulfill following conditions
@@ -140,7 +140,7 @@ In this chapter we explain the theoretical concepts relevant to this thesis. We 
 			\item Isotropy: $\hat{h}(\mathbf{k}) = \hat{h}(| \mathbf{k} |)$
 		\end{enumerate}
 		
-		In this work, we will be using Gaussian filters for one and two dimensional smoothing. Although Gaussian filters are not ideal, e.g. isotropy is violated for small standard deviations, it is still a good approximation for an ideal low pass filter. Computing the Fourier transform (for convolution) is also faster for a Gaussian filter. The $m$-th component of a one dimensional Gaussian filter mask can be obtained from the Gaussian function
+		In this work, Gaussian filters will be used for one and two dimensional smoothing. Although Gaussian filters are not ideal, e.g. isotropy is violated for small standard deviations, it is still a good approximation for an ideal low pass filter. Computing the Fourier transform (for convolution) is also faster for a Gaussian filter. The $m$-th component of a one dimensional Gaussian filter mask can be obtained from the Gaussian function
 		\begin{equation}
 		G_{m} = \dfrac{1}{2 \pi \sigma^2} \text{ exp}
 			 \left( 
@@ -205,7 +205,7 @@ In this chapter we explain the theoretical concepts relevant to this thesis. We 
 			\mathscr{F}\{\mathbf{\nabla}\} = 2 \pi \text{i} \mathbf{k}
 		\end{equation}
 		
-		For the second derivative we need to consider all possible combinations of second order partial differential operators of a two dimensional signal. The resulting $2 \times 2$ matrix is called the Hessian matrix
+		For the second derivative all possible combinations of second order partial differential operators of a two dimensional signal need to be considered. The resulting $2 \times 2$ matrix is called the Hessian matrix
 		\begin{equation}
 			\mathbf{H} = 
 				\begin{bmatrix}
@@ -224,7 +224,7 @@ In this chapter we explain the theoretical concepts relevant to this thesis. We 
 		Edge detectors can be implemented as filters $h$ that operate on a two dimensional grid. 
 
 			
-		In this work we will be using the Sobel filter masks as defined in equation (\ref{eq:sobel}) in order to compute derivatives in $x$ and $y$ directions. 
+		In this work, the Sobel filter masks as defined in equation (\ref{eq:sobel}) will be used to compute derivatives in $x$ and $y$ directions. 
 		\begin{equation}
 			S_x =
 			 \begin{bmatrix}
@@ -257,12 +257,12 @@ In this chapter we explain the theoretical concepts relevant to this thesis. We 
 			\caption{Ideal local neighborhood described by a unit vector $\tilde{\mathbf{n}}$}
 			\label{fig:struct_tensor_intro}
 		\end{figure}
-		Although derivation is useful to determine the gradient magnitude and its direction in an image, it doesn't tell us much about gradient directions in a specific neighborhood of a point. Figure \ref{fig:struct_tensor_intro} shows that in a neighborhood with ideal orientation gray values change in one direction only. Generally, the direction of local orientation can be denoted with a unit vector $\tilde{\mathbf{n}}$. If we orient the coordinate system along the principal directions, the gray values become a one dimensional function and a simple neighbourhood can be represented by
+		Although derivation is useful to determine the gradient magnitude and its direction in an image, it doesn't tell us much about gradient directions in a specific neighborhood of a point. Figure \ref{fig:struct_tensor_intro} shows that in a neighborhood with ideal orientation gray values change in one direction only. Generally, the direction of local orientation can be denoted with a unit vector $\tilde{\mathbf{n}}$. If the coordinate system is oriented along the principal directions, the gray values become a one dimensional function and a simple neighbourhood can be represented by
 		\begin{equation}
 			g(\mathbf{x}) = g(\mathbf{x}^T \tilde{\mathbf{n}})
 		\end{equation}
 
-		From this principle we can derive the structure tensor \citep{JaehneBook}
+		From this principle the structure tensor can be derived\citep{JaehneBook}
 		\begin{equation} 
 			\mathbf{J} = \int w(\mathbf{x} - \mathbf{x'}) 
 								\left( 
@@ -309,7 +309,7 @@ In this chapter we explain the theoretical concepts relevant to this thesis. We 
 		\end{table}
 		
 		
-		For discrete images, we use Sobel filters as defined in equation \ref{eq:sobel} for derivation and a Gaussian smoothing mask introduced in section \ref{sect:smoothing}. Computing the elements of a structure tensor for an image $G$ therefore requires following steps:
+		For discrete images, Sobel filters as defined in equation \ref{eq:sobel} are used for derivation. As for smoothing, a Gaussian smoothing mask as introduced in section \ref{sect:smoothing} is used. Computing the elements of a structure tensor for an image $G$ therefore requires following steps:
 		\begin{enumerate}
 			\item $G_x = S_x \star G$ \\
 						$G_y = S_y \star G$
