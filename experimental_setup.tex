@@ -1,14 +1,13 @@
 \chapter{Experimental Setup}\label{experimental_setup}
 	\section{Requirements}\label{requirements}
-		In order to improve on previous works \citet{Leonie}, section \ref{related_work}), we require that our method fulfills following criteria:
+		In order to improve on previous works \citet{Leonie}, section \ref{related_work}), we require that the developed method in this work fulfills following criteria:
 	\begin{itemize}
-		\item \textbf{R1: Minimal distance to water surface}: This requirement defined our experimental setup. As shown in figures \ref{fig:aquarium_setup} and \ref{fig:aeolotron_setup}, lighting bubbles from below gives more freedom for the camera to be closer to the water surface. This is more apparent when the camera faces the surface with a certain angle. 
-		\item \textbf{R2: Consistent image results}: Bubbles can look very different under different lighting conditions. For instance, bubbles might appear as dark disks or bright rings (chapter \ref{related_work}) depending how they are lit. We therefore require that the angle between camera and light source is always constant. This requirement guarantees a consistent pattern for bubbles across different water tanks.
-		\item \textbf{R3: Images must contain all possibly retrievable information}. From our simulation (figure \ref{subfig:bubble_simulation}) we know that bubbles are characterized by two peaks. Both of these – especially the upper, dimmer one – are required to be visible. This requires the camera to have a high signal-to-noise ratio and/or the light source to be very bright. 
+		\item \textbf{R1: Minimal distance to water surface}: This requirement defined the experimental setup. As shown in figures \ref{fig:aquarium_setup} and \ref{fig:aeolotron_setup}, lighting bubbles from below gives more freedom for the camera to be closer to the water surface. This is more apparent when the camera faces the surface with a certain angle. 
+		\item \textbf{R2: Consistent image results}: Bubbles can look very different under different lighting conditions. For instance, bubbles might appear as dark disks or bright rings (chapter \ref{related_work}) depending how they are lit. It is therefore required that the angle between camera and light source is always constant. This requirement guarantees a consistent pattern for bubbles across different water tanks.
+		\item \textbf{R3: Images must contain all possibly retrievable information}. From simulation (figure \ref{subfig:bubble_simulation}) it is known that bubbles are characterized by two peaks. Both of these – especially the upper, dimmer one – are required to be visible. This requires the camera to have a high signal-to-noise ratio and/or the light source to be very bright. 
 	\end{itemize}	
 		
 	\section{Aquarium Setup}
-	%TODO 2 more columns for different setups
 		\begin{figure}
 			\centering
 			\includegraphics[scale=1]{images/aquarium_setup}
@@ -16,11 +15,11 @@
 			\label{fig:aquarium_setup}
 		\end{figure}			
 		
-		The goal of this setup is to capture bubble images that can be used to prototype our algorithm, so we built the experiment in a transparent $1m \times 1m \times 1m$ water tank as shown in figure \ref{fig:aquarium_setup} where we could change most of the parameters such as lighting angle, camera and bubble concentration independently from each other. Measurement results are discussed in next chapter and image analysis is discussed in chapter \ref{the_algorithm}.
+		The goal of this setup is to capture bubble images that can be used to prototype the proposed algorithm, so the experiment was built in a transparent $1m \times 1m \times 1m$ water tank as shown in figure \ref{fig:aquarium_setup} where most of the parameters could be changed such as lighting angle, camera and bubble concentration independently from each other. Measurement results are discussed in next chapter and image analysis is discussed in chapter \ref{the_algorithm}.
 		
-		In order to satisfy requirements in section \ref{requirements}, we opted for parameters as summarized in table \ref{tab:aquarium_param}. 
+		In order to satisfy requirements in section \ref{requirements}, parameters were set according to table \ref{tab:aquarium_param}. 
 		
-		We chose the Basler A1920 mainly because of its high signal-to-noise ratio, and therefore fulfilling requirement R3 given enough light. Its main drawback is its relatively low frame rate at the highest possible resolution, which makes bubble tracking more difficult, which in turn makes radius calibration more difficult (see section \ref{calibration_algorithm}). Compared to an available high-speed camera with comparable maximum resolution, (PCO Dimax, 1,2kHz at $2000 \times 2000$ resolution) our chosen camera also has a smaller sensor. This means that the magnification factor is higher and therefore smaller bubbles can be better detected. A 100 mm macro lens was used in this setup. The large focal length yields a large magnification factor.
+		We chose the Basler A1920 mainly because of its high signal-to-noise ratio, and therefore fulfilling requirement R3 given enough light. Its main drawback is its relatively low frame rate at the highest possible resolution, which makes bubble tracking more difficult, which in turn makes radius calibration more difficult (see section \ref{calibration_algorithm}). Compared to an available high-speed camera with comparable maximum resolution, (PCO Dimax, 1,2kHz at $2000 \times 2000$ resolution) the chosen camera also has a smaller sensor. This means that the magnification factor is higher and therefore smaller bubbles can be better detected. A 100 mm macro lens was used in this setup. The large focal length yields a large magnification factor.
 %		\item \textbf{Gamma value}
 %		\item \textbf{F-number} This value has been chosen such that the depth of field is a few centimeters large (see also section \ref{calibration_setup})		
 	Bubbles were produced by a bubble generator. Bubble radii therefore depend on the amount of air flowing through the bubble generator, measured in liter per minute or LPM. We acquired two sets of measurements, the first with a low bubble concentration, (1,8 LPM air flow), and the second with a much higher bubble concentration (3 LPM). 
@@ -60,12 +59,11 @@
 		\end{table}
 		
 	\section{Aeolotron Setup}
-		%TODO Table as 4.1
 		The Aeolotron is an experimental annular wind-wave facility with a diameter of about 10m and a width of about 60cm. Typical water height is 1m. Four wind engines generate reference wind speeds of up to 17m/s, enough to generate breaking waves that can produce air bubbles. Figure \ref{fig:aeolotron_setup} shows a schematic view of the wind facility as well as the experimental setup.
 		
-		The goal of this setup is to apply the knowledge gained from the previous setup on bubbles emerging from breaking waves, so we reproduced the setup from the aquarium at the Aeolotron, while keeping as many unchanged parameters as possible (e.g. same camera, same light source same lens etc...).
+		The goal of this setup is to apply the knowledge gained from the previous setup on bubbles emerging from breaking waves, so the setup from the aquarium was reproduced at the Aeolotron, while keeping as many unchanged parameters as possible (e.g. same camera, same light source same lens etc...).
 		
-	We also used a bubble generator first, to verify that the algorithm developed for the previous setup still works with measurements from the Aeolotron setup. Some parameters such as focus distance and angle between the light source and bubbles were inevitably changed, which means we needed to calibrate our setup again. Table \ref{tab:aeolotron_setup} summarizes the setup's parameters.
+	Also a bubble generator was used at Aeolotron in order to verify that the algorithm developed for the previous setup still works with measurements from the Aeolotron setup. Some parameters such as the focal distance and the angle between the light source and bubbles were inevitably changed, which means new calibration measurements were needed. Table \ref{tab:aeolotron_setup} summarizes the setup's parameters.
 	
 		\begin{table}
 			\centering
@@ -158,11 +156,11 @@
 	
 	\section{Calibration}\label{calibration_setup}
 		\subsection{Depth of Field}\label{sub:depth_of_field_setup}
-			Since we want to determine the measurement volume, we need to not only detect bubbles in an image, but also determine their depth, i.e. distance to the focal plane. With the experimental setup shown in figure \ref{fig:depth_of_field_setup}, bubbles can be trapped and moved along the depth axis. 
+			Since the measurement volume needs to be determined, it is not only necessary to detect bubbles in an image, but also to determine their depth, i.e. distance to the focal plane. With the experimental setup shown in figure \ref{fig:depth_of_field_setup}, bubbles can be trapped and moved along the depth axis. 
 			
-			Figure \ref{fig:depth_of_field_setup_result} shows images captured with this setup. Note how blurriness varies among images depending on the distance to focal point. In section \ref{calibration_algorithm} we discuss how to extract depth form these images. The setup is not perfectly stable, so resulting images were not perfectly aligned. As a workaround, we took additional images with a different light source at each position to make other surrounding objects visible, e.g. armature of calibration device that can later on be used for tracking and stabilization. 
+			Figure \ref{fig:depth_of_field_setup_result} shows images captured with this setup. Note how blurriness varies among images depending on the distance to the focal plane. In section \ref{calibration_algorithm} we discuss how to extract depth form these images. The setup is not perfectly stable, so resulting images were not perfectly aligned. As a workaround, additional images were captured with a different light source at each position to make other surrounding objects visible, e.g. armature of calibration device that can later on be used for tracking and image stabilization. 
 			
-			This calibration technique is practical, because we do not need to determine the absolute distance to the camera. So only relative distances to focal plane are needed for a depth calibration. This is important because the goal of calibration is to determine the measurement volume only and not necessarily the absolute position of the measurement volume to the camera. 
+			This calibration technique is practical, because only relative distances to the focal plane are needed for depth calibration. This is important because the goal of calibration is to determine the measurement volume only and not necessarily the absolute position of the bubbles to the camera. 
 			
 			
 			\begin{SCfigure}
@@ -190,7 +188,7 @@
 			
 			
 		\subsection{Radius}\label{sub:radius_setup}
-			Although simulation shows that the distance between the two dominant peaks in a bubble is proportional to the bubble radius, we cannot determine the real radius from measurement results alone (figure \ref{fig:aqauarium_result} and \ref{fig:aeolotron_result}). So we need to change the lighting in such a way that the real radius becomes measurable, i.e. the whole bubble becomes visible. In a similar way to the light field method \cite{MischlerDiss}, we used an additional light source and a mirror in order to light up the bubbles from behind (figure \ref{fig:radius_calibration_setup}). Then, we acquired images at a frame rate of 200 FPS and lit the additional light source every second frame. Results are shown in figure \ref{fig:radius_calibration_setup_result}. In section \ref{calibration_algorithm} we identify bubbles lit from below with those lit from behind in order to estimate the proportionality factor between the real radius and the radius computed by our algorithm. 
+			Although simulation shows that the distance between the two dominant peaks in a bubble is proportional to the bubble radius, the real radius cannot be determined from measurement results alone (figure \ref{fig:aqauarium_result} and \ref{fig:aeolotron_result}). So lighting needs to be changed in such a way that the real radius becomes measurable, i.e. the whole bubble becomes visible. In a similar way to the light field method \cite{MischlerDiss}, an additional light source and a mirror were mounted in order to light up bubbles from behind (figure \ref{fig:radius_calibration_setup}). Then, images were acquired at a frame rate of 200 FPS, where the second light source was turned on every second frame. Results are shown in figure \ref{fig:radius_calibration_setup_result}. In section \ref{calibration_algorithm} bubbles lit from below are identified with those lit from behind in order to estimate the proportionality factor between the real radius and the radius computed by the proposed algorithms. 
 			
 
 			\begin{SCfigure}
