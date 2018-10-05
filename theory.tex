@@ -360,12 +360,15 @@ This chapter explains the theoretical concepts relevant to this thesis. First, t
 		
 		\begin{figure}
 			\centering
-			\begin{subfigure}[b]{0.55\textwidth}
-				\includegraphics[scale=.5]{images/training_intro.png}
+			\begin{subfigure}[b]{\textwidth}
+				\centering
+				\includegraphics[scale=.6]{images/training_intro.png}
 				\caption{Training}
 			\end{subfigure}
-			\begin{subfigure}[b]{0.55\textwidth}
-				\includegraphics[scale=.5]{images/testing_intro.png}
+			\vfill
+			\begin{subfigure}[b]{\textwidth}
+				\centering
+				\includegraphics[scale=.6]{images/testing_intro.png}
 				\caption{Testing}
 			\end{subfigure}
 			\caption{Training and testing in machine learning}
@@ -376,7 +379,7 @@ This chapter explains the theoretical concepts relevant to this thesis. First, t
 		\subsubsection{Terminology}
 			\begin{itemize} 
 				\item \textbf{Training} is changing the model's parameters based on the model's output. Training is also referred to as optimization. When training data is annotated, the process of training is also called supervised training. 
-				\item \textbf{Testing} is assigning a score to a trained model based on annotated testing data. The score is typically by an evaluation criteria and is independent of the model itself. 
+				\item \textbf{Testing} is assigning a score to a trained model based on annotated testing data. The score is typically produced by an evaluation criteria and is independent of the model itself. 
 				\item \textbf{Validation} is a form of testing, so it assigns a score to a trained model. Validation is needed when one wants to choose the best model among some trained candidate models based on their testing performance. Since changing a parameter of the algorithm (in this case the whole model) based on the output is equivalent to training by definition, an independent data set is needed to compute the final score of the algorithm, i.e. validation data. 
 			\end{itemize}				
 			
@@ -397,7 +400,7 @@ This chapter explains the theoretical concepts relevant to this thesis. First, t
 			The drawback of using a CNN is the need of a large amount of data and computational power for proper training. It is also not possible to extract feature importance from a trained CNN, which makes CNNs resemble black boxes that are hard to interpret.  
 			 \citet{NNMethods} explain CNNs in more details.
 		
-		%TODO chnage mAP@p-IoU with mAP@p-IoU
+
 		\subsection{Evaluation Criteria: mAP@p-IoU}
 		  The object detection algorithm using the \textit{intersection over union at $p$ mean average precision} criteria as explained in figure \ref{fig:iou_def}. As the  name suggests, the area of intersection between the predicted and the ground truth bounding boxes is computed and then divided by the union area of the two boxes. This means that IoU = 1 corresponds to a perfect prediction and IoU = 0 is a complete miss (assuming original images were annotated perfectly). So a threshold $p$ is chosen such that IoU $>= p$ corresponds to a correct prediction or \textit{true positive}. 		  
 

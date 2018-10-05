@@ -93,7 +93,7 @@
 		After having extracted a one dimensional signal from a potential bubble, the signal is classified using a convolutional neural network called \textit{BubbleNet}. 
 
 		\subsubsection{BubbleNet architecture}		
-		The architecture of BubbleNet, showin in figure \ref{fig:cnn_arch} is inspired from \citet{Li2017}, where the authors used a 1D convolutional neural network to classify electrocardiogram signals (ECG). We used two convolutional layers with MaxPool layers in between and two dense layers, where the last dense layer is also the output. 
+		The architecture of BubbleNet, showin in figure \ref{fig:cnn_arch} is inspired from \citet{Li2017}, where the authors used a 1D convolutional neural network to classify electrocardiogram signals (ECG). We used two convolutional layers with MaxPool layers in between and two dense layers, where the last dense layer is also the output. The first convolutional layer has a relatively large receptive field. The idea behind it is to account for the large variations of the peak's widths. For the next layers, we follow a similar pattern to \citet{Li2017} and choose a small receptive field for the last convolutional layer, with the intent to capture salient features at a higher abstraction level. 
 		
 		\begin{figure}
 			\centering
