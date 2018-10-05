@@ -11,7 +11,7 @@
 \BOOKMARK [2][-]{subsection.2.2.5}{Orientation and Structure Tensor}{section.2.2}% 11
 \BOOKMARK [1][-]{section.2.3}{The object detection problem}{chapter.2}% 12
 \BOOKMARK [2][-]{subsection.2.3.1}{Classification}{section.2.3}% 13
-\BOOKMARK [2][-]{subsection.2.3.2}{Evaluation Criteria: IoU@p-mAP}{section.2.3}% 14
+\BOOKMARK [2][-]{subsection.2.3.2}{Evaluation Criteria: mAP@p-IoU}{section.2.3}% 14
 \BOOKMARK [0][-]{chapter.3}{Related Work}{}% 15
 \BOOKMARK [1][-]{section.3.1}{Bright field method}{chapter.3}% 16
 \BOOKMARK [1][-]{section.3.2}{Bubble optical imaging instrument}{chapter.3}% 17

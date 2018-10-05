@@ -1,11 +1,11 @@
 \chapter{The Algorithm} \label{the_algorithm}
-	In this chapter we discuss two important object detection algorithms that can classify bubbles in an image and estimate their radii. The first algorithm, which is referred to as \textit{BubbleProfiles} or simply algorithm \ref{algo:bubbleNet} is optimized to work for small bubble concentration (e.g. figure \ref{fig:aqauarium_result}) whereas algorithm \ref{algo:bubbleCurves}, also referred to as \textit{BubbleCurves} is better suited for bubble images with very high concentrations (figure \ref{fig:aquarium_result_high_conc}).
+	This chapter discusses two important object detection algorithms that can classify bubbles in an image and estimate their radii. The first algorithm, which is referred to as \textit{BubbleProfiles} or simply algorithm \ref{algo:bubbleNet} is optimized to work for small bubble concentration (e.g. figure \ref{fig:aqauarium_result}) whereas algorithm \ref{algo:bubbleCurves}, also referred to as \textit{BubbleCurves} is better suited for bubble images with very high concentrations (figure \ref{fig:aquarium_result_high_conc}).
 		
 	\section{Motivation}
-		Section \ref{the_object_detection_problem} mentions that the state of the art object detection algorithms are based on deep learning algorithms such as Faster R-CNN \citep{FasterRCNN} and YOLO \citep{YOLO}. Training these algorithms with our data (simulated and real) did not yield good results. Training a pre-trained R-CNN algorithm (i.e. transfer learning) is not meaningful either because most pre-trained models have large anchors (or rank regions boxes) and are fine tuned to work for real world photographs that contain sparse objects such as humans, cars and pets. 
+		Section \ref{the_object_detection_problem} mentions that the state of the art object detection algorithms are based on deep learning algorithms such as Faster R-CNN \citep{FasterRCNN} and YOLO \citep{YOLO}. Training these algorithms with the data from this work (simulated and real) did not yield good results. Training a pre-trained R-CNN algorithm (i.e. transfer learning) is not meaningful either because most pre-trained models have large anchors (or rank regions boxes) and are fine tuned to work for real world photographs that contain sparse objects such as humans, cars and pets. 
 		
 		The acquired data from this work however, is very dense. And although bubbles can have comlex pattern, these patterns are far simpler than typical objects found in photographs. 
-		This led us to the conclusion that such algorithms are not well suited for detecting small and dense objects (images with a low bubble concentration are also considered to have dense objects, since they contain several hundred bubble instances per image that are very close to each other). This suspicion was confirmed by \cite{Zhenhua2018} who also added that these algorithms not only rely on a large amount of training data, but also require the data to be rich in features, which does not apply to our data. 
+		This led us to the conclusion that such algorithms are not well suited for detecting small and dense objects (images with a low bubble concentration are also considered to have dense objects, since they contain several hundred bubble instances per image that are very close to each other). This suspicion was confirmed by \cite{Zhenhua2018} who also added that these algorithms not only rely on a large amount of training data, but also require the data to be rich in features, which does not apply to this work's data. 
 		
 	Interestingly though, scaling down anchors and training an R-CNN algorithm (cite rcnn, Projektpraktikum?) from scratch did perform slightly better, with an IoU@0.5mAP of 68\%. This however, is far from ideal, so developing a different approach was necessary to achieve better results. 
 		
@@ -14,7 +14,7 @@
 		
 	\section{BubbleNet}\label{BubbleNet}
 	
-	This algorithm detects bubbles in an image with low bubble concentration and estimates their radii. The algorithm extracts candidate signals from images, classifies these signals and then computes a radius from a signal. A vanilla version of the algorithm is described in algorithm \ref{algo:bubbleNet}. Note that the algorithm returns a list of rectangles (i.e. bounding boxes around bubbles) so that we can evaluate its performance. Later on, only bubble radii, i.e. rectangles' widths and depths are needed to construct a bubble spectrum. 
+	This algorithm detects bubbles in an image with low bubble concentration and estimates their radii. The algorithm extracts candidate signals from images, classifies these signals and then computes a radius from a signal. A vanilla version of the algorithm is described in algorithm \ref{algo:bubbleNet}. Note that the algorithm returns a list of rectangles (i.e. bounding boxes around bubbles) so that evaluate its performance can be evaluated. Later on, only bubble radii, i.e. bounding boxes' widths and bubbles' depths are needed to construct a bubble spectrum. 
 	
 			\begin{algorithm}
 			\begin{algorithmic}[1]
@@ -26,9 +26,9 @@
 					\If {BubbleNet($v_p$)}
 						\State Compute radius $r$ and center $c$ from signal using equation \ref{eq:get_radius}
 						\State Compute real radius $r'$ using radius calibration equation \ref{eq:radius_calib}
-						\State Compute depth $d$ using equation \ref{eq:dof_calib}
+						\State Compute depth $dp$ using equation \ref{eq:dof_calib}
 						\State append($Rec$, toBoundingBox($r'$, $c$))
-						\State append($Dep$, $d$)
+						\State append($Dep$, $dp$)
 					\EndIf
 				\EndFor
 			\end{algorithmic}
@@ -41,7 +41,7 @@
 	
 	A closer inspection of bubbles shows that a bubble can be described well by a vertical cross section going through the middle of the bubble. For instance, figure \ref{fig:bubble_profile} shows that a vertical profile $v_p$ is characterized by a two salient peaks: A bright peak that emerges from total reflection as explained in figure \ref{fig:bubble_physics} as well as a dimmer, yet still visible second peak at a distance $d$ from the first peak. Furthermore, simulation shows that the distance $d$ is proportional to the real bubble radius (figure \ref{fig:peaks_radius_fit}). Note that in figure \ref{fig:peaks_radius_fit} the distance $d$ was computed on rendered images, whereas the radius is a given parameter that is determined before rendering. The step wise increase in $d$ can be explained by sampling, i.e. when the radius increases by an amount smaller than a pixel, $d$ will either not change or increase by exactly 1 pixel.
 	
-	In order to reach a better precision, we perform a Gaussian fit around the two peaks. Here it is necessary to initialize the fit routine with reasonable values, otherwise both fits would converge towards the same function. So we first smooth the signal with a 1D Gaussian filter, and then determine the absolute maximum $m_1$ within the signal corresponding to the first peak. The second peak corresponds to the highest local maximum $m_2$ that comes right after $m_1$. Finally, we use $arg(m_1)$ and $arg(m_2)$ as initial parameters for a Gaussian fit around the peaks. The final result is given by
+	In order to reach a better precision, a Gaussian fit around the two peaks is performed. Here it is necessary to initialize the fit routine with reasonable values, otherwise both fits would converge towards the same function. So the signal is first smoothed with a 1D Gaussian filter, and then the absolute maximum $m_1$ within the signal is determined that corresponds to the first peak. The second peak corresponds to the highest local maximum $m_2$ that comes right after $m_1$. Finally, we use the positions of $m_1$ and $m_2$ as initial parameters for a Gaussian fit around the peaks. The final result is given by
 	\begin{equation}
 		r_{\text{measured}} = \dfrac{| \mu_1 - \mu_2 |}{2}
 		\label{eq:get_radius}
@@ -84,16 +84,16 @@
 	
 	
 	\subsection{Signal extraction}
-		So far, we discussed how we can determine the radius from a given vertical cross section of a bubble. However, the question remains, how do we know the signal corresponds to a bubble in the first place? This is by far more challenging than determining the bubble radius and will be discussed thoroughly in the following sections. 
+		So far, it has been discussed how we can determine the radius from a given vertical cross section of a bubble. However, the question remains, how do we know the signal corresponds to a bubble in the first place? Answering this question is by far more challenging than determining the bubble radius and the solution will be discussed thoroughly in the following sections. 
 		
-		As we can see from measurement results (section \ref{measurement_results}), extracting local maxima from an image gives good starting points for vertical profile extraction. Starting from a local maximum, we need to go a few pixels downwards $l_{d}$ to cover the whole peak and a certain distance upwards $l_u$ until the second peak is reached. $l_d$ and $l_u$ are hyperparameters that add up to the total signal length $L$. The choice $l_u$ depends on the largest bubble radius that we want to detect. From \citet{Al-Lashi2016} we know that bubbles large enough to loose their spherical shape are very rare and their contribution to gas transfer can be neglected. Also, \citet{Leonie} showed that the maximum bubble diameter observed at the Aeolotron facility lies at around 500 $\mu m$ (i.e. 50 pixels). As for $l_d$, a constant value of 4 pixels is good enough to cover the large peak, because the value returned by the fit usually lies within 1 to 2 pixels away from the local maximum. 	
+		As measurement results show (section \ref{measurement_results}), extracting local maxima from an image gives good starting points for vertical profile extraction. Starting from a local maximum, we need to go a few pixels downwards $l_{d}$ to cover the whole peak and a certain distance upwards $l_u$ until the second peak is reached. $l_d$ and $l_u$ are hyperparameters that add up to the total signal length $L$. The choice of $l_u$ depends on the largest bubble radius that we want to detect. \citet{Al-Lashi2016} showed that bubbles large enough to loose their spherical shape are very rare and their contribution to gas transfer can be neglected. Also, \citet{Leonie} showed that the maximum bubble diameter observed at the Aeolotron facility lies at around 500 $\mu m$ (i.e. 50 pixels). As for $l_d$, a constant value of 4 pixels is good enough to cover the large peak, because the value returned by the fit usually lies within 1 to 2 pixels away from the local maximum. 	
 	
 		
 		\subsection{Signal classification}
-		After having extracted a one dimensional signal from a potential bubble, we classify it using a convolutional neural network that we call \textit{BubbleNet}. 
+		After having extracted a one dimensional signal from a potential bubble, the signal is classified using a convolutional neural network called \textit{BubbleNet}. 
 
 		\subsubsection{BubbleNet architecture}		
-		The architecture of our BubbleNet is inspired from \citet{Li}, where the authors used a 1D convolutional neural network to classify electrocardiogram signals (ECG). The architecture of our CNN is shown in figure \ref{fig:cnn_arch}. We used two convolutional layers with MaxPool layers in between and two dense layers, where the last dense layer is also the output. 
+		The architecture of BubbleNet, showin in figure \ref{fig:cnn_arch} is inspired from \citet{Li}, where the authors used a 1D convolutional neural network to classify electrocardiogram signals (ECG). We used two convolutional layers with MaxPool layers in between and two dense layers, where the last dense layer is also the output. 
 		
 		\begin{figure}
 			\centering
@@ -142,7 +142,7 @@
 %Non-trainable params: 0
 		\end{figure}
 		
-	Note that the neural network has a fixed input size of 20 gray values. This means that resizing the vertical profiles is often necessary before passing them to the CNN. We therefore train our CNN with resized inputs in order to make it robust against such preprocessing operations. 
+	Note that the neural network has a fixed input size of 20 gray values. This means that resizing the vertical profiles is often necessary before passing them to the CNN. We therefore train BubbleNet with resized inputs in order to make it robust against such preprocessing operations. 
 	
 	Since the bubble radius is not known prior to vertical profile extraction, we also extract $n$ signals, where 
 	\begin{equation}
@@ -183,7 +183,7 @@
 			We first shuffled our data and split it into training (80\%) and testing (20\%). After training for 14 epochs, the testing accuracy converged to 96.8\%, which is a very good result for a binary classifier. 
 			
 			For validation we used 20 more manually annotated small images, each containing from 10 to 20 bubbles. Figure \ref{fig:bubbleNet_result} illustrates the performance of algorithm \ref{algo:bubbleNet}.  
-			The algorithm achieved IoU@0.5mAP = 91.5\% and IoU@0.3mAP = 93\%. Note that this is slightly worse than the classification accuracy result. This is due to the occasionally unprecise radius computation, which gets penalized by the IoU@p-mAP criteria. 
+			The algorithm achieved mAP@IoU = 91.5\% and IoU@0.3mAP = 93\%. Note that this is slightly worse than the classification accuracy result. This is due to the occasionally unprecise radius computation, which gets penalized by the IoU@p-mAP criteria. 
 	
 			\begin{figure}
 				\centering
@@ -338,7 +338,7 @@
 				
 				The final result is shown in figure \ref{fig:final_result}. Although the circle matches the bubble's shape well, it is clear that the radius has been underestimated. Similarly to algorithm \ref{algo:bubbleNet}, radius calibration is addressed in section \ref{sub:radius_algorithm}
 				
-				Using a validation set of 30 small images, each containing 30 to 40 bubbles, this algorithm achieved IoU@0.5mAP = 89.3\%, which is slightly worse than algorithm \ref{algo:bubbleNet}. This is in part due to the high rate of overlap between bubbles, making curvature extraction less precise.. Nevertheless, the algorithm is reliable enough to be usable for bubble detection in high concentration images.
+				Using a validation set of 30 small images, each containing 30 to 40 bubbles, this algorithm achieved mAP@IoU = 89.3\%, which is slightly worse than algorithm \ref{algo:bubbleNet}. This is in part due to the high rate of overlap between bubbles, making curvature extraction less precise.. Nevertheless, the algorithm is reliable enough to be usable for bubble detection in high concentration images.
 				
 
 	
