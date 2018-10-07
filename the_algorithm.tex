@@ -41,7 +41,7 @@
 	
 	A closer inspection of bubbles shows that a bubble can be described well by a vertical cross section going through the middle of the bubble. For instance, figure \ref{fig:bubble_profile} shows that a vertical profile $v_p$ is characterized by a two salient peaks: A bright peak that emerges from total reflection as explained in figure \ref{fig:bubble_physics} as well as a dimmer, yet still visible second peak at a distance $d$ from the first peak. Furthermore, simulation shows that the distance $d$ is proportional to the real bubble radius (figure \ref{fig:peaks_radius_fit}). Note that in figure \ref{fig:peaks_radius_fit} the distance $d$ was computed on rendered images, whereas the radius is a given parameter that is determined before rendering. The step wise increase in $d$ can be explained by sampling, i.e. when the radius increases by an amount smaller than a pixel, $d$ will either not change or increase by exactly 1 pixel.
 	
-	In order to reach a better precision, a Gaussian fit around the two peaks is performed. Here it is necessary to initialize the fit routine with reasonable values, otherwise both fits would converge towards the same function. So the signal is first smoothed with a 1D Gaussian filter, and then the absolute maximum $m_1$ within the signal is determined that corresponds to the first peak. The second peak corresponds to the highest local maximum $m_2$ that comes right after $m_1$. Finally, we use the positions of $m_1$ and $m_2$ as initial parameters for a Gaussian fit around the peaks. The final result is given by
+	In order to reach a better precision, a Gaussian fit around the two peaks is performed. Here it is necessary to initialize the fit routine with reasonable values, otherwise both fits would converge towards the same function. So the signal is first smoothed with a 1D Gaussian filter, and then the absolute maximum $m_1$ within the signal is determined that corresponds to the first peak. The second peak corresponds to the highest local maximum $m_2$ that comes right after $m_1$. Finally, the positions of $m_1$ and $m_2$ are used as initial parameters for a Gaussian fit around the peaks. The final result is given by
 	\begin{equation}
 		r_{\text{measured}} = \dfrac{| \mu_1 - \mu_2 |}{2}
 		\label{eq:get_radius}
@@ -84,16 +84,16 @@
 	
 	
 	\subsection{Signal extraction}
-		So far, it has been discussed how we can determine the radius from a given vertical cross section of a bubble. However, the question remains, how do we know the signal corresponds to a bubble in the first place? Answering this question is by far more challenging than determining the bubble radius and the solution will be discussed thoroughly in the following sections. 
+		So far, it has been discussed how the radius can be determined from a given vertical cross section of a bubble. However, the question remains, how do we know the signal corresponds to a bubble in the first place? Answering this question is by far more challenging than determining the bubble radius and the solution will be discussed thoroughly in the following sections. 
 		
-		As measurement results show (section \ref{measurement_results}), extracting local maxima from an image gives good starting points for vertical profile extraction. Starting from a local maximum, we need to go a few pixels downwards $l_{d}$ to cover the whole peak and a certain distance upwards $l_u$ until the second peak is reached. $l_d$ and $l_u$ are hyperparameters that add up to the total signal length $L$. The choice of $l_u$ depends on the largest bubble radius that we want to detect. \citet{Al-Lashi2016} showed that bubbles large enough to loose their spherical shape are very rare and their contribution to gas transfer can be neglected. Also, \citet{Leonie} showed that the maximum bubble diameter observed at the Aeolotron facility lies at around 500 $\mu m$ (i.e. 50 pixels). As for $l_d$, a constant value of 4 pixels is good enough to cover the large peak, because the value returned by the fit usually lies within 1 to 2 pixels away from the local maximum. 	
+		As measurement results show (section \ref{measurement_results}), extracting local maxima from an image gives good starting points for vertical profile extraction. Starting from a local maximum, the signal must reach a few pixels downwards $l_{d}$ to cover the whole peak and a certain distance upwards $l_u$ until the second peak is reached. $l_d$ and $l_u$ are hyperparameters that add up to the total signal length $L$. The choice of $l_u$ depends on the largest bubble radius that need to be detected. \citet{Al-Lashi2016} showed that bubbles large enough to loose their spherical shape are very rare and their contribution to gas transfer can be neglected. Also, \citet{Leonie} showed that the maximum bubble diameter observed at the Aeolotron facility lies at around 500 $\mu m$ (i.e. 50 pixels). As for $l_d$, a constant value of 4 pixels is good enough to cover the large peak, because the value returned by the fit usually lies within 1 to 2 pixels away from the local maximum. 	
 	
 		
 		\subsection{Signal classification}
 		After having extracted a one dimensional signal from a potential bubble, the signal is classified using a convolutional neural network called \textit{BubbleNet}. 
 
 		\subsubsection{BubbleNet architecture}		
-		The architecture of BubbleNet, showin in figure \ref{fig:cnn_arch} is inspired from \citet{Li2017}, where the authors used a 1D convolutional neural network to classify electrocardiogram signals (ECG). We used two convolutional layers with MaxPool layers in between and two dense layers, where the last dense layer is also the output. The first convolutional layer has a relatively large receptive field. The idea behind it is to account for the large variations of the peak's widths. For the next layers, we follow a similar pattern to \citet{Li2017} and choose a small receptive field for the last convolutional layer, with the intent to capture salient features at a higher abstraction level. 
+		The architecture of BubbleNet, showin in figure \ref{fig:cnn_arch} is inspired from \citet{Li2017}, where the authors used a 1D convolutional neural network to classify electrocardiogram signals (ECG). BubbleNet contains two convolutional layers with MaxPool layers in between and two dense layers, where the last dense layer is also the output. The first convolutional layer has a relatively large receptive field. The idea behind it is to account for the large variations of the peak's widths. For the next layers, a similar pattern to \citet{Li2017} is followed and a small receptive field is chosen for the last convolutional layer, aiming to capture salient features at a higher abstraction level. 
 		
 		\begin{figure}
 			\centering
@@ -142,16 +142,16 @@
 %Non-trainable params: 0
 		\end{figure}
 		
-	Note that the neural network has a fixed input size of 20 gray values. This means that resizing the vertical profiles is often necessary before passing them to the CNN. We therefore train BubbleNet with resized inputs in order to make it robust against such preprocessing operations. 
+	Note that the neural network has a fixed input size of 20 gray values. This means that resizing the vertical profiles is often necessary before passing them to the CNN. BubbleNet is therefore trained with resized inputs in order to make it robust against such preprocessing operations. 
 	
 	Since the bubble radius is not known prior to vertical profile extraction, not one but $n$ signals with length $L_s$ are extracted, where 
 	\begin{equation}
 		r_{min} \leq L_s \leq L
 	\end{equation}
-	and then the signal with the highest bubble probability (raw classifier output) is kept. Signals that are classified as background obviously do not get further considerations. $r_{min}$ is the smallest detectable bubble radius and it depends on the magnification factor. For the Aeolotron setup, we have $r_{min} = 90 \mu m$.
+	and then the signal with the highest bubble probability (raw classifier output) is kept. Signals that are classified as background obviously do not get further considerations. $r_{min}$ is the smallest detectable bubble radius and it depends on the magnification factor. For the Aeolotron setup, $r_{min} = 90 \mu m$ was used.
 
 		\subsubsection{Training Data}
-			The most straightforward approach to generate training data is to annotate images by hand, preferably with an accuracy of no more than 2 pixels. However, this can quickly become very tedious work, especially when hundreds of thousands of images are needed to train a neural network with over $10^{3}$ parameters. Instead, we generated training data as follows:
+			The most straightforward approach to generate training data is to annotate images by hand, preferably with an accuracy of no more than 2 pixels. However, this can quickly become very tedious work, especially when hundreds of thousands of images are needed to train a neural network with over $10^{3}$ parameters. Instead, training data were generated as follows:
 			\begin{enumerate}
 				\item Annotate 300 bubbles only by hand.
 				\item Train logistic regression classifier with 300 annotated and 300 simulated images using manually computed features.
@@ -168,9 +168,9 @@
 				\item Peaks distance $d$
 			\end{itemize}
 			
-			The annotated images are fairly similar in size, lighting conditions and camera settings (Gamma value, gain, exposure time etc..). The reason for that, is because we want to optimize the logistic regression classifier for a high recall, regardless of its precision. So at this stage, it is only desired to detect as few false positives as possible, even if that means neglecting potential true positives, which in turn lowers the precision. This is obviously not a good approach to classify bubbles in general, however, our goal at this stage is to merely generate accurately annotated data. 
+			The annotated images are fairly similar in size, lighting conditions and camera settings (Gamma value, gain, exposure time etc..). The reason for that, is because we want to optimize the logistic regression classifier for a high recall, regardless of its precision. So at this stage, it is only desired to detect as few false positives as possible, even if that means neglecting potential true positives, which in turn lowers the precision. This is obviously not a good approach to classify bubbles in general, however, the goal at this stage is to merely generate accurately annotated data. 
 			
-			After predicting $10^5$ true positive bubble instances from our measurements in step step 3, we processed these images further to generate more data. This included changing the gamma value, resizing (upsampling and downsampling), and vertical flipping. 
+			After predicting $10^5$ true positive bubble instances from the measurements in step step 3, images were processed further to generate more data. Processing images with the goal of generating more data is called data augmentation and it is essential to teach the network the desired invariance and robustness properties \citep{UNet}. Data augmentation included changing the gamma value, with the intent to make the model robust against images taken with different camera settings, resizing (upsampling and downsampling), and horizontal flipping.
 			
 			Having generated more than $4 \cdot 10^5$, the neural network can now be trained. 
 			
@@ -182,9 +182,9 @@
 			
 		\subsubsection{Results}
 			
-			We first shuffled our data and split it into training (80\%) and testing (20\%). After training for 14 epochs, the testing accuracy converged to 96.8\%, which is a very good result for a binary classifier. 
+			First, the data was shuffled data and split it into training (80\%) and testing (20\%). After training for 14 epochs, the testing accuracy converged to 96.8\%, which is a very good result for a binary classifier. 
 			
-			For validation we used 20 more manually annotated small images, each containing from 10 to 20 bubbles. Figure \ref{fig:bubbleNet_result} illustrates the performance of algorithm \ref{algo:bubbleNet}.  
+			For validation, 20 more manually annotated small images were used, each containing from 10 to 20 bubbles. Figure \ref{fig:bubbleNet_result} illustrates the performance of algorithm \ref{algo:bubbleNet}.  
 			The algorithm achieved mAP@.5IoU = 91.5\% and mAP@.3IoU = 93\%. Note that this is slightly worse than the classification accuracy result. This is due to the occasionally unprecise radius computation, which gets penalized by the mAP@p-IoU criteria. 
 			
 			\begin{SCfigure}
@@ -200,7 +200,7 @@
 	
 	
 	\section{BubbleCurves}\label{BubbleCurves}
-		This algorithm detects bubbles in images with high bubble concentrations and estimates their radii. In these images, bubble curvatures are much better distinguishable than on low bubble concentrations images. In algorithm \ref{algo:bubbleCurves}, we first pick candidates, classify them and then determine their radii.
+		This algorithm detects bubbles in images with high bubble concentrations and estimates their radii. In these images, bubble curvatures are much better distinguishable than on low bubble concentrations images. In algorithm \ref{algo:bubbleCurves}, first candidates are picked, classified and then their radii are determined.
 	
 		\begin{algorithm}
 			\begin{algorithmic}[1]
@@ -230,21 +230,22 @@
 	
 	
 	\subsection{Bubble Classification}\label{bubble_classification}
-		In a similar way to algorithm \ref{algo:bubbleNet}, we pick our candidate bubbles based on local maxima in the input image. Then we extract a window with fixed size of $10 \times 10$ pixels around the local maximum. Orientation from structure tensor, the eigenvalues of the structure tensor (see section \ref{radius_from_orientation}) as well as the eigenvalues of the Hessian matrix are used as features to classify bubbles using a random forest classifier. 
+		In a similar way to algorithm \ref{algo:bubbleNet}, candidate bubbles are picked based on local maxima in the input image. Then a window with fixed size of $10 \times 10$ pixels is extracted around the local maximum. The window size is a hyperparameter and it was chosen, such that it covers enough curvature for large bubbles while keeping its size as small as possible, so that no more than one full (small) bubble is contained in this window. 
+		 Orientation from structure tensor, the eigenvalues of the structure tensor (see section \ref{radius_from_orientation}) as well as the eigenvalues of the Hessian matrix are used as features to classify bubbles using a random forest classifier. 
 		
-		The choice of these features is justified as follows. We expect bubbles to show a strong orientation inwards around the local maximum. Therefore we compute the orientation using the structure tensor and expect orientation to be vertical. The eigenvalues of the structure tensor show whether this orientation is significant or not. Finally, with the eigenvalues of the hessian matrix we can determine the curvature around the local maximum, which is expected to be concave. 
+		The choice of these features is justified as follows. Bubbles are expected to show a strong orientation inwards around the local maximum. Therefore the orientation is computed using the structure tensor with the expectation to see a vertical orientation. The eigenvalues of the structure tensor show whether this orientation is significant or not. Finally, with the eigenvalues of the hessian matrix the curvature around the local maximum can be determined, which is expected to be concave. 
 		
-		As for classification, we chose a random forest classifier (section \ref{rand_forest_class}) because it is well suited for determining thresholds by using decision trees that are particularly robust to inclusion of irrelevant features, which is important when the window size is larger than the considered bubble.
+		As for classification, a random forest classifier classifier (section \ref{rand_forest_class}) because it is well suited for determining thresholds by using decision trees that are particularly robust to inclusion of irrelevant features, which is important when the window size is larger than the considered bubble.
 		
 		
 		
 	
 	\subsection{Radius from Orientation}\label{radius_from_orientation}
-		The idea behind determining the bubble radius is to start from a point on the bubble edge and then "walk" along this edge and keep track of the path. After gathering enough points along this path, we perform a circle fit to determine the bubble's radius and center. 
+		The idea behind determining the bubble radius is to start from a point on the bubble edge and then "walk" along this edge and keep track of the path. After gathering enough points along this path, a circle fit is performed to determine the bubble's radius and center. 
 		
 		\subsubsection{Orientation}
 		
-		Figure \ref{fig:struct_tensor_result} shows the result of applying the structure tensor to a single bubble. We note that orientation arrows describe the orientation as expected around the strongest peak in the image. Since it is only possible to compute the double angle using the structure tensor, the direction of the arrows is not important. In fact, we see a direction flip around the middle of the image. When considering the eigenvalues, we note that both eigenvalues are close to zero around the bubble center and on the upper part of the bubble (figure \ref{subfig:larger_ev} and \ref{subfig:smaller_ev}). This means that orientation around this area is homogeneous (ref theory struct tensor EV interpretation) so results form these area are likely not valid. This is more apparent in figure \ref{fig:struct_tensor_result_2}, where orientation on the upper side is different from the one around the brightest peak in the image. For these reasons, we will only use orientation along the bubble edge up to the middle of the bubble, i.e. where the larger eigenvalue is significantly larger than zero.
+		Figure \ref{fig:struct_tensor_result} shows the result of applying the structure tensor to a single bubble. Orientation arrows describe the orientation as expected around the strongest peak in the image. Since it is only possible to compute the double angle using the structure tensor, the direction of the arrows is not important. In fact, a direction flip around the middle of the image can be observed. When considering the eigenvalues, it can be observed that both eigenvalues are close to zero around the bubble center and on the upper part of the bubble (figure \ref{subfig:larger_ev} and \ref{subfig:smaller_ev}). This means that orientation around this area is homogeneous (ref theory struct tensor EV interpretation) so results form these area are likely not valid. This is more apparent in figure \ref{fig:struct_tensor_result_2}, where orientation on the upper side is different from the one around the brightest peak in the image. For these reasons, only orientation along the bubble edge up to the middle of the bubble will be used, i.e. where the larger eigenvalue is significantly larger than zero.
 		
 		\begin{figure}
 			\begin{subfigure}[t]{.4\textwidth}
@@ -285,8 +286,9 @@
 	
 	
 			\subsubsection{Curve from Orientation}
-				Assuming that our starting point is part of the bubble's lower edge, we first get the orientation at the current pixel and then sample points on a line segment along this orientation. The sampling method is taken from \citet{Bopp2018}: A square is drawn around each point on the sampling line, and then a weighted average of the gray values within the rectangle is performed, where weights are intersection areas between neighboring pixels and the drawn rectangle. This sampling step is illustrated in figure \ref{fig:subpixel_sampling}
-				 After sampling, we perform a Gaussian fit along the fit line, where we initialize the mean with the current position. Next, we add the fit result to our curve and move one step to the right. Figure \ref{fig:curve_from_orientation} summarizes how a bubble curve is extracted using orientation. 
+				Assuming that the starting point is part of the bubble's lower edge, the orientation at the current pixel is computed and then points are sampled on a line segment along this orientation. The sampling method is taken from \citet{Bopp2018}: A square is drawn around each point on the sampling line, and then a weighted average of the gray values within the rectangle is performed, where weights are intersection areas between neighboring pixels and the drawn rectangle. This sampling step is illustrated in figure \ref{fig:subpixel_sampling}
+				 After sampling, a Gaussian fit is performed along the fit line, where the mean is initialized with the current position. Next, the fit result is added to the final curve and the next starting point is chosen by moving one step to the right. 
+				 Figure \ref{fig:curve_from_orientation} summarizes how a bubble curve is extracted using orientation. 
 				 
 				 \begin{figure}
 				 	\centering
@@ -303,7 +305,7 @@
 				 \end{figure}
 				 
 				
-				Finally, we use a least squares fit to find the center $c = (a,b)^T$ and the radius $r$ from the circle equation
+				Finally, a least squares fit is used to find the center $c = (a,b)^T$ and the radius $r$ from the circle equation
 				\begin{equation}
 					\sqrt{ \left( (x-a)^2 + (y-b)^2 \right)} = r^2
 				\end{equation}
@@ -349,11 +351,11 @@
 	
 	\section{Calibration}\label{calibration_algorithm}
 		\subsection{Depth of Field}
-			Determining the distance between a bubble and the focal plane can be deduced from bubble blurriness. If we consider a vertical profile of the bright lower peak (for both low and high bubble concentration images), we note that the peak's width increases with increasing distance from the focal plane (figure \ref{subfig:peak_profile}). We therefore describe blurriness with the peak's width, given by the sigma parameter of a Gaussian fit around the peak. Theoretically, we would expect a linear dependency between blurriness and distance to focal plane. However, our light source has a certain size that has to be accounted for, which gives bubble peaks a certain minimum width at focus. 
+			Determining the distance between a bubble and the focal plane can be deduced from bubble blurriness. When considering a vertical profile of the bright lower peak (for both low and high bubble concentration images), it becomes clear that the peak's width increases with increasing distance from the focal plane (figure \ref{subfig:peak_profile}). Therefore blurriness can be described with the peak's width, given by the sigma parameter of a Gaussian fit around the peak. Theoretically, a linear dependency between blurriness and the distance to the focal plane would be expected. However, the light source has a certain size that has to be accounted for, which gives bubble peaks a certain minimum width at focus. 
 			
-			Furthermore, blurriness depends on the radius. For instance, larger bubbles tend to be visible for larger distances from the focal plane (up to 10 centimeters), whereas small bubbles are only visible for no more than 2 centimeters. Figure \ref{subfig:dof_calib_meas} shows measured blurriness (in terms of $\sigma$) as a function of radius and distance from focal plane. 
+			Furthermore, blurriness depends on the radius. For instance, larger bubbles tend to be visible for larger distances from the focal plane (up to 10 centimeters), whereas small bubbles are only visible for no more than 2 centimeters. Figure \ref{subfig:dof_calib_meas} shows measured blurriness (in terms of $\sigma$) as a function of radius and distance from the focal plane. 
 			
-			Therefore, we choose a fourth degree polynomial to describe the blurriness-depth dependency and a linear function to describe the radius dependency. The resulting calibration equation is 
+			Therefore, a fourth degree polynomial is chosen to describe the blurriness-depth dependency and a linear function to describe the radius dependency. The resulting calibration equation is 
 			\begin{equation}
 				f(r, d) = b \cdot r + a_1 \cdot d + a_2 \cdot d^2 + c
 				\label{eq:dof_calib}				
@@ -397,9 +399,9 @@
 		\subsection{Radius}\label{sub:radius_algorithm}
 			The measurement technique developed in this work uses a light source to light up bubbles from below and captures images with a camera placed at $90^\circ$ to the light source. The resulting images are characterized by a lower peak (or bright lower curvature for high concentration bubbles) as discussed in section \ref{measurement_result}. From these images alone, it is not clear whether the observed edge corresponds to the real bubble edge or not. Also, algorithm \ref{algo:bubbleCurves} clearly underestimates the observed radius (figure \ref{fig:final_result}). 
 			
-			In order to correct for this effect, we performed calibration measurements as described in section \ref{sub:radius_setup}.
+			In order to correct for this effect, calibration measurements as described in section \ref{sub:radius_setup} are performed.
 			
-			We first need to identify back lit bubbles with those lit from below. So we take images with back lit bubbles only, and track a few bubbles of different sizes and depths and compute their radii. From the tracked back lit bubbles, we can roughly estimate the position of the same bubble lit from below. Figure \ref{fig:radius_calib_demo} illustrates the principle behind identifying bubbles from different images. 
+			Back lit bubbles need to get identified with those lit from below. So images are acquired with back lit bubbles only, then tracking is applied to the images to track a few bubbles of different sizes and depths. The radii of the tracked bubbles is also computed for each position, i.e. from each image. From the tracked back lit bubbles, the position of the same bubble lit from below can be roughly estimated. Figure \ref{fig:radius_calib_demo} illustrates the principle behind identifying bubbles from different images with different light sources. 
 			
 			\begin{figure}	
 				\centering
@@ -429,7 +431,7 @@
 			
 			
 			Determining the radius of bubbles lit from below is done using algorithm \ref{algo:bubbleNet}. As for the corresponding back lit bubbles, the radius is determined as follows:
-			First, we compute the derivative image and then estimate the position of the bubble center using the characteristic bright peak around the bubble center. We then extract several horizontal profiles that go through or are very close to the bubble center. Next, we compute the local maxima from the extracted profiles and apply a Gaussian fit around them in order to determine the local maximum with a subpixel accuracy. The bubble diameter is then given by the distance between the two local maxima that are farthest apart from each other. Figure \ref{fig:green_radius} illustrates the described steps above. 
+			First, the derivative image is computed and then the position of the bubble center is estimated using the characteristic bright peak around the bubble center. Then, several horizontal profiles that go through or are very close to the bubble center are extracted. Next, the local maxima from the extracted profiles is determined and a Gaussian fit around them is applied in order to determine the local maximum with a subpixel accuracy. Finally, the bubble diameter is given by the distance between the two local maxima that are farthest apart from each other. Figure \ref{fig:green_radius} illustrates the described steps above. 
 			
 			\begin{figure}
 				\centering
@@ -437,7 +439,7 @@
 				\begin{subfigure}[t]{.4\textwidth}
 					\centering
 					\includegraphics[scale=0.3]{images/green_edges.png}
-					\caption{From derivative image we extract horizontal profiles}
+					\caption{Horizontal profiles are extracted from the derivative image}
 				\end{subfigure}\hfill
 				\begin{subfigure}[t]{.5\textwidth}
 					\centering

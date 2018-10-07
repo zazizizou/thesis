@@ -157,6 +157,7 @@
 				\centering
 				\includegraphics[scale=0.5]{images/aquarium_result_high_conc_2.png}
 				\caption{}
+				\label{subfig:too_large_bubble}
 			\end{subfigure}\hfill		
 			\caption{Sample images captured with aquarium setup for a high bubble concentration. The upper peak is not visible anymore. However, bubble curvatures are more recognizable, even for smaller bubbles}
 			\label{fig:aquarium_result_high_conc}
@@ -179,7 +180,8 @@
 				\label{fig:aeolotron_result}
 			\end{figure}
 
-			Figures \ref{fig:aqauarium_result}, \ref{fig:aquarium_result_high_conc} and \ref{fig:aeolotron_result} show different images captured using a bubble generator in two different water tanks. For low bubble concentrations, images look very similar across the two different setups. However, when the concentration is very high (figure \ref{fig:aquarium_result_high_conc}) bubbles change dramatically. The curvature can be easily distinguished and scattered light from other bubbles gives bubbles a more circular shape. Also, the background is much brighter for a high bubble concentration. The exact bubble shape will be discussed further in chapter \ref{the_algorithm}.	
+			Figures \ref{fig:aqauarium_result}, \ref{fig:aquarium_result_high_conc} and \ref{fig:aeolotron_result} show different images captured using a bubble generator in two different water tanks. For low bubble concentrations, images look very similar across the two different setups. However, when the concentration is very high (figure \ref{fig:aquarium_result_high_conc}) bubbles change dramatically. The curvature can be easily distinguished and scattered light from other bubbles gives bubbles a more circular shape. Also, the background is much brighter for a high bubble concentration. Figure \ref{subfig:too_large_bubble} shows a bubble so large that it lost its spherical shape. Such bubbles are too rare and will be classifier as background with no further considerations. 
+			The exact bubble shape will be discussed further in chapter \ref{the_algorithm}.	Full size, raw measurements can be found in appendix. 
 	
 	
 	\section{Calibration}\label{calibration_setup}
