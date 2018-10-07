@@ -155,12 +155,12 @@
 			\begin{enumerate}
 				\item Annotate 300 bubbles only by hand.
 				\item Train logistic regression classifier with 300 annotated and 300 simulated images using manually computed features.
-				\item Predict 100 000 bubble instances with logistic regression classifier
+				\item Predict 100 000 bubble instances with logistic regression classifier for use as training data. 
 				\item Use data augmentation to generate a total of 200 000 vertical profiles. 				
 				\item Extract 200 000 background (non bubble) images to balance data.
 			\end{enumerate}
 			
-			For step 2, we used following features:
+			Step 2 and 3 are performed to generate training data. Following features have been used:
 			\begin{itemize}
 				\item First peak's gray value $p_1$
 				\item Second peak's gray value $p_2$
@@ -168,7 +168,9 @@
 				\item Peaks distance $d$
 			\end{itemize}
 			
-			The annotated images are fairly similar in size, lighting conditions and camera settings (Gamma value, gain, exposure time etc..). The reason for that, is because we want to optimize the logistic regression classifier for a high recall, regardless of its precision. So at this stage, we only want to detect as few false positives as possible, even if that means neglecting potential true positives, which in turn lowers the precision. This is obviously not a good approach to classify bubbles, however, our goal at this stage is to merely generate accurately annotated data. After predicting $10^5$ true positive bubble instances from our measurements in step step 3, we processed these images further to generate more data. This included changing the gamma value, resizing (upsampling and downsampling), and vertical flipping. 
+			The annotated images are fairly similar in size, lighting conditions and camera settings (Gamma value, gain, exposure time etc..). The reason for that, is because we want to optimize the logistic regression classifier for a high recall, regardless of its precision. So at this stage, it is only desired to detect as few false positives as possible, even if that means neglecting potential true positives, which in turn lowers the precision. This is obviously not a good approach to classify bubbles in general, however, our goal at this stage is to merely generate accurately annotated data. 
+			
+			After predicting $10^5$ true positive bubble instances from our measurements in step step 3, we processed these images further to generate more data. This included changing the gamma value, resizing (upsampling and downsampling), and vertical flipping. 
 			
 			Having generated more than $4 \cdot 10^5$, the neural network can now be trained. 
 			
@@ -184,13 +186,13 @@
 			
 			For validation we used 20 more manually annotated small images, each containing from 10 to 20 bubbles. Figure \ref{fig:bubbleNet_result} illustrates the performance of algorithm \ref{algo:bubbleNet}.  
 			The algorithm achieved mAP@.5IoU = 91.5\% and mAP@.3IoU = 93\%. Note that this is slightly worse than the classification accuracy result. This is due to the occasionally unprecise radius computation, which gets penalized by the mAP@p-IoU criteria. 
-	
-			\begin{figure}
+			
+			\begin{SCfigure}
 				\centering
-				\includegraphics[scale=0.4]{images/bubbleNet_validation_result.png}
+				\includegraphics[scale=0.8]{images/bubbleNet_validation_result.png}
 				\caption{Testing of algorithm \ref{algo:bubbleNet}. Red: ground truth, green: predicted. Note how in this image, ground truth annotation was not done perfectly, so IoU results were likely slightly underestimated.}
 				\label{fig:bubbleNet_result}
-			\end{figure}
+			\end{SCfigure}
 	
 	
 	
