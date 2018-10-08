@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.5.24)  8 OCT 2018 13:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.5.24)  8 OCT 2018 13:15
 entering extended mode
 **./MA.tex
 (MA.tex
@@ -1656,11 +1656,11 @@ Overfull \hbox (0.33444pt too wide) in paragraph at lines 8--8
 \tf@lof=\write5
 \openout5 = `MA.lof'.
 
- (MA.lot)
+ (MA.lot [53])
 \tf@lot=\write6
 \openout6 = `MA.lot'.
 
- (MA.bbl [53] [54]
+ (MA.bbl [54]
 chapter 8.
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 12.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
@@ -1721,7 +1721,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 69.
 Here is how much of TeX's memory you used:
  12373 strings out of 493328
  200142 string characters out of 3139121
- 392739 words of memory out of 3000000
+ 392898 words of memory out of 3000000
  15334 multiletter control sequences out of 15000+200000
  26510 words of font info for 66 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1756,9 +1756,9 @@ msfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 /cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.p
 fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on MA.pdf (58 pages, 8098498 bytes).
+Output written on MA.pdf (58 pages, 8099200 bytes).
 PDF statistics:
- 1758 PDF objects out of 2073 (max. 8388607)
+ 1761 PDF objects out of 2073 (max. 8388607)
  217 named destinations out of 1000 (max. 500000)
  677 words of extra memory for PDF output out of 10000 (max. 10000000)
 
