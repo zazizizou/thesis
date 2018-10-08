@@ -70,7 +70,7 @@
 				\includegraphics[scale=.5]{graphs/one_peaks_profile.png}
 				\caption{Vertical bubble profile. The second peak is much dimmer than the first, but still bright enough to be distinguished from background noise.}
 			\end{subfigure}
-			\caption{A small air bubble from an image with low bubble concentration.}
+			\caption{A small air bubble from an image with a low bubble concentration.}
 			\label{fig:bubble_profile}
 		\end{figure}
 		
@@ -98,7 +98,7 @@
 		\begin{figure}
 			\centering
 			\includegraphics[scale=0.5]{images/cnn_architecture.png}
-			\caption{Architecture of BubbleNet. Numbers in parentheses refer to the kernel size. The rest refers to the layer size. }
+			\caption{Architecture of BubbleNet. Numbers in parentheses refer to the receptive field. Numbers inside layers are the layer size. The chosen activation function is Relu. Both MaxPool layers have a pool size of 2.}
 			\label{fig:cnn_arch}
 			
 % ########## CNN ##################
@@ -293,7 +293,7 @@
 				 \begin{figure}
 				 	\centering
 				 	\includegraphics[scale=.5]{images/curve_from_orientation.png}
-				 	\caption{Extracting curve from bubble using orientation and neighborhood sampling.}
+				 	\caption{Extracting curve from bubble using orientation.}
 				 	\label{fig:curve_from_orientation}
 				 \end{figure}
 				 
@@ -325,7 +325,7 @@
 					\end{subfigure}
 					
 					
-					\caption{Sampling and fit Note that the circle works well, even though only half a circle is extracted from the bubble at most. }
+					\caption{Sampling and fit. The circle fit works well, even though only half a circle is extracted from the bubble at most. }
 					\label{fig:fit_circle_fit_result}
 				\end{figure}
 
@@ -366,25 +366,19 @@
 			
 			
 			
-			%TODO fix scale, font, etc..
 			\begin{figure}
-				\begin{subfigure}[t]{.50\textwidth}
+				\centering
+				\begin{subfigure}[b]{\textwidth}
 						\centering
-						\includegraphics[scale=.4]{graphs/peak_profile_fit.png}
+						\includegraphics[scale=.6]{graphs/peak_profile_fit.png}
 						\caption{Vertical peak profile and Gaussian fit with $\sigma = 4.04$}
 						\label{subfig:peak_profile}
-					\end{subfigure}\hfill
-				\begin{subfigure}[t]{.50\textwidth}
-						\centering
-						\includegraphics[scale=.4]{images/dof_calibration_measurement.png}
-						\caption{ }
-						\label{subfig:dof_calib_meas}
-					\end{subfigure}				
+					\end{subfigure}%
 					
-				\begin{subfigure}[t]{.50\textwidth}
-						\centering
-						\includegraphics[scale=.4]{images/dof_calibration_fit.png}
-						\caption{Sampling result. }
+				\begin{subfigure}[b]{\textwidth}
+					\centering
+						\includegraphics[scale=.6]{images/dof_calibration_fit.png}
+						\caption{Blurriness as a function of bubble radius and distance from focal plane. Fit function from calibration equation \ref{eq:dof_calib} is drawn as a wireframe mesh.}
 						\label{subfig:depth_calib_fit_result}
 					\end{subfigure}								
 				
@@ -397,7 +391,7 @@
 			
 			
 		\subsection{Radius}\label{sub:radius_algorithm}
-			The measurement technique developed in this work uses a light source to light up bubbles from below and captures images with a camera placed at $90^\circ$ to the light source. The resulting images are characterized by a lower peak (or bright lower curvature for high concentration bubbles) as discussed in section \ref{measurement_result}. From these images alone, it is not clear whether the observed edge corresponds to the real bubble edge or not. Also, algorithm \ref{algo:bubbleCurves} clearly underestimates the observed radius (figure \ref{fig:final_result}). 
+			The measurement technique developed in this work uses a light source to light up bubbles from below and captures images with a camera placed at $90^\circ$ to the light source. The resulting images are characterized by a lower peak (or bright lower curvature for high concentration bubbles) as discussed in section \ref{measurement_results}. From these images alone, it is not clear whether the observed edge corresponds to the real bubble edge or not. Also, algorithm \ref{algo:bubbleCurves} clearly underestimates the observed radius (figure \ref{fig:final_result}). 
 			
 			In order to correct for this effect, calibration measurements as described in section \ref{sub:radius_setup} are performed.
 			
