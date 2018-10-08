@@ -1,4 +1,4 @@
-\begin{thebibliography}{20}
+\begin{thebibliography}{21}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -149,6 +149,12 @@ Shaoqing Ren, Kaiming He, Ross Girshick, and Jian Sun.
   91--99. Curran Associates, Inc., 2015.
 \newblock URL
   \url{http://papers.nips.cc/paper/5638-faster-r-cnn-towards-real-time-object-detection-with-region-proposal-networks.pdf}.
+
+\bibitem[Ronneberger et~al.(2015)Ronneberger, Fischer, and Brox]{UNet}
+Olaf Ronneberger, Philipp Fischer, and Thomas Brox.
+\newblock U-net: Convolutional networks for biomedical image segmentation.
+\newblock \emph{CoRR}, abs/1505.04597, 2015.
+\newblock URL \url{http://arxiv.org/abs/1505.04597}.
 
 \bibitem[Terray et~al.(1996)Terray, A.~Donelan, Agrawal, Drennan, Kahma,
   Williams, Hwang, and A.~Kitaigorodskii]{Terry}

@@ -1,6 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2016)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: MA.aux
+This is BibTeX, Version 0.99dThe top-level auxiliary file: MA.aux
 A level-1 auxiliary file: titlepages-eng.aux
 A level-1 auxiliary file: abstracts.aux
 A level-1 auxiliary file: introduction.aux
@@ -9,6 +7,7 @@ A level-1 auxiliary file: related_work.aux
 A level-1 auxiliary file: experimental_setup.aux
 A level-1 auxiliary file: the_algorithm.aux
 A level-1 auxiliary file: discussion.aux
+A level-1 auxiliary file: appendix.aux
 The style file: plainnat.bst
 A level-1 auxiliary file: deposition.aux
 Database file #1: biblio.bib
@@ -19,45 +18,4 @@ Warning--to sort, need author or key in Zhenhua2018
 Warning--empty author in NIWA
 Warning--empty author in Zhenhua2018
 Warning--empty journal in Terry
-You've used 20 entries,
-            2773 wiz_defined-function locations,
-            757 strings with 9120 characters,
-and the built_in function-call counts, 9251 in all, are:
-= -- 878
-> -- 469
-< -- 13
-+ -- 163
-- -- 142
-* -- 760
-:= -- 1412
-add.period$ -- 86
-call.type$ -- 20
-change.case$ -- 99
-chr.to.int$ -- 19
-cite$ -- 49
-duplicate$ -- 444
-empty$ -- 751
-format.name$ -- 163
-if$ -- 1975
-int.to.chr$ -- 2
-int.to.str$ -- 1
-missing$ -- 17
-newline$ -- 129
-num.names$ -- 72
-pop$ -- 192
-preamble$ -- 1
-purify$ -- 85
-quote$ -- 0
-skip$ -- 330
-stack$ -- 0
-substring$ -- 306
-swap$ -- 66
-text.length$ -- 5
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 208
-warning$ -- 6
-while$ -- 75
-width$ -- 0
-write$ -- 313
 (There were 7 warnings)
