@@ -1,5 +1,5 @@
 \chapter{Theory}\label{theory}
-This chapter explains the theoretical concepts relevant to this thesis. First, the physics behind the developed method is explained in section \ref{bubble_physics}, in particular how bubbles interact with light. Next, the mathematical basics necessary for image processing such as Fourier theory and edge detection are discussed in section \ref{image_processing}. Section \ref{machine_learning} explains the principle behind machine learning that the method developed in this work relies on for classification. Finally, section \ref{the_object_detection_problem} formally introduces the object detection problem and the chosen criteria for evaluation. 
+This chapter explains the theoretical concepts relevant to this thesis. First, the physics behind the developed method is explained in section \ref{bubble_physics}, in particular how bubbles interact with light. Next, the mathematical basics necessary for image processing such as Fourier theory and edge detection are discussed in section \ref{image_processing}. Finally, section \ref{the_object_detection_problem} formally introduces the object detection problem and the principle behind machine learning the the method developed in this work relies on for classification.
 
 	\section{Bubble physics} \label{bubble_physics}
 
@@ -253,8 +253,8 @@ This chapter explains the theoretical concepts relevant to this thesis. First, t
 		\subsection{Orientation and Structure Tensor}
 		\begin{figure} %fig:struct_tensor_intro
 			\centering
-			\includegraphics[scale=1]{images/structure_tensor_intro.png}
-			\caption{Ideal local neighborhood described by a unit vector $\tilde{\mathbf{n}}$}
+			\includegraphics[scale=.5]{images/structure_tensor_intro.png}
+			\caption{Ideal local neighborhood described by a unit vector $\tilde{\mathbf{n}}$ \citep{JaehneBook}.}
 			\label{fig:struct_tensor_intro}
 		\end{figure}
 		Although derivation is useful to determine the gradient magnitude and its direction in an image, it doesn't tell us much about gradient directions in a specific neighborhood of a point. Figure \ref{fig:struct_tensor_intro} shows that in a neighborhood with ideal orientation gray values change in one direction only. Generally, the direction of local orientation can be denoted with a unit vector $\tilde{\mathbf{n}}$. If the coordinate system is oriented along the principal directions, the gray values become a one dimensional function and a simple neighbourhood can be represented by
@@ -353,7 +353,7 @@ This chapter explains the theoretical concepts relevant to this thesis. First, t
 	There has been a lot of progress in this field thanks to deep learning algorithms (see next section) that rely on training a relatively complex model a large amount of annotated data. The sate of the art algorithms include region based methods such as Faster R-CNN \citep{FasterRCNN}, where many candidate regions are first extracted and then classified and single evaluation methods such as YOLO \citep{YOLO}, where bounding boxes and class probabilities are estimated with one single neural network in a single evaluation. Although these algorithms perform very well on typical photographs and support between 1000 and 9000 different classes, applying them to this bubble detection problem yields very bad results (see chapter \ref{the_algorithm}). 
 	In this work, a machine learning based approach is used for the classification part, whereas localization is performed with classical image processing methods.
 		
-		\subsection{Classification}\label{machine_learning}
+		\subsection{Classification}\label{classification}
 		In this work, machine learning techniques are used mainly for signal classification purposes. For instance, both of the proposed algorithms rely on binary classification using a random forest classifier and a convolutional neural network. This section explains the principle behind machine learning and the main idea behind the chosen model. A more thorough argumentation about the chosen architecture and model-specific parameters is discussed in chapter \ref{the_algorithm}.
 
 		Machine learning is commonly defined as the practice of using algorithms to parse data, learn from it, and then make a determination or prediction about something. In this case, this means training the model with a large number of bubble and background instances, in order to predict whether a given signal corresponds to a bubble or not. Figure \ref{fig:machine_learning_intro} summarizes the principle behind machine learning. 
