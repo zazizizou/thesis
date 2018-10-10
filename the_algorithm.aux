@@ -3,6 +3,7 @@
 \citation{FasterRCNN}
 \citation{YOLO}
 \citation{Zhenhua2018}
+\citation{RCNN}
 \@writefile{toc}{\contentsline {chapter}{\numberline {5}The Algorithm}{32}{chapter.5}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
@@ -26,56 +27,56 @@
 \newlabel{fig:peaks_radius_fit}{{5.2}{35}{Simulated distance between two peaks as a function of bubble radius.\relax }{figure.caption.31}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.2.3}Signal classification}{35}{subsection.5.2.3}}
 \@writefile{toc}{\contentsline {subsubsection}{\nonumberline BubbleNet architecture}{35}{section*.32}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Architecture of BubbleNet. Numbers in parentheses refer to the receptive field. Numbers inside layers are the layer size. The chosen activation function is Relu. Both MaxPool layers have a pool size of 2.\relax }}{36}{figure.caption.33}}
-\newlabel{fig:cnn_arch}{{5.3}{36}{Architecture of BubbleNet. Numbers in parentheses refer to the receptive field. Numbers inside layers are the layer size. The chosen activation function is Relu. Both MaxPool layers have a pool size of 2.\relax }{figure.caption.33}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Architecture of BubbleNet. Numbers in parentheses refer to the receptive field. Numbers inside the layer boxes refer to the layer size. The chosen activation function is Relu. Both MaxPool layers have a pool size of 2.\relax }}{36}{figure.caption.33}}
+\newlabel{fig:cnn_arch}{{5.3}{36}{Architecture of BubbleNet. Numbers in parentheses refer to the receptive field. Numbers inside the layer boxes refer to the layer size. The chosen activation function is Relu. Both MaxPool layers have a pool size of 2.\relax }{figure.caption.33}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\nonumberline Training Data}{36}{section*.34}}
 \citation{UNet}
 \@writefile{toc}{\contentsline {subsubsection}{\nonumberline Results}{37}{section*.35}}
 \@writefile{toc}{\contentsline {section}{\numberline {5.3}BubbleCurves}{37}{section.5.3}}
 \newlabel{BubbleCurves}{{5.3}{37}{BubbleCurves}{section.5.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Bubble Classification}{37}{subsection.5.3.1}}
-\newlabel{bubble_classification}{{5.3.1}{37}{Bubble Classification}{subsection.5.3.1}{}}
 \newlabel{SC@4}{{\caption@xref {??}{ on input line 195}}{38}{Results}{figure.caption.36}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Testing of algorithm \ref  {algo:bubbleNet}. Red: ground truth, green: predicted. Note how in this image, ground truth annotation was not done perfectly, so IoU results were likely slightly underestimated.\relax }}{38}{figure.caption.36}}
 \newlabel{fig:bubbleNet_result}{{5.4}{38}{Testing of algorithm \ref {algo:bubbleNet}. Red: ground truth, green: predicted. Note how in this image, ground truth annotation was not done perfectly, so IoU results were likely slightly underestimated.\relax }{figure.caption.36}{}}
 \@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces BubbleCurves\relax }}{38}{algorithm.2}}
 \newlabel{algo:bubbleCurves}{{2}{38}{BubbleCurves\relax }{algorithm.2}{}}
 \citation{Bopp2018}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Bubble Classification}{39}{subsection.5.3.1}}
+\newlabel{bubble_classification}{{5.3.1}{39}{Bubble Classification}{subsection.5.3.1}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Radius from Orientation}{39}{subsection.5.3.2}}
 \newlabel{radius_from_orientation}{{5.3.2}{39}{Radius from Orientation}{subsection.5.3.2}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\nonumberline Orientation}{39}{section*.37}}
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Curve from Orientation}{39}{section*.40}}
 \newlabel{subfig:larger_ev}{{5.5c}{40}{Larger eigenvalues of the structure tensor\relax }{figure.caption.38}{}}
 \newlabel{sub@subfig:larger_ev}{{c}{40}{Larger eigenvalues of the structure tensor\relax }{figure.caption.38}{}}
 \newlabel{subfig:smaller_ev}{{5.5d}{40}{Smaller eigenvalues of the structure tensor \relax }{figure.caption.38}{}}
 \newlabel{sub@subfig:smaller_ev}{{d}{40}{Smaller eigenvalues of the structure tensor \relax }{figure.caption.38}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Structure tensor eigenvalues and orientation on a single bubble from a high bubble concentration image.\relax }}{40}{figure.caption.38}}
 \newlabel{fig:struct_tensor_result}{{5.5}{40}{Structure tensor eigenvalues and orientation on a single bubble from a high bubble concentration image.\relax }{figure.caption.38}{}}
-\newlabel{SC@5}{{\caption@xref {??}{ on input line 280}}{40}{Orientation}{figure.caption.39}{}}
+\newlabel{SC@5}{{\caption@xref {??}{ on input line 281}}{40}{Orientation}{figure.caption.39}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces Applying the structure tensor on a slightly smaller and differently lit bubble. Significance of orientation is represented by the arrows' length. Orientation from the left side and the upper part is not meaningful and can't be used.\relax }}{40}{figure.caption.39}}
 \newlabel{fig:struct_tensor_result_2}{{5.6}{40}{Applying the structure tensor on a slightly smaller and differently lit bubble. Significance of orientation is represented by the arrows' length. Orientation from the left side and the upper part is not meaningful and can't be used.\relax }{figure.caption.39}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces Extracting curve from bubble using orientation.\relax }}{41}{figure.caption.41}}
 \newlabel{fig:curve_from_orientation}{{5.7}{41}{Extracting curve from bubble using orientation.\relax }{figure.caption.41}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Results}{41}{section*.44}}
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Curve from Orientation}{41}{section*.40}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces Gray value sampling along sampling line\relax }}{42}{figure.caption.42}}
 \newlabel{fig:subpixel_sampling}{{5.8}{42}{Gray value sampling along sampling line\relax }{figure.caption.42}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5.9}{\ignorespaces Sampling and fit. The circle fit works well, even though only half a circle is extracted from the bubble at most. \relax }}{42}{figure.caption.43}}
 \newlabel{fig:fit_circle_fit_result}{{5.9}{42}{Sampling and fit. The circle fit works well, even though only half a circle is extracted from the bubble at most. \relax }{figure.caption.43}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.10}{\ignorespaces Final result of algorithm \ref  {algo:bubbleCurves} applied to a single bubble\relax }}{42}{figure.caption.45}}
-\newlabel{fig:final_result}{{5.10}{42}{Final result of algorithm \ref {algo:bubbleCurves} applied to a single bubble\relax }{figure.caption.45}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.10}{\ignorespaces Final result of algorithm \ref  {algo:bubbleCurves} applied to a single bubble\relax }}{43}{figure.caption.45}}
+\newlabel{fig:final_result}{{5.10}{43}{Final result of algorithm \ref {algo:bubbleCurves} applied to a single bubble\relax }{figure.caption.45}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Results}{43}{section*.44}}
 \@writefile{toc}{\contentsline {section}{\numberline {5.4}Calibration}{43}{section.5.4}}
 \newlabel{calibration_algorithm}{{5.4}{43}{Calibration}{section.5.4}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}Depth of Field}{43}{subsection.5.4.1}}
-\newlabel{eq:dof_calib}{{5.5}{43}{Depth of Field}{equation.5.4.5}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}Radius}{43}{subsection.5.4.2}}
-\newlabel{sub:radius_algorithm}{{5.4.2}{43}{Radius}{subsection.5.4.2}{}}
-\newlabel{subfig:peak_profile}{{5.11a}{44}{Vertical peak profile and Gaussian fit with $\sigma = 4.04$\relax }{figure.caption.46}{}}
-\newlabel{sub@subfig:peak_profile}{{a}{44}{Vertical peak profile and Gaussian fit with $\sigma = 4.04$\relax }{figure.caption.46}{}}
-\newlabel{subfig:depth_calib_fit_result}{{5.11b}{44}{Blurriness as a function of bubble radius and distance from focal plane. Fit function from calibration equation \ref {eq:dof_calib} is drawn as a wireframe mesh.\relax }{figure.caption.46}{}}
-\newlabel{sub@subfig:depth_calib_fit_result}{{b}{44}{Blurriness as a function of bubble radius and distance from focal plane. Fit function from calibration equation \ref {eq:dof_calib} is drawn as a wireframe mesh.\relax }{figure.caption.46}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.11}{\ignorespaces Depth calibration\relax }}{44}{figure.caption.46}}
-\newlabel{fig:depth_calib}{{5.11}{44}{Depth calibration\relax }{figure.caption.46}{}}
-\newlabel{eq:radius_calib}{{5.6}{45}{Radius}{equation.5.4.6}{}}
+\newlabel{eq:dof_calib}{{5.5}{44}{Depth of Field}{equation.5.4.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}Radius}{44}{subsection.5.4.2}}
+\newlabel{sub:radius_algorithm}{{5.4.2}{44}{Radius}{subsection.5.4.2}{}}
+\newlabel{eq:radius_calib}{{5.6}{44}{Radius}{equation.5.4.6}{}}
+\newlabel{subfig:peak_profile}{{5.11a}{45}{Vertical peak profile and Gaussian fit with $\sigma = 4.04$\relax }{figure.caption.46}{}}
+\newlabel{sub@subfig:peak_profile}{{a}{45}{Vertical peak profile and Gaussian fit with $\sigma = 4.04$\relax }{figure.caption.46}{}}
+\newlabel{subfig:depth_calib_fit_result}{{5.11b}{45}{Blurriness as a function of bubble radius and distance from focal plane. Fit function from calibration equation \ref {eq:dof_calib} is drawn as a wireframe mesh.\relax }{figure.caption.46}{}}
+\newlabel{sub@subfig:depth_calib_fit_result}{{b}{45}{Blurriness as a function of bubble radius and distance from focal plane. Fit function from calibration equation \ref {eq:dof_calib} is drawn as a wireframe mesh.\relax }{figure.caption.46}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.11}{\ignorespaces Depth calibration\relax }}{45}{figure.caption.46}}
+\newlabel{fig:depth_calib}{{5.11}{45}{Depth calibration\relax }{figure.caption.46}{}}
 \newlabel{subfig:green_1}{{5.12a}{46}{\relax }{figure.caption.47}{}}
 \newlabel{sub@subfig:green_1}{{a}{46}{\relax }{figure.caption.47}{}}
 \newlabel{subfig:green_2}{{5.12b}{46}{\relax }{figure.caption.47}{}}

@@ -1,12 +1,13 @@
 \chapter{Theory}\label{theory}
-This chapter explains the theoretical concepts relevant to this thesis. First, the physics behind the developed method is explained in section \ref{bubble_physics}, in particular how bubbles interact with light. Next, the mathematical basics necessary for image processing such as Fourier theory and edge detection are discussed in section \ref{image_processing}. Finally, section \ref{the_object_detection_problem} formally introduces the object detection problem and the principle behind machine learning the the method developed in this work relies on for classification.
+This chapter explains the theoretical concepts relevant to this thesis. First, the physics behind the developed method is explained in section \ref{bubble_physics}, in particular how bubbles interact with light.
+Next, the mathematical basics necessary for image processing such as Fourier theory and edge detection are discussed in section \ref{image_processing}. Finally, section \ref{the_object_detection_problem} formally introduces the object detection problem and the principle behind machine learning that the method developed in this work relies on for classification.
 
 	\section{Bubble physics} \label{bubble_physics}
 
 		\subsection{Reflection and Refraction}
-			\textbf{Reflection} is the abrupt change in the direction of propagation of a light beam that strikes the boundary between two different media. Assuming the incoming light ray makes an angle $\theta_1$ with the normal of a plane tangent to the boundary, then the reflected ray makes an angle $\theta_1'$ with this normal and lies in the same plane as the incident ray and the normal. The reflection law is shown in figure \ref{fig:reflection_def} and is described as
+			\textbf{Reflection} is the abrupt change in the direction of propagation of a light beam that strikes the boundary between two different media. Assuming the incoming light ray makes an angle $\theta$ with the normal of a plane tangent to the boundary, then the reflected ray makes an angle $\theta'$ with this normal and lies in the same plane as the incident ray and the normal. The reflection law is shown in figure \ref{fig:reflection_def} and is described as
 			\begin{equation}
-				\theta = \theta'
+				\theta = \theta'.
 			\end{equation}
 			
 			\begin{figure}
@@ -30,20 +31,20 @@ This chapter explains the theoretical concepts relevant to this thesis. First, t
 		    \caption{Reflection and refraction laws.}
 	 		\end{figure}	
 			
-			\textbf{Refraction} is the change in direction of propagation of a wave when the wave passes from one medium into another with a different index of refraction. The angle of the reflected beam is shown in figure \ref{fig:refracted_def} is given by Snell's law:
+			\textbf{Refraction} is the change in direction of propagation of a wave when the wave passes from one medium into another with a different index of refraction. The angle of the reflected beam is shown in figure \ref{fig:refracted_def} and is given by Snell's law:
 			\begin{equation}
-				n_1 \sin(\theta_1) = n_2 \sin(\theta_2)
+				n_1 \sin(\theta_1) = n_2 \sin(\theta_2),
 			\end{equation}
-				Where $n_1$ and $n_2$ are the indices of refraction of the media.
+				where $n_1$ and $n_2$ are the indices of refraction of the media.
 				
 				\textbf{Total reflection} occurs when angle of the incident beam is larger than the critical angle:
 				\begin{equation}
-					\theta_c = \arcsin\left(\dfrac{n_2}{n_1}\right)
+					\theta_c = \arcsin\left(\dfrac{n_2}{n_1}\right).
 				\end{equation}
 				
 				
 		\subsection{Bubble-light interaction}
-			Since the smallest bubble radius (around 50-100 $\mu m$) is much larger than the wavelength of the light source (around 600 nm), diffraction within the air bubble can be neglected. Mie scattering effects are also only relevant for radii within the same order of magnitude as the wavelength \citep{Demtroeder2} so it can be neglected as well. Therefore, only refraction and reflection laws will be considered. 
+			Since the smallest bubble radius (around 50 $\mu m$) is much larger than the wavelength of the light source (around 600 nm), diffraction within the air bubble can be neglected. Mie scattering effects are also only relevant for radii within the same order of magnitude as the wavelength \citep{Demtroeder2} so they can be neglected as well. Therefore, only refraction and reflection laws will be considered. 
 			
 			\begin{figure}
 		    \centering
@@ -60,7 +61,7 @@ This chapter explains the theoretical concepts relevant to this thesis. First, t
 		        \label{subfig:bubble_simulation}
 		    \end{subfigure}
 		    
-		    \caption{Interaction of a light bubble with light rays}
+		    \caption{Interaction of a light bubble with light rays.}
 		    \label{fig:bubble_physics}
 	 		\end{figure}	
 			
@@ -202,7 +203,7 @@ This chapter explains the theoretical concepts relevant to this thesis. First, t
 		\end{equation}
 		and its corresponding Fourier transform is
 		\begin{equation}
-			\mathscr{F}\{\mathbf{\nabla}\} = 2 \pi \text{i} \mathbf{k}
+			\mathscr{F}\{\mathbf{\nabla}\} = 2 \pi \text{i} \mathbf{k}.
 		\end{equation}
 		
 		For the second derivative all possible combinations of second order partial differential operators of a two dimensional signal need to be considered. The resulting $2 \times 2$ matrix is called the Hessian matrix
@@ -217,7 +218,7 @@ This chapter explains the theoretical concepts relevant to this thesis. First, t
 		and its Fourier transform is
 		
 		\begin{equation}
-			\mathscr{F}\{\mathbf{H}\} = -4 \pi^2 \mathbf{k}\mathbf{k}^T
+			\mathscr{F}\{\mathbf{H}\} = -4 \pi^2 \mathbf{k}\mathbf{k}^T.
 		\end{equation}
 		
 		
@@ -243,7 +244,7 @@ This chapter explains the theoretical concepts relevant to this thesis. First, t
 			\end{equation}
 		At each point in the image, the resulting gradient approximations can be combined to give the gradient magnitude image $S$ using:
 		\begin{equation}
-			S = \sqrt{(S_x \star G )^2 + (S_y \star G)^2}
+			S = \sqrt{(S_x \star G )^2 + (S_y \star G)^2},
 			\label{eq:grad_sobel}
 		\end{equation}
 		where G is the input image. Figure \ref{fig:sobel_demo} shows the result of applying the derivation operator on an image. Note how edges have different magnitude depending on their strength. 
@@ -362,15 +363,15 @@ This chapter explains the theoretical concepts relevant to this thesis. First, t
 			\begin{subfigure}[b]{\textwidth}
 				\centering
 				\includegraphics[scale=.6]{images/training_intro.png}
-				\caption{Training}
+				\caption{Training.}
 			\end{subfigure}
 			\vfill
 			\begin{subfigure}[b]{\textwidth}
 				\centering
 				\includegraphics[scale=.6]{images/testing_intro.png}
-				\caption{Testing}
+				\caption{Testing.}
 			\end{subfigure}
-			\caption{Training and testing in machine learning}
+			\caption{Training and testing in machine learning.}
 			\label{fig:machine_learning_intro}
 		\end{figure}				
 		
