@@ -80,7 +80,7 @@ This chapter explains the theoretical concepts relevant to this thesis. First, t
 		\end{figure}
 	
 		\subsection{Fourier theory}
-		The Fourier transform is an important image processing tool which is used to decompose an image into its since and cosine components. The output of the transformation represents the image in the Fourier or frequency domain, while the input image is the spacial domain. In the Fourier domain image, each point represents a particular frequency contained in the spatial domain image.
+		The Fourier transform is an important image processing tool which is used to decompose an image into its sine and cosine components. The output of the transformation represents the image in the Fourier or frequency domain, while the input image is the spacial domain. In the Fourier domain image, each point represents a particular frequency contained in the spatial domain image.
 		The \textit{continuous} two-dimensional Fourier transform is defined as
 		\begin{equation}
 				\mathscr{F}\{ g(\mathbf{x})  \} = \hat{g}(\mathbf{k}) = 
@@ -90,15 +90,15 @@ This chapter explains the theoretical concepts relevant to this thesis. First, t
 		\begin{equation}
 				\mathscr{F}^{-1}\{ \hat{g}(\mathbf{k}) \} = g(\mathbf{x}) =
 				 \int_{-\infty}^{\infty} \hat{g}(\mathbf{k})
-			\text{exp}\left( -2 \pi \text{i} \mathbf{k}^T \mathbf{x}  \right) \text{d}\mathbf{x}
+			\text{exp}\left( -2 \pi \text{i} \mathbf{k}^T \mathbf{x}  \right) \text{d}\mathbf{x},
 		\end{equation}
-		Where $\mathbf{x}$ and $\mathbf{k}$  are the two dimensional space and frequency vectors respectively. 
+		where $\mathbf{x}$ and $\mathbf{k}$  are the two dimensional space and frequency vectors respectively. 
 		
 		Images however are discrete two dimensional signals, therefore the \textit{Discrete} Fourier transform or DFT is needed, which is defined as
 		\begin{equation}
 			\text{DFT}\{ g_{m,n} \} = \hat{g}_{u,v} = \dfrac{1}{MN} \sum_{m=0}^{M-1} \sum_{n=0}^{N-1}
 			g_{m,n} \text{ exp} \left(  - \dfrac{2 \pi \text{i} m u}{M}  \right)
-						\text{exp} \left(  - \dfrac{2 \pi \text{i} n u}{N}  \right)
+						\text{exp} \left(  - \dfrac{2 \pi \text{i} n u}{N}  \right).
 		\end{equation}		 
 
 		Similarly, the inverse 2-D DFT is defined as 
@@ -106,7 +106,7 @@ This chapter explains the theoretical concepts relevant to this thesis. First, t
 		\begin{equation}
 		 \text{IDFT}\{\hat{g}_{u,v}\} = g_{m,n} = \sum_{m=0}^{M-1} \sum_{n=0}^{N-1} \hat{g}_{u,v}
 			\text{ exp} \left(   \dfrac{2 \pi \text{i} m u}{M}  \right)
-			\text{exp} \left(   \dfrac{2 \pi \text{i} n u}{N}  \right)
+			\text{exp} \left(   \dfrac{2 \pi \text{i} n u}{N}  \right).
 		\end{equation}
 		
 		
@@ -120,19 +120,19 @@ This chapter explains the theoretical concepts relevant to this thesis. First, t
 		and the discrete two dimensional convolution as
 		\begin{equation}
 			g'_{m,n} = \sum_{m'=0}^{M-1} \sum_{n'=0}^{N-1}
-			h_{m',n'} g_{m-m', n-n'}
+			h_{m',n'} g_{m-m', n-n'}.
 		\end{equation}
 		
 		One important property of convolution is that it can be expressed as a multiplication in the Fourier domain. 
 		\begin{equation}
-		\mathscr{F}\{g \star h\} = N M \hat{h} \hat{g}
+		\mathscr{F}\{g \star h\} = N M \hat{h} \hat{g}.
 		\end{equation}
 		This property, together with the fast Fourier implementation of the Fourier transform allows a fast computation of convolutions. 
 		
-		Edges of images are typically extended with zero values (i.e. zero padding). This introduces an error when applying filters at the image border so borders will mostly be excluded when using filters (see chapter \ref{the_algorithm} for more details).
+		Edges of images are typically extended with zero values (i.e. zero padding). This introduces an error when applying filters at the image border. Therefore, borders will mostly be excluded when using filters (see chapter \ref{the_algorithm} for more details).
 		
 		\subsection{Smoothing}\label{sect:smoothing}
-		Smoothing an image means convolving an image with a smoothing filter. A smoothing or averaging filters must ideally fulfill following conditions
+		Smoothing an image means convolving an image with a smoothing filter. A smoothing or averaging filters must ideally fulfill the following conditions
 		\begin{enumerate}
 			\item Zero-shift: $\Im (\hat{h}(\mathbf{k})) = 0$
 			\item Preservation of mean value: $\hat{h}(0) = 1 $
@@ -145,34 +145,34 @@ This chapter explains the theoretical concepts relevant to this thesis. First, t
 		G_{m} = \dfrac{1}{2 \pi \sigma^2} \text{ exp}
 			 \left( 
 			 	- \dfrac{(m-\mu)^2}{2 \sigma^2}
-			 \right)
+			 \right),
 		\end{equation}
-		Where $\mu$ is the mean, i.e. Gaussian peak's position and $\sigma$ is the standard deviation, i.e. peak's width.
+		where $\mu$ is the mean, i.e. the distribution peak's position and $\sigma$ is the standard deviation, i.e. the peak's width.
 		
-		Figure \ref{fig:gauss_intro} show a Gaussian curve in one and two dimensions as well as the result of convolving an image with a Gaussian filter mask. Note how the image becomes blurry, i.e. large wave numbers have been suppressed.
+		Figure \ref{fig:gauss_intro} shows a Gaussian curve in one and two dimensions as well as the result of convolving an image with a Gaussian filter mask. Note how the image becomes blurry, i.e. large wave numbers have been suppressed.
 		\begin{figure}
 		    \centering
 		    \begin{subfigure}[t]{0.3\textwidth}
 		        \includegraphics[width=\textwidth]{graphs/gauss_sigma_4.png}
-		        \caption{1D Gaussian signal with $\mu=15$ and $\sigma=2$}
+		        \caption{1D Gaussian signal with $\mu=15$ and $\sigma=2$.}
 		    \end{subfigure}%
 		    \begin{subfigure}[t]{0.3\textwidth}
 		        \includegraphics[width=\textwidth]{images/gauss_sigma_2.png}
-		        \caption{2D Gaussian signal with $\mu_x = \mu_y = 15$ and $\sigma_x = \sigma_y = 4$}
+		        \caption{2D Gaussian signal with $\mu_x = \mu_y = 15$ and $\sigma_x = \sigma_y = 4$.}
 		    \end{subfigure}
 		    
 		    \begin{subfigure}[t]{0.3\textwidth}
 		        \includegraphics[width=\textwidth]{images/green_one.png}
-		        \caption{Original image}
+		        \caption{Original image.}
 		    \end{subfigure}
 			  \begin{subfigure}[t]{0.3\textwidth}
 		        \includegraphics[width=\textwidth]{images/green_one_gaussian.png}
-		        \caption{After convolution with 2D Gaussian mask}
+		        \caption{After convolution with 2D Gaussian mask.}
 		    \end{subfigure}
 		    ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
 		    %(or a blank line to force the subfigure onto a new line)
 
-		    \caption{Gaussian smoothing filter}
+		    \caption{Gaussian smoothing filter.}
 		    \label{fig:gauss_intro}
 		\end{figure}
 
@@ -246,7 +246,6 @@ This chapter explains the theoretical concepts relevant to this thesis. First, t
 			S = \sqrt{(S_x \star G )^2 + (S_y \star G)^2}
 			\label{eq:grad_sobel}
 		\end{equation}
-
 		where G is the input image. Figure \ref{fig:sobel_demo} shows the result of applying the derivation operator on an image. Note how edges have different magnitude depending on their strength. 
 		
 		
@@ -257,7 +256,7 @@ This chapter explains the theoretical concepts relevant to this thesis. First, t
 			\caption{Ideal local neighborhood described by a unit vector $\tilde{\mathbf{n}}$ \citep{JaehneBook}.}
 			\label{fig:struct_tensor_intro}
 		\end{figure}
-		Although derivation is useful to determine the gradient magnitude and its direction in an image, it doesn't tell us much about gradient directions in a specific neighborhood of a point. Figure \ref{fig:struct_tensor_intro} shows that in a neighborhood with ideal orientation gray values change in one direction only. Generally, the direction of local orientation can be denoted with a unit vector $\tilde{\mathbf{n}}$. If the coordinate system is oriented along the principal directions, the gray values become a one dimensional function and a simple neighbourhood can be represented by
+		Although derivation is useful to determine the gradient magnitude and its direction in an image, it does not give much information about gradient directions in a specific neighborhood of a point. Figure \ref{fig:struct_tensor_intro} shows that in a neighborhood with ideal orientation gray values change in one direction only. Generally, the direction of local orientation can be denoted with a unit vector $\tilde{\mathbf{n}}$. If the coordinate system is oriented along the principal directions, the gray values become a one dimensional function and a simple neighbourhood can be represented by
 		\begin{equation}
 			g(\mathbf{x}) = g(\mathbf{x}^T \tilde{\mathbf{n}})
 		\end{equation}
@@ -268,7 +267,7 @@ This chapter explains the theoretical concepts relevant to this thesis. First, t
 								\left( 
 									\mathbf{\nabla}g(\mathbf{x'}) \mathbf{\nabla}g(\mathbf{x'})^T
 								\right)
-								\text{d}\mathbf{x'}
+								\text{d}\mathbf{x'}.
 		\end{equation}
 		
 		The $pq$-th component of this tensor is therefore given by
@@ -277,7 +276,7 @@ This chapter explains the theoretical concepts relevant to this thesis. First, t
 							\left(
 								\dfrac{\partial g(\mathbf{x'})}{\partial x'_p} \dfrac{\partial g(\mathbf{x'})}{\partial x'_q}
 							\right)
-							\text{d} \mathbf{x'}
+							\text{d} \mathbf{x'}.
 			\label{eq:struct_tensor_pq}
 		\end{equation}
 		
@@ -287,11 +286,11 @@ This chapter explains the theoretical concepts relevant to this thesis. First, t
 			\tan(2\theta) = \dfrac{2 J_{12}}{J_{11} - J_{22}}
 		\end{equation}
 	
-		The importance of the structure tensor stems from the fact the eigenvalues (which can be ordered $\lambda_1 \geq \lambda_2 \geq 0$ and the corresponding eigenvectors summarize the distribution of the gradient within the window defined by $w$. Table \ref{tab:struc_tensor_interp} shows how eigenvalues can be interpreted.
+		The importance of the structure tensor stems from the fact that eigenvalues (which can be ordered $\lambda_1 \geq \lambda_2 \geq 0$) and the corresponding eigenvectors summarize the distribution of the gradient within the window defined by $w$ \citep{Bigun1986}. Table \ref{tab:struc_tensor_interp} shows how eigenvalues can be interpreted.
 		
 		\begin{table}
 		
-			\begin{tabular}{|l|l|l|p{5cm}| }
+			\begin{tabular}{|l|c|l|p{5cm}| }
 			\hline 
 			\textbf{Condition} & \textbf{Rank(J)} & \textbf{Description }\\ 
 			\hline 
@@ -309,7 +308,7 @@ This chapter explains the theoretical concepts relevant to this thesis. First, t
 		\end{table}
 		
 		
-		For discrete images, Sobel filters as defined in equation \ref{eq:sobel} are used for derivation. As for smoothing, a Gaussian smoothing mask as introduced in section \ref{sect:smoothing} is used. Computing the elements of a structure tensor for an image $G$ therefore requires following steps:
+		For discrete images, Sobel filters as defined in equation \ref{eq:sobel} are used for derivation. As for smoothing, a Gaussian smoothing mask as introduced in section \ref{sect:smoothing} is used. Computing the elements of a structure tensor for an image $G$ therefore requires the following steps:
 		\begin{enumerate}
 			\item $G_x = S_x \star G$ \\
 						$G_y = S_y \star G$
@@ -324,7 +323,7 @@ This chapter explains the theoretical concepts relevant to this thesis. First, t
 		\sidecaptionvpos{figure}{t}
 		\begin{SCfigure}
 			\centering
-			\caption{Orientation angle using sobel filters for derivation and a Gaussian mask with $\sigma =1$ for smoothing.}		
+			\caption{Orientation angle using Sobel filters for derivation and a Gaussian mask with $\sigma =1$ for smoothing.}		
 			\includegraphics[scale=0.5]{images/structure_tensor_demo.png}
 			\label{fig:struct_tensor_demo}
 		\end{SCfigure}
@@ -350,13 +349,13 @@ This chapter explains the theoretical concepts relevant to this thesis. First, t
 			\label{fig:obj_detec_intro}
 		\end{figure}
 	
-	There has been a lot of progress in this field thanks to deep learning algorithms (see next section) that rely on training a relatively complex model a large amount of annotated data. The sate of the art algorithms include region based methods such as Faster R-CNN \citep{FasterRCNN}, where many candidate regions are first extracted and then classified and single evaluation methods such as YOLO \citep{YOLO}, where bounding boxes and class probabilities are estimated with one single neural network in a single evaluation. Although these algorithms perform very well on typical photographs and support between 1000 and 9000 different classes, applying them to this bubble detection problem yields very bad results (see chapter \ref{the_algorithm}). 
+	There has been a lot of progress in this field thanks to deep learning algorithms that rely on training a relatively complex model on a large amount of annotated data. The sate of the art algorithms include region based methods such as Faster R-CNN \citep{FasterRCNN}, where many candidate regions are first extracted and then classified, and single evaluation methods such as YOLO \citep{YOLO}, where bounding boxes and class probabilities are estimated with one single neural network in a single evaluation. Although these algorithms perform very well on typical photographs and support between 1000 and 9000 different classes, applying them to this bubble detection problem yields very bad results (see chapter \ref{the_algorithm}). 
 	In this work, a machine learning based approach is used for the classification part, whereas localization is performed with classical image processing methods.
 		
 		\subsection{Classification}\label{classification}
-		In this work, machine learning techniques are used mainly for signal classification purposes. For instance, both of the proposed algorithms rely on binary classification using a random forest classifier and a convolutional neural network. This section explains the principle behind machine learning and the main idea behind the chosen model. A more thorough argumentation about the chosen architecture and model-specific parameters is discussed in chapter \ref{the_algorithm}.
+		In this work, machine learning techniques are used mainly for signal classification purposes. For instance, both of the proposed algorithms rely on binary classification using a random forest classifier and a convolutional neural network. This section explains the principles of machine learning and the main idea behind the chosen model. A more thorough argumentation about the chosen architecture and model-specific parameters is discussed in chapter \ref{the_algorithm}.
 
-		Machine learning is commonly defined as the practice of using algorithms to parse data, learn from it, and then make a determination or prediction about something. In this case, this means training the model with a large number of bubble and background instances, in order to predict whether a given signal corresponds to a bubble or not. Figure \ref{fig:machine_learning_intro} summarizes the principle behind machine learning. 
+		Machine learning is commonly defined as the practice of using algorithms to parse data, learn from it, and then make a determination or prediction about something. In this case, this means training the model with a large number of bubble and background instances, in order to predict whether a given signal corresponds to a bubble or not. Figure \ref{fig:machine_learning_intro} summarizes the steps performed by a machine learning algorithm. 
 		
 		\begin{figure}
 			\centering
@@ -379,30 +378,30 @@ This chapter explains the theoretical concepts relevant to this thesis. First, t
 		\subsubsection{Terminology}
 			\begin{itemize} 
 				\item \textbf{Training} is changing the model's parameters based on the model's output. Training is also referred to as optimization. When training data is annotated, the process of training is also called supervised training. 
-				\item \textbf{Testing} is assigning a score to a trained model based on annotated testing data. The score is typically produced by an evaluation criteria and is independent of the model itself. 
+				\item \textbf{Testing} is assigning a score to a trained model based on annotated testing data. The score is typically produced by an evaluation criterion and is independent of the model itself. 
 				\item \textbf{Validation} is a form of testing, so it assigns a score to a trained model. Validation is needed when one wants to choose the best model among some trained candidate models based on their testing performance. Since changing a parameter of the algorithm (in this case the whole model) based on the output is equivalent to training by definition, an independent data set is needed to compute the final score of the algorithm, i.e. validation data. 
 			\end{itemize}				
 			
 		\subsubsection{Logistic Regression Classifier}
 			Logistic regression is despite its name a linear model for classification, where the probabilities describing the possible outcome of a single trial are modeled using a logistic function (sigmoid curve):
 			\begin{equation}
-				lr(x) = \dfrac{A}{1 + e^{-k (x-x_0)}}
+				lr(x) = \dfrac{A}{1 + e^{-k (x-x_0)}},
 			\end{equation}
-		where $x_0$ is the x-value of the sigmoid's midpoint, $A$ is the curve's maximum value and k is the steepness of the curve. This model is very simple and can be trained with relatively few data points. Its main drawback is its inability to generalize to complex data with high number of features. This classifier is used as a preprocessing step to generate training data for the more demanding convolutional neural network. 
+		where $x_0$ is the x-value of the sigmoid's midpoint, $A$ is the curve's maximum value and $k$ is the steepness of the curve. This model is very simple and can be trained with relatively few data points. Its main drawback is its inability to generalize to complex data with a large number of features. This classifier is used as a preprocessing step to generate training data for the more demanding convolutional neural network. 
 		
 		\subsubsection{Random Forest Classifier}\label{rand_forest_class}
-			Random forest classifiers operate by constructing a multitude of decision trees at training time and outputting the class that is the mode of the classes \citep{Ho1995}. So random forest is an ensemble method in which a classifier is constructed by combining several different independent base classifiers. Their main advantage over a simple decision tree is the ability to describe the data well without overfitting. 			
-			This method is well suited for small sized and balanced data set, given the chosen features describe the data well. It also allows an estimation of feature importance in the classification, something that neural networks are known to be lacking. Its main drawback is its tendency to generate deep trees during training, which makes evaluation computationally expensive. See (cite Pattern Recognition buch 2016) for a more in depth description of random forests. %TODO cite more on random forests
+			Random forest classifiers operate by constructing a multitude of decision trees at training time and outputting the class that is the mode of the classes \citep{Ho1995}. Thus, random forest is an ensemble method in which a classifier is constructed by combining several different independent base classifiers. Their main advantage over a simple decision tree is the ability to describe the data well without overfitting. 			
+			This method is well suited for small sized and balanced data set, given the chosen features describe the data well. It also allows an estimation of feature importance in the classification, something that neural networks are known to be lacking. Its main drawback is its tendency to generate deep trees during training, which makes evaluation computationally expensive. See \citet{BishopBook} for a more in depth description of random forests. 
 			
 		\subsubsection{Convolutional Neural Network}
-			First introduced by \citep{AlexNet}, a convolutional neural networks, or CNN is a class of deep, feed-forward artificial neural networks. Convolutional networks were inspired by biological processes in that the connectivity pattern between neurons resembles the organization of the animal visual cortex. Individual neurons activate only when stimulated in a restricted region of the visual field known as the receptive field. The receptive fields of different neurons partially overlap such that they cover the entire visual field. CNNs are known for their ability to generalize well to large, mutlidimensional data. They also require very little preprocessing. For instance, neural networks learn the filters needed to extract features using back propagation (i.e. stochastic gradient descent) to optimize convolutional and dense layers within the neural network. This eliminates the need to first compute features and then pass them to the classifier as is done by classical machine learning algorithms such as random forests.
+			First introduced by \citet{AlexNet}, a convolutional neural networks, or CNN is a class of deep, feed-forward artificial neural networks. Convolutional networks were inspired by biological processes in that the connectivity pattern between neurons resembles the organization of the animal visual cortex. Individual neurons activate only when stimulated in a restricted region of the visual field known as the receptive field. The receptive fields of different neurons partially overlap such that they cover the entire visual field. CNNs are known for their ability to generalize well to large, mutli-dimensional data. They also require very little preprocessing. For instance, neural networks learn the filters needed to extract features using back propagation (i.e. stochastic gradient descent) to optimize convolutional and dense layers within the neural network. This eliminates the need to first compute features and then pass them to the classifier as is done by classical machine learning algorithms such as random forests.
 			
 			The drawback of using a CNN is the need of a large amount of data and computational power for proper training. It is also not possible to extract feature importance from a trained CNN, which makes CNNs resemble black boxes that are hard to interpret.  
-			 \citet{NNMethods} explain CNNs in more details.
+			 For a detailed explanation of CNNs, see \citet{NNMethods}.
 		
 
-		\subsection{Evaluation Criteria: mAP@p-IoU}
-		  The object detection algorithm using the \textit{intersection over union at $p$ mean average precision} criteria as explained in figure \ref{fig:iou_def}. As the  name suggests, the area of intersection between the predicted and the ground truth bounding boxes is computed and then divided by the union area of the two boxes. This means that IoU = 1 corresponds to a perfect prediction and IoU = 0 is a complete miss (assuming original images were annotated perfectly). So a threshold $p$ is chosen such that IoU $>= p$ corresponds to a correct prediction or \textit{true positive}. 		  
+		\subsection{Evaluation Criterion: mAP@p-IoU}
+		  The object detection algorithm uses the \textit{intersection over union at $p$ mean average precision} criterion as explained in figure \ref{fig:iou_def}. As the  name suggests, the area of intersection between the predicted and the ground truth bounding boxes is computed and then divided by the union area of the two boxes. This means that IoU = 1 corresponds to a perfect prediction and IoU = 0 is a complete miss (assuming original images were annotated perfectly). So a threshold $p$ is chosen such that IoU $>= p$ corresponds to a correct prediction or \textit{true positive}. 		  
 
 		\begin{figure}
 			\centering
@@ -413,17 +412,17 @@ This chapter explains the theoretical concepts relevant to this thesis. First, t
 		  
 		  \textit{Mean average precision} refers to the average of the maximum precision at different recall values, where \textbf{precision} and \textbf{recall} are defined as
 		  \begin{equation}
-		  	precision = \dfrac{True \hspace{.1cm} Positive}{True \hspace{.1cm}  Positive + False \hspace{.1cm}  Positive}
+		  	\text{precision} = \dfrac{\text{True Positive}}{ \text{True Positive} + \text{False Positive}}
 		  \end{equation}
 		  \begin{equation}
-		  	recall = \dfrac{True \hspace{.1cm}  Positive}{True \hspace{.1cm}  Positive + False \hspace{.1cm}  Negative}
+		  	\text{recall} = \dfrac{\text{True Positive}}{ \text{True Positive} + \text{False Negative}}
 		  \end{equation}
 
 		From the above definition it becomes clear that precision measures how accurate the predictions are and recall measures how well all the positives can be found.
 		
 		Since the proposed algorithms perform binary classification, \textit{mean average precision} is equivalent to \textit{average precision}. 
 		
-		\textbf{Note:} This criteria only shows how well the algorithm is at detecting bubbles from an image, and does not necessarily make a strong statement on how well the measurement technique as a whole performs at estimating bubble size distributions in a water. 
+		\textbf{Note:} This criterion only shows how well the algorithm is at detecting bubbles in an image, and does not necessarily make a strong statement on how well the measurement technique as a whole performs at estimating bubble size distributions in water. 
 		
 		 
 

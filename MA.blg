@@ -11,10 +11,14 @@ A level-1 auxiliary file: appendix.aux
 The style file: plainnat.bst
 A level-1 auxiliary file: deposition.aux
 Database file #1: biblio.bib
+Warning--I'm ignoring Bigun1986's extra "institution" field
+--line 271 of file biblio.bib
+Warning--I'm ignoring Bigun1986's extra "pages" field
+--line 273 of file biblio.bib
 Warning--to sort, need author or key in NIWA
 Warning--to sort, need editor, organization, or key in geissler_1995
 Warning--to sort, need author or key in Zhenhua2018
 Warning--empty author in NIWA
 Warning--empty author in Zhenhua2018
 Warning--empty journal in Terry
-(There were 6 warnings)
+(There were 8 warnings)

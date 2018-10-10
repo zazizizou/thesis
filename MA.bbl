@@ -1,4 +1,4 @@
-\begin{thebibliography}{22}
+\begin{thebibliography}{24}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -43,6 +43,18 @@ Raied~S. Al-Lashi, Steve~R. Gunn, and Helen Czerski.
   (8):\penalty0 1701--1714, 2016{\natexlab{b}}.
 \newblock \doi{10.1175/JTECH-D-15-0222.1}.
 \newblock URL \url{https://doi.org/10.1175/JTECH-D-15-0222.1}.
+
+\bibitem[Bigun(1987)]{Bigun1986}
+Josef Bigun.
+\newblock Optimal orientation detection of linear symmetry.
+\newblock Technical Report 828, Linköping University, Computer Vision, 1987.
+
+\bibitem[Bishop(2006)]{BishopBook}
+Christopher~M. Bishop.
+\newblock \emph{Pattern Recognition and Machine Learning (Information Science
+  and Statistics)}.
+\newblock Springer-Verlag, Berlin, Heidelberg, 2006.
+\newblock ISBN 0387310738.
 
 \bibitem[Bopp(2018)]{Bopp2018}
 Maximilian Bopp.
@@ -111,13 +123,14 @@ Kerstin Krall.
 \newblock PhD thesis, Institue of Environmental Physics, Heidelberg University,
   2013.
 
-\bibitem[Krizhevsky et~al.(2017)Krizhevsky, Sutskever, and Hinton]{AlexNet}
-Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E. Hinton.
+\bibitem[Krizhevsky et~al.(2012)Krizhevsky, Sutskever, and Hinton]{AlexNet}
+Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton.
 \newblock Imagenet classification with deep convolutional neural networks.
-\newblock \emph{Commun. ACM}, 60\penalty0 (6):\penalty0 84--90, May 2017.
-\newblock ISSN 0001-0782.
-\newblock \doi{10.1145/3065386}.
-\newblock URL \url{http://doi.acm.org/10.1145/3065386}.
+\newblock In F.~Pereira, C.~J.~C. Burges, L.~Bottou, and K.~Q. Weinberger,
+  editors, \emph{Advances in Neural Information Processing Systems 25}, pages
+  1097--1105. Curran Associates, Inc., 2012.
+\newblock URL
+  \url{http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf}.
 
 \bibitem[Leifer et~al.(2003)Leifer, de~Leeuw, and Cohen]{Leifer2003}
 Ira Leifer, Gerrit de~Leeuw, and Leo~H. Cohen.

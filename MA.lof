@@ -4,10 +4,10 @@
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Reflection and refraction laws.\relax }}{8}{figure.caption.2}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Interaction of a light bubble with light rays\relax }}{9}{figure.caption.3}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Notation and coordinate system\relax }}{10}{figure.caption.4}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Gaussian smoothing filter\relax }}{12}{figure.caption.5}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Gaussian smoothing filter.\relax }}{12}{figure.caption.5}
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Computing image derivative. Edges are detected by applying a derivative filter.\relax }}{12}{figure.caption.6}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Ideal local neighborhood described by a unit vector $\mathaccentV {tilde}07E{\mathbf {n}}$ \citep {JaehneBook}\relax }}{14}{figure.caption.7}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Orientation angle using sobel filters for derivation and a Gaussian mask with $\sigma =1$ for smoothing.\relax }}{15}{figure.caption.9}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Ideal local neighborhood described by a unit vector $\mathaccentV {tilde}07E{\mathbf {n}}$ \citep {JaehneBook}.\relax }}{14}{figure.caption.7}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Orientation angle using Sobel filters for derivation and a Gaussian mask with $\sigma =1$ for smoothing.\relax }}{15}{figure.caption.9}
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Output of an object detection algorithm. Bounding boxes around correctly classified bubbles are returned.\relax }}{16}{figure.caption.10}
 \contentsline {figure}{\numberline {2.9}{\ignorespaces Training and testing in machine learning\relax }}{17}{figure.caption.11}
 \contentsline {figure}{\numberline {2.10}{\ignorespaces Definition of intersection over union (IoU). Green represents predicted bounding box and red is the ground truth. Areas are drawn in blue\relax }}{19}{figure.caption.16}
