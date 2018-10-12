@@ -81,7 +81,7 @@
 		
 		The goal of this setup is to apply the knowledge gained from the aquarium setup to bubbles emerging from breaking waves, so the setup from the aquarium was reproduced at the Aeolotron, while keeping as many parameters unchanged as possible.
 		
-	Also, a bubble generator was used at the Aeolotron in order to verify that the algorithm developed for the previous setup still works with measurements from the Aeolotron setup. Some parameters such as the focal distance and the angle between the light source and bubbles were inevitably changed, which means new calibration measurements were needed. Table \ref{tab:aeolotron_setup} summarizes the setup's parameters.
+	Also, a bubble generator was used at the Aeolotron in order to verify that the algorithm developed for the previous setup still works with measurements from the Aeolotron setup. Some parameters such as the focal distance, the distance between the light and bubbles were inevitably changed, which means new calibration measurements were needed. Table \ref{tab:aeolotron_setup} summarizes the setup's parameters.
 	
 		\begin{table}
 			\centering
@@ -142,22 +142,26 @@
 				\centering
 				\includegraphics[scale=0.5]{images/aq_result_low_small_1.png}
 				\caption{}
+				\label{subfig:low_a}
 			\end{subfigure}\hfill
 			\begin{subfigure}[t]{.4\textwidth}
 				\centering
-				\includegraphics[scale=0.5]{images/aq_result_low_small_2.png}
+				\includegraphics[scale=0.5]{images/aq_result_low_small_2.png}				
 				\caption{}
+				\label{subfig:low_b}				
 			\end{subfigure}
 			
 			\begin{subfigure}[t]{.4\textwidth}
 				\centering
-				\includegraphics[scale=0.5]{images/aq_result_surf_small_1.png}
+				\includegraphics[scale=0.5]{images/aq_result_surf_small_1.png}				
 				\caption{}
+				\label{subfig:low_c}				
 			\end{subfigure}\hfill
 			\begin{subfigure}[t]{.4\textwidth}
 				\centering
 				\includegraphics[scale=0.5]{images/aq_result_surf_small_2.png}
 				\caption{}
+				\label{subfig:low_d}				
 			\end{subfigure}\hfill			
 			\caption{Sample image captured with aquarium setup for a low bubble concentration for different camera setups. Note how bubbles are characterized by one bright peak at the bottom and one dimmer upper peak, as expected from simulation.}			
 			\label{fig:aqauarium_result}
@@ -198,7 +202,8 @@
 				\label{fig:aeolotron_result}
 			\end{figure}
 
-			Figures \ref{fig:aqauarium_result}, \ref{fig:aquarium_result_high_conc} and \ref{fig:aeolotron_result} show different images captured using a bubble generator in two different water tanks. For low bubble concentrations, images look very similar across the two different setups. However, when the concentration is very high (figure \ref{fig:aquarium_result_high_conc}) bubbles change dramatically. The curvature can be easily distinguished and scattered light from other bubbles gives bubbles a more circular shape. Also, the background is much brighter for a high bubble concentration. Figure \ref{subfig:too_large_bubble} shows a bubble so large that it lost its spherical shape. Such bubbles are too rare and will be classifier as background with no further considerations. 
+			Figures \ref{fig:aqauarium_result} and \ref{fig:aquarium_result_high_conc} show images captured using a bubble generator with the aquarium setup. For low bubble concentrations, bubbles can be recognized by their characteristic bright lower peak. 
+			However, when the concentration is very high (figure \ref{fig:aquarium_result_high_conc}) bubbles change dramatically. The curvature can be easily distinguished and scattered light from other bubbles gives bubbles a more circular shape. Also, the background is much brighter for a high bubble concentration. Figure \ref{subfig:too_large_bubble} shows a bubble so large that it lost its spherical shape. Such bubbles are too rare and will be classifier as background with no further considerations. 
 			The exact bubble shape will be discussed further in chapter \ref{the_algorithm}.	Full size, raw measurements can be found in the appendix. 
 	
 	

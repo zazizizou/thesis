@@ -24,7 +24,7 @@
 \contentsline {section}{\numberline {4.1}Requirements}{23}{section.4.1}
 \contentsline {section}{\numberline {4.2}Aquarium Setup}{23}{section.4.2}
 \contentsline {section}{\numberline {4.3}Aeolotron Setup}{25}{section.4.3}
-\contentsline {section}{\numberline {4.4}Acquired raw bubble images}{25}{section.4.4}
+\contentsline {section}{\numberline {4.4}Acquired Bubble Images}{25}{section.4.4}
 \contentsline {section}{\numberline {4.5}Calibration}{27}{section.4.5}
 \contentsline {subsection}{\numberline {4.5.1}Depth of Field}{27}{subsection.4.5.1}
 \contentsline {subsection}{\numberline {4.5.2}Radius}{27}{subsection.4.5.2}
