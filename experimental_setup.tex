@@ -1,30 +1,46 @@
 \chapter{Experimental Setup}\label{experimental_setup}
 
-	This chapter discusses the experimental setup 
+	This chapter explains the two similar experimental setups used to measure bubbles and discusses the resulting bubble images. First, the requirements for the setup are formally introduced in section \ref{requirements}, then the aquarium and the Aeolotron experimental setups that fulfill these requirements are explained in sections \ref{aquarium_setup} and \ref{aeolotron_setup}. Next, the acquired images are presented in section \ref{measurement_results}. Finally, the calibration setup is explained in section \ref{calibration_setup}  
 	\section{Requirements}\label{requirements}
-		In order to improve on previous works \citep{Leonie}, we require that the developed method in this work fulfills the following criteria:
+		In order to extend the previous work by \cite{Leonie}, we require that the developed method in this work fulfills the following criteria:
 	\begin{itemize}
 		\item \textbf{R1: Minimal distance to water surface}: This requirement defined the experimental setup. As shown in figures \ref{fig:aquarium_setup} and \ref{fig:aeolotron_setup}, lighting bubbles from below gives more freedom for the camera to be closer to the water surface. This is more apparent when the camera faces the surface with a certain angle. 
 		\item \textbf{R2: Consistent image results}: Bubbles can look very different under different lighting conditions. For instance, bubbles might appear as dark disks or bright rings (chapter \ref{related_work}) depending on how they are lit. It is therefore required that the angle between the camera and the light source is always constant. This requirement guarantees a consistent pattern for bubbles across different water tanks.
 		\item \textbf{R3: Images must contain all possibly retrievable information}. Simulation (figure \ref{subfig:bubble_simulation}) shows that bubbles are characterized by two peaks. Both of these – especially the upper, dimmer one – are required to be visible. This requires the camera to have a high signal-to-noise ratio and/or the light source to be very bright. 
 	\end{itemize}	
+	
+	There is no unique setup that fulfills these requirements. So many parameters were chosen for practical reasons only. The following sections discuss two similar experimental setups that fulfill the requirements above. 
+	
+	
 		
-	\section{Aquarium Setup}
+	\section{Aquarium Setup}\label{aquarium_setup}
 		\begin{figure}
-			\centering
-			\includegraphics[scale=1]{images/aquarium_setup}
-			\caption{Experimental setup illustrating the $90^\circ$ angle between the light source (LED array) and the camera. Note how LEDs are also oriented towards the camera's field of view to maximize the amount of light reaching the camera and therefore reduce noise.}
+			\begin{subfigure}[t]{.5\textwidth}
+				\includegraphics[scale=.6]{images/aquarium_setup.png}
+				\caption{3D view.}
+				\label{subfig:aquarium_setup_above}
+			\end{subfigure}\hfill
+			\begin{subfigure}[t]{.4\textwidth}
+				\includegraphics[scale=.6]{images/aquarium_setup_above.png}
+				\caption{View from above.}
+			\end{subfigure}
+			\caption{Experimental setup illustrating the $90^\circ$ angle between the light source (LED array) and the camera. Note how LEDs are oriented towards the camera's field of view to maximize the amount of light reaching the camera and therefore reduce noise.}
 			\label{fig:aquarium_setup}
 		\end{figure}			
 		
-		The goal of this setup is to capture bubble images that can be used to prototype the proposed algorithm, so the experiment was built in a transparent $1m \times 1m \times 1m$ water tank as shown in figure \ref{fig:aquarium_setup} where most of the parameters could be changed such as lighting angle, camera and bubble concentration independently from each other. Measurement results are discussed in the next chapter and image analysis is discussed in chapter \ref{the_algorithm}.
+		The goal of this setup was to capture bubble images that can be used to prototype the proposed algorithm. So the experiment was built in a transparent $1m \times 1m \times 1m$ water tank as shown in figure \ref{fig:aquarium_setup}. In order to satisfy requirements in section \ref{requirements}, parameters were set according to table \ref{tab:aquarium_param}. 
+		 In this setup, most of the parameters could be changed such as lighting angle, camera and bubble concentration independently from each other. The obtained images are discussed in section \ref{measurement_results} and image analysis is discussed in chapter \ref{the_algorithm}.
+		 
+		 The setup consists of a transparent water tank (aquarium), one camera, a light source (LED arrays) and a bubble generator. 
+		 
+		 LED arrays were mounted underneath the water tank, and were oriented towards the camera's field of view to maximize the amount of light reaching the camera. As for the camera itself, it faces the light source at a $90^\circ$ angle. 
+		 Seen from above, as shown in figure \ref{subfig:aquarium_setup_above}, the bubble generator lies right next to the light source. This way, it does not block any light from the LEDs but it is still close enough, such that bubbles within the camera's field of view are well lit. 
 		
-		In order to satisfy requirements in section \ref{requirements}, parameters were set according to table \ref{tab:aquarium_param}. 
-		We chose the Basler A1920 camera mainly because of its high signal-to-noise ratio, and therefore fulfilling requirement R3 given enough light. Its main drawback is its relatively low frame rate at the highest possible resolution, which makes bubble tracking more difficult, which in turn makes radius calibration more difficult (see section \ref{calibration_algorithm}). Compared to an available high-speed camera with comparable maximum resolution, (PCO Dimax, 1,2kHz at $2000 \times 2000$ resolution) the chosen camera also has a smaller sensor. This means that the magnification factor is higher and therefore smaller bubbles can be better detected. A 100 mm macro lens was used in this setup. The large focal length yields a large magnification factor.
+		We chose the Basler A1920 camera mainly because of its high signal-to-noise ratio, and therefore fulfilling requirement R3 given enough light. Its main drawback is its relatively low frame rate at the highest possible resolution, which makes bubble tracking more difficult, which in turn makes radius calibration more difficult (see section \ref{calibration_algorithm}). Compared to an available high-speed camera with comparable maximum resolution, (PCO Dimax, 1,2kHz at $2000 \times 2000$ resolution) the chosen camera also has a smaller sensor. This means that the magnification is higher and therefore smaller bubbles can be better detected ($50 \, \mu m/px$ vs $30 \, \mu m /px$). A 100 mm macro lens from Zeiss was used in this setup. The large focal length contributes to the large magnification factor of $30 \, \mu m /px$.
 	
-	Bubbles were produced by a bubble generator. Bubble radii therefore depend on the amount of air flowing through the bubble generator, measured in liter per minute or LPM. We acquired two sets of measurements, the first with a low bubble concentration, (1,8 LPM air flow), and the second with a much higher bubble concentration (3 LPM). 
+	Bubbles were produced by a bubble generator. Bubble radii therefore depend on the amount of air flowing through the bubble generator, measured in liter per minute or LPM. We acquired two sets of measurements, the first with a low bubble concentration, (1.8 LPM air flow), and the second with a much higher bubble concentration (3 LPM). 
 		
-		\begin{table}
+		\begin{table}[h]
 			\centering
 		
 			\begin{tabular}{|c|c|}
@@ -42,14 +58,16 @@
 			Resolution [px] &1920 x 1200 \\
 			\hline 
 			Sensor size & 11.3 mm x 7.1 mm \\
-			\hline
-			Air flow & 1,8 LPM / 3 LPM \\ 
 			\hline 
-			Magnification factor & 30 um/px \\ 
+			Magnification factor & $30 \, \mu m/px$ \\ 
 			\hline 
 			Framerate & 100 Hz \\ 
 			\hline 
 			Resulting field of view & 5,7cm x 3,6 cm \\
+			\hline
+			Bubble generator & FIAP profiO$_2$ Keramik\\			
+			\hline
+			Air flow & 1,8 LPM / 3 LPM \\ 
 			\hline
 			\end{tabular} 
 			
@@ -58,12 +76,12 @@
 
 		\end{table}
 		
-	\section{Aeolotron Setup}
-		The Aeolotron is an experimental annular wind-wave facility with a diameter of about 10m and a width of about 60cm. Typical water height is 1m. Four wind engines generate reference wind speeds of up to 17m/s, enough to generate breaking waves that can produce air bubbles. Figure \ref{fig:aeolotron_setup} shows a schematic view of the wind facility as well as the experimental setup.
+	\section{Aeolotron Setup}\label{aeolotron_setup}
+		The Aeolotron is an annular wind-wave facility with a diameter of about $10 \, m$ and a width of about $60 \, cm$. Typical water height is 1m. Four wind engines generate reference wind speeds of up to $17 \, m/s$, enough to generate breaking waves that can produce air bubbles. Figure \ref{fig:aeolotron_setup} shows a schematic view of the wind facility as well as the experimental setup.
 		
-		The goal of this setup is to apply the knowledge gained from the previous setup on bubbles emerging from breaking waves, so the setup from the aquarium was reproduced at the Aeolotron, while keeping as many parameters unchanged as possible (e.g. same camera, same light source same lens etc...).
+		The goal of this setup is to apply the knowledge gained from the aquarium setup to bubbles emerging from breaking waves, so the setup from the aquarium was reproduced at the Aeolotron, while keeping as many parameters unchanged as possible.
 		
-	Also, a bubble generator was used at Aeolotron in order to verify that the algorithm developed for the previous setup still works with measurements from the Aeolotron setup. Some parameters such as the focal distance and the angle between the light source and bubbles were inevitably changed, which means new calibration measurements were needed. Table \ref{tab:aeolotron_setup} summarizes the setup's parameters.
+	Also, a bubble generator was used at the Aeolotron in order to verify that the algorithm developed for the previous setup still works with measurements from the Aeolotron setup. Some parameters such as the focal distance and the angle between the light source and bubbles were inevitably changed, which means new calibration measurements were needed. Table \ref{tab:aeolotron_setup} summarizes the setup's parameters.
 	
 		\begin{table}
 			\centering
@@ -83,14 +101,14 @@
 			Resolution [px] &1920 x 1200 \\
 			\hline 
 			Sensor size & 11.3 mm x 7.1 mm \\
-			\hline
-			Air flow & 1,8 LPM  \\ 
 			\hline 
 			Magnification factor & 10 um/px \\ 
 			\hline 
 			Framerate & 100 Hz \\ 
 			\hline 
 			Resulting field of view & 1,9 cm x 1,2 cm \\
+			\hline
+			Air flow & 1,8 LPM  \\ 
 			\hline
 			\end{tabular} 
 			
@@ -118,7 +136,7 @@
 	
 		
 		
-	\section{Measurement result}\label{measurement_results}
+	\section{Acquired Bubble Images}\label{measurement_results}
 		\begin{figure}[h]			
 			\begin{subfigure}[t]{.4\textwidth}
 				\centering

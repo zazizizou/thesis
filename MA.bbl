@@ -1,4 +1,4 @@
-\begin{thebibliography}{24}
+\begin{thebibliography}{25}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -48,6 +48,12 @@ Richard~O. Duda and Peter~E. Hart.
 \newblock ISSN 0001-0782.
 \newblock \doi{10.1145/361237.361242}.
 \newblock URL \url{http://doi.acm.org/10.1145/361237.361242}.
+
+\bibitem[Flothow(2017)]{Leonie}
+Leonie Flothow.
+\newblock Bubble characteristics from breaking waves in fresh water and
+  simulated seawater.
+\newblock Master's thesis, 2017.
 
 \bibitem[Gei{\ss}ler and J{\"a}hne(1995)]{geissler_1995}
 P.~Gei{\ss}ler and B.~J{\"a}hne.
