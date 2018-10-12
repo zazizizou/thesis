@@ -47,7 +47,7 @@
 			\hline 
 			Camera & Basler A1920-155um \\ 
 			\hline 
-			Focal length & 100 mm \\ 
+			Focal length & Zeiss 100 mm macro \\ 
 			\hline 
 			F-number & 5,6 \\ 
 			\hline 
@@ -77,11 +77,12 @@
 		\end{table}
 		
 	\section{Aeolotron Setup}\label{aeolotron_setup}
-		The Aeolotron is an annular wind-wave facility with a diameter of about $10 \, m$ and a width of about $60 \, cm$. Typical water height is 1m. Four wind engines generate reference wind speeds of up to $17 \, m/s$, enough to generate breaking waves that can produce air bubbles. Figure \ref{fig:aeolotron_setup} shows a schematic view of the wind facility as well as the experimental setup.
+		The Aeolotron is an annular wind-wave facility with a diameter of about $10 \, m$ and a width of about $60 \, cm$. Typical water height is 1m. Four wind engines generate reference wind speeds of up to $17 \, m/s$, enough to generate breaking waves that can produce air bubbles. 
 		
-		The goal of this setup is to apply the knowledge gained from the aquarium setup to bubbles emerging from breaking waves, so the setup from the aquarium was reproduced at the Aeolotron, while keeping as many parameters unchanged as possible.
+		The goal of this setup is to apply the knowledge gained from the aquarium setup to bubbles emerging from breaking waves, so the setup from the aquarium was reproduced at the Aeolotron, while keeping as many parameters unchanged as possible. Figure \ref{fig:aeolotron_setup} shows a schematic view of the wind facility as well as the experimental setup. 
 		
-	Also, a bubble generator was used at the Aeolotron in order to verify that the algorithm developed for the previous setup still works with measurements from the Aeolotron setup. Some parameters such as the focal distance, the distance between the light and bubbles were inevitably changed, which means new calibration measurements were needed. Table \ref{tab:aeolotron_setup} summarizes the setup's parameters.
+		Similarly to the aquarium setup, the Aeolotron setup consisted of one camera, a light source and a bubble generator. 
+		The light source was mounted underneath the Aeolotron and the camera was set with an $90^\circ$ relative to the light source. The bubble generator was laid at around 1 meter away from the light source (see \ref{subfig:aeolotron_setup_above}). A wind speed of $u_{10} = 8 m/s$ \footnote{$u_{10}$ refers to the wind speed at $10 \, m$ distance from the water surface. Turbine frequency was set at 15 Hz, which corresponds to $u_{10} = 8 m/s$ \citep{Bopp2018}.} was set. This wind speed is not high enough to generate breaking waves. However, it generated currents strong enough to ensure a random bubble distribution around the camera's field of view. Table \ref{tab:aeolotron_setup} summarizes the setup's parameters.
 	
 		\begin{table}
 			\centering
@@ -90,7 +91,7 @@
 			\hline 
 			Camera & Basler A1920-155um \\ 
 			\hline 
-			Focal length & 100 mm \\ 
+			Focal length & Zeiss 100 mm macro\\ 
 			\hline 
 			F-number & 5,6 \\ 
 			\hline 
@@ -108,6 +109,8 @@
 			\hline 
 			Resulting field of view & 1,9 cm x 1,2 cm \\
 			\hline
+			Bubble generator & FIAP profiO$_2$ Keramik\\			
+			\hline
 			Air flow & 1,8 LPM  \\ 
 			\hline
 			\end{tabular} 
@@ -117,17 +120,22 @@
 
 		\end{table}
 		
-		\begin{figure}
+		\begin{figure}[h]
 			\centering
-			\begin{subfigure}[t]{.4\linewidth}
+			\begin{subfigure}[t]{.3\linewidth}
 				\centering
 				\includegraphics[scale=0.15]{images/aeolotron-gesamt.png}
 				\caption{Aeolotron wind wave facility \citep{Krall2013}.}
 			\end{subfigure}
+			
 			\begin{subfigure}[t]{.4\linewidth}		
-				\centering
 				\includegraphics[scale=.5]{images/aeolotron_setup.png}
 				\caption{Experimental setup.}
+			\end{subfigure}\hfill%
+			\begin{subfigure}[t]{.4\linewidth}		
+				\includegraphics[scale=.5]{images/aeolotron_setup_above.png}
+				\caption{Aeolotron from above.}
+				\label{subfig:aeolotron_setup_above}
 			\end{subfigure}
 			
 			\caption{Aeolotron facility and experimental setup.}

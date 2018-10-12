@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.5.24)  12 OCT 2018 19:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.5.24)  12 OCT 2018 21:28
 entering extended mode
 **./MA.tex
 (MA.tex
@@ -776,7 +776,11 @@ LaTeX Warning: Label `subfig:aquarium_result_sat' multiply defined.
 
 LaTeX Warning: Label `sub@subfig:aquarium_result_sat' multiply defined.
 
-) (the_algorithm.aux) (discussion.aux) (appendix.aux) (deposition.aux))
+) (the_algorithm.aux) (results.aux
+
+LaTeX Warning: Label `fig:final_result' multiply defined.
+
+) (discussion.aux) (appendix.aux) (deposition.aux))
 \openout1 = `MA.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
@@ -935,14 +939,14 @@ Class scrreprt Warning: \float@addtolists detected!
 
  (theory.tex
 chapter 2.
-<images/reflection.png, id=285, 377.41pt x 377.41pt>
+<images/reflection.png, id=305, 377.41pt x 377.41pt>
 File: images/reflection.png Graphic file (type png)
 
 <use images/reflection.png>
 Package pdftex.def Info: images/reflection.png used on input line 16.
 (pdftex.def)             Requested size: 170.71394pt x 170.71402pt.
 
-<images/refraction.png, id=287, 377.41pt x 377.41pt>
+<images/refraction.png, id=307, 377.41pt x 377.41pt>
 File: images/refraction.png Graphic file (type png)
 
 <use images/refraction.png>
@@ -953,21 +957,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--22
 \T1/cmr/m/n/10.95 gets re-fracted ac-cord-ing to
  []
 
-<images/total_reflection.png, id=288, 377.41pt x 377.41pt>
+<images/total_reflection.png, id=308, 377.41pt x 377.41pt>
 File: images/total_reflection.png Graphic file (type png)
 
 <use images/total_reflection.png>
 Package pdftex.def Info: images/total_reflection.png used on input line 27.
 (pdftex.def)             Requested size: 213.39569pt x 213.39253pt.
 
-<images/bubble_refraction.png, id=292, 377.41pt x 377.41pt>
+<images/bubble_refraction.png, id=312, 377.41pt x 377.41pt>
 File: images/bubble_refraction.png Graphic file (type png)
 
 <use images/bubble_refraction.png>
 Package pdftex.def Info: images/bubble_refraction.png used on input line 53.
 (pdftex.def)             Requested size: 188.70453pt x 188.70453pt.
 
-<images/bubble_simulation.png, id=293, 228.855pt x 228.35312pt>
+<images/bubble_simulation.png, id=313, 228.855pt x 228.35312pt>
 File: images/bubble_simulation.png Graphic file (type png)
 
 <use images/bubble_simulation.png>
@@ -979,7 +983,7 @@ Package pdftex.def Info: images/bubble_simulation.png used on input line 59.
 
 ] [8 <./images/reflection.png> <./images/refraction.png> <./images/total_reflec
 tion.png>]
-<images/coord_sys.png, id=324, 249.93375pt x 201.75375pt>
+<images/coord_sys.png, id=344, 249.93375pt x 201.75375pt>
 File: images/coord_sys.png Graphic file (type png)
 
 <use images/coord_sys.png>
@@ -992,7 +996,7 @@ e-fore the \T1/cmr/m/it/12 Dis-crete \T1/cmr/m/n/12 Fourier
  []
 
 [10 <./images/coord_sys.png>]
-<graphs/gauss_sigma_4.png, id=353, 722.7pt x 433.62pt>
+<graphs/gauss_sigma_4.png, id=373, 722.7pt x 433.62pt>
 File: graphs/gauss_sigma_4.png Graphic file (type png)
 
 <use graphs/gauss_sigma_4.png>
@@ -1003,7 +1007,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 158--158
 [][][]|\T1/cmr/m/n/10.95 1D Gaus-sian sig-nal
  []
 
-<images/gauss_sigma_2.png, id=354, 433.62pt x 289.08pt>
+<images/gauss_sigma_2.png, id=374, 433.62pt x 289.08pt>
 File: images/gauss_sigma_2.png Graphic file (type png)
 
 <use images/gauss_sigma_2.png>
@@ -1014,13 +1018,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 162--162
 [][][]|\T1/cmr/m/n/10.95 2D Gaus-sian sig-nal
  []
 
-<images/green_one.png, id=355, 433.62pt x 289.08pt>
+<images/green_one.png, id=375, 433.62pt x 289.08pt>
 File: images/green_one.png Graphic file (type png)
  <use images/green_one.png>
 Package pdftex.def Info: images/green_one.png used on input line 166.
 (pdftex.def)             Requested size: 128.03871pt x 85.35725pt.
 
-<images/green_one_gaussian.png, id=356, 433.62pt x 289.08pt>
+<images/green_one_gaussian.png, id=376, 433.62pt x 289.08pt>
 File: images/green_one_gaussian.png Graphic file (type png)
 
 <use images/green_one_gaussian.png>
@@ -1035,7 +1039,7 @@ Overfull \hbox (2.73097pt too wide) in paragraph at lines 187--188
 [][] 
  []
 
-<images/green_one_sobel.png, id=357, 433.62pt x 289.08pt>
+<images/green_one_sobel.png, id=377, 433.62pt x 289.08pt>
 File: images/green_one_sobel.png Graphic file (type png)
 
 <use images/green_one_sobel.png>
@@ -1048,7 +1052,7 @@ Overfull \hbox (2.73097pt too wide) in paragraph at lines 191--192
 
 [11] [12 <./graphs/gauss_sigma_4.png> <./images/gauss_sigma_2.png> <./images/gr
 een_one.png> <./images/green_one_gaussian.png> <./images/green_one_sobel.png>]
-<images/structure_tensor_intro.png, id=382, 258.9675pt x 260.47313pt>
+<images/structure_tensor_intro.png, id=402, 258.9675pt x 260.47313pt>
 File: images/structure_tensor_intro.png Graphic file (type png)
 
 <use images/structure_tensor_intro.png>
@@ -1056,7 +1060,7 @@ Package pdftex.def Info: images/structure_tensor_intro.png used on input line 2
 56.
 (pdftex.def)             Requested size: 129.48341pt x 130.23624pt.
  [13] [14 <./images/structure_tensor_intro.png>] <images/structure_tensor_demo.
-png, id=420, 433.62pt x 433.62pt>
+png, id=440, 433.62pt x 433.62pt>
 File: images/structure_tensor_demo.png Graphic file (type png)
 
 <use images/structure_tensor_demo.png>
@@ -1068,7 +1072,7 @@ Underfull \hbox (badness 2334) in paragraph at lines 330--330
 \T1/cmr/m/n/12 bel fil-ters for deriva-tion
  []
 
-<images/object_detection_intro_1.png, id=422, 377.41pt x 377.41pt>
+<images/object_detection_intro_1.png, id=442, 377.41pt x 377.41pt>
 File: images/object_detection_intro_1.png Graphic file (type png)
 
 <use images/object_detection_intro_1.png>
@@ -1076,14 +1080,14 @@ Package pdftex.def Info: images/object_detection_intro_1.png used on input line
  341.
 (pdftex.def)             Requested size: 150.96132pt x 150.96132pt.
 
-<images/object_detection_intro_2.png, id=423, 377.41pt x 377.41pt>
+<images/object_detection_intro_2.png, id=443, 377.41pt x 377.41pt>
 File: images/object_detection_intro_2.png Graphic file (type png)
 
 <use images/object_detection_intro_2.png>
 Package pdftex.def Info: images/object_detection_intro_2.png used on input line
  346.
 (pdftex.def)             Requested size: 150.96132pt x 150.96132pt.
- [15 <./images/structure_tensor_demo.png>] <images/training_intro.png, id=442, 
+ [15 <./images/structure_tensor_demo.png>] <images/training_intro.png, id=462, 
 690.58pt x 368.37625pt>
 File: images/training_intro.png Graphic file (type png)
 
@@ -1091,7 +1095,7 @@ File: images/training_intro.png Graphic file (type png)
 Package pdftex.def Info: images/training_intro.png used on input line 365.
 (pdftex.def)             Requested size: 414.3512pt x 221.02744pt.
 
-<images/testing_intro.png, id=443, 742.775pt x 321.2pt>
+<images/testing_intro.png, id=463, 742.775pt x 321.2pt>
 File: images/testing_intro.png Graphic file (type png)
 
 <use images/testing_intro.png>
@@ -1111,7 +1115,7 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 381.
  [16 <./images/object_detection_intro_1.png> <./images/object_detection_intro_2
 .png>] [17 <./images/training_intro.png> <./images/testing_intro.png>] [18]
-<images/iou_def.png, id=479, 534.99875pt x 257.96375pt>
+<images/iou_def.png, id=499, 534.99875pt x 257.96375pt>
 File: images/iou_def.png Graphic file (type png)
 
 <use images/iou_def.png>
@@ -1122,7 +1126,7 @@ Package pdftex.def Info: images/iou_def.png used on input line 409.
 
  (related_work.tex
 chapter 3.
-<images/bright_field_method.png, id=504, 899.36pt x 349.305pt>
+<images/bright_field_method.png, id=524, 899.36pt x 349.305pt>
 File: images/bright_field_method.png Graphic file (type png)
 
 <use images/bright_field_method.png>
@@ -1133,14 +1137,14 @@ Overfull \hbox (125.00107pt too wide) in paragraph at lines 13--14
 [][] 
  []
 
-<images/bright_field_result.png, id=505, 233.87375pt x 143.53625pt>
+<images/bright_field_result.png, id=525, 233.87375pt x 143.53625pt>
 File: images/bright_field_result.png Graphic file (type png)
 
 <use images/bright_field_result.png>
 Package pdftex.def Info: images/bright_field_result.png used on input line 19.
 (pdftex.def)             Requested size: 116.93657pt x 71.76794pt.
 
-<images/bright_field_calibration_target.png, id=506, 642.4pt x 481.8pt>
+<images/bright_field_calibration_target.png, id=526, 642.4pt x 481.8pt>
 File: images/bright_field_calibration_target.png Graphic file (type png)
 
 <use images/bright_field_calibration_target.png>
@@ -1152,7 +1156,7 @@ ut line 24.
 
 
 ]
-<images/bubble_optical_imaging_instrument.png, id=522, 309.155pt x 363.3575pt>
+<images/bubble_optical_imaging_instrument.png, id=542, 309.155pt x 363.3575pt>
 File: images/bubble_optical_imaging_instrument.png Graphic file (type png)
 
 <use images/bubble_optical_imaging_instrument.png>
@@ -1160,7 +1164,7 @@ Package pdftex.def Info: images/bubble_optical_imaging_instrument.png used on i
 nput line 47.
 (pdftex.def)             Requested size: 92.74721pt x 109.00809pt.
 
-<images/sample_result_optical_imaging_instrument.png, id=523, 359.3425pt x 216.
+<images/sample_result_optical_imaging_instrument.png, id=543, 359.3425pt x 216.
 81pt>
 File: images/sample_result_optical_imaging_instrument.png Graphic file (type pn
 g)
@@ -1181,7 +1185,7 @@ strument.png> <./images/sample_result_optical_imaging_instrument.png>]
 
 (experimental_setup.tex
 chapter 4.
-<images/aquarium_setup.png, id=544, 401.5pt x 299.1175pt>
+<images/aquarium_setup.png, id=564, 401.5pt x 299.1175pt>
 File: images/aquarium_setup.png Graphic file (type png)
 
 <use images/aquarium_setup.png>
@@ -1192,7 +1196,7 @@ Overfull \hbox (27.50615pt too wide) in paragraph at lines 19--20
 [][] 
  []
 
-<images/aquarium_setup_above.png, id=545, 318.18875pt x 268.00125pt>
+<images/aquarium_setup_above.png, id=565, 318.18875pt x 268.00125pt>
 File: images/aquarium_setup_above.png Graphic file (type png)
 
 <use images/aquarium_setup_above.png>
@@ -1209,197 +1213,214 @@ Overfull \hbox (20.20076pt too wide) in paragraph at lines 24--25
 
 
 ] [24 <./images/aquarium_setup.png> <./images/aquarium_setup_above.png>]
-<images/aeolotron-gesamt.png, id=568, 1134.2375pt x 1189.44376pt>
+<images/aeolotron-gesamt.png, id=592, 1134.2375pt x 1189.44376pt>
 File: images/aeolotron-gesamt.png Graphic file (type png)
 
 <use images/aeolotron-gesamt.png>
-Package pdftex.def Info: images/aeolotron-gesamt.png used on input line 124.
+Package pdftex.def Info: images/aeolotron-gesamt.png used on input line 127.
 (pdftex.def)             Requested size: 170.12828pt x 178.40886pt.
 
-Underfull \hbox (badness 3250) in paragraph at lines 125--125
-[][][]|\T1/cmr/m/n/10.95 Ae-olotron wind wave fa-cil-ity
- []
-
-<images/aeolotron_setup.png, id=573, 406.51875pt x 291.0875pt>
-File: images/aeolotron_setup.png Graphic file (type png)
-
-<use images/aeolotron_setup.png>
-Package pdftex.def Info: images/aeolotron_setup.png used on input line 129.
-(pdftex.def)             Requested size: 203.25887pt x 145.54338pt.
-
-Overfull \hbox (32.54492pt too wide) in paragraph at lines 129--130
+Overfull \hbox (42.08957pt too wide) in paragraph at lines 127--128
  [][] 
  []
 
-<images/aq_result_low_small_1.png, id=574, 335.2525pt x 337.26pt>
+
+Underfull \hbox (badness 2556) in paragraph at lines 128--128
+[][][]|\T1/cmr/m/n/10.95 Ae-olotron wind wave
+ []
+
+<images/aeolotron_setup.png, id=597, 406.51875pt x 291.0875pt>
+File: images/aeolotron_setup.png Graphic file (type png)
+
+<use images/aeolotron_setup.png>
+Package pdftex.def Info: images/aeolotron_setup.png used on input line 132.
+(pdftex.def)             Requested size: 203.25887pt x 145.54338pt.
+
+Overfull \hbox (32.54492pt too wide) in paragraph at lines 132--133
+[][] 
+ []
+
+<images/aeolotron_setup_above.png, id=598, 328.22626pt x 278.03876pt>
+File: images/aeolotron_setup_above.png Graphic file (type png)
+
+<use images/aeolotron_setup_above.png>
+Package pdftex.def Info: images/aeolotron_setup_above.png used on input line 13
+6.
+(pdftex.def)             Requested size: 164.11272pt x 139.01903pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<images/aq_result_low_small_1.png, id=599, 335.2525pt x 337.26pt>
 File: images/aq_result_low_small_1.png Graphic file (type png)
 
 <use images/aq_result_low_small_1.png>
-Package pdftex.def Info: images/aq_result_low_small_1.png used on input line 14
-3.
+Package pdftex.def Info: images/aq_result_low_small_1.png used on input line 15
+1.
 (pdftex.def)             Requested size: 167.62584pt x 168.62958pt.
 
-<images/aq_result_low_small_2.png, id=575, 335.2525pt x 337.26pt>
+<images/aq_result_low_small_2.png, id=600, 335.2525pt x 337.26pt>
 File: images/aq_result_low_small_2.png Graphic file (type png)
 
 <use images/aq_result_low_small_2.png>
-Package pdftex.def Info: images/aq_result_low_small_2.png used on input line 14
-9.
+Package pdftex.def Info: images/aq_result_low_small_2.png used on input line 15
+7.
 (pdftex.def)             Requested size: 167.62584pt x 168.62958pt.
 
-<images/aq_result_surf_small_1.png, id=576, 335.2525pt x 337.26pt>
+<images/aq_result_surf_small_1.png, id=601, 335.2525pt x 337.26pt>
 File: images/aq_result_surf_small_1.png Graphic file (type png)
 
 <use images/aq_result_surf_small_1.png>
 Package pdftex.def Info: images/aq_result_surf_small_1.png used on input line 1
-56.
+64.
 (pdftex.def)             Requested size: 167.62584pt x 168.62958pt.
 
-<images/aq_result_surf_small_2.png, id=577, 335.2525pt x 337.26pt>
+<images/aq_result_surf_small_2.png, id=602, 335.2525pt x 337.26pt>
 File: images/aq_result_surf_small_2.png Graphic file (type png)
 
 <use images/aq_result_surf_small_2.png>
 Package pdftex.def Info: images/aq_result_surf_small_2.png used on input line 1
-62.
+70.
 (pdftex.def)             Requested size: 167.62584pt x 168.62958pt.
-
+ [25]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/aquarium_result_high_conc_1.png, id=578, 335.2525pt x 337.26pt>
+<images/aquarium_result_high_conc_1.png, id=615, 335.2525pt x 337.26pt>
 File: images/aquarium_result_high_conc_1.png Graphic file (type png)
 
 <use images/aquarium_result_high_conc_1.png>
 Package pdftex.def Info: images/aquarium_result_high_conc_1.png used on input l
-ine 174.
+ine 182.
 (pdftex.def)             Requested size: 167.62584pt x 168.62958pt.
 
-<images/aquarium_result_high_conc_2.png, id=579, 335.2525pt x 337.26pt>
+<images/aquarium_result_high_conc_2.png, id=616, 335.2525pt x 337.26pt>
 File: images/aquarium_result_high_conc_2.png Graphic file (type png)
 
 <use images/aquarium_result_high_conc_2.png>
 Package pdftex.def Info: images/aquarium_result_high_conc_2.png used on input l
-ine 180.
+ine 188.
 (pdftex.def)             Requested size: 167.62584pt x 168.62958pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/aeolotron_result_small_1.png, id=580, 335.2525pt x 337.26pt>
+<images/aeolotron_result_small_1.png, id=617, 335.2525pt x 337.26pt>
 File: images/aeolotron_result_small_1.png Graphic file (type png)
 
 <use images/aeolotron_result_small_1.png>
 Package pdftex.def Info: images/aeolotron_result_small_1.png used on input line
- 191.
+ 199.
 (pdftex.def)             Requested size: 167.62584pt x 168.62958pt.
 
-<images/aeolotron_result_small_2.png, id=581, 335.2525pt x 337.26pt>
+<images/aeolotron_result_small_2.png, id=618, 335.2525pt x 337.26pt>
 File: images/aeolotron_result_small_2.png Graphic file (type png)
 
 <use images/aeolotron_result_small_2.png>
 Package pdftex.def Info: images/aeolotron_result_small_2.png used on input line
- 197.
+ 205.
 (pdftex.def)             Requested size: 167.62584pt x 168.62958pt.
 
-Overfull \hbox (42.68172pt too wide) in paragraph at lines 189--200
+Overfull \hbox (42.68172pt too wide) in paragraph at lines 197--208
 [][] [] 
  []
 
-[25] [26 <./images/aeolotron-gesamt.png> <./images/aeolotron_setup.png>]
-<images/depth_of_field_setup.png, id=605, 445.665pt x 444.66125pt>
+[26] <images/depth_of_field_setup.png, id=635, 445.665pt x 444.66125pt>
 File: images/depth_of_field_setup.png Graphic file (type png)
 
 <use images/depth_of_field_setup.png>
-Package pdftex.def Info: images/depth_of_field_setup.png used on input line 221
+Package pdftex.def Info: images/depth_of_field_setup.png used on input line 229
 .
 (pdftex.def)             Requested size: 222.83195pt x 222.33008pt.
 
-Underfull \hbox (badness 2653) in paragraph at lines 224--224
+Underfull \hbox (badness 2653) in paragraph at lines 232--232
 \T1/cmr/m/n/12 mi-crom-e-ter screw traps
  []
 
-<images/dof_calib_1.png, id=606, 260.975pt x 210.7875pt>
+<images/dof_calib_1.png, id=636, 260.975pt x 210.7875pt>
 File: images/dof_calib_1.png Graphic file (type png)
 
 <use images/dof_calib_1.png>
-Package pdftex.def Info: images/dof_calib_1.png used on input line 229.
+Package pdftex.def Info: images/dof_calib_1.png used on input line 237.
 (pdftex.def)             Requested size: 130.48718pt x 105.3935pt.
 
-<images/dof_calib_2.png, id=607, 260.975pt x 210.7875pt>
+<images/dof_calib_2.png, id=637, 260.975pt x 210.7875pt>
 File: images/dof_calib_2.png Graphic file (type png)
 
 <use images/dof_calib_2.png>
-Package pdftex.def Info: images/dof_calib_2.png used on input line 234.
+Package pdftex.def Info: images/dof_calib_2.png used on input line 242.
 (pdftex.def)             Requested size: 130.48718pt x 105.3935pt.
 
-Overfull \hbox (42.68172pt too wide) in paragraph at lines 227--237
+Overfull \hbox (42.68172pt too wide) in paragraph at lines 235--245
 [][][] 
  []
 
-<images/radius_setup_fancy.png, id=615, 445.665pt x 444.66125pt>
+[27 <./images/aeolotron-gesamt.png> <./images/aeolotron_setup.png> <./images/ae
+olotron_setup_above.png>]
+<images/radius_setup_fancy.png, id=655, 445.665pt x 444.66125pt>
 File: images/radius_setup_fancy.png Graphic file (type png)
 
 <use images/radius_setup_fancy.png>
-Package pdftex.def Info: images/radius_setup_fancy.png used on input line 248.
+Package pdftex.def Info: images/radius_setup_fancy.png used on input line 256.
 (pdftex.def)             Requested size: 222.83195pt x 222.33008pt.
 
-<images/rad_calib_1.png, id=616, 200.75pt x 200.75pt>
+<images/rad_calib_1.png, id=656, 200.75pt x 200.75pt>
 File: images/rad_calib_1.png Graphic file (type png)
 
 <use images/rad_calib_1.png>
-Package pdftex.def Info: images/rad_calib_1.png used on input line 256.
+Package pdftex.def Info: images/rad_calib_1.png used on input line 264.
 (pdftex.def)             Requested size: 140.52403pt x 140.52403pt.
 
-<images/rad_calib_2.jpg, id=617, 200.75pt x 200.75pt>
+<images/rad_calib_2.jpg, id=657, 200.75pt x 200.75pt>
 File: images/rad_calib_2.jpg Graphic file (type jpg)
 
 <use images/rad_calib_2.jpg>
-Package pdftex.def Info: images/rad_calib_2.jpg used on input line 261.
+Package pdftex.def Info: images/rad_calib_2.jpg used on input line 269.
 (pdftex.def)             Requested size: 140.52403pt x 140.52403pt.
 
-<images/rad_calib_3.png, id=618, 200.75pt x 200.75pt>
+<images/rad_calib_3.png, id=658, 200.75pt x 200.75pt>
 File: images/rad_calib_3.png Graphic file (type png)
 
 <use images/rad_calib_3.png>
-Package pdftex.def Info: images/rad_calib_3.png used on input line 266.
+Package pdftex.def Info: images/rad_calib_3.png used on input line 274.
 (pdftex.def)             Requested size: 140.52403pt x 140.52403pt.
 
-<images/rad_calib_4.jpg, id=619, 200.75pt x 200.75pt>
+<images/rad_calib_4.jpg, id=659, 200.75pt x 200.75pt>
 File: images/rad_calib_4.jpg Graphic file (type jpg)
 
 <use images/rad_calib_4.jpg>
-Package pdftex.def Info: images/rad_calib_4.jpg used on input line 271.
+Package pdftex.def Info: images/rad_calib_4.jpg used on input line 279.
 (pdftex.def)             Requested size: 140.52403pt x 140.52403pt.
 
-Overfull \hbox (45.2922pt too wide) in paragraph at lines 254--274
+Overfull \hbox (45.2922pt too wide) in paragraph at lines 262--282
 [][] []
  []
 
 
-Overfull \hbox (45.2922pt too wide) in paragraph at lines 254--274
+Overfull \hbox (45.2922pt too wide) in paragraph at lines 262--282
 [] [] 
  []
 
-) [27] [28 <./images/aq_result_low_small_1.png> <./images/aq_result_low_small_2
+) [28] [29 <./images/aq_result_low_small_1.png> <./images/aq_result_low_small_2
 .png> <./images/aq_result_surf_small_1.png> <./images/aq_result_surf_small_2.pn
-g>] [29 <./images/aquarium_result_high_conc_1.png> <./images/aquarium_result_hi
+g>] [30 <./images/aquarium_result_high_conc_1.png> <./images/aquarium_result_hi
 gh_conc_2.png> <./images/aeolotron_result_small_1.png> <./images/aeolotron_resu
-lt_small_2.png>] [30 <./images/depth_of_field_setup.png> <./images/dof_calib_1.
-png> <./images/dof_calib_2.png> <./images/radius_setup_fancy.png>] [31 <./image
+lt_small_2.png>] [31 <./images/depth_of_field_setup.png> <./images/dof_calib_1.
+png> <./images/dof_calib_2.png> <./images/radius_setup_fancy.png>] [32 <./image
 s/rad_calib_1.png> <./images/rad_calib_2.jpg> <./images/rad_calib_3.png> <./ima
 ges/rad_calib_4.jpg>]
 \openout2 = `the_algorithm.aux'.
 
  (the_algorithm.tex
 chapter 5.
-[32
+[33
 
 
 
 ]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 36.
- [33] <images/one_peaks_color.png, id=702, 433.62pt x 433.62pt>
+ [34] <images/one_peaks_color.png, id=736, 433.62pt x 433.62pt>
 File: images/one_peaks_color.png Graphic file (type png)
 
 <use images/one_peaks_color.png>
@@ -1415,7 +1436,7 @@ Underfull \hbox (badness 2119) in paragraph at lines 67--67
 [][][]|\T1/cmr/m/n/10.95 En-larged im-age of a
  []
 
-<graphs/one_peaks_profile.png, id=703, 433.62pt x 289.08pt>
+<graphs/one_peaks_profile.png, id=737, 433.62pt x 289.08pt>
 File: graphs/one_peaks_profile.png Graphic file (type png)
 
 <use graphs/one_peaks_profile.png>
@@ -1426,31 +1447,23 @@ Overfull \hbox (46.09552pt too wide) in paragraph at lines 70--71
 [][] 
  []
 
-<graphs/peak_distance_radius_fit.png, id=704, 433.62pt x 289.08pt>
+<graphs/peak_distance_radius_fit.png, id=738, 433.62pt x 289.08pt>
 File: graphs/peak_distance_radius_fit.png Graphic file (type png)
 
 <use graphs/peak_distance_radius_fit.png>
 Package pdftex.def Info: graphs/peak_distance_radius_fit.png used on input line
  79.
 (pdftex.def)             Requested size: 260.17401pt x 173.44933pt.
- [34 <./images/one_peaks_color.png> <./graphs/one_peaks_profile.png>]
-<images/cnn_architecture.png, id=722, 590.205pt x 316.18124pt>
+ [35 <./images/one_peaks_color.png> <./graphs/one_peaks_profile.png>]
+<images/cnn_architecture.png, id=756, 590.205pt x 316.18124pt>
 File: images/cnn_architecture.png Graphic file (type png)
 
 <use images/cnn_architecture.png>
 Package pdftex.def Info: images/cnn_architecture.png used on input line 100.
 (pdftex.def)             Requested size: 295.10178pt x 158.09023pt.
- [35 <./graphs/peak_distance_radius_fit.png>]
-[36 <./images/cnn_architecture.png>]
-<images/bubbleNet_validation_result.png, id=747, 251.94125pt x 336.75812pt>
-File: images/bubbleNet_validation_result.png Graphic file (type png)
-
-<use images/bubbleNet_validation_result.png>
-Package pdftex.def Info: images/bubbleNet_validation_result.png used on input l
-ine 192.
-(pdftex.def)             Requested size: 201.55327pt x 269.40686pt.
- [37] [38 <./images/bubbleNet_validation_result.png>]
-<images/struct_tensor_original.png, id=775, 289.08pt x 289.08pt>
+ [36 <./graphs/peak_distance_radius_fit.png>]
+[37 <./images/cnn_architecture.png>] [38]
+<images/struct_tensor_original.png, id=797, 289.08pt x 289.08pt>
 File: images/struct_tensor_original.png Graphic file (type png)
 
 <use images/struct_tensor_original.png>
@@ -1458,7 +1471,7 @@ Package pdftex.def Info: images/struct_tensor_original.png used on input line 2
 54.
 (pdftex.def)             Requested size: 144.53964pt x 144.53964pt.
 
-<images/struct_tensor_orientation.png, id=776, 289.08pt x 289.08pt>
+<images/struct_tensor_orientation.png, id=798, 289.08pt x 289.08pt>
 File: images/struct_tensor_orientation.png Graphic file (type png)
 
 <use images/struct_tensor_orientation.png>
@@ -1466,20 +1479,20 @@ Package pdftex.def Info: images/struct_tensor_orientation.png used on input lin
 e 258.
 (pdftex.def)             Requested size: 144.53964pt x 144.53964pt.
 
-<images/larger_ev.png, id=777, 289.08pt x 289.08pt>
+<images/larger_ev.png, id=799, 289.08pt x 289.08pt>
 File: images/larger_ev.png Graphic file (type png)
  <use images/larger_ev.png>
 Package pdftex.def Info: images/larger_ev.png used on input line 263.
 (pdftex.def)             Requested size: 144.53964pt x 144.53964pt.
 
-<images/smaller_ev.png, id=778, 289.08pt x 289.08pt>
+<images/smaller_ev.png, id=800, 289.08pt x 289.08pt>
 File: images/smaller_ev.png Graphic file (type png)
 
 <use images/smaller_ev.png>
 Package pdftex.def Info: images/smaller_ev.png used on input line 268.
 (pdftex.def)             Requested size: 144.53964pt x 144.53964pt.
 
-<images/struct_tensor_result_2.png, id=779, 433.62pt x 433.62pt>
+<images/struct_tensor_result_2.png, id=801, 433.62pt x 433.62pt>
 File: images/struct_tensor_result_2.png Graphic file (type png)
 
 <use images/struct_tensor_result_2.png>
@@ -1489,7 +1502,7 @@ Package pdftex.def Info: images/struct_tensor_result_2.png used on input line 2
  [39] [40 <./images/struct_tensor_original.png> <./images/struct_tensor_orienta
 tion.png> <./images/larger_ev.png> <./images/smaller_ev.png> <./images/struct_t
 ensor_result_2.png>]
-<images/curve_from_orientation.png, id=801, 563.10374pt x 660.4675pt>
+<images/curve_from_orientation.png, id=823, 563.10374pt x 660.4675pt>
 File: images/curve_from_orientation.png Graphic file (type png)
 
 <use images/curve_from_orientation.png>
@@ -1497,21 +1510,21 @@ Package pdftex.def Info: images/curve_from_orientation.png used on input line 2
 96.
 (pdftex.def)             Requested size: 281.55118pt x 330.23294pt.
 
-<images/subpixel_sampling.png, id=802, 317.185pt x 190.7125pt>
+<images/subpixel_sampling.png, id=824, 317.185pt x 190.7125pt>
 File: images/subpixel_sampling.png Graphic file (type png)
 
 <use images/subpixel_sampling.png>
 Package pdftex.def Info: images/subpixel_sampling.png used on input line 303.
 (pdftex.def)             Requested size: 158.5921pt x 95.356pt.
 
-<images/sampling_result.png, id=804, 189.70876pt x 187.19937pt>
+<images/sampling_result.png, id=826, 189.70876pt x 187.19937pt>
 File: images/sampling_result.png Graphic file (type png)
 
 <use images/sampling_result.png>
 Package pdftex.def Info: images/sampling_result.png used on input line 319.
 (pdftex.def)             Requested size: 151.7672pt x 149.75969pt.
 
-<graphs/circle_fit.png, id=805, 295.1025pt x 203.76125pt>
+<graphs/circle_fit.png, id=827, 295.1025pt x 203.76125pt>
 File: graphs/circle_fit.png Graphic file (type png)
 
 <use graphs/circle_fit.png>
@@ -1522,7 +1535,7 @@ Overfull \hbox (23.95134pt too wide) in paragraph at lines 317--327
 [][] [] 
  []
 
-<images/bubbleCurve_final_result.png, id=806, 98.86937pt x 87.82813pt>
+<images/bubbleCurve_final_result.png, id=828, 98.86937pt x 87.82813pt>
 File: images/bubbleCurve_final_result.png Graphic file (type png)
 
 <use images/bubbleCurve_final_result.png>
@@ -1532,14 +1545,14 @@ Package pdftex.def Info: images/bubbleCurve_final_result.png used on input line
  [41 <./images/curve_from_orientation.png>] [42 <./images/subpixel_sampling.png
 > <./images/sampling_result.png> <./graphs/circle_fit.png>] [43 <./images/bubbl
 eCurve_final_result.png>]
-<graphs/peak_profile_fit.png, id=841, 433.62pt x 289.08pt>
+<graphs/peak_profile_fit.png, id=863, 433.62pt x 289.08pt>
 File: graphs/peak_profile_fit.png Graphic file (type png)
 
 <use graphs/peak_profile_fit.png>
 Package pdftex.def Info: graphs/peak_profile_fit.png used on input line 374.
 (pdftex.def)             Requested size: 260.17401pt x 173.44933pt.
 
-<images/dof_calibration_fit.png, id=842, 521.95pt x 348.30125pt>
+<images/dof_calibration_fit.png, id=864, 521.95pt x 348.30125pt>
 File: images/dof_calibration_fit.png Graphic file (type png)
 
 <use images/dof_calibration_fit.png>
@@ -1547,7 +1560,7 @@ Package pdftex.def Info: images/dof_calibration_fit.png used on input line 381.
 
 (pdftex.def)             Requested size: 313.17241pt x 208.98236pt.
 
-<images/tracking_green.png, id=850, 400.49625pt x 397.485pt>
+<images/tracking_green.png, id=872, 400.49625pt x 397.485pt>
 File: images/tracking_green.png Graphic file (type png)
 
 <use images/tracking_green.png>
@@ -1558,7 +1571,7 @@ Overfull \hbox (9.5077pt too wide) in paragraph at lines 405--406
  [][] 
  []
 
-<images/tracking_green_2.png, id=851, 398.23781pt x 395.22656pt>
+<images/tracking_green_2.png, id=873, 398.23781pt x 395.22656pt>
 File: images/tracking_green_2.png Graphic file (type png)
 
 <use images/tracking_green_2.png>
@@ -1569,21 +1582,21 @@ Overfull \hbox (8.49141pt too wide) in paragraph at lines 411--412
  [][] 
  []
 
-<images/tracking_red.png, id=852, 414.04688pt x 400.49625pt>
+<images/tracking_red.png, id=874, 414.04688pt x 400.49625pt>
 File: images/tracking_red.png Graphic file (type png)
 
 <use images/tracking_red.png>
 Package pdftex.def Info: images/tracking_red.png used on input line 418.
 (pdftex.def)             Requested size: 186.31937pt x 180.22165pt.
 
-<images/green_edges.png, id=863, 403.5075pt x 378.41376pt>
+<images/green_edges.png, id=885, 403.5075pt x 378.41376pt>
 File: images/green_edges.png Graphic file (type png)
 
 <use images/green_edges.png>
 Package pdftex.def Info: images/green_edges.png used on input line 436.
 (pdftex.def)             Requested size: 121.05318pt x 113.525pt.
 
-<graphs/green_radius_demo.png, id=864, 433.62pt x 289.08pt>
+<graphs/green_radius_demo.png, id=886, 433.62pt x 289.08pt>
 File: graphs/green_radius_demo.png Graphic file (type png)
 
 <use graphs/green_radius_demo.png>
@@ -1594,7 +1607,7 @@ Overfull \hbox (46.77832pt too wide) in paragraph at lines 441--442
  [][] 
  []
 
-<graphs/radius_calibration_result.png, id=867, 433.62pt x 289.08pt>
+<graphs/radius_calibration_result.png, id=889, 433.62pt x 289.08pt>
 File: graphs/radius_calibration_result.png Graphic file (type png)
 
 <use graphs/radius_calibration_result.png>
@@ -1605,11 +1618,40 @@ e 458.
 46 <./images/tracking_green.png> <./images/tracking_green_2.png> <./images/trac
 king_red.png>]) [47 <./images/green_edges.png> <./graphs/green_radius_demo.png>
  <./graphs/radius_calibration_result.png>]
+\openout2 = `results.aux'.
+
+ (results.tex
+chapter 6.
+<images/bubbleNet_validation_result.png, id=924, 251.94125pt x 336.75812pt>
+File: images/bubbleNet_validation_result.png Graphic file (type png)
+
+<use images/bubbleNet_validation_result.png>
+Package pdftex.def Info: images/bubbleNet_validation_result.png used on input l
+ine 13.
+(pdftex.def)             Requested size: 201.55327pt x 269.40686pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: images/bubbleCurve_final_result.png Graphic file (type png)
+<use images/bubbleCurve_final_result.png>
+Package pdftex.def Info: images/bubbleCurve_final_result.png used on input line
+ 25.
+(pdftex.def)             Requested size: 128.53015pt x 114.17653pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) [48
+
+
+
+] [49 <./images/bubbleNet_validation_result.png>]
 \openout2 = `discussion.aux'.
 
  (discussion.tex
-chapter 6.
-) [48
+chapter 7.
+) [50
 
 
 
@@ -1617,7 +1659,7 @@ chapter 6.
 \openout2 = `appendix.aux'.
 
  (appendix.tex
-<images/aquarium_result_surf.png, id=904, 1092.08pt x 979.66pt>
+<images/aquarium_result_surf.png, id=953, 1092.08pt x 979.66pt>
 File: images/aquarium_result_surf.png Graphic file (type png)
 
 <use images/aquarium_result_surf.png>
@@ -1628,7 +1670,7 @@ Overfull \hbox (10.03287pt too wide) in paragraph at lines 5--6
  [][] 
  []
 
-<images/aquarium_result_high_conc.jpg, id=905, 903.375pt x 1445.4pt>
+<images/aquarium_result_high_conc.jpg, id=954, 903.375pt x 1445.4pt>
 File: images/aquarium_result_high_conc.jpg Graphic file (type jpg)
 
 <use images/aquarium_result_high_conc.jpg>
@@ -1636,43 +1678,43 @@ Package pdftex.def Info: images/aquarium_result_high_conc.jpg used on input lin
 e 11.
 (pdftex.def)             Requested size: 271.01459pt x 433.62335pt.
 
-<images/aeolotron_result_raw.png, id=906, 903.375pt x 1445.4pt>
+<images/aeolotron_result_raw.png, id=955, 903.375pt x 1445.4pt>
 File: images/aeolotron_result_raw.png Graphic file (type png)
 
 <use images/aeolotron_result_raw.png>
 Package pdftex.def Info: images/aeolotron_result_raw.png used on input line 18.
 
 (pdftex.def)             Requested size: 271.01459pt x 433.62335pt.
-) [49
+) [51
 
 
 
-] [50 <./images/aquarium_result_surf.png>] [51 <./images/aquarium_result_high_c
-onc.jpg>] [52 <./images/aeolotron_result_raw.png>]
-chapter 7.
+] [52 <./images/aquarium_result_surf.png>] [53 <./images/aquarium_result_high_c
+onc.jpg>] [54 <./images/aeolotron_result_raw.png>]
+chapter 8.
 (MA.lof
 Overfull \hbox (0.33444pt too wide) in paragraph at lines 8--8
  [][] [][][]\T1/cmr/m/n/12 Computing im-age deriva-tive. Edges are de-tected by
  ap-ply-ing a deriva- 
  []
 
-[53
+[55
 
 
 ])
 \tf@lof=\write5
 \openout5 = `MA.lof'.
 
- (MA.lot
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [54])
+ [56]
+(MA.lot)
 \tf@lot=\write6
 \openout6 = `MA.lot'.
 
-
-(MA.bbl [55]
-chapter 8.
+ (MA.bbl [57]
+chapter 9.
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 12.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
@@ -1682,7 +1724,7 @@ Underfull \hbox (badness 1874) in paragraph at lines 75--81
 2 https : / / doi . org / 10 . 2200 /
  []
 
-[56
+[58
 
 ]
 Underfull \hbox (badness 1629) in paragraph at lines 114--121
@@ -1720,68 +1762,71 @@ Overfull \hbox (14.42671pt too wide) in paragraph at lines 114--121
 []neural-[]networks .
  []
 
-[57]) [58]
+[59]) [60]
 \openout2 = `deposition.aux'.
 
- (deposition.tex) [59
+ (deposition.tex) [61
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 69.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 69.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 70.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 70.
  (MA.aux (titlepages-eng.aux) (abstracts.aux)
 (introduction.aux) (theory.aux) (related_work.aux) (experimental_setup.aux)
-(the_algorithm.aux) (discussion.aux) (appendix.aux) (deposition.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 69.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 69.
+(the_algorithm.aux) (results.aux) (discussion.aux) (appendix.aux)
+(deposition.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 70.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 70.
 Package rerunfilecheck Info: File `MA.out' has not changed.
-(rerunfilecheck)             Checksum: FD57A8F99FFC6419A7D0A9FBEEAEA5C5;2708.
+(rerunfilecheck)             Checksum: 6F58829018F17216254246A7137CA29A;2942.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 69.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 70.
  ) 
 Here is how much of TeX's memory you used:
- 12404 strings out of 493328
- 200685 string characters out of 3139121
- 395566 words of memory out of 3000000
- 15358 multiletter control sequences out of 15000+200000
- 26510 words of font info for 66 fonts, out of 3000000 for 9000
+ 12457 strings out of 493328
+ 201460 string characters out of 3139121
+ 394628 words of memory out of 3000000
+ 15390 multiletter control sequences out of 15000+200000
+ 30399 words of font info for 81 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  49i,10n,80p,8815b,563s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\windis\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
 \ectt1200.pk> <C:\Users\windis\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
-n\ec\dpi600\ecrm0800.pk> <C:\Users\windis\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
-our\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\windis\AppData\Local\MiKTeX\2.9\f
-onts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk> <C:\Users\windis\AppData\Local\M
-iKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbi1200.pk> <C:\Users\windis\AppD
-ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\
-windis\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1440.pk>
+n\ec\dpi600\ecrm1000.pk> <C:\Users\windis\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
+our\jknappen\ec\dpi600\ecrm0700.pk> <C:\Users\windis\AppData\Local\MiKTeX\2.9\f
+onts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk> <C:\Users\windis\AppData\Local\M
+iKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk> <C:\Users\windis\AppD
+ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbi1200.pk> <C:\Users\
+windis\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk>
  <C:\Users\windis\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\e
-crm1200.pk> <C:\Users\windis\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
-ec\dpi600\ecsx1200.pk> <C:\Users\windis\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
-r\jknappen\ec\dpi600\ecsx2074.pk> <C:\Users\windis\AppData\Local\MiKTeX\2.9\fon
-ts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk> <C:\Users\windis\AppData\Local\MiK
-TeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk> <C:\Users\windis\AppDat
-a\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1728.pk> <C:\Users\wi
-ndis\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk> <
-C:\Users\windis\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecs
-s1440.pk> <C:\Users\windis\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec
-\dpi600\ecss1728.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program 
-Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.p
-fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on MA.pdf (59 pages, 8214250 bytes).
+csx1440.pk> <C:\Users\windis\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
+ec\dpi600\ecrm1200.pk> <C:\Users\windis\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
+r\jknappen\ec\dpi600\ecsx1200.pk> <C:\Users\windis\AppData\Local\MiKTeX\2.9\fon
+ts\pk\ljfour\jknappen\ec\dpi600\ecsx2074.pk> <C:\Users\windis\AppData\Local\MiK
+TeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk> <C:\Users\windis\AppDat
+a\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk> <C:\Users\wi
+ndis\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1728.pk> <
+C:\Users\windis\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecr
+m1440.pk> <C:\Users\windis\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec
+\dpi600\ecss1440.pk> <C:\Users\windis\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\
+jknappen\ec\dpi600\ecss1728.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi
+10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
+C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/rsfs/rsfs10.pfb>
+Output written on MA.pdf (61 pages, 8251311 bytes).
 PDF statistics:
- 1807 PDF objects out of 2073 (max. 8388607)
- 223 named destinations out of 1000 (max. 500000)
- 682 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1899 PDF objects out of 2073 (max. 8388607)
+ 230 named destinations out of 1000 (max. 500000)
+ 719 words of extra memory for PDF output out of 10000 (max. 10000000)
 
