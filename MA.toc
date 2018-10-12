@@ -23,11 +23,11 @@
 \contentsline {chapter}{\numberline {4}Experimental Setup}{23}{chapter.4}
 \contentsline {section}{\numberline {4.1}Requirements}{23}{section.4.1}
 \contentsline {section}{\numberline {4.2}Aquarium Setup}{23}{section.4.2}
-\contentsline {section}{\numberline {4.3}Aeolotron Setup}{25}{section.4.3}
+\contentsline {section}{\numberline {4.3}Aeolotron Setup}{24}{section.4.3}
 \contentsline {section}{\numberline {4.4}Measurement result}{25}{section.4.4}
 \contentsline {section}{\numberline {4.5}Calibration}{26}{section.4.5}
 \contentsline {subsection}{\numberline {4.5.1}Depth of Field}{26}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}Radius}{26}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.2}Radius}{27}{subsection.4.5.2}
 \contentsline {chapter}{\numberline {5}The Algorithm}{32}{chapter.5}
 \contentsline {section}{\numberline {5.1}Motivation}{32}{section.5.1}
 \contentsline {section}{\numberline {5.2}BubbleNet}{32}{section.5.2}

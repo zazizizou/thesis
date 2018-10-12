@@ -1,15 +1,9 @@
-\begin{thebibliography}{25}
+\begin{thebibliography}{24}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
-
-\bibitem[gei(1995)]{geissler_1995}
-\emph{{Measurements of bubble size distributions with an optical technique
-  based on depth from focus}}, December 1995. Zenodo.
-\newblock \doi{10.5281/zenodo.10400}.
-\newblock URL \url{https://doi.org/10.5281/zenodo.10400}.
 
 \bibitem[NIW(2016)]{NIWA}
 Gas exchange and climate.
@@ -17,37 +11,20 @@ Gas exchange and climate.
 \newblock URL
   \url{https://www.niwa.co.nz/sites/niwa.co.nz/files/import/attachments/gas.pdf}.
 
-\bibitem[Zhe(2018)]{Zhenhua2018}
-Detecting small, densely distributed objects with filter-amplifier networks and
-  loss boosting.
-\newblock \emph{CoRR}, abs/1802.07845, 2018.
-\newblock URL \url{http://arxiv.org/abs/1802.07845}.
-\newblock Withdrawn.
-
-\bibitem[Al-Lashi et~al.(2016{\natexlab{a}})Al-Lashi, Gunn, and
-  Czerski]{Al-Lashi2016}
+\bibitem[Al-Lashi et~al.(2016)Al-Lashi, Gunn, and Czerski]{Al-Lashi2016}
 Raied~S. Al-Lashi, Steve~R. Gunn, and Helen Czerski.
 \newblock Automated processing of oceanic bubble images for measuring bubble
   size distributions underneath breaking waves.
 \newblock \emph{Journal of Atmospheric and Oceanic Technology}, 33\penalty0
-  (8):\penalty0 1701--1714, 2016{\natexlab{a}}.
+  (8):\penalty0 1701--1714, 2016.
 \newblock \doi{10.1175/JTECH-D-15-0222.1}.
 \newblock URL \url{https://doi.org/10.1175/JTECH-D-15-0222.1}.
 
-\bibitem[Al-Lashi et~al.(2016{\natexlab{b}})Al-Lashi, Gunn, and
-  Czerski]{Zhong2016}
-Raied~S. Al-Lashi, Steve~R. Gunn, and Helen Czerski.
-\newblock Automated processing of oceanic bubble images for measuring bubble
-  size distributions underneath breaking waves.
-\newblock \emph{Journal of Atmospheric and Oceanic Technology}, 33\penalty0
-  (8):\penalty0 1701--1714, 2016{\natexlab{b}}.
-\newblock \doi{10.1175/JTECH-D-15-0222.1}.
-\newblock URL \url{https://doi.org/10.1175/JTECH-D-15-0222.1}.
-
-\bibitem[Bigun(1987)]{Bigun1986}
-Josef Bigun.
-\newblock Optimal orientation detection of linear symmetry.
-\newblock Technical Report 828, Linköping University, Computer Vision, 1987.
+\bibitem[Bigun and Granlund(1986)]{Bigun1986}
+J.~Bigun and G.~H. Granlund.
+\newblock {Optimal orientation detection of linear symmetry}.
+\newblock Technical Report Report LiTH-ISY-I-0828, Computer Vision Laboratory,
+  Link\"{o}ping University, Sweden, 1986.
 
 \bibitem[Bishop(2006)]{BishopBook}
 Christopher~M. Bishop.
@@ -72,12 +49,14 @@ Richard~O. Duda and Peter~E. Hart.
 \newblock \doi{10.1145/361237.361242}.
 \newblock URL \url{http://doi.acm.org/10.1145/361237.361242}.
 
-\bibitem[Flothow(2017)]{Leonie}
-Leonie Flothow.
-\newblock Bubble characteristics from breaking waves in fresh water and
-  simulated seawater.
-\newblock Master's thesis, Institude of Environmental Physics, Heidelberg
-  University, 2017.
+\bibitem[Gei{\ss}ler and J{\"a}hne(1995)]{geissler_1995}
+P.~Gei{\ss}ler and B.~J{\"a}hne.
+\newblock Measurements of bubble size distributions with an optical technique
+  based on depth from focus.
+\newblock In B.~J{\"a}hne and E.~Monahan, editors, \emph{Air-Water Gas
+  Transfer, Selected Papers, 3rd Intern. Symp. on Air-Water Gas Transfer},
+  pages 351--362, Hanau, 1995. AEON.
+\newblock \doi{10.5281/zenodo.10400}.
 
 \bibitem[Girshick et~al.(2013)Girshick, Donahue, Darrell, and Malik]{RCNN}
 Ross~B. Girshick, Jeff Donahue, Trevor Darrell, and Jitendra Malik.
@@ -86,11 +65,13 @@ Ross~B. Girshick, Jeff Donahue, Trevor Darrell, and Jitendra Malik.
 \newblock \emph{CoRR}, abs/1311.2524, 2013.
 \newblock URL \url{http://arxiv.org/abs/1311.2524}.
 
-\bibitem[Goldberg and Hirst(2017)]{NNMethods}
-Yoav Goldberg and Graeme Hirst.
-\newblock \emph{Neural Network Methods in Natural Language Processing}.
-\newblock Morgan \& Claypool Publishers, 2017.
-\newblock ISBN 1627052984, 9781627052986.
+\bibitem[Goldberg(2017)]{NNMethods}
+Yoav Goldberg.
+\newblock Neural network methods for natural language processing.
+\newblock \emph{Synthesis Lectures on Human Language Technologies}, 10\penalty0
+  (1):\penalty0 1--309, 2017.
+\newblock \doi{10.2200/S00762ED1V01Y201703HLT037}.
+\newblock URL \url{https://doi.org/10.2200/S00762ED1V01Y201703HLT037}.
 
 \bibitem[Ho(1995)]{Ho1995}
 Tin~Kam Ho.
@@ -101,27 +82,27 @@ Tin~Kam Ho.
 \newblock ISBN 0-8186-7128-9.
 \newblock URL \url{http://dl.acm.org/citation.cfm?id=844379.844681}.
 
-\bibitem[J\"ahne(2005)]{JaehneBook}
-Bernd J\"ahne.
-\newblock \emph{Digital Image Processing}.
-\newblock Springer-Verlag Berlin Heidelberg, 6 edition, 2005.
-\newblock ISBN 978-3-540-24035-8.
-\newblock \doi{10.1007/3-540-27563-0}.
-
 \bibitem[J{\"a}hne et~al.(1984)J{\"a}hne, Wais, and Barabas]{jaehne1984}
-Bernd J{\"a}hne, Thomas Wais, and Michael Barabas.
+B.~J{\"a}hne, T.~Wais, and M.~Barabas.
 \newblock A new optical bubble measuring device; a simple model for bubble
   contribution to gas exchange.
 \newblock In W.~Brutsaert and G.~H. Jirka, editors, \emph{Gas transfer at water
-  surfaces}, pages 237--246. Reidel, Reidel, 1984.
+  surfaces}, pages 237--246, Hingham, MA, 1984. Reidel.
 \newblock \doi{10.1007/978-94-017-1660-4_22}.
 
+\bibitem[J{\"a}hne(2005)]{JaehneBook}
+Bernd J{\"a}hne.
+\newblock \emph{Digital Image Processing}.
+\newblock Springer, Berlin, 6 edition, 2005.
+\newblock \doi{10.1007/3-540-27563-0}.
+
 \bibitem[Krall(2013)]{Krall2013}
-Kerstin Krall.
-\newblock \emph{Laboratory investigations of air-sea gas transfer under a wide
-  range of water surface conditions}.
-\newblock PhD thesis, Institude of Environmental Physics, Heidelberg
-  University, 2013.
+Kerstin~Ellen Krall.
+\newblock \emph{Laboratory Investigations of Air-Sea Gas Transfer under a Wide
+  Range of Water Surface Conditions}.
+\newblock Dissertation, Institut f{\"u}r Umweltphysik, Fakult{\"a}t f{\"u}r
+  Physik und Astronomie, Univ.\ Heidelberg, 2013.
+\newblock URL \url{http://www.ub.uni-heidelberg.de/archiv/14392}.
 
 \bibitem[Krizhevsky et~al.(2012)Krizhevsky, Sutskever, and Hinton]{AlexNet}
 Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton.
@@ -151,8 +132,9 @@ Dan Li, Jianxin Zhang, Qiang Zhang, and Xiaopeng Wei.
 Wolfgang Mischler.
 \newblock \emph{Systematic Measurements of Bubble Induced Gas Exchange for
   Trace Gases with Low Solubilities}.
-\newblock PhD thesis, Institude of Environmental Physics, Heidelberg
-  University, 2014.
+\newblock Dissertation, Institut f{\"u}r Umweltphysik, Fakult{\"a}t f{\"u}r
+  Physik und Astronomie, Univ.\ Heidelberg, 2014.
+\newblock URL \url{http://www.ub.uni-heidelberg.de/archiv/17720}.
 
 \bibitem[Redmon et~al.(2016)Redmon, Divvala, Girshick, and Farhadi]{YOLO}
 J.~Redmon, S.~Divvala, R.~Girshick, and A.~Farhadi.
@@ -168,8 +150,6 @@ Shaoqing Ren, Kaiming He, Ross Girshick, and Jian Sun.
 \newblock In C.~Cortes, N.~D. Lawrence, D.~D. Lee, M.~Sugiyama, and R.~Garnett,
   editors, \emph{Advances in Neural Information Processing Systems 28}, pages
   91--99. Curran Associates, Inc., 2015.
-\newblock URL
-  \url{http://papers.nips.cc/paper/5638-faster-r-cnn-towards-real-time-object-detection-with-region-proposal-networks.pdf}.
 
 \bibitem[Ronneberger et~al.(2015)Ronneberger, Fischer, and Brox]{UNet}
 Olaf Ronneberger, Philipp Fischer, and Thomas Brox.
@@ -190,5 +170,22 @@ W.~Wolfgang~Demtr{\"o}der.
 \newblock Springer-Lehrbuch. Springer Berlin Heidelberg, 2013.
 \newblock ISBN 9783642299438.
 \newblock URL \url{https://books.google.de/books?id=lIYBlwEACAAJ}.
+
+\bibitem[Zhenhua~Chen(2018)]{Zhenhua2018}
+Robert~Templeman Zhenhua~Chen, David~Crandall.
+\newblock Detecting small, densely distributed objects with filter-amplifier
+  networks and loss boosting.
+\newblock \emph{CoRR}, abs/1802.07845, 2018.
+\newblock URL \url{http://arxiv.org/abs/1802.07845}.
+\newblock Withdrawn.
+
+\bibitem[Zhong et~al.(2016)Zhong, Zou, Zhang, and Tian]{Zhong2016}
+Sheng Zhong, Xu~Zou, Zhibing Zhang, and Hongzhou Tian.
+\newblock A flexible image analysis method for measuring bubble parameters.
+\newblock \emph{Chemical Engineering Science}, 141:\penalty0 143 -- 153, 2016.
+\newblock ISSN 0009-2509.
+\newblock \doi{https://doi.org/10.1016/j.ces.2015.10.033}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S000925091500706X}.
 
 \end{thebibliography}
