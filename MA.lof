@@ -33,17 +33,16 @@
 \contentsline {figure}{\numberline {5.6}{\ignorespaces Extracting curve from bubble using orientation.\relax }}{41}{figure.caption.39}
 \contentsline {figure}{\numberline {5.7}{\ignorespaces Gray value sampling along sampling line\relax }}{42}{figure.caption.40}
 \contentsline {figure}{\numberline {5.8}{\ignorespaces Sampling and fit. The circle fit works well, even though only half a circle is extracted from the bubble at most. \relax }}{42}{figure.caption.41}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Final result of algorithm \ref {algo:bubbleCurves} applied to a single bubble\relax }}{43}{figure.caption.43}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Depth calibration\relax }}{45}{figure.caption.44}
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Identifying a bubble from images with different lighting. Images were acquired at 200 FPS. Image \ref {subfig:red} was taken after \ref {subfig:green_1} and before \ref {subfig:green_2}. Matching bubble in \ref {subfig:red} is marked in red \relax }}{46}{figure.caption.45}
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Determining the radius of a back lit bubble\relax }}{47}{figure.caption.46}
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Measured radius as a function of real radius.\relax }}{47}{figure.caption.47}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Depth calibration\relax }}{44}{figure.caption.42}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Identifying a bubble from images with different lighting. Images were acquired at 200 FPS. Image \ref {subfig:red} was taken after \ref {subfig:green_1} and before \ref {subfig:green_2}. Matching bubble in \ref {subfig:red} is marked in red \relax }}{46}{figure.caption.43}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Determining the radius of a back lit bubble\relax }}{47}{figure.caption.44}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Measured radius as a function of real radius.\relax }}{47}{figure.caption.45}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Testing of algorithm \ref {algo:bubbleNet}. Red: ground truth, green: predicted. Note how in this image, ground truth annotation was not done perfectly, so IoU results were likely slightly underestimated.\relax }}{49}{figure.caption.48}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Final result of algorithm \ref {algo:bubbleCurves} applied to a single bubble\relax }}{49}{figure.caption.49}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Testing of algorithm \ref {algo:bubbleNet}. Red: ground truth, green: predicted. Note how in this image, ground truth annotation was not done perfectly, so IoU results were likely slightly underestimated.\relax }}{49}{figure.caption.46}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Applying algorithm \ref {algo:bubbleNet} to a validation image. Image taken with the aquarium setup at 4\tmspace +\thinmuskip {.1667em}cm below the water surface. Bubble radius has been calibrated with equation \ref {eq:radius_calib}, and measurement volume was limited to $6.6\tmspace +\thinmuskip {.1667em} mm \times 9.6 \tmspace +\thinmuskip {.1667em} mm \times 1\tmspace +\thinmuskip {.1667em}cm$\relax }}{49}{figure.caption.47}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Image captured close to the water surface with the aquarium setup. Most bubbles show the expected two peaks, except for those very close to the water surface, where bubble curvatures is also visible.\relax }}{52}{figure.caption.51}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Image with high bubble concentration at aquarium setup using a bubble generator.\relax }}{53}{figure.caption.52}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Image from Aeolotron setup with low bubble concentrations. Motion blur can be observed for fast moving large bubbles.\relax }}{54}{figure.caption.53}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Image captured close to the water surface with the aquarium setup. Most bubbles show the expected two peaks, except for those very close to the water surface, where bubble curvatures is also visible.\relax }}{52}{figure.caption.49}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Image with high bubble concentration at aquarium setup using a bubble generator.\relax }}{53}{figure.caption.50}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Image from Aeolotron setup with low bubble concentrations. Motion blur can be observed for fast moving large bubbles.\relax }}{54}{figure.caption.51}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
