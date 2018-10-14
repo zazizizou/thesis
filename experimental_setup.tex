@@ -82,7 +82,7 @@
 		The goal of this setup is to apply the knowledge gained from the aquarium setup to bubbles emerging from breaking waves, so the setup from the aquarium was reproduced at the Aeolotron, while keeping as many parameters unchanged as possible. Figure \ref{fig:aeolotron_setup} shows a schematic view of the wind facility as well as the experimental setup. 
 		
 		Similarly to the aquarium setup, the Aeolotron setup consisted of one camera, a light source and a bubble generator. 
-		The light source was mounted underneath the Aeolotron and the camera was set with an $90^\circ$ relative to the light source. The bubble generator was laid at around 1 meter away from the light source (see \ref{subfig:aeolotron_setup_above}). A wind speed of $u_{10} = 8 m/s$ \footnote{$u_{10}$ refers to the wind speed at $10 \, m$ distance from the water surface. Turbine frequency was set at 15 Hz, which corresponds to $u_{10} = 8 m/s$ \citep{Bopp2018}.} was set. This wind speed is not high enough to generate breaking waves. However, it generated currents strong enough to ensure a random bubble distribution around the camera's field of view. Table \ref{tab:aeolotron_setup} summarizes the setup's parameters.
+		The light source was mounted underneath the Aeolotron and the camera was set with an $90^\circ$ relative to the light source. The bubble generator was laid at around 1 meter away from the light source (see \ref{subfig:aeolotron_setup_above}). A wind speed of $u_{10} = 8 m/s$ \footnote{$u_{10}$ refers to the wind speed at $10 \, m$ distance from the water surface. Turbine frequency was set to 15 Hz, which corresponds to $u_{10} = 8 m/s$ \citep{Bopp2018}.} was set. This wind speed is not high enough to generate breaking waves. However, it generated currents strong enough to ensure a random bubble distribution around the camera's field of view. Table \ref{tab:aeolotron_setup} summarizes the setup's parameters.
 	
 		\begin{table}
 			\centering
@@ -216,45 +216,50 @@
 	
 	
 	\section{Calibration}\label{calibration_setup}
+		When acquiring images with a single camera, the absolute distance of bubbles to the camera as well as their absolute size are lost. These issues are addressed in section \ref{sub:magnification} and \ref{sub:depth_of_field_setup}. Also, the experimental setup does not allow to measure the real bubble radius directly. The radius calibration is therefore addressed in section \ref{sub:radius_setup}.
+		\subsection{Magnification}\label{sub:magnification}
+			The magnification factor is determined by acquiring an image of target of a known size. In this case, a target with circles of known radii and known distance to each other was mounted exactly at the focus plane. Counting the number of pixels between two circles gave gives the magnification factor, expressed in $\mu m/px$. The magnification factor had a value of $30\, \mu / px$ for the aquarium setup and $10 \mu / px$ for the Aeolotron setup. 
 		\subsection{Depth of Field}\label{sub:depth_of_field_setup}
-			Since the measurement volume needs to be determined, it is not only necessary to detect bubbles in an image, but also to determine their depth, i.e.\ distance to the focal plane. With the experimental setup shown in figure \ref{fig:depth_of_field_setup}, bubbles can be trapped and moved along the depth axis. This setup consists of the same camera, light source and bubble generator used for the Aeolotron setup, plus a depth calibration device. The calibration device is a simple stick mounted on the Aeolotron's walls, such it can be moved with a micrometer screw in the depth direction (i.e.\ towards and away from the focal plane). Bubbles moving towards the water surface get trapped 
+			Since the measurement volume needs to be determined, it is not only necessary to detect bubbles in an image, but also to determine their depth, i.e.\ distance to the focal plane. However, only relative distances to the focal plane are needed for depth calibration. This is important because the goal of calibration is to determine the measurement volume only and not necessarily the absolute position of the bubbles to the camera. 
 			
-			Figure \ref{fig:depth_of_field_setup_result} shows images captured with this setup. Note how blurriness varies among images depending on the distance to the focal plane. In section \ref{calibration_algorithm} we discuss how to extract depth form these images. The setup is not perfectly stable, so resulting images were not perfectly aligned. As a workaround, additional images were captured with a different light source at each position to make other surrounding objects visible, e.g. armature of calibration device that can later on be used as reference objects to align images. 
+			With the experimental setup shown in figure \ref{fig:depth_of_field_setup}, bubbles can be trapped and moved along the depth axis. This setup consists of the same camera, light source and bubble generator used for the Aeolotron setup, plus a depth calibration device. The calibration device is simply a stick mounted on the Aeolotron's walls, such it can be moved with a micrometer screw in the depth direction (i.e.\ towards and away from the focal plane). Bubbles moving up towards the water surface cling to the lower surface of the stick. This way, the blurriness of bubbles can be controlled by the moving stick.  
 			
-			This calibration technique is practical, because only relative distances to the focal plane are needed for depth calibration. This is important because the goal of calibration is to determine the measurement volume only and not necessarily the absolute position of the bubbles to the camera. 
+			Figure \ref{fig:depth_of_field_setup_result} shows two bubble images acquired with this setup with a relative distance of 10\, mm. Note how blurriness varies among images depending on the distance to the focal plane. In section \ref{calibration_algorithm} we discuss how to extract depth form these images. 
+			
+			The setup is not perfectly stable, so moving the calibration device along the depth axis caused a movement along the $x$ and $y$ directions. In order to correct for this effect, additional images were captured with a different light source at each position to make other surrounding objects visible, e.g.\ the mount of the calibration device that can later on be used as reference objects to align images.  
 			
 			
 			\begin{SCfigure}
 				\centering
 				\includegraphics[scale=.5]{images/depth_of_field_setup.png}
-				\caption{Setup for depth of field calibration. A high friction stick attached to a micrometer screw traps bubbles and moves them away from the focal plane.}
+				\caption{Setup for depth of field calibration. A stick attached to a micrometer screw traps bubbles and moves them away from the focal plane.}
 				\label{fig:depth_of_field_setup}
 			\end{SCfigure}
 			
 			\begin{figure}
 				\begin{subfigure}[b]{.55\textwidth}
 					\centering
-					\includegraphics[scale=.5]{images/dof_calib_1.png}
+					\includegraphics[scale=.8]{images/dof_calib_1.png}
 					\caption{}
 				\end{subfigure}%
 				\begin{subfigure}[b]{.55\textwidth}
 					\centering
-					\includegraphics[scale=.5]{images/dof_calib_2.png}
+					\includegraphics[scale=.8]{images/dof_calib_2.png}
 					\caption{}
 				\end{subfigure}
-				
-				\caption{Two images from depth of field calibration setup at different distances from focal plane.}								
+				\caption{Two images from depth of field calibration setup at a relative distance of $10mm$ to each other. Images are inverted for clarity. }								
 				\label{fig:depth_of_field_setup_result}
 			\end{figure}
 			
 			
 		\subsection{Radius}\label{sub:radius_setup}
-			Although simulation shows that the distance between the two dominant peaks in a bubble is proportional to the bubble radius, the real radius cannot be determined from measurement results alone (figure \ref{fig:aqauarium_result} and \ref{fig:aeolotron_result}). Therefore, lighting needs to be changed in such a way that the real radius, i.e.\ the whole bubble becomes measurable. In a similar way to the light field method \cite{MischlerDiss}, an additional light source and a mirror were mounted in order to light up bubbles from behind (figure \ref{fig:radius_calibration_setup}). Then, images were acquired at a frame rate of 200 FPS, where the second light source was turned on every second frame. Results are shown in figure \ref{fig:radius_calibration_setup_result}. In section \ref{calibration_algorithm} bubbles lit from below are identified with those lit from behind in order to estimate the proportionality factor between the real radius and the radius computed by the proposed algorithms. 
+			Although simulation shows that the distance between the two dominant peaks in a bubble is proportional to the bubble radius, the real radius cannot be determined from measurement results alone (figure \ref{fig:aqauarium_result} and \ref{fig:aeolotron_result}). Therefore, lighting needs to be changed in such a way that the real radius, i.e.\ the whole bubble becomes measurable. In a similar way to the light field method \cite{MischlerDiss}, an additional light source and a mirror were mounted in order to light up bubbles from behind as shown in figure \ref{fig:radius_calibration_setup}. In addition to the components of the Aeolotron experimental setup, this calibration setup consists of a mirror and an additional light source. This allows the bubbles to be lit from behind. 
+			Then, images were acquired at a frame rate of 200 FPS, where the second light source was turned on every second frame. Results are shown in figure \ref{fig:radius_calibration_setup_result}. In section \ref{calibration_algorithm} bubbles lit from below are identified with those lit from behind in order to estimate the proportionality factor between the real radius and the radius computed by the proposed algorithms. 
 			
 
 			\begin{SCfigure}
 				\includegraphics[scale=.5]{images/radius_setup_fancy.png}
-				\caption{A view from inside the Aeolotron wind wave facility for radius calibration. The additional light source (green) is synchronized with the main light source (red).}
+				\caption{A view from inside the Aeolotron wind wave facility for radius calibration. The mirror was mounted such that it reflects light from the second light source (green) back to the camera. The additional light source is synchronized with the main light source (red).}
 				\label{fig:radius_calibration_setup}
 			\end{SCfigure}
 			
