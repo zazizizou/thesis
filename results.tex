@@ -1,5 +1,5 @@
 \chapter{Results}\label{results}
-	This chapter discusses the performance of the two developed algorithms in sections \ref{result_profiles} and \ref{result_curves}. 
+	This chapter discusses the performance and the limits of the two developed algorithms.
 	
 		\section{BubbleProfiles}\label{result_profiles}
 			
@@ -8,7 +8,7 @@
 			For validation, 20 more manually annotated small images were used, each containing from 10 to 20 bubbles. Figure \ref{fig:bubbleNet_result} illustrates the performance of algorithm \ref{algo:bubbleNet}.  
 			The algorithm achieved mAP@.5IoU = 91.5\% and mAP@.3IoU = 93\%. Note that this is slightly worse than the classification accuracy result. This is due to the occasionally unprecise radius computation, which gets penalized by the mAP@p-IoU criterion. 
 			
-			In figure \ref{bubb_dist_1}, algorithm \ref{algo:bubbleNet} was applied to an image from the validation data set. Since the bubble radii were determined with a subpixel accuracy, bubble distributions are represented as a histogram with a bin size of $9 \, \mu m$. Figure \ref{subfig:b_val_0} shows that most bubbles have a size between $300 \, \mu m$ and $480 \mu m$.
+			In figure \ref{bubb_dist_1}, algorithm \ref{algo:bubbleNet} was applied to an image from the validation data set to produce a bubble distribution. Since the bubble radii were determined with a subpixel accuracy, bubble distributions are represented as a histogram with a bin size of $9 \, \mu m$. It can be observed that most bubbles have a size between $300 \, \mu m$ and $480 \mu m$. According to the technical specifications of the bubble generator, bubble radii between $100 \, \mu m$ and $400 \, \mu$ are expected. 
 			
 			\begin{figure}[h!]
 				\centering
@@ -25,11 +25,11 @@
 						\label{subfig:b_val_0}
 					\end{subfigure}\hfill
 					\begin{subfigure}[t]{.4\textwidth}
-						\includegraphics[scale=0.6]{images/val_0.png}
+						\includegraphics[scale=0.6]{images/val_1.png}
 						\caption{Validation image}
 						\label{subfig:val_0}
 					\end{subfigure}
-					\caption{Applying algorithm \ref{algo:bubbleNet} to a validation image. Image taken with the aquarium setup at 4\,cm below the water surface. Bubble radius has been calibrated with equation \ref{eq:radius_calib}, and measurement volume was limited to $6.6\, mm \times 9.6 \, mm \times 1\, cm$}
+					\caption{Applying algorithm \ref{algo:bubbleNet} to a validation image captured with the aquarium setup. Image taken with the aquarium setup at 4\,cm below the water surface. Bubble radius has been calibrated with equation \ref{eq:radius_calib}, and measurement volume was limited to $6.6\, mm \times 9.6 \, mm \times 1\, cm$}
 					\label{bubb_dist_1}
 				\end{figure}
 
