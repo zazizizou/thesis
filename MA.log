@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.4.18)  24 OCT 2018 16:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.4.18)  24 OCT 2018 19:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1522,44 +1522,44 @@ mo.png> <./graphs/radius_calibration_result.png>]
 
  (./results.tex
 Chapter 6.
-<images/bubbleNet_validation_result.png, id=923, 251.94125pt x 336.75812pt>
+<images/bubbleNet_validation_result.png, id=925, 251.94125pt x 336.75812pt>
 File: images/bubbleNet_validation_result.png Graphic file (type png)
 
 <use images/bubbleNet_validation_result.png>
 Package pdftex.def Info: images/bubbleNet_validation_result.png used on input l
-ine 15.
+ine 24.
 (pdftex.def)             Requested size: 201.55327pt x 269.40686pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<graphs/b_val_0.png, id=926, 433.62pt x 289.08pt>
-File: graphs/b_val_0.png Graphic file (type png)
- <use graphs/b_val_0.png>
-Package pdftex.def Info: graphs/b_val_0.png used on input line 23.
-(pdftex.def)             Requested size: 260.17401pt x 173.44933pt.
-
-Overfull \hbox (89.46007pt too wide) in paragraph at lines 23--24
-[][] 
- []
-
-<images/val_1.png, id=927, 240.9pt x 321.2pt>
-File: images/val_1.png Graphic file (type png)
- <use images/val_1.png>
-Package pdftex.def Info: images/val_1.png used on input line 28.
-(pdftex.def)             Requested size: 144.5411pt x 192.72148pt.
-) [48
+ [48
 
 
 
 ]
-[49 <./images/bubbleNet_validation_result.png> <./graphs/b_val_0.png> <./images
-/val_1.png>]
+<graphs/b_val_0.png, id=936, 433.62pt x 289.08pt>
+File: graphs/b_val_0.png Graphic file (type png)
+ <use graphs/b_val_0.png>
+Package pdftex.def Info: graphs/b_val_0.png used on input line 32.
+(pdftex.def)             Requested size: 260.17401pt x 173.44933pt.
+
+Overfull \hbox (89.46007pt too wide) in paragraph at lines 32--33
+[][] 
+ []
+
+<images/val_1.png, id=937, 240.9pt x 321.2pt>
+File: images/val_1.png Graphic file (type png)
+ <use images/val_1.png>
+Package pdftex.def Info: images/val_1.png used on input line 37.
+(pdftex.def)             Requested size: 144.5411pt x 192.72148pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) [49 <./images/bubbleNet_validation_result.png>] [50 <./graphs/b_val_0.png> <.
+/images/val_1.png>]
 \openout2 = `discussion.aux'.
 
  (./discussion.tex
 Chapter 7.
-) [50
+) [51
 
 
 
@@ -1567,7 +1567,7 @@ Chapter 7.
 \openout2 = `appendix.aux'.
 
  (./appendix.tex
-<images/aquarium_result_surf.png, id=955, 1092.08pt x 979.66pt>
+<images/aquarium_result_surf.png, id=966, 1092.08pt x 979.66pt>
 File: images/aquarium_result_surf.png Graphic file (type png)
 
 <use images/aquarium_result_surf.png>
@@ -1578,7 +1578,7 @@ Overfull \hbox (10.03287pt too wide) in paragraph at lines 5--6
  [][] 
  []
 
-<images/aquarium_result_high_conc.jpg, id=956, 903.375pt x 1445.4pt>
+<images/aquarium_result_high_conc.jpg, id=967, 903.375pt x 1445.4pt>
 File: images/aquarium_result_high_conc.jpg Graphic file (type jpg)
 
 <use images/aquarium_result_high_conc.jpg>
@@ -1586,19 +1586,19 @@ Package pdftex.def Info: images/aquarium_result_high_conc.jpg used on input lin
 e 11.
 (pdftex.def)             Requested size: 271.01459pt x 433.62335pt.
 
-<images/aeolotron_result_raw.png, id=957, 903.375pt x 1445.4pt>
+<images/aeolotron_result_raw.png, id=968, 903.375pt x 1445.4pt>
 File: images/aeolotron_result_raw.png Graphic file (type png)
 
 <use images/aeolotron_result_raw.png>
 Package pdftex.def Info: images/aeolotron_result_raw.png used on input line 18.
 
 (pdftex.def)             Requested size: 271.01459pt x 433.62335pt.
-) [51
+) [52
 
 
 
-] [52 <./images/aquarium_result_surf.png>] [53 <./images/aquarium_result_high_c
-onc.jpg>] [54 <./images/aeolotron_result_raw.png>]
+] [53 <./images/aquarium_result_surf.png>] [54 <./images/aquarium_result_high_c
+onc.jpg>] [55 <./images/aeolotron_result_raw.png>]
 Chapter 8.
 (./MA.lof
 Overfull \hbox (0.33444pt too wide) in paragraph at lines 8--8
@@ -1606,13 +1606,13 @@ Overfull \hbox (0.33444pt too wide) in paragraph at lines 8--8
  ap-ply-ing a deriva- 
  []
 
-[55
+[56
 
 
 ]
 Underfull \vbox (badness 6252) has occurred while \output is active []
 
- [56])
+ [57])
 \tf@lof=\write5
 \openout5 = `MA.lof'.
 
@@ -1621,7 +1621,7 @@ Underfull \vbox (badness 6252) has occurred while \output is active []
 \tf@lot=\write6
 \openout6 = `MA.lot'.
 
- (./MA.bbl [57]
+ (./MA.bbl [58]
 Chapter 9.
 
 Underfull \hbox (badness 1874) in paragraph at lines 75--81
@@ -1629,7 +1629,7 @@ Underfull \hbox (badness 1874) in paragraph at lines 75--81
 2 https : / / doi . org / 10 . 2200 /
  []
 
-[58
+[59
 
 ]
 Underfull \hbox (badness 1629) in paragraph at lines 114--121
@@ -1667,10 +1667,10 @@ Overfull \hbox (14.42671pt too wide) in paragraph at lines 114--121
 []neural-[]networks .
  []
 
-[59]) [60]
+[60]) [61]
 \openout2 = `deposition.aux'.
 
- (./deposition.tex) [61
+ (./deposition.tex) [62
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 71.
@@ -1687,13 +1687,16 @@ Package rerunfilecheck Info: File `MA.out' has not changed.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 71.
  ) 
 Here is how much of TeX's memory you used:
- 11627 strings out of 493117
- 183259 string characters out of 6135433
- 326509 words of memory out of 5000000
- 14491 multiletter control sequences out of 15000+600000
+ 11633 strings out of 493117
+ 183329 string characters out of 6135433
+ 326574 words of memory out of 5000000
+ 14492 multiletter control sequences out of 15000+600000
  30712 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  48i,10n,71p,1076b,561s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1730,10 +1733,10 @@ per/sfsx2074.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-supe
 r/sfti1200.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/
 sftt1000.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sf
 tt1200.pfb>
-Output written on MA.pdf (61 pages, 8341173 bytes).
+Output written on MA.pdf (62 pages, 8330211 bytes).
 PDF statistics:
- 1282 PDF objects out of 1440 (max. 8388607)
- 1030 compressed objects within 11 object streams
- 229 named destinations out of 1000 (max. 500000)
+ 1293 PDF objects out of 1440 (max. 8388607)
+ 1040 compressed objects within 11 object streams
+ 234 named destinations out of 1000 (max. 500000)
  724 words of extra memory for PDF output out of 10000 (max. 10000000)
 

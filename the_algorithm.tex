@@ -39,7 +39,7 @@
 	
 	\subsection{Radius from Bubble}
 	
-	A closer inspection of bubbles shows that a bubble can be described well by a vertical cross section going through the middle of the bubble. For instance, figure \ref{fig:bubble_profile} shows that a vertical profile $v_p$ is characterized by a two salient peaks: A bright peak that emerges from total reflection as explained in figure \ref{fig:bubble_physics} as well as a dimmer, yet still visible second peak at a distance $d$ from the first peak. Furthermore, simulation shows that the distance $d$ is proportional to the real bubble radius (figure \ref{fig:peaks_radius_fit}). Note that in figure \ref{fig:peaks_radius_fit} the distance $d$ was computed on rendered images, whereas the radius is a given parameter that is determined before rendering. The step wise increase in $d$ can be explained by sampling, i.e. when the radius increases by an amount smaller than a pixel, $d$ will either not change or increase by exactly 1 pixel.
+	A closer inspection of bubbles shows that a bubble can be described well by a vertical cross section going through the middle of the bubble. For instance, figure \ref{fig:bubble_profile} shows that a vertical profile $v_p$ is characterized by a two salient peaks: A bright peak that emerges from total reflection as explained in figure \ref{fig:bubble_physics} as well as a dimmer, yet still visible second peak at a distance $d$ from the first peak. Furthermore, simulation shows that the distance $d$ is proportional to the real bubble radius (figure \ref{fig:peaks_radius_fit}). Note that in figure \ref{fig:peaks_radius_fit} the distance $d$ was computed on rendered images, whereas the radius is a given parameter that is determined before rendering. The stepwise increase in $d$ can be explained by sampling, i.e. when the radius increases by an amount smaller than a pixel, $d$ will either not change or increase by exactly 1 pixel.
 	
 	In order to reach a better precision, a Gaussian fit around the two peaks is performed. Here it is necessary to initialize the fit routine with reasonable values, otherwise both fits would converge towards the same function. So the signal is first smoothed with a 1D Gaussian filter, and then the absolute maximum $m_1$ within the signal is determined that corresponds to the first peak. The second peak corresponds to the highest local maximum $m_2$ that comes right after $m_1$. Finally, the positions of $m_1$ and $m_2$ are used as initial parameters for a Gaussian fit around the peaks. The final result is given by
 	\begin{equation}
@@ -83,7 +83,7 @@
 	
 	
 	
-	\subsection{Signal extraction}
+	\subsection{Signal extraction}\label{signal_extraction}
 		So far, it has been discussed how the radius can be determined from a given vertical cross section of a bubble. However, the question remains, how do we know the signal corresponds to a bubble in the first place? Answering this question is by far more challenging than determining the bubble radius and the solution will be discussed thoroughly in the following sections. 
 		
 		As measurement results show (section \ref{measurement_results}), extracting local maxima from an image gives good starting points for vertical profile extraction. Starting from a local maximum, the signal must reach a few pixels downwards $l_{d}$ to cover the whole peak and a certain distance upwards $l_u$ until the second peak is reached. $l_d$ and $l_u$ are hyperparameters that add up to the total signal length $L$. The choice of $l_u$ depends on the largest bubble radius that need to be detected. \citet{Al-Lashi2016} showed that bubbles large enough to loose their spherical shape are very rare and their contribution to gas transfer can be neglected. Also, \citet{Leonie} showed that the maximum bubble diameter observed at the Aeolotron facility lies at around 500 $\mu m$ (i.e. 50 pixels). As for $l_d$, a constant value of 4 pixels is good enough to cover the large peak, because the value returned by the fit usually lies within 1 to 2 pixels away from the local maximum. 	
@@ -322,7 +322,7 @@
 					\begin{subfigure}[t]{.55\textwidth}
 						\centering
 						\includegraphics[scale=.7]{graphs/circle_fit.png}
-						\caption{Circle fit result.}
+						\caption{Circle fit result. }
 					\end{subfigure}
 					
 					
@@ -357,9 +357,9 @@
 				\begin{subfigure}[b]{\textwidth}
 						\centering
 						\includegraphics[scale=.6]{graphs/peak_profile_fit.png}
-						\caption{Vertical peak profile and Gaussian fit with $\sigma = 4.04$}
+						\caption{Vertical peak profile and Gaussian fit with $\sigma = 4.04 \, px$.}
 						\label{subfig:peak_profile}
-					\end{subfigure}%
+					\end{subfigure}
 					
 				\begin{subfigure}[b]{\textwidth}
 					\centering
@@ -368,7 +368,7 @@
 						\label{subfig:depth_calib_fit_result}
 					\end{subfigure}								
 				
-				\caption{Depth calibration}
+				\caption{Depth calibration.}
 				\label{fig:depth_calib}
 			\end{figure}
 			

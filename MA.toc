@@ -47,9 +47,13 @@
 \contentsline {subsection}{\numberline {5.4.2}Radius}{43}{subsection.5.4.2}
 \contentsline {chapter}{\numberline {6}Results}{48}{chapter.6}
 \contentsline {section}{\numberline {6.1}BubbleProfiles}{48}{section.6.1}
-\contentsline {section}{\numberline {6.2}BubbleCurves}{48}{section.6.2}
-\contentsline {chapter}{\numberline {7}Conclusion}{50}{chapter.7}
-\contentsline {chapter}{\numberline {8}Lists}{55}{chapter.8}
-\contentsline {section}{\numberline {8.1}List of Figures}{55}{section.8.1}
-\contentsline {section}{\numberline {8.2}List of Tables}{57}{section.8.2}
-\contentsline {chapter}{\numberline {9}Bibliography}{58}{chapter.9}
+\contentsline {subsubsection}{\nonumberline Performance}{48}{section*.46}
+\contentsline {subsubsection}{\nonumberline Limits}{48}{section*.47}
+\contentsline {section}{\numberline {6.2}BubbleCurves}{49}{section.6.2}
+\contentsline {subsubsection}{\nonumberline Performance}{49}{section*.50}
+\contentsline {subsubsection}{\nonumberline Limits}{49}{section*.51}
+\contentsline {chapter}{\numberline {7}Conclusion}{51}{chapter.7}
+\contentsline {chapter}{\numberline {8}Lists}{56}{chapter.8}
+\contentsline {section}{\numberline {8.1}List of Figures}{56}{section.8.1}
+\contentsline {section}{\numberline {8.2}List of Tables}{58}{section.8.2}
+\contentsline {chapter}{\numberline {9}Bibliography}{59}{chapter.9}
