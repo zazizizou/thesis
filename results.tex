@@ -13,13 +13,13 @@
 			
 			\subsubsection{Limits}
 			The bubble radius is determined by computing the distance between the bright, lower peak and the dim, upper peak. Therefore, the smallest detectable bubble depends on how well the two peaks can be distinguished from each other.
-			 This in turn depends on the smoothing filter applied to the vertical profile signal before peak extraction. A Gaussian smoothing filter with $\sigma = 4 \, px$ was used for both algorithms. This effectively sets the limit for the smallest detectable radius to $5 \, px$, i.e.\ $110 \, \mu$ after calibration. The largest detectable bubble has a radius of $50 \, px$ as already discussed in section \ref{signal_extraction}. 
+			 This in turn depends on the smoothing filter applied to the vertical profile signal before peak extraction. A Gaussian smoothing filter with $\sigma = 4 \, px$ was used for both algorithms. This effectively sets the limit for the smallest detectable radius to $5 \, px$, i.e.\ $110 \, \mu m$ after calibration. The largest detectable bubble has a radius of $50 \, px$ as already discussed in section \ref{signal_extraction}. 
 			 
 			 The smallest detectable bubble radius can be further improved by increasing the magnification factor, as long as the assumptions discussed in section \ref{bubble_physics} are met, i.e.\ diffraction and Mie scattering are negligible. 
 			 
 			 
 			
-			\begin{figure}[h!]
+			\begin{figure}
 				\centering
 				\includegraphics[scale=0.8]{images/bubbleNet_validation_result.png}
 				\caption{Validation of algorithm \ref{algo:bubbleNet}. Red: ground truth, green: predicted. Note how in this image, ground truth annotation was not done perfectly, so IoU results were likely slightly underestimated.}
@@ -27,7 +27,7 @@
 			\end{figure}
 
 
-				\begin{figure}[h!]
+				\begin{figure}
 					\begin{subfigure}[t]{.4\textwidth}
 						\includegraphics[scale=0.6]{graphs/b_val_0.png}
 						\caption{Bubble distribution}
@@ -48,10 +48,14 @@
 			\section{BubbleCurves}\label{result_curves}
 			
 				\subsubsection{Performance}
-				Using a validation set of 30 small images, each containing 30 to 40 bubbles, this algorithm achieved mAP@.5IoU = 89.3\%, which is slightly worse than algorithm \ref{algo:bubbleNet}. This is in part due to the high rate of overlap between bubbles, making curvature extraction less precise.. Nevertheless, the algorithm is reliable enough to be usable for bubble detection in high concentration images.					
+				This algorithm was only tested on the aquarium setup, since high bubble concentrations were not observed at the Aeolotron setup. 
+				
+				Using a validation set of 30 small images, each containing 30 to 40 bubbles, this algorithm achieved mAP@.5IoU = 89.3\%, which is slightly worse than algorithm \ref{algo:bubbleNet}. This is in part due to the high rate of overlap between bubbles, making curvature extraction less precise. 
+				Nevertheless, the algorithm is reliable enough to be usable for bubble detection in high concentration images.					
 				
 				\subsubsection{Limits}
-				Algorithm \ref{algo:bubbleCurves} relies on orientation for classification as well as to compute the bubble radius. 
+				Algorithm \ref{algo:bubbleCurves} relies on orientation to perform classification as well as to compute the bubble radius. Therefore, the smallest detectable bubble needs to show different orientations at different parts of the bubble. For instance, the orientation at the lower edge of the bubble needs to be different from the orientation at the side edge. Applying algorithm \ref{algo:bubbleCurves} to simulated data shows that the smallest detectable bubble radius is $5 \, px$, which corresponds to $160 \mu m$ after calibration. 
+				The smallest detectable radius can also be improved by increasing the magnification. 
 				
 				
 				

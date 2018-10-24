@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.4.18)  24 OCT 2018 19:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.4.18)  24 OCT 2018 22:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1549,11 +1549,7 @@ File: images/val_1.png Graphic file (type png)
  <use images/val_1.png>
 Package pdftex.def Info: images/val_1.png used on input line 37.
 (pdftex.def)             Requested size: 144.5411pt x 192.72148pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-) [49 <./images/bubbleNet_validation_result.png>] [50 <./graphs/b_val_0.png> <.
+ [49 <./images/bubbleNet_validation_result.png>]) [50 <./graphs/b_val_0.png> <.
 /images/val_1.png>]
 \openout2 = `discussion.aux'.
 
@@ -1567,7 +1563,7 @@ Chapter 7.
 \openout2 = `appendix.aux'.
 
  (./appendix.tex
-<images/aquarium_result_surf.png, id=966, 1092.08pt x 979.66pt>
+<images/aquarium_result_surf.png, id=967, 1092.08pt x 979.66pt>
 File: images/aquarium_result_surf.png Graphic file (type png)
 
 <use images/aquarium_result_surf.png>
@@ -1578,7 +1574,7 @@ Overfull \hbox (10.03287pt too wide) in paragraph at lines 5--6
  [][] 
  []
 
-<images/aquarium_result_high_conc.jpg, id=967, 903.375pt x 1445.4pt>
+<images/aquarium_result_high_conc.jpg, id=968, 903.375pt x 1445.4pt>
 File: images/aquarium_result_high_conc.jpg Graphic file (type jpg)
 
 <use images/aquarium_result_high_conc.jpg>
@@ -1586,7 +1582,7 @@ Package pdftex.def Info: images/aquarium_result_high_conc.jpg used on input lin
 e 11.
 (pdftex.def)             Requested size: 271.01459pt x 433.62335pt.
 
-<images/aeolotron_result_raw.png, id=968, 903.375pt x 1445.4pt>
+<images/aeolotron_result_raw.png, id=969, 903.375pt x 1445.4pt>
 File: images/aeolotron_result_raw.png Graphic file (type png)
 
 <use images/aeolotron_result_raw.png>
@@ -1687,15 +1683,12 @@ Package rerunfilecheck Info: File `MA.out' has not changed.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 71.
  ) 
 Here is how much of TeX's memory you used:
  11633 strings out of 493117
  183329 string characters out of 6135433
- 326574 words of memory out of 5000000
+ 326577 words of memory out of 5000000
  14492 multiletter control sequences out of 15000+600000
  30712 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1733,10 +1726,10 @@ per/sfsx2074.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-supe
 r/sfti1200.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/
 sftt1000.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sf
 tt1200.pfb>
-Output written on MA.pdf (62 pages, 8330211 bytes).
+Output written on MA.pdf (62 pages, 8336277 bytes).
 PDF statistics:
- 1293 PDF objects out of 1440 (max. 8388607)
- 1040 compressed objects within 11 object streams
+ 1294 PDF objects out of 1440 (max. 8388607)
+ 1041 compressed objects within 11 object streams
  234 named destinations out of 1000 (max. 500000)
  724 words of extra memory for PDF output out of 10000 (max. 10000000)
 
