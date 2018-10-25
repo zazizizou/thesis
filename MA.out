@@ -12,35 +12,38 @@
 \BOOKMARK [1][-]{section.2.3}{The object detection problem}{chapter.2}% 12
 \BOOKMARK [2][-]{subsection.2.3.1}{Classification}{section.2.3}% 13
 \BOOKMARK [2][-]{subsection.2.3.2}{Evaluation Criterion: mAP@p-IoU}{section.2.3}% 14
-\BOOKMARK [0][-]{chapter.3}{Related Work}{}% 15
+\BOOKMARK [0][-]{chapter.3}{Bubble}{}% 15
 \BOOKMARK [1][-]{section.3.1}{Bright field method}{chapter.3}% 16
 \BOOKMARK [1][-]{section.3.2}{Bubble optical imaging instrument}{chapter.3}% 17
-\BOOKMARK [0][-]{chapter.4}{Experimental Setup}{}% 18
-\BOOKMARK [1][-]{section.4.1}{Requirements}{chapter.4}% 19
-\BOOKMARK [1][-]{section.4.2}{Aquarium Setup}{chapter.4}% 20
-\BOOKMARK [1][-]{section.4.3}{Aeolotron Setup}{chapter.4}% 21
-\BOOKMARK [1][-]{section.4.4}{Acquired Bubble Images}{chapter.4}% 22
-\BOOKMARK [1][-]{section.4.5}{Calibration}{chapter.4}% 23
-\BOOKMARK [2][-]{subsection.4.5.1}{Magnification}{section.4.5}% 24
-\BOOKMARK [2][-]{subsection.4.5.2}{Depth of Field}{section.4.5}% 25
-\BOOKMARK [2][-]{subsection.4.5.3}{Radius}{section.4.5}% 26
-\BOOKMARK [0][-]{chapter.5}{The Algorithm}{}% 27
-\BOOKMARK [1][-]{section.5.1}{Motivation}{chapter.5}% 28
-\BOOKMARK [1][-]{section.5.2}{BubbleNet}{chapter.5}% 29
-\BOOKMARK [2][-]{subsection.5.2.1}{Radius from Bubble}{section.5.2}% 30
-\BOOKMARK [2][-]{subsection.5.2.2}{Signal extraction}{section.5.2}% 31
-\BOOKMARK [2][-]{subsection.5.2.3}{Signal classification}{section.5.2}% 32
-\BOOKMARK [1][-]{section.5.3}{BubbleCurves}{chapter.5}% 33
-\BOOKMARK [2][-]{subsection.5.3.1}{Bubble Classification}{section.5.3}% 34
-\BOOKMARK [2][-]{subsection.5.3.2}{Radius from Orientation}{section.5.3}% 35
-\BOOKMARK [1][-]{section.5.4}{Calibration}{chapter.5}% 36
-\BOOKMARK [2][-]{subsection.5.4.1}{Depth of Field}{section.5.4}% 37
-\BOOKMARK [2][-]{subsection.5.4.2}{Radius}{section.5.4}% 38
-\BOOKMARK [0][-]{chapter.6}{Results}{}% 39
-\BOOKMARK [1][-]{section.6.1}{BubbleProfiles}{chapter.6}% 40
-\BOOKMARK [1][-]{section.6.2}{BubbleCurves}{chapter.6}% 41
-\BOOKMARK [0][-]{chapter.7}{Conclusion}{}% 42
-\BOOKMARK [0][-]{chapter.8}{Lists}{}% 43
-\BOOKMARK [1][-]{section.8.1}{List of Figures}{chapter.8}% 44
-\BOOKMARK [1][-]{section.8.2}{List of Tables}{chapter.8}% 45
-\BOOKMARK [0][-]{chapter.9}{Bibliography}{}% 46
+\BOOKMARK [1][-]{section.3.3}{\200}{chapter.3}% 18
+\BOOKMARK [0][-]{chapter.4}{Experimental Setup}{}% 19
+\BOOKMARK [1][-]{section.4.1}{Requirements}{chapter.4}% 20
+\BOOKMARK [1][-]{section.4.2}{Aquarium Setup}{chapter.4}% 21
+\BOOKMARK [1][-]{section.4.3}{Aeolotron Setup}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.4}{Acquired Bubble Images}{chapter.4}% 23
+\BOOKMARK [1][-]{section.4.5}{Calibration}{chapter.4}% 24
+\BOOKMARK [2][-]{subsection.4.5.1}{Magnification}{section.4.5}% 25
+\BOOKMARK [2][-]{subsection.4.5.2}{Depth of Field}{section.4.5}% 26
+\BOOKMARK [2][-]{subsection.4.5.3}{Radius}{section.4.5}% 27
+\BOOKMARK [0][-]{chapter.5}{The Algorithm}{}% 28
+\BOOKMARK [1][-]{section.5.1}{Motivation}{chapter.5}% 29
+\BOOKMARK [1][-]{section.5.2}{BubbleNet}{chapter.5}% 30
+\BOOKMARK [2][-]{subsection.5.2.1}{Radius from Bubble}{section.5.2}% 31
+\BOOKMARK [2][-]{subsection.5.2.2}{Signal extraction}{section.5.2}% 32
+\BOOKMARK [2][-]{subsection.5.2.3}{Signal classification}{section.5.2}% 33
+\BOOKMARK [1][-]{section.5.3}{BubbleCurves}{chapter.5}% 34
+\BOOKMARK [2][-]{subsection.5.3.1}{Bubble Classification}{section.5.3}% 35
+\BOOKMARK [2][-]{subsection.5.3.2}{Radius from Orientation}{section.5.3}% 36
+\BOOKMARK [1][-]{section.5.4}{Calibration}{chapter.5}% 37
+\BOOKMARK [2][-]{subsection.5.4.1}{Depth of Field}{section.5.4}% 38
+\BOOKMARK [2][-]{subsection.5.4.2}{Radius}{section.5.4}% 39
+\BOOKMARK [0][-]{chapter.6}{Results}{}% 40
+\BOOKMARK [1][-]{section.6.1}{BubbleProfiles}{chapter.6}% 41
+\BOOKMARK [1][-]{section.6.2}{BubbleCurves}{chapter.6}% 42
+\BOOKMARK [0][-]{chapter.7}{Conclusion}{}% 43
+\BOOKMARK [1][-]{section.7.1}{Summary}{chapter.7}% 44
+\BOOKMARK [1][-]{section.7.2}{Outlook}{chapter.7}% 45
+\BOOKMARK [0][-]{chapter.8}{Lists}{}% 46
+\BOOKMARK [1][-]{section.8.1}{List of Figures}{chapter.8}% 47
+\BOOKMARK [1][-]{section.8.2}{List of Tables}{chapter.8}% 48
+\BOOKMARK [0][-]{chapter.9}{Bibliography}{}% 49

@@ -1,15 +1,9 @@
-\begin{thebibliography}{25}
+\begin{thebibliography}{24}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
-
-\bibitem[NIW(2016)]{NIWA}
-Gas exchange and climate.
-\newblock \emph{Water and Atmosphere}, 14, 2016.
-\newblock URL
-  \url{https://www.niwa.co.nz/sites/niwa.co.nz/files/import/attachments/gas.pdf}.
 
 \bibitem[Al-Lashi et~al.(2016)Al-Lashi, Gunn, and Czerski]{Al-Lashi2016}
 Raied~S. Al-Lashi, Steve~R. Gunn, and Helen Czerski.

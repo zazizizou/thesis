@@ -1,6 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2016)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: MA.aux
+This is BibTeX, Version 0.99dThe top-level auxiliary file: MA.aux
 A level-1 auxiliary file: titlepages-eng.aux
 A level-1 auxiliary file: abstracts.aux
 A level-1 auxiliary file: introduction.aux
@@ -14,49 +12,6 @@ A level-1 auxiliary file: appendix.aux
 The style file: plainnat.bst
 A level-1 auxiliary file: deposition.aux
 Database file #1: biblio.bib
-Warning--to sort, need author or key in NIWA
-Warning--empty author in NIWA
 Warning--empty school in Leonie
 Warning--empty journal in Terry
-You've used 25 entries,
-            2773 wiz_defined-function locations,
-            815 strings with 10859 characters,
-and the built_in function-call counts, 11867 in all, are:
-= -- 1117
-> -- 630
-< -- 21
-+ -- 215
-- -- 190
-* -- 936
-:= -- 1856
-add.period$ -- 109
-call.type$ -- 25
-change.case$ -- 132
-chr.to.int$ -- 25
-cite$ -- 55
-duplicate$ -- 565
-empty$ -- 934
-format.name$ -- 220
-if$ -- 2524
-int.to.chr$ -- 1
-int.to.str$ -- 1
-missing$ -- 23
-newline$ -- 161
-num.names$ -- 104
-pop$ -- 241
-preamble$ -- 1
-purify$ -- 109
-quote$ -- 0
-skip$ -- 433
-stack$ -- 0
-substring$ -- 382
-swap$ -- 86
-text.length$ -- 8
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 260
-warning$ -- 4
-while$ -- 103
-width$ -- 0
-write$ -- 396
-(There were 4 warnings)
+(There were 2 warnings)
