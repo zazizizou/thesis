@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.5.24)  25 OCT 2018 15:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.5.24)  25 OCT 2018 16:24
 entering extended mode
 **./MA.tex
 (MA.tex
@@ -894,22 +894,14 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [3
 
 
-] (MA.toc
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 23.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 23.
- [4
+] (MA.toc [4
 
 
 ])
 \tf@toc=\write4
 \openout4 = `MA.toc'.
 
-
-[5]
+ [5]
 \openout2 = `introduction.aux'.
 
  (introduction.tex
@@ -937,14 +929,14 @@ Class scrreprt Warning: \float@addtolists detected!
 
  (theory.tex
 chapter 2.
-<images/reflection.png, id=321, 377.41pt x 377.41pt>
+<images/reflection.png, id=320, 377.41pt x 377.41pt>
 File: images/reflection.png Graphic file (type png)
 
 <use images/reflection.png>
 Package pdftex.def Info: images/reflection.png used on input line 16.
 (pdftex.def)             Requested size: 170.71394pt x 170.71402pt.
 
-<images/refraction.png, id=323, 377.41pt x 377.41pt>
+<images/refraction.png, id=322, 377.41pt x 377.41pt>
 File: images/refraction.png Graphic file (type png)
 
 <use images/refraction.png>
@@ -955,21 +947,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--22
 \T1/cmr/m/n/10.95 gets re-fracted ac-cord-ing to
  []
 
-<images/total_reflection.png, id=324, 377.41pt x 377.41pt>
+<images/total_reflection.png, id=323, 377.41pt x 377.41pt>
 File: images/total_reflection.png Graphic file (type png)
 
 <use images/total_reflection.png>
 Package pdftex.def Info: images/total_reflection.png used on input line 27.
 (pdftex.def)             Requested size: 213.39569pt x 213.39253pt.
 
-<images/bubble_refraction.png, id=328, 377.41pt x 377.41pt>
+<images/bubble_refraction.png, id=327, 377.41pt x 377.41pt>
 File: images/bubble_refraction.png Graphic file (type png)
 
 <use images/bubble_refraction.png>
 Package pdftex.def Info: images/bubble_refraction.png used on input line 53.
 (pdftex.def)             Requested size: 188.70453pt x 188.70453pt.
 
-<images/bubble_simulation.png, id=329, 228.855pt x 228.35312pt>
+<images/bubble_simulation.png, id=328, 228.855pt x 228.35312pt>
 File: images/bubble_simulation.png Graphic file (type png)
 
 <use images/bubble_simulation.png>
@@ -981,7 +973,7 @@ Package pdftex.def Info: images/bubble_simulation.png used on input line 59.
 
 ] [8 <./images/reflection.png> <./images/refraction.png> <./images/total_reflec
 tion.png>]
-<images/coord_sys.png, id=360, 249.93375pt x 201.75375pt>
+<images/coord_sys.png, id=359, 249.93375pt x 201.75375pt>
 File: images/coord_sys.png Graphic file (type png)
 
 <use images/coord_sys.png>
@@ -1104,8 +1096,15 @@ Overfull \hbox (18.87703pt too wide) in paragraph at lines 371--372
  [][] 
  []
 
-[16 <./images/object_detection_intro_1.png> <./images/object_detection_intro_2.
-png>] [17 <./images/training_intro.png> <./images/testing_intro.png>] [18]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 381.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 381.
+ [16 <./images/object_detection_intro_1.png> <./images/object_detection_intro_2
+.png>] [17 <./images/training_intro.png> <./images/testing_intro.png>] [18]
 <images/iou_def.png, id=514, 534.99875pt x 257.96375pt>
 File: images/iou_def.png Graphic file (type png)
 
@@ -1167,14 +1166,6 @@ ed on input line 53.
 Overfull \hbox (8.95686pt too wide) in paragraph at lines 53--54
  [][] 
  []
-
-LaTeX Font Info:    Try loading font information for OMS+cmss on input line 62.
-
-LaTeX Font Info:    No file OMScmss.fd. on input line 62.
-
-LaTeX Font Warning: Font shape `OMS/cmss/bx/n' undefined
-(Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbullet' on input line 62.
 
 ) [22 <./images/bright_field_method.png> <./images/bright_field_result.png> <./
 images/bright_field_calibration_target.png> <./images/bubble_optical_imaging_in
@@ -1799,32 +1790,20 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 71.
 (deposition.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 71.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 71.
-
-
-Package rerunfilecheck Warning: File `MA.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `MA.out':
-(rerunfilecheck)             Before: 3163CB6FDFC46B213B92B88AEF006FBF;3104
-(rerunfilecheck)             After:  08C9B96A01C6CD6592F9B4BBD7BB51E3;3098.
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+Package rerunfilecheck Info: File `MA.out' has not changed.
+(rerunfilecheck)             Checksum: 1F16BB08EEBE0AE2BECD11F2D722E1BC;3125.
 
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 71.
  ) 
 Here is how much of TeX's memory you used:
- 12486 strings out of 493328
- 201782 string characters out of 3139121
- 395189 words of memory out of 3000000
- 15408 multiletter control sequences out of 15000+200000
- 30969 words of font info for 83 fonts, out of 3000000 for 9000
+ 12477 strings out of 493328
+ 201664 string characters out of 3139121
+ 395199 words of memory out of 3000000
+ 15401 multiletter control sequences out of 15000+200000
+ 30712 words of font info for 82 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  49i,10n,80p,8815b,563s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\windis\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
@@ -1860,9 +1839,9 @@ pe1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
 /amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
 s/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy
 8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on MA.pdf (63 pages, 8302384 bytes).
+Output written on MA.pdf (63 pages, 8302910 bytes).
 PDF statistics:
- 1962 PDF objects out of 2073 (max. 8388607)
+ 1963 PDF objects out of 2073 (max. 8388607)
  237 named destinations out of 1000 (max. 500000)
  748 words of extra memory for PDF output out of 10000 (max. 10000000)
 
