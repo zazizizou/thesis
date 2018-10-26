@@ -44,7 +44,7 @@ Next, the mathematical basics necessary for image processing such as Fourier the
 				
 				
 		\subsection{Bubble-light interaction}
-			Since the smallest bubble radius (around 50 $\mu m$) is much larger than the wavelength of the light source (around 600 nm), diffraction within the air bubble can be neglected. Mie scattering effects are also only relevant for radii within the same order of magnitude as the wavelength \citep{Demtroeder2} so they can be neglected as well. Therefore, only refraction and reflection laws will be considered. 
+			Since the smallest considered bubble radius (around 50 \, $\mu$m) is much larger than the wavelength of the light source (around 600 \, nm), diffraction within the air bubble can be neglected. Mie scattering effects are also only relevant for radii within the same order of magnitude as the wavelength \citep{Demtroeder2} so they can be neglected as well. Therefore, only refraction and reflection laws will be considered. 
 			
 			\begin{figure}
 		    \centering
@@ -363,15 +363,15 @@ Next, the mathematical basics necessary for image processing such as Fourier the
 			\begin{subfigure}[b]{\textwidth}
 				\centering
 				\includegraphics[scale=.6]{images/training_intro.png}
-				\caption{Training.}
+				\caption{Training: The trainable model is optimized according to the output of the loss function. Both ground truth labels and predicted labels are needed to compute the loss. Predicted labels are produced by pre-processing the raw training data and then running the trainable model. }
 			\end{subfigure}
 			\vfill
 			\begin{subfigure}[b]{\textwidth}
 				\centering
 				\includegraphics[scale=.6]{images/testing_intro.png}
-				\caption{Testing.}
+				\caption{Testing: After training is complete, the model is tested. This is achieved by computing a score based on ground truth and predicted labels. This score quantifies the performance of the model and the model is not further optimized based on it.}
 			\end{subfigure}
-			\caption{Training and testing in machine learning.}
+			\caption{Difference between training and testing in machine learning.}
 			\label{fig:machine_learning_intro}
 		\end{figure}				
 		

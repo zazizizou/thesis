@@ -36,9 +36,9 @@
 		 LED arrays were mounted underneath the water tank, and were oriented towards the camera's field of view to maximize the amount of light reaching the camera. As for the camera itself, it faces the light source at a $90^\circ$ angle. 
 		 Seen from above, as shown in figure \ref{subfig:aquarium_setup_above}, the bubble generator lies right next to the light source. This way, it does not block any light from the LEDs but it is still close enough, such that bubbles within the camera's field of view are well lit. 
 		
-		We chose the Basler A1920 camera mainly because of its high signal-to-noise ratio, and therefore fulfilling requirement R3 given enough light. Its main drawback is its relatively low frame rate at the highest possible resolution, which makes bubble tracking more difficult, which in turn makes radius calibration more difficult (see section \ref{calibration_algorithm}). Compared to an available high-speed camera with comparable maximum resolution, (PCO Dimax, 1,2kHz at $2000 \times 2000$ resolution) the chosen camera also has a smaller sensor. This means that the magnification is higher and therefore smaller bubbles can be better detected ($50 \, \mu m/px$ vs $30 \, \mu m /px$). A 100 mm macro lens from Zeiss was used in this setup. The large focal length contributes to the large magnification factor of $30 \, \mu m /px$.
+		We chose the Basler A1920 camera mainly because of its high signal-to-noise ratio, and therefore fulfilling requirement R3 given enough light. Its main drawback is its relatively low frame rate at the highest possible resolution, which makes bubble tracking more difficult, which in turn makes radius calibration more difficult (see section \ref{calibration_algorithm}). Compared to an available high-speed camera with comparable maximum resolution, (PCO Dimax, 1,2\,kHz at $2000 \times 2000$ resolution) the chosen camera also has a smaller sensor. This means that the magnification is higher and therefore smaller bubbles can be better detected ($50 \, \mu$m/px vs $30 \, \mu $m/px). A 100\,mm macro lens from Zeiss was used in this setup. The large focal length contributes to the large magnification factor of $30 \, \mu$m/px.
 	
-	Bubbles were produced by a bubble generator. Bubble radii therefore depend on the amount of air flowing through the bubble generator, measured in liter per minute or LPM. We acquired two sets of measurements, the first with a low bubble concentration, (1.8 LPM air flow), and the second with a much higher bubble concentration (3 LPM). 
+	Bubbles were produced by a bubble generator. Bubble radii therefore depend on the amount of air flowing through the bubble generator, measured in liter per minute or LPM. We acquired two sets of measurements, the first with a low bubble concentration, (1.8\,LPM air flow), and the second with a much higher bubble concentration (3\,LPM). 
 		
 		\begin{table}[h]
 			\centering
@@ -47,27 +47,27 @@
 			\hline 
 			Camera & Basler A1920-155um \\ 
 			\hline 
-			Focal length & Zeiss 100 mm macro \\ 
+			Focal length & Zeiss 100\,mm macro \\ 
 			\hline 
-			F-number & 5,6 \\ 
+			F-number & 5.6 \\ 
 			\hline 
-			Exposure time & 100 $\mu s$ \\ 
+			Exposure time & $100 \, \mu$s \\ 
 			\hline 
-			Gamma & 0,8 \\
+			Gamma & 0.8 \\
 			\hline
 			Resolution [px] &1920 x 1200 \\
 			\hline 
-			Sensor size & 11.3 mm x 7.1 mm \\
+			Sensor size & 11.3\,mm x 7.1\,mm \\
 			\hline 
-			Magnification factor & $30 \, \mu m/px$ \\ 
+			Magnification factor & $30 \, \mu$m/px \\ 
 			\hline 
-			Framerate & 100 Hz \\ 
+			Framerate & 100\,Hz \\ 
 			\hline 
-			Resulting field of view & 5,7cm x 3,6 cm \\
+			Resulting field of view & 5.7\,cm x 3.6\,cm \\
 			\hline
 			Bubble generator & FIAP profiO$_2$ Keramik\\			
 			\hline
-			Air flow & 1,8 LPM / 3 LPM \\ 
+			Air flow & 1.8\,LPM / 3\,LPM \\ 
 			\hline
 			\end{tabular} 
 			
@@ -77,12 +77,12 @@
 		\end{table}
 		
 	\section{Aeolotron Setup}\label{aeolotron_setup}
-		The Aeolotron is an annular wind-wave facility with a diameter of about $10 \, m$ and a width of about $60 \, cm$. Typical water height is 1m. Four wind engines generate reference wind speeds of up to $17 \, m/s$, enough to generate breaking waves that can produce air bubbles. 
+		The Aeolotron is an annular wind-wave facility with a diameter of about $10$\,m and a width of about $60$\,cm. Typical water height is 1\,m. Four wind engines generate reference wind speeds of up to $17$\,m/s, enough to generate breaking waves that can produce air bubbles. 
 		
 		The goal of this setup is to apply the knowledge gained from the aquarium setup to bubbles emerging from breaking waves, so the setup from the aquarium was reproduced at the Aeolotron, while keeping as many parameters unchanged as possible. Figure \ref{fig:aeolotron_setup} shows a schematic view of the wind facility as well as the experimental setup. 
 		
 		Similarly to the aquarium setup, the Aeolotron setup consisted of one camera, a light source and a bubble generator. 
-		The light source was mounted underneath the Aeolotron and the camera was set with an $90^\circ$ relative to the light source. The bubble generator was laid at around 1 meter away from the light source (see \ref{subfig:aeolotron_setup_above}). A wind speed of $u_{10} = 8 m/s$ \footnote{$u_{10}$ refers to the wind speed at $10 \, m$ distance from the water surface. Turbine frequency was set to 15 Hz, which corresponds to $u_{10} = 8 m/s$ \citep{Bopp2018}.} was set. This wind speed is not high enough to generate breaking waves. However, it generated currents strong enough to ensure a random bubble distribution around the camera's field of view. Table \ref{tab:aeolotron_setup} summarizes the setup's parameters.
+		The light source was mounted underneath the Aeolotron and the camera was set with an $90^\circ$ relative to the light source. The bubble generator was laid at around 1 meter away from the light source (see \ref{subfig:aeolotron_setup_above}). A wind speed of $u_{10} = 8$\,m/s \footnote{$u_{10}$ refers to the wind speed at $10$\,m distance from the water surface. Turbine frequency was set to 15 Hz, which corresponds to $u_{10} = 8$\,m/s, as measured by methods according to \citet{Bopp2011}.} was set. This wind speed is not high enough to generate breaking waves. However, it generated currents strong enough to ensure a random bubble distribution around the camera's field of view. Table \ref{tab:aeolotron_setup} summarizes the setup's parameters.
 	
 		\begin{table}
 			\centering
@@ -91,27 +91,27 @@
 			\hline 
 			Camera & Basler A1920-155um \\ 
 			\hline 
-			Focal length & Zeiss 100 mm macro\\ 
+			Focal length & Zeiss 100\,mm macro\\ 
 			\hline 
-			F-number & 5,6 \\ 
+			F-number & 5.6 \\ 
 			\hline 
-			Exposure time & 130 $\mu s$ \\ 
+			Exposure time & 130\,$\mu$s \\ 
 			\hline 
-			Gamma & 0,7 \\
+			Gamma & 0.7 \\
 			\hline
-			Resolution [px] &1920 x 1200 \\
+			Resolution &1920\,px x 1200\,px \\
 			\hline 
-			Sensor size & 11.3 mm x 7.1 mm \\
+			Sensor size & 11.3\,mm x 7.1\,mm \\
 			\hline 
-			Magnification factor & 10 um/px \\ 
+			Magnification factor & 10\,$\mu$m/px \\ 
 			\hline 
-			Framerate & 100 Hz \\ 
+			Framerate & 100\,Hz \\ 
 			\hline 
-			Resulting field of view & 1,9 cm x 1,2 cm \\
+			Resulting field of view & 1.9\,cm x 1.2\,cm \\
 			\hline
 			Bubble generator & FIAP profiO$_2$ Keramik\\			
 			\hline
-			Air flow & 1,8 LPM  \\ 
+			Air flow & 1.8\,LPM  \\ 
 			\hline
 			\end{tabular} 
 			
@@ -130,11 +130,11 @@
 			
 			\begin{subfigure}[t]{.4\linewidth}		
 				\includegraphics[scale=.5]{images/aeolotron_setup.png}
-				\caption{Experimental setup.}
+				\caption{3D view of the experimental setup.}
 			\end{subfigure}\hfill%
 			\begin{subfigure}[t]{.4\linewidth}		
 				\includegraphics[scale=.5]{images/aeolotron_setup_above.png}
-				\caption{Aeolotron from above.}
+				\caption{Top view.}
 				\label{subfig:aeolotron_setup_above}
 			\end{subfigure}
 			
@@ -218,13 +218,13 @@
 	\section{Calibration}\label{calibration_setup}
 		When acquiring images with a single camera, the absolute distance of bubbles to the camera as well as their absolute size are lost. These issues are addressed in section \ref{sub:magnification} and \ref{sub:depth_of_field_setup}. Also, the experimental setup does not allow to measure the real bubble radius directly. The radius calibration is therefore addressed in section \ref{sub:radius_setup}.
 		\subsection{Magnification}\label{sub:magnification}
-			The magnification factor is determined by acquiring an image of target of a known size. In this case, a target with circles of known radii and known distance to each other was mounted exactly at the focus plane. Counting the number of pixels between two circles gave gives the magnification factor, expressed in $\mu m/px$. The magnification factor had a value of $30\, \mu / px$ for the aquarium setup and $10 \mu / px$ for the Aeolotron setup. 
+			The magnification factor is determined by acquiring an image of target of a known size. In this case, a target with circles of known radii and known distance to each other was mounted exactly at the focus plane. Counting the number of pixels between two circles gave gives the magnification factor, expressed in $\mu$m/px. The magnification factor had a value of $30\, \mu$m/px for the aquarium setup and $10 \, \mu$m/px for the Aeolotron setup. 
 		\subsection{Depth of Field}\label{sub:depth_of_field_setup}
 			Since the measurement volume needs to be determined, it is not only necessary to detect bubbles in an image, but also to determine their depth, i.e.\ distance to the focal plane. However, only relative distances to the focal plane are needed for depth calibration. This is important because the goal of calibration is to determine the measurement volume only and not necessarily the absolute position of the bubbles to the camera. 
 			
 			With the experimental setup shown in figure \ref{fig:depth_of_field_setup}, bubbles can be trapped and moved along the depth axis. This setup consists of the same camera, light source and bubble generator used for the Aeolotron setup, plus a depth calibration device. The calibration device is simply a stick mounted on the Aeolotron's walls, such it can be moved with a micrometer screw in the depth direction (i.e.\ towards and away from the focal plane). Bubbles moving up towards the water surface cling to the lower surface of the stick. This way, the blurriness of bubbles can be controlled by the moving stick.  
 			
-			Figure \ref{fig:depth_of_field_setup_result} shows two bubble images acquired with this setup with a relative distance of 10\, mm. Note how blurriness varies among images depending on the distance to the focal plane. In section \ref{calibration_algorithm} we discuss how to extract depth form these images. 
+			Figure \ref{fig:depth_of_field_setup_result} shows two bubble images acquired with this setup with a relative distance of 10\,mm. Note how blurriness varies among images depending on the distance to the focal plane. In section \ref{calibration_algorithm} we discuss how to extract depth form these images. 
 			
 			The setup is not perfectly stable, so moving the calibration device along the depth axis caused a movement along the $x$ and $y$ directions. In order to correct for this effect, additional images were captured with a different light source at each position to make other surrounding objects visible, e.g.\ the mount of the calibration device that can later on be used as reference objects to align images.  
 			

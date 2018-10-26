@@ -1,4 +1,4 @@
-\begin{thebibliography}{24}
+\begin{thebibliography}{25}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -26,6 +26,13 @@ Christopher~M. Bishop.
   and Statistics)}.
 \newblock Springer-Verlag, Berlin, Heidelberg, 2006.
 \newblock ISBN 0387310738.
+
+\bibitem[Bopp(2011)]{Bopp2011}
+M.~Bopp.
+\newblock Messung der schubspannungsgeschwindigkeit am heidelberger aeolotron
+  mittels der impulsbilanzmethode.
+\newblock Bachelor thesis, Institut f{\"u}r Umweltphysik, Fakult{\"a}t f{\"u}r
+  Physik und Astronomie, Univ.\ Heidelberg, 2011.
 
 \bibitem[Bopp(2018)]{Bopp2018}
 Maximilian Bopp.

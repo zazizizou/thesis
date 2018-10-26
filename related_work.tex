@@ -2,7 +2,7 @@
 \chapter{Bubble Imaging Methods} \label{related_work}
  
 
-This chapter briefly discusses two similar bubble measurement techniques that aim to estimate bubble concentrations in water. The first is a master's thesis by \citet{Leonie}, where a bright field method was used in a wind wave facility, so that bubbles appeared as dark circles on camera, and the second is a field measurement technique \citep{Al-Lashi2016}, where bubbles were artificially lit from below, yielding similar images to our own. 
+This chapter briefly discusses two similar bubble measurement techniques that aim to estimate bubble concentrations in water. The first is a master's thesis by \citet{Leonie}, where a bright field method was used in a wind wave facility, so that bubbles appeared as dark circles on camera. The second is a field measurement technique \citep{Al-Lashi2016}, where bubbles were artificially lit from below, yielding similar images to the ones discussed in this thesis, and the third one is the method proposed by this work. 
 
 \section{Bright field method}
 	As an improved method from \citet{MischlerDiss}, \citet{Leonie} uses a bright field method as shown in figure \ref{fig:bright_field}. Bubbles in this experimental setup are backlit, so that they appear completely dark except for one spot in the center (see section  \ref{bubble_physics}). Note the need to use a lens shift adapter because the incoming rays are not parallel. 
@@ -26,7 +26,7 @@ This chapter briefly discusses two similar bubble measurement techniques that ai
 				\label{subfig:calib_target}
 			\end{subfigure}
 			
-			\caption{Bright field method}
+			\caption{In the bright field method, bubbles are back-lit. Bubbles scatter the incoming light away such that they appear as dark disks. }
 			\label{fig:bright_field}
 		\end{figure}		
 	
@@ -38,9 +38,9 @@ This chapter briefly discusses two similar bubble measurement techniques that ai
 	
 	
 \section{Bubble optical imaging instrument}
-	This technique submerges an optical imaging instrument (figure \ref{subfig:optical_imaging}) underwater and illuminates a thin slice	of water of volume 4cm $\times$ 4cm $\times$ 5mm. This method is particularly interesting because it produces images similar to our own. However, applying the algorithm from this paper did not yield good results. This is most likely due to the fact that our method does not illuminate the bubbles from above, making the bubble's circular shape not easily detectable with a Hough transform \citep{Hough1972} \citep{Al-Lashi2016}.
+	This technique submerges an optical imaging instrument (figure \ref{subfig:optical_imaging}) underwater and illuminates a thin slice	of water of volume 4\,cm $\times$ 4\,cm $\times$ 5\,mm. This method is particularly interesting because it produces images similar to our own. However, applying the algorithm from this paper did not yield good results. This is most likely due to the fact that our method does not illuminate the bubbles from above, making the bubble's circular shape not easily detectable with a Hough transform \citep{Hough1972} \citep{Al-Lashi2016}.
 	
-		\begin{figure}[h]
+		\begin{figure}[h!]
 			\centering
 			\begin{subfigure}[t]{0.4\textwidth}
 				\centering
@@ -60,8 +60,10 @@ This chapter briefly discusses two similar bubble measurement techniques that ai
 
 
 \section{Proposed Method}
-The proposed method aims to 
+The proposed method in this work aims to capture bubbles that are as close to the water surface as possible, and to develop robust algorithms that can reliably detect bubbles, estimate their radii and their depths (i.e.\ distance to focal plane). In particular, the proposed method should perform well for high and low bubble concentrations. 
+The principle behind this method is to light air bubbles in a water tank from below, and position the camera on the side of the water tank. The reflected light on the lower edge of bubbles is then captured by the camera. 
 
+The main drawback of this method, however, is that small bubbles with less than 6 to 8\,px in diameter can not be detected. 
 
 
 

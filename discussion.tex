@@ -14,4 +14,30 @@ The validation dataset was also not as varied as the one used for the previous a
 \section{Outlook}
 The evaluation criterion introduced in this work shows that the developed algorithms can be used reliably. A comparison of the bubble distributions computed with the proposed algorithm in this work with bubble distributions resulting from other methods is necessary to validate the developed bubble measuring technique as a whole. 
 
-The optical experimental setup can be further improved to detect smaller bubbles by increasing the magnification factor, e.g.\ by using a lens with a larger focal length. Changing the experimental setup would require changing different hyperparameters of the algorithms such as maximum signal length for algorithm \ref{algo:bubbleNet} and the initial window size for algorithm \ref{algo:bubbleCurves}. However, re-training the classifiers would not be necessary. Furthermore, it is currently not possible to acquire measurements for more than a few minutes, because the light source would become too hot. Synchronizing the light source with the camera, e.g.\ with a triggering mechanism would eliminate this problem. 
+The optical experimental setup can be further improved to detect smaller bubbles by increasing the magnification factor, e.g.\ by using a lens with a larger focal length. Changing the experimental setup would require changing different hyperparameters of the algorithms such as maximum signal length for algorithm \ref{algo:bubbleNet} and the initial window size for algorithm \ref{algo:bubbleCurves}. However, re-training the classifiers would not be necessary. 
+
+Furthermore, the user must currently define which algorithm is best suited for the data. Therefore, the algorithms can be improved by merging them into one that can automatically distinguish between high and low bubble concentration images and applies either algorithm 1 or 2 to the image. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

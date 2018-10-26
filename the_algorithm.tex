@@ -86,7 +86,7 @@
 	\subsection{Signal extraction}\label{signal_extraction}
 		So far, it has been discussed how the radius can be determined from a given vertical cross section of a bubble. However, the question remains, how do we know the signal corresponds to a bubble in the first place? Answering this question is by far more challenging than determining the bubble radius and the solution will be discussed thoroughly in the following sections. 
 		
-		As measurement results show (section \ref{measurement_results}), extracting local maxima from an image gives good starting points for vertical profile extraction. Starting from a local maximum, the signal must reach a few pixels downwards $l_{d}$ to cover the whole peak and a certain distance upwards $l_u$ until the second peak is reached. $l_d$ and $l_u$ are hyperparameters that add up to the total signal length $L$. The choice of $l_u$ depends on the largest bubble radius that need to be detected. \citet{Al-Lashi2016} showed that bubbles large enough to loose their spherical shape are very rare and their contribution to gas transfer can be neglected. Also, \citet{Leonie} showed that the maximum bubble diameter observed at the Aeolotron facility lies at around 500 $\mu m$ (i.e. 50 pixels). As for $l_d$, a constant value of 4 pixels is good enough to cover the large peak, because the value returned by the fit usually lies within 1 to 2 pixels away from the local maximum. 	
+		As measurement results show (section \ref{measurement_results}), extracting local maxima from an image gives good starting points for vertical profile extraction. Starting from a local maximum, the signal must reach a few pixels downwards $l_{d}$ to cover the whole peak and a certain distance upwards $l_u$ until the second peak is reached. $l_d$ and $l_u$ are hyperparameters that add up to the total signal length $L$. The choice of $l_u$ depends on the largest bubble radius that need to be detected. \citet{Al-Lashi2016} showed that bubbles large enough to loose their spherical shape are very rare and their contribution to gas transfer can be neglected. Also, \citet{Leonie} showed that the maximum bubble diameter observed at the Aeolotron facility lies at around $500 \, \mu$m (i.e. 50 px). As for $l_d$, a constant value of 4 pixels is good enough to cover the large peak, because the value returned by the fit usually lies within 1 to 2 pixels away from the local maximum. 	
 	
 		
 		\subsection{Signal classification}
@@ -155,9 +155,9 @@
 			\begin{enumerate}
 				\item Annotate 300 bubbles only by hand.
 				\item Train a logistic regression classifier with 300 annotated and 300 simulated images using manually computed features.
-				\item Predict 100 000 bubble instances with logistic regression classifier for use as training data. 
-				\item Use data augmentation to generate a total of 200 000 vertical profiles. 				
-				\item Extract 200 000 background (non bubble) images to balance data.
+				\item Predict 100\,000 bubble instances with logistic regression classifier for use as training data. 
+				\item Use data augmentation to generate a total of 200\,000 vertical profiles. 				
+				\item Extract 200\,000 background (non bubble) images to balance data.
 			\end{enumerate}
 			
 			Step 2 and 3 are performed to generate training data only. Following features have been used:
@@ -230,7 +230,7 @@
 	
 	
 	\subsection{Bubble Classification}\label{bubble_classification}
-		In a similar way to algorithm \ref{algo:bubbleNet}, candidate bubbles are picked based on local maxima in the input image. Then a window with a fixed size of $10 \times 10$ pixels is extracted around the local maximum. The window size is a hyperparameter and it has been chosen, such that it covers enough curvature for large bubbles while keeping its size as small as possible, so that no more than one full (small) bubble is contained in this window. 
+		In a similar way to algorithm \ref{algo:bubbleNet}, candidate bubbles are picked based on local maxima in the input image. Then a window with a fixed size of $10 \, \text{px} \times 10 \, \text{px}$ is extracted around the local maximum. The window size is a hyperparameter and it has been chosen, such that it covers enough curvature for large bubbles while keeping its size as small as possible, so that no more than one full (small) bubble is contained in this window. 
 		 Orientation from structure tensor, the eigenvalues of the structure tensor (see section \ref{radius_from_orientation}) as well as the eigenvalues of the Hessian matrix are used as features to classify bubbles using a random forest classifier. 
 		
 		The choice of these features is justified as follows. Bubbles are expected to show a strong orientation inwards around the local maximum. Therefore the orientation is computed using the structure tensor with the expectation to see a vertical orientation. The eigenvalues of the structure tensor show whether this orientation is significant or not. Finally, with the eigenvalues of the hessian matrix the concavity around the local maximum can be determined, which is expected to be concave. 
@@ -246,7 +246,7 @@
 		\subsubsection{Orientation}
 		
 		Figure \ref{fig:struct_tensor_result} shows the result of applying the structure tensor to a single bubble. Orientation arrows describe the orientation as expected around the strongest peak in the image. Since it is only possible to compute the double angle using the structure tensor, the direction of the arrows is not important. In fact, a direction flip around the middle of the image can be observed. When considering the eigenvalues, it can be observed that both eigenvalues are close to zero around the bubble center and on the upper part of the bubble (figure \ref{subfig:larger_ev} and \ref{subfig:smaller_ev}). 
-		This means that orientation around this area is homogeneous (Table \ref{tab:struc_tensor_interp}) so results form these area are likely not valid. This is more apparent in figure \ref{fig:struct_tensor_result_2}, where orientation on the upper side is different from the one around the brightest peak in the image. For these reasons, only orientation along the bubble edge up to the middle of the bubble will be used, i.e. where the larger eigenvalue is significantly larger than zero.
+		This means that orientation around this area is homogeneous (Table \ref{tab:struc_tensor_interp}) so results form these area are likely not valid. This is more apparent in figure \ref{fig:struct_tensor_result_2}, where orientation on the upper side is different from the one around the brightest peak in the image. For these reasons, only orientation along the bubble edge up to the middle of the bubble will be used, i.e.\ where the larger eigenvalue is significantly larger than zero.
 		
 		\begin{figure}
 			\begin{subfigure}[t]{.4\textwidth}
@@ -301,7 +301,7 @@
 				 \begin{figure}
 				 	\centering
 				 	\includegraphics[scale=.5]{images/subpixel_sampling.png}
-				 	\caption{Gray value sampling along sampling line}
+				 	\caption{Gray value sampling along sampling line. Numbers represent the gray value of a pixel. The result is obtained by computing the weighted average of the drawn square with the neighbouring pixels, where weights are the normalized intersection area between the drawn square and the neighbouring pixels.}
 				 	\label{fig:subpixel_sampling}
 				 \end{figure}
 				 
@@ -313,20 +313,12 @@
 				The fit and sampling results are shown in figure \ref{fig:fit_circle_fit_result}
 				
 				\begin{figure}
-				
-					\begin{subfigure}[t]{.50\textwidth}
 						\centering
-						\includegraphics[scale=.8]{images/sampling_result.png}
+						\includegraphics[scale=.8]{images/sampling_result_fit.png}
 						\caption{Sampling result. }
-					\end{subfigure}					
-					\begin{subfigure}[t]{.55\textwidth}
-						\centering
-						\includegraphics[scale=.7]{graphs/circle_fit.png}
-						\caption{Circle fit result. }
-					\end{subfigure}
-					
-					
-					\caption{Sampling and fit. The circle fit works well, even though only half a circle is extracted from the bubble at most. }
+						\label{fig:sampling_result}								
+					\caption{Sampling and fit. Dots represent the steps of curve extraction. 
+					The circle fit works well, even though only half a circle is extracted from the bubble at most. }
 					\label{fig:fit_circle_fit_result}
 				\end{figure}
 				
@@ -377,7 +369,7 @@
 			
 			
 		\subsection{Radius}\label{sub:radius_algorithm}
-			The measurement technique developed in this work uses a light source to light up bubbles from below and captures images with a camera placed at $90^\circ$ relative to the light source. The resulting images are characterized by a lower peak (or bright lower curvature for high concentration bubbles) as discussed in section \ref{measurement_results}. From these images alone, it is not clear whether the observed edge corresponds to the real bubble edge or not. Also, algorithm \ref{algo:bubbleCurves} clearly underestimates the observed radius (figure \ref{fig:final_result}). 
+			The measurement technique developed in this work uses a light source to light up bubbles from below and captures images with a camera placed at $90^\circ$ relative to the light source. The resulting images are characterized by a lower peak (or bright lower curvature for high concentration bubbles) as discussed in section \ref{measurement_results}. From these images alone, it is not clear whether the observed edge corresponds to the real bubble edge or not. Also, figure \ref{fig:sampling_result} shows that algorithm \ref{algo:bubbleCurves} clearly underestimates the observed radius. 
 			
 			In order to correct for this effect, calibration measurements as described in section \ref{sub:radius_setup} are performed.
 			
