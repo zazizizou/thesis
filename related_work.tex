@@ -38,29 +38,13 @@ This chapter briefly discusses two similar bubble measurement techniques that ai
 	
 	
 \section{Bubble optical imaging instrument}
-	This technique submerges an optical imaging instrument (figure \ref{subfig:optical_imaging}) underwater and illuminates a thin slice	of water of volume 4\,cm $\times$ 4\,cm $\times$ 5\,mm. This method is particularly interesting because it produces images similar to our own. However, applying the algorithm from this paper did not yield good results. This is most likely due to the fact that our method does not illuminate the bubbles from above, making the bubble's circular shape not easily detectable with a Hough transform \citep{Hough1972} \citep{Al-Lashi2016}.
-	
-		\begin{figure}[h!]
-			\centering
-			\begin{subfigure}[t]{0.4\textwidth}
-				\centering
-				\includegraphics[scale=.3]{images/bubble_optical_imaging_instrument.png}
-				\caption{Bubble optical imaging instrument. The submerged device }
-				\label{subfig:optical_imaging}
-			\end{subfigure}\hfill
-			\begin{subfigure}[t]{0.4\textwidth}
-				\centering
-				\includegraphics[scale=.5]{images/sample_result_optical_imaging_instrument.png}
-				\caption{Sample result image containing two types of bubbles: filled circles (disks) and rings. }
-				\label{subfig:result_optical_imaging}
-			\end{subfigure}
-			\label{fig:optical_imaging}
-			\caption{Bubble detection with the bubble optical imaging instrument}
-		\end{figure}		
+	This technique is a field method that submerges an optical imaging instrument underwater and illuminates a thin slice	of water of volume from above and below. 
+	This method is particularly interesting because it produces images similar to our own. The
+	However, applying the algorithm from this paper did not yield good results. This is most likely due to the fact that our method does not illuminate the bubbles from above, making the bubble's circular shape not easily detectable with a simple Hough transform \citep{Hough1972}.
 
 
 \section{Proposed Method}
-The proposed method in this work aims to capture bubbles that are as close to the water surface as possible, and to develop robust algorithms that can reliably detect bubbles, estimate their radii and their depths (i.e.\ distance to focal plane). In particular, the proposed method should perform well for high and low bubble concentrations. 
+The proposed method in this work aims to measure bubbles that are as close to the water surface as possible, and to develop robust algorithms that can reliably detect bubbles, estimate their radii and their depths (i.e.\ distance to focal plane). In particular, the proposed method should perform well for high and low bubble concentrations. 
 The principle behind this method is to light air bubbles in a water tank from below, and position the camera on the side of the water tank. The reflected light on the lower edge of bubbles is then captured by the camera. 
 
 The main drawback of this method, however, is that small bubbles with less than 6 to 8\,px in diameter can not be detected. 
