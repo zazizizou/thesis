@@ -1,6 +1,6 @@
 \chapter{Theory}\label{theory}
 This chapter explains the theoretical concepts relevant to this thesis. First, the physics behind the developed method is explained in section \ref{bubble_physics}, in particular how bubbles interact with light.
-Next, the mathematical basics necessary for image processing such as Fourier theory and edge detection are discussed in section \ref{image_processing}. Finally, section \ref{the_object_detection_problem} formally introduces the object detection problem and the principle behind machine learning that the method developed in this work relies on for classification.
+Next, the mathematical basics necessary for image processing such as Fourier theory and edge detection are introduced in section \ref{image_processing}. Finally, section \ref{the_object_detection_problem} formally introduces the object detection problem and the principle behind machine learning that the method developed in this work relies on for bubble detection.
 
 	\section{Bubble physics} \label{bubble_physics}
 
@@ -66,23 +66,23 @@ Next, the mathematical basics necessary for image processing such as Fourier the
 	 		\end{figure}	
 			
 			Figure \ref{subfig:bubble_refraction} shows refracted rays inside an air bubble. Since the outside medium (water) is more dense, total refraction occurs at the lower bubble boundary. Simulation in figure \ref{subfig:bubble_simulation} also shows that when a bubble is lit from bellow, two peaks can be observed. The lower peak is strong because it arises from total reflection on the lower bubble boundary, whereas the upper peak is much weaker. The second peak arises from internal (partial) reflections within the bubble and can be best explained by the Fresnel equations \citep{Demtroeder2}. 
-			The different peaks characteristics will be exploited by the proposed algorithm in order to compute the bubble's depth and radius.
+			The different properties of the peaks will be exploited by the proposed algorithm in order to compute the bubble's depth and radius.
 			
 			
 	
 	\section{Image processing}	\label{image_processing}
-	In the following an image is represented as a two dimensional signal written as a matrix \textit{\textbf{g}}. $g_{m,n}$ denotes the pixel (i.e. picture element) at the \textit{m}-th row corresponding to the \textit{n}-th column. The chosen coordinate system is described in figure \ref{fig:coord_sys}. 
+	In the following an image is represented as a two dimensional signal written as a matrix \textit{\textbf{g}}. $g_{m,n}$ denotes the pixel (picture element) at the \textit{m}-th row corresponding to the \textit{n}-th column. The chosen coordinate system is described in figure \ref{fig:coord_sys}. 
 	
 		\begin{figure}
 		    \centering
 		    \includegraphics[scale=0.4]{images/coord_sys.png}
-		    \caption{Notation and coordinate system}
+		    \caption{Notation and coordinate system. The origin of the image is at the top left. First index denotes the row, the second represents the column. }
 		    \label{fig:coord_sys}
 		\end{figure}
 	
 		\subsection{Fourier theory}
 		The Fourier transform is an important image processing tool which is used to decompose an image into its sine and cosine components. The output of the transformation represents the image in the Fourier or frequency domain, while the input image is the spacial domain. In the Fourier domain image, each point represents a particular frequency contained in the spatial domain image.
-		The \textit{continuous} two-dimensional Fourier transform is defined as
+		The continuous two-dimensional Fourier transform is defined as
 		\begin{equation}
 				\mathscr{F}\{ g(\mathbf{x})  \} = \hat{g}(\mathbf{k}) = 
 				\int_{-\infty}^{\infty} g(\mathbf{x}) \text{exp}\left( -2 \pi \text{i} \mathbf{k}^T \mathbf{x}  \right) \text{d}\mathbf{x}
@@ -95,11 +95,11 @@ Next, the mathematical basics necessary for image processing such as Fourier the
 		\end{equation}
 		where $\mathbf{x}$ and $\mathbf{k}$  are the two dimensional space and frequency vectors respectively. 
 		
-		Images however are discrete two dimensional signals, therefore the \textit{Discrete} Fourier transform or DFT is needed, which is defined as
+		Images however are discrete two dimensional signals, therefore the discrete Fourier transform or DFT is needed, which is defined as
 		\begin{equation}
 			\text{DFT}\{ g_{m,n} \} = \hat{g}_{u,v} = \dfrac{1}{MN} \sum_{m=0}^{M-1} \sum_{n=0}^{N-1}
 			g_{m,n} \text{ exp} \left(  - \dfrac{2 \pi \text{i} m u}{M}  \right)
-						\text{exp} \left(  - \dfrac{2 \pi \text{i} n u}{N}  \right).
+						\text{exp} \left(  - \dfrac{2 \pi \text{i} n v}{N}  \right).
 		\end{equation}		 
 
 		Similarly, the inverse 2-D DFT is defined as 
@@ -107,7 +107,7 @@ Next, the mathematical basics necessary for image processing such as Fourier the
 		\begin{equation}
 		 \text{IDFT}\{\hat{g}_{u,v}\} = g_{m,n} = \sum_{m=0}^{M-1} \sum_{n=0}^{N-1} \hat{g}_{u,v}
 			\text{ exp} \left(   \dfrac{2 \pi \text{i} m u}{M}  \right)
-			\text{exp} \left(   \dfrac{2 \pi \text{i} n u}{N}  \right).
+			\text{exp} \left(   \dfrac{2 \pi \text{i} n v}{N}  \right).
 		\end{equation}
 		
 		
@@ -130,7 +130,7 @@ Next, the mathematical basics necessary for image processing such as Fourier the
 		\end{equation}
 		This property, together with the fast Fourier implementation of the Fourier transform allows a fast computation of convolutions. 
 		
-		Edges of images are typically extended with zero values (i.e. zero padding). This introduces an error when applying filters at the image border. Therefore, borders will mostly be excluded when using filters (see chapter \ref{the_algorithm} for more details).
+		Edges of images are typically extended with zero values (i.e.\ zero padding). This introduces an error when applying filters at the image border. Therefore, borders will mostly be excluded when using filters.
 		
 		\subsection{Smoothing}\label{sect:smoothing}
 		Smoothing an image means convolving an image with a smoothing filter. A smoothing or averaging filters must ideally fulfill the following conditions
@@ -148,9 +148,9 @@ Next, the mathematical basics necessary for image processing such as Fourier the
 			 	- \dfrac{(m-\mu)^2}{2 \sigma^2}
 			 \right),
 		\end{equation}
-		where $\mu$ is the mean, i.e. the distribution peak's position and $\sigma$ is the standard deviation, i.e. the peak's width.
+		where $\mu$ is the mean, i.e.\ the distribution peak's position and $\sigma$ is the standard deviation, i.e.\ the distribution's width.
 		
-		Figure \ref{fig:gauss_intro} shows a Gaussian curve in one and two dimensions as well as the result of convolving an image with a Gaussian filter mask. Note how the image becomes blurry, i.e. large wave numbers have been suppressed.
+		Figure \ref{fig:gauss_intro} shows a Gaussian curve in one and two dimensions as well as the result of convolving an image with a Gaussian filter mask. Note how the image becomes blurry, i.e.\ large wave numbers have been suppressed.
 		\begin{figure}
 		    \centering
 		    \begin{subfigure}[t]{0.3\textwidth}
@@ -195,7 +195,7 @@ Next, the mathematical basics necessary for image processing such as Fourier the
 			\caption{Computing image derivative. Edges are detected by applying a derivative filter.}
 			\label{fig:sobel_demo}
 		\end{figure}
-		An edge can be defined as a set of continuous pixel positions where an abrupt change of intensity (i.e. gray value) occurs. Therefore, edge detection is based on differentiation, where in discrete images differentiation is replaced by discrete differences that are mere approximation to differentiation. There is also the need to not only know where edges are, but also how strong they are.
+		An edge can be defined as a set of continuous pixel positions where an abrupt change of intensity (i.e.\ gray value) occurs. Therefore, edge detection is based on differentiation, where in discrete images differentiation is replaced by discrete differences that are mere approximation to differentiation. There is also the need to not only know where edges are, but also how strong they are.
 		
 		In continuous space, a partial derivative operation is defined as
 		\begin{equation}
@@ -363,13 +363,13 @@ Next, the mathematical basics necessary for image processing such as Fourier the
 			\begin{subfigure}[b]{\textwidth}
 				\centering
 				\includegraphics[scale=.6]{images/training_intro.png}
-				\caption{Training: The trainable model is optimized according to the output of the loss function. Both ground truth labels and predicted labels are needed to compute the loss. Predicted labels are produced by pre-processing the raw training data and then running the trainable model. }
+				\caption{Training: The trainable model is optimized according to the output of the loss function. Both ground truth labels and predicted labels are needed to compute the loss. Predicted labels are produced by pre-processing the raw training data and then evaluate them with the model. }
 			\end{subfigure}
 			\vfill
 			\begin{subfigure}[b]{\textwidth}
 				\centering
 				\includegraphics[scale=.6]{images/testing_intro.png}
-				\caption{Testing: After training is complete, the model is tested. This is achieved by computing a score based on ground truth and predicted labels. This score quantifies the performance of the model and the model is not further optimized based on it.}
+				\caption{Testing: After training is complete, the model is tested. This is achieved by computing a score based on ground truth and predicted labels. The score quantifies the performance of the model. In contrast to training, the model is not further optimized based on the computed score.}
 			\end{subfigure}
 			\caption{Difference between training and testing in machine learning.}
 			\label{fig:machine_learning_intro}
@@ -378,9 +378,9 @@ Next, the mathematical basics necessary for image processing such as Fourier the
 		
 		\subsubsection{Terminology}
 			\begin{itemize} 
-				\item \textbf{Training} is changing the model's parameters based on the model's output. Training is also referred to as optimization. When training data is annotated, the process of training is also called supervised training. 
+				\item \textbf{Training} is changing the model's parameters based on the model's output. Training is also referred to as optimization. When training data is annotated, the process of training is called supervised training. 
 				\item \textbf{Testing} is assigning a score to a trained model based on annotated testing data. The score is typically produced by an evaluation criterion and is independent of the model itself. 
-				\item \textbf{Validation} is a form of testing, so it assigns a score to a trained model. Validation is needed when one wants to choose the best model among some trained candidate models based on their testing performance. Since changing a parameter of the algorithm (in this case the whole model) based on the output is equivalent to training by definition, an independent data set is needed to compute the final score of the algorithm, i.e. validation data. 
+				\item \textbf{Validation} is a form of testing, so it assigns a score to a trained model. Validation is needed when one wants to choose the best model among some trained candidate models based on their testing performance. Since changing a parameter of the algorithm (in this case the whole model) based on the output is equivalent to training by definition, an independent data set is needed to compute the final score of the algorithm, i.e.\ validation data. 
 			\end{itemize}				
 			
 		\subsubsection{Logistic Regression Classifier}
@@ -395,14 +395,14 @@ Next, the mathematical basics necessary for image processing such as Fourier the
 			This method is well suited for small sized and balanced data set, given the chosen features describe the data well. It also allows an estimation of feature importance in the classification, something that neural networks are known to be lacking. Its main drawback is its tendency to generate deep trees during training, which makes evaluation computationally expensive. See \citet{BishopBook} for a more in depth description of random forests. 
 			
 		\subsubsection{Convolutional Neural Network}
-			First introduced by \citet{AlexNet}, a convolutional neural networks, or CNN is a class of deep, feed-forward artificial neural networks. Convolutional networks were inspired by biological processes in that the connectivity pattern between neurons resembles the organization of the animal visual cortex. Individual neurons activate only when stimulated in a restricted region of the visual field known as the receptive field. The receptive fields of different neurons partially overlap such that they cover the entire visual field. CNNs are known for their ability to generalize well to large, mutli-dimensional data. They also require very little preprocessing. For instance, neural networks learn the filters needed to extract features using back propagation (i.e. stochastic gradient descent) to optimize convolutional and dense layers within the neural network. This eliminates the need to first compute features and then pass them to the classifier as is done by classical machine learning algorithms such as random forests.
+			First introduced by \citet{AlexNet}, a convolutional neural networks, or CNN is a class of deep, feed-forward artificial neural networks. Convolutional networks were inspired by biological processes in that the connectivity pattern between neurons resembles the organization of the animal visual cortex. Individual neurons activate only when stimulated in a restricted region of the visual field known as the receptive field. The receptive fields of different neurons partially overlap such that they cover the entire visual field. CNNs are known for their ability to generalize well to large, mutli-dimensional data. They also require very little preprocessing. For instance, neural networks learn the filters needed to extract features using back propagation (i.e.\ stochastic gradient descent) to optimize convolutional and dense layers within the neural network. This eliminates the need to first compute features and then pass them to the classifier as is done by classical machine learning algorithms such as random forests.
 			
 			The drawback of using a CNN is the need of a large amount of data and computational power for proper training. It is also not possible to extract feature importance from a trained CNN, which makes CNNs resemble black boxes that are hard to interpret.  
 			 For a detailed explanation of CNNs, see \citet{NNMethods}.
 		
 
 		\subsection{Evaluation Criterion: mAP@p-IoU}
-		  The object detection algorithm uses the \textit{intersection over union at $p$ mean average precision} criterion as explained in figure \ref{fig:iou_def}. As the  name suggests, the area of intersection between the predicted and the ground truth bounding boxes is computed and then divided by the union area of the two boxes. This means that IoU = 1 corresponds to a perfect prediction and IoU = 0 is a complete miss (assuming original images were annotated perfectly). So a threshold $p$ is chosen such that IoU $>= p$ corresponds to a correct prediction or \textit{true positive}. 		  
+		  The object detection algorithm uses the \textit{mean average precision at $p$ intersection over union} criterion or simply mAP@$p$-IoU, as illustrated in figure \ref{fig:iou_def}. As the  name suggests, the area of intersection between the predicted and the ground truth bounding boxes is computed and then divided by the union area of the two boxes. This means that IoU = 1 corresponds to a perfect prediction and IoU = 0 is a complete miss (assuming original images were annotated perfectly). So a threshold $p$ is chosen such that IoU $>= p$ corresponds to a correct prediction or \textit{true positive}. 		  
 
 		\begin{figure}
 			\centering
@@ -415,15 +415,16 @@ Next, the mathematical basics necessary for image processing such as Fourier the
 		  \begin{equation}
 		  	\text{precision} = \dfrac{\text{True Positive}}{ \text{True Positive} + \text{False Positive}}
 		  \end{equation}
+		  and
 		  \begin{equation}
-		  	\text{recall} = \dfrac{\text{True Positive}}{ \text{True Positive} + \text{False Negative}}
+		  	\text{recall} = \dfrac{\text{True Positive}}{ \text{True Positive} + \text{False Negative}}.
 		  \end{equation}
 
 		From the above definition it becomes clear that precision measures how accurate the predictions are and recall measures how well all the positives can be found.
 		
 		Since the proposed algorithms perform binary classification, \textit{mean average precision} is equivalent to \textit{average precision}. 
 		
-		\textbf{Note:} This criterion only shows how well the algorithm is at detecting bubbles in an image, and does not necessarily make a strong statement on how well the measurement technique as a whole performs at estimating bubble size distributions in water. 
+		Note that this criterion only shows how well the algorithm is at detecting bubbles in an image, and does not necessarily make a strong statement on how well the measurement technique as a whole performs at estimating bubble size distributions in water. 
 		
 		 
 

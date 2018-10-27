@@ -41,6 +41,13 @@ Maximilian Bopp.
 \newblock PhD thesis, Institude of Environmental Physics, Heidelberg
   University, 2018.
 
+\bibitem[Demtr{\"o}der(2013)]{Demtroeder2}
+W.~Demtr{\"o}der.
+\newblock \emph{Experimentalphysik 2: Elektrizit{\"a}t und Optik}.
+\newblock Springer-Lehrbuch. Springer Berlin Heidelberg, 2013.
+\newblock ISBN 9783642299438.
+\newblock URL \url{https://books.google.de/books?id=lIYBlwEACAAJ}.
+
 \bibitem[Duda and Hart(1972)]{Hough1972}
 Richard~O. Duda and Peter~E. Hart.
 \newblock Use of the hough transformation to detect lines and curves in
@@ -170,13 +177,6 @@ Eugene Terray, M~A.~Donelan, Y.C. Agrawal, William Drennan, Kimmo Kahma, Albert
   Williams, Paul Hwang, and S~A.~Kitaigorodskii.
 \newblock Estimates of kinetic energy dissipation under breaking waves.
 \newblock 26:\penalty0 792--807, May 1996.
-
-\bibitem[Wolfgang~Demtr{\"o}der(2013)]{Demtroeder2}
-W.~Wolfgang~Demtr{\"o}der.
-\newblock \emph{Experimentalphysik 2: Elektrizit{\"a}t und Optik}.
-\newblock Springer-Lehrbuch. Springer Berlin Heidelberg, 2013.
-\newblock ISBN 9783642299438.
-\newblock URL \url{https://books.google.de/books?id=lIYBlwEACAAJ}.
 
 \bibitem[Zhenhua~Chen(2018)]{Zhenhua2018}
 Robert~Templeman Zhenhua~Chen, David~Crandall.

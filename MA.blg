@@ -1,6 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2016)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: MA.aux
+This is BibTeX, Version 0.99dThe top-level auxiliary file: MA.aux
 A level-1 auxiliary file: titlepages-eng.aux
 A level-1 auxiliary file: abstracts.aux
 A level-1 auxiliary file: introduction.aux
@@ -16,45 +14,4 @@ A level-1 auxiliary file: deposition.aux
 Database file #1: biblio.bib
 Warning--empty school in Leonie
 Warning--empty journal in Terry
-You've used 25 entries,
-            2773 wiz_defined-function locations,
-            815 strings with 10874 characters,
-and the built_in function-call counts, 11877 in all, are:
-= -- 1116
-> -- 640
-< -- 22
-+ -- 218
-- -- 193
-* -- 928
-:= -- 1878
-add.period$ -- 109
-call.type$ -- 25
-change.case$ -- 134
-chr.to.int$ -- 25
-cite$ -- 52
-duplicate$ -- 561
-empty$ -- 923
-format.name$ -- 224
-if$ -- 2516
-int.to.chr$ -- 1
-int.to.str$ -- 1
-missing$ -- 22
-newline$ -- 161
-num.names$ -- 108
-pop$ -- 241
-preamble$ -- 1
-purify$ -- 110
-quote$ -- 0
-skip$ -- 430
-stack$ -- 0
-substring$ -- 381
-swap$ -- 85
-text.length$ -- 8
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 260
-warning$ -- 2
-while$ -- 106
-width$ -- 0
-write$ -- 396
 (There were 2 warnings)
